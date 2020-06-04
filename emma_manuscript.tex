@@ -1,0 +1,372 @@
+%-*- program: pdflatex -*-
+%-*- program: bibtex -*-
+%-*- program: pdflatex -*-
+%-*- program: pdflatex -*-
+
+
+% --------------------------------------------------------------
+% Preamble
+% --------------------------------------------------------------
+
+\documentclass{article}
+\usepackage{arxiv}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{tabularx}
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{gensymb}        % degree, angle symbols
+
+% for math equations and symbols
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\SD}{\mathit{SD}}
+\newcommand{\SE}{\mathit{SE}}
+\newcommand{\BF}{\mathit{BF}}
+
+% This prevents placing floats before a section.
+\usepackage{placeins}
+
+
+% ---------------------------------------------------------
+% Title, authors
+% ---------------------------------------------------------
+
+\title{A meta-analysis of eye movements in decision-making}
+
+% Alternatives
+% The visual environment influences attention during decision making
+% Visual environments, attention and decision making
+% A meta analysis of influence of the visual environement factors on  attention in decision making
+
+\author{
+  Jacob L. Orquin\thanks{Correspondence concerning this article should be addressed to Jacob L. Orquin, Department of Management/MAPP, Aarhus University, Fuglesangs alle 4, 8210 Aarhus V - Denmark. E-mail: jalo@mgmt.au.dk. Data and scripts are available at: \url{https://osf.io/buk7p/}. This research was supported by the Independent Research Fund Denmark, grant number: 8046-00014A. The authors thank Martin Meissner, Tobias Otterbring, Sonja Perkovic, and Valdimar Sigurdsson for feedback on earlier versions of the manuscript.}, Erik S. Lahm, Hrvoje Stojić
+}
+
+
+\begin{document}
+\maketitle
+
+% ---------------------------------------------------------
+% Abstract
+% ---------------------------------------------------------
+
+
+\begin{abstract}  % NHB limit: 150 words
+As decision-makers, we rely on our eyes for gathering information in a vast number of tasks every day. A growing body of research attempts to understand what drives eye movements in decision-making and how eye movements are related to the decision process. Different models have been proposed, assuming that eye movements are driven separately or in combination by either by goal related top-down factors or stimulus related bottom-up factors. We meta-analyze empirical studies on eye movements in decision-making and provide a quantitative overview of some of the factors driving eye movements. Our findings reveal that the bottom-up factors, salience ($\rho = .13$), surface size ($\rho = .38$), left vs right positioning ($\rho = .27$), central positioning ($\rho = .43$), and set size ($\rho = .28$), all influence what decision-makers gaze at independently of the decision task or preferences. Top-down factors have a slightly larger effect on eye movements than bottom-up factors: decision-makers gaze more at information that is relevant in terms of task goals ($\rho = .42$) or subjective preferences ($\rho = .48$) and gaze more at the eventually chosen option ($\rho = .70$) regardless of whether the choice is based on preferences or inferences. Our findings show a need for incorporating bottom-up factors in models that jointly explain eye movements and decision-making.
+\end{abstract}
+
+\keywords{eye movements, decision-making, meta-analysis, top-down control, bottom-up control} 
+
+
+% -------------------------------------------------------
+% Introduction
+% -------------------------------------------------------
+
+\section{Significance statement}
+
+In decision making we often gather information with our eyes. We show that decision makers are more likely to gaze at information that is relevant to the decision task or their preferences, but also gaze more at information when it is salient, large, centrally positioned, and uncluttered independently of its relevance. Because the structure of our visual environment plays a large role in determining eye movements, citizens and policy makers should be aware of who is in control of the visual environment and how it can bias information processing in favor of or against the interests of decision makers.   
+
+
+\section{Introduction}
+
+
+
+
+
+% -------------------------------------------------------
+% Results
+% -------------------------------------------------------
+
+\section{Results}
+
+% In the following sections, we perform a meta-analysis on the top-down and bottom-up factors reviewed above. Our analysis aims to further our understanding of eye movement control, in general, and in decision-making in particular. So far, relatively few meta-analyses on eye movements have been published. Consequently, there are several unresolved methodological issues such as how to compare different eye movement metrics, dealing with multiple and different areas of interest (AOIs), and handling measurement validity across different eye tracker types. To handle these issues, we use a psychometric meta-analysis, which allows us to quantify the interference of measurement validity or multiple metrics. 
+
+We analyzed each individual subgroup separately in R (Viechtbauer, 2010). Results on all bottom-up factors are presented in fixation likelihood and results on top-down factors are presented in fixation count (effect sizes on both metrics are comparable, see Table~\ref{tab:metric_correction}). The main results are presented in Table~\ref{tab:main_results}, with the most important variables being the corrected effect size estimate, $\rho$, and the associated heterogeneity, $I^2$. We also perform moderator analyses of set size, inferential viewing, and preferential viewing with regards to the effect of alternatives vs attributes and a moderator analysis of choice bias with regards to the effect of inferential vs preferential tasks. We find weak support for the alternative vs attribute moderator across set size, $Q_M(1) = 3.628$, $p = .057$, inferential viewing, $Q_M (1) = 1.95$, $p = .163$, and preferential viewing, $Q_M (1) = 3.762$, $p = .052$. While none of the moderators are significant at .05, it is noteworthy that effect sizes are consistently larger when operationalized at the level of alternatives compared to attributes (Table~\ref{tab:main_results}). In the following we report results for the main and moderator groups to allow readers to form their own opinion. We find no support for moderation of choice bias by inferential vs preferential task, $Q_M(1) = 0.003$, $p = .955$, and only report results for the main group. Finally, we test the probability that the synthesized effect sizes of inferential viewing, preferential viewing, and choice bias stem from different populations. Using a Wald test, we find that effect sizes of inferential viewing and preferential viewing are unlikely to differ, $z = -0.555$, $p = .342$, inferential viewing and choice bias are likely to differ, $z = -2.658$, $p = .012$, and preferential viewing and choice bias somewhat likely to differ, $z = -1.8$, $p = .079$.
+
+
+\begin{table*}
+\caption{Main results of the meta-analysis divided into independent variable subgroups }
+\label{tab:main_results}
+\centering
+\begin{tabularx}{\columnwidth}{p{0.23\columnwidth}p{0.18\columnwidth}p{0.52\columnwidth}}
+  \cmidrule(lr){1-3}
+    \multicolumn{1}{l}{Parameter} &
+    \multicolumn{1}{l}{Prior} &
+    \multicolumn{1}{l}{Hyperpriors} \\
+  \cmidrule(lr){1-3}
+  
+  \cmidrule(lr){1-3}
+
+\multicolumn{3}{p{0.95\columnwidth}}{\textit{Note}. $k$ = number of studies; $N$ = number of participants; Estimate = unattenuated effect size estimate, $\SE$ = standard error of estimate; $Z$ = Z statistic; $p$ = significance level; $CI_{95}$ LL = lower limit of the 95\% confidence interval; $CI_{95}$ UL = upper limit of the 95\% confidence interval, $I^2$ = within-group heterogeneity. Indented variables are moderator subgroups.}
+\end{tabularx}
+\end{table*}
+
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth]{flow}
+\centering
+\caption{Forest plots showing the unattenuated effect size correlations for each study as well as average effect across study groups. Salience A), surface size B), left vs right position C), central position D), set size for alternative E), set size for attribute F), inferential viewing for alternative G), inferential viewing for attribute H), preferential viewing for alternative I), preferential viewing for attribute J), choice bias K). Error bars represent the 95\% confidence interval of the mean.}
+\label{fig:forest_plots}
+\end{figure}
+
+
+\subsection{Publication bias}
+
+We assessed potential publication bias using a trim-and-fill analysis (Duval \& Tweedie, 2000) of each subgroup. In addition, we plotted the Fisher $z$ transformed correlation coefficients of each study by its respective standard error (Figure~\ref{fig:funnel_plots}). The symmetry of the funnel plot in Figure~\ref{fig:funnel_plots} provides a qualitative picture of whether there is a file drawer problem, i.e. we expect that studies with smaller sample sizes and hence higher standard errors yield more variable effect sizes the smallest of which are less likely to be published leading to an asymmetric funnel plot. The trim-and-fill analysis resulted in a downward adjustment of the average effect size for most of the subgroups. The corrected effect sizes in Table~\ref{tab:trim_and_fill} provide a more conservative estimate of the true population effects, but are also subject to some uncertainty. Specifically, the interpretation of the corrected results may be biased due to heterogeneity in many of the subgroups as well as a relatively small number of studies in the bottom up factor groups.
+
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth]{flow}
+\centering
+\caption{Funnel plots for each study subgroup. Observations are Fishers z transformed correlation coefficients against their standard error. Asymmetric distributions of observations can indicate the presence of publication bias since smaller studies (those with higher standard errors) have more variable effect sizes and are less likely to be published unless the effect is large. Salience A), surface size B), left vs right position C), central position D), set size E), set size for alternative F), set size for attribute G), inferential viewing H), inferential viewing for alternative I), inferential viewing for attribute J), preferential viewing K), preferential viewing for alternative L), preferential viewing for attribute M), choice bias N).}
+\label{fig:funnel_plots}
+\end{figure}
+
+
+% -------------------------------------------------------
+% Discussion
+% -------------------------------------------------------
+
+\section{Discussion}
+
+For the better part of our daily lives, we attend to and gather information using our eyes. We visually inspect food products in the supermarket or online, we read emails, task lists, memos, or software and spend considerable time looking at other people and our surroundings in an attempt to navigate our social and physical environment. Consequently, many of the decisions we make, small or large, are based on the visual information that we gather using our eyes. In this study, we attempt to answer how our eyes gather information during decision-making. We meta-analyze empirical studies on eye movements in decision-making and provide a quantitative overview of the factors driving eye movements in decision-making. We distinguish between internal or top-down factors such as preferential viewing, inferential viewing, and choice bias and external or bottom-up factors such as salience, surface size, set size, and position effects. We identify 107 effect sizes and perform a psychometric meta-analysis to control for issues related to the validity of each study. 
+
+\subsection{Main findings}
+
+Except for salience, ρ = .15, the results show that all bottom-up factors have medium to large effect sizes ranging from ρ = .42 to .57. In comparison, all three top-down factors are large, ranging from ρ = .50 to .77, but not three times as large as previously hypothesized (Wedel \& Pieters, 2006). Considering that there is no bottom-up free visual environment, it is reasonable to expect that all bottom-up factors influence eye movements at the same time. In laboratory environments, it is possible, and often desirable, to control for bottom-up factors, but in natural environments where no such control or counterbalancing takes place, the visual environment could account for a large share of variance in eye movements. The mounting evidence that demonstrates a causal effect of eye movements on decision-making (Ghaffari \& Fiedler, 2018; Reeck et al., 2017; Pärnamets et al., 2015; Shimojo et al., 2003), therefore, suggest an important role for the visual environment in guiding our decisions through our eye movements. 
+
+Regarding top-down factors, several findings have emerged. We decided to analyze studies on inferential viewing and preferential viewing separately since there is a clear qualitative difference between the two domains. In studies on inferential viewing, participants receive instructions concerning a specific decision goal, whereas, in preferential viewing studies, participants decide based on subjective preferences. The inspection of the effect sizes reveals that the main effect in the two types of studies are indistinguishable, i.e., similar effect sizes, ρ task = .495 and ρ preferential viewing  = .511 and overlapping credibility and confidence intervals. This result suggests that it makes no difference to eye movements whether the relevance of information is defined according to an externally specified goal or according to preferences. Breaking down both groups by moderators reveal further similarities. Both preferential viewing and inferential viewing are moderated by the subgroups alternatives and attribute, and in both cases, there is a larger effect at the alternative level. These findings dovetail with the moderation of set size where we also find a larger effect on set size by alternatives than set size by attributes. The result implies that decision-makers are more likely to adapt to increases in set size by ignoring alternatives than by ignoring attributes. One interpretation is that decision-makers are more oriented towards compensatory than non-compensatory decision rules, e.g., more likely to use satisficing than the lexicographic decision rules. 
+Finally, we find that choice bias has a very large effect on eye movements. The choice bias effect is similar for preferential and inferential decision tasks, suggesting that eye movements are not driven by preferential viewing. Even in tasks where the chosen option is not the preferred option, decision-makers make more fixations to it. There could be several explanations for this finding. The choice bias might arise because of  a) the gaze cascade phenomenon (Shimojo et al., 2003), b) an evidence accumulation process as proposed to, for instance, the aDDM model (Krajbich, Armel, \& Rangel, 2010), c) coherence maximization as proposed in the parallel constraint satisfaction model (Glöckner \& Herbold, 2011), d) the result of a resource-rational process in which decision-makers prioritize attention (Callaway \& Griffiths, 2019), or e) a mere consequence of a preparations for a motor response towards the chosen option (Hayhoe \& Ballard, 2014). The specific mechanism behind choice bias remains unclear; but considering how large the effect is, and the number of models that imply this effect, we believe that a better, and eventually full understanding of the effect will help advance decision research. 
+
+\subsection{Implications for other disciplines}
+
+Our findings have implications for several scientific disciplines. We have focused our discussion on judgment and decision-making but will turn a few other topics. Our meta-analysis is, to the best of our knowledge, the first to quantitatively summarize findings on top-down and bottom-up control of eye movements in any discipline, including vision science. Naturally, other disciplines may want to take stock of these findings and have to evaluate the generalizability of the findings to their respective discipline. Since JDM is a broad term, several disciplines such as cognitive psychology, behavioral economics, and consumer psychology are represented in the set of included studies. For these disciplines, our findings provide a useful framework for developing choice architecture interventions (Münscher, Vetter, \& Scheuerle, 2016) based on bottom-up factors. Our findings also point to the possibility of measuring individual preferences in real time through eye movements – a technique that may become practically relevant once our devices have built-in eye trackers (Bulling \& Wedel, 2019).    
+
+Given the high degree of variance in methodologies and stimuli, we expect that our results generalize well to other disciplines such as learning and education research, problem solving, or human-computer interaction. The disciplines studying eye movements in natural environments, e.g., driving, aviation, or other natural tasks, should be cautious when applying our findings since the vast majority of the included effect sizes were from laboratory-based studies. In general, our findings attest to an unexpectedly large influence of the visual environment on our eye movements. We believe that this pattern is likely to replicate in other disciplines as well.
+
+
+\subsection{Methodological contributions}
+
+So far, only a few meta-analyses have been published on eye movements, and no guidelines exist concerning how to deal with eye-tracking-specific issues in meta-analyses. To perform our analysis, we have developed procedures for how to handle issues related to multiple AOIs, multiple metrics, and eye tracker validity. The procedure for handling eye tracker validity showed that eye trackers with poorer accuracy, in general, lead to lower effect sizes. In our data, the difference in Ai between the best and worst eye trackers were spanning from .167 to .667. This result is a substantial difference. Accounting for eye tracker validity improved the precision of the synthesized effect sizes. This finding is, furthermore, an important methodological contribution which demonstrates the relevance of ensuring high-quality eye tracker data.
+
+Regarding the multiple metrics such as fixation count, fixation likelihood, or dwell, count, we showed, first of all, that these metrics yield very similar effect sizes, and, second, that the effect sizes expressed in one metric can be converted to an effect size expressed in another metric. Regarding studies which report multiple AOIs, we propose to average the effect sizes across AOIs. An alternative would have been to weight the effect sizes depending on the relevance of the AOI to the research question, but this approach would have required precise and unambiguous predictions regarding the relevance of each AOI. Such precise predictions are rare but may become more frequent in the future since other researchers can now derive predictions based on our findings.   
+
+
+\subsection{Limitations and future research}
+
+Several limitations deserve to be mentioned. Most importantly, several of the bottom-up factors included a low number of studies which casts some doubt about the precision of the results. The low number of studies also analyzed the publication bias less reliable, thereby, adding to the uncertainty. Another challenge is that the studies included varied substantially because of stimulus differences, e.g., high vs. low complexity stimuli, and because of task differences, e.g., risky gambles vs. consumer decision-making. These differences may have introduced additional heterogeneity into the synthesized effect sizes, but at the same time, serve to increase the generalizability of the findings (Cooper, Hedges, \& Valentine, 2009). 
+
+Our findings call into question several assumptions about how decision-makers search for and gather information. Several existing theories and models make assumptions that imply only a subset of the identified top-down and bottom-up factors. While these models may work in a controlled laboratory environment, it is clear that they do not generalize to more natural environments. Future models should, therefore, strive to incorporate a wide set of the identified factors to balance between top-down and bottom-up control. Another important avenue will be to gain a better understanding of the phenomenon of choice bias. How does it arise and what does it imply about the attention-choice process? From a methodological perspective, future research may further develop our framework for correcting for eye tracker accuracy. We know that several factors contribute to the validity of eye trackers, e.g., accuracy depends on the stimulus and the AOI size (Orquin \& Holmqvist, 2018) and other artifacts such as sample population and recording location also matter (Nyström, Andersson, \& Holmqvist, 2013). By extending our framework to include these other artifacts, it will be possible to make more precise estimates of effect sizes in meta-analysis and individual studies as well as more realistic power analyses.    
+
+
+% -----------------------------------------------------------
+% Method
+% -----------------------------------------------------------
+
+\section{Method}
+
+\subsection{Literature Search}
+
+Web of Science was searched using the following terms: eye track* OR eye move* OR eye fix* AND decision-making OR choice. Grey literature, such as reports and unpublished work, was identified in the first 2,000 hits on Google Scholar. No restrictions on publication date or language were imposed. Additional literature was identified by searching the reference lists of the identified papers and through contact with the authors. Calls for unpublished studies were distributed to the relevant research communities via email lists published February 2018 at the following lists; EADM, SJDM, and EGPROC. The search resulted in 291 studies screened for eligibility. The last search was done on March 1st, 2018.
+
+
+\subsection{Inclusion Criteria}
+
+We included studies in which participants made decisions or judgments between discrete alternatives while their eye movements were monitored using eye-tracking technology. We did not include studies related to perceptual judgments, such as categorizing or discriminating visual stimuli or studies on problem solving. We excluded studies where participants were selected based on clinical diagnosis or specific sociodemographic traits e.g., visual disorders, age-related visual diseases, age restrictions such as adolescents or infants. Studies using fixed exposure time or time pressure manipulations were excluded since these manipulations can influence eye movement processes (Orquin \& Holmqvist, 2018) and lead to different results (Simola, Kuisma, Kaakinen, 2019). Included studies used either fixation likelihood (AOI looked at or not), fixation count (number of fixations to AOI), total fixation duration (sum of durations of all fixation to an AOI), or dwell count (number of dwells to an AOI). Eventually, 58 articles met all inclusion criteria and were included in the meta-analysis (Figure~\ref{fig:flow_diagram}).
+
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth]{flow}
+\centering
+\caption{Flow diagram of the literature search.}
+\label{fig:flow_diagram}
+\end{figure}
+
+
+\subsection{Coding Procedure}
+
+The included studies were coded with regards to their i) effect size, ii) sample size, iii) research domain, iv) eye tracker model, v) dependent variable, and vi) independent variable. All studies were initially coded by the first author and later by the second author. Any disagreement was resolved by discussion. Agreement for categorical variables was assessed using Cohen's kappa and for continuous variables using intraclass correlation coefficient (Shrout \& Fleiss, 1979). Overall, there was a high level of agreement: effect size, $\textrm{ICC} = 0.684$, sample size, $\textrm{ICC} = 0.996$, research domain, $\kappa = 0.687$, eye tracker model, $\kappa =0.886$, dependent variable, $\kappa = 0.923$, and independent variable, $\kappa = 0.934$.%
+%
+\footnote{Most of the printed coding sheets were unfortunately lost while moving between offices. The inter coder reliability is therefore computed on 20 observations from the random coding sheets that were recovered.}
+
+Coding of effect sizes is described in detail below and sample size was coded as the total number of participants in a study. The research domain was coded as preferential consumer choice, inferential consumer choice, preferential non consumer choice, inferential non consumer choice, and risky gambles. The research domain was later recoded for the analysis of choice bias in the following way: inferential consumer choice and inferential non consumer choice were recoded as inferential choice while the other three domains were coded as preferential choice. We coded the eye tracker model as the specific name of the eye tracking equipment used in the study, e.g. Tobii T2150 or Tobii T60, since different models from the same producer vary in measurement accuracy and precision. Information on each eye tracker model's accuracy and precision was identified through the equipment producers' websites. We coded the dependent variable as the specific eye tracking metric in which an effect size was reported. We coded the independent variable as bottom-up control and top-down control, with bottom-up control divided into five dimensions, visual salience, surface size, left vs right position, central position, and set size, and top-down control divided into three dimensions, inferential viewing, preferential viewing, and choice bias. We outline these categories in detail below. 
+
+\paragraph{Visual salience.} We coded studies as visual salience if they operationalized one or more of the known dimensions of visual salience such as color, edge density, contrast, or motion (Itti & Koch, 2001). Some studies failed to indicate the direction of the salience manipulation, i.e. high vs. low levels of salience. In such cases, we contacted the original author and asked for clarification.
+
+\paragraph{Surface Size} We coded studies that manipulated the relative surface size of alternatives or attribute, e.g., small vs. large alternatives or attributes (Lohse, 1997). Some studies manipulated the number of product facings, i.e., the number of the same product on a supermarket shelf (Chandon et al., 2009). We coded such manipulation as a surface size manipulation. 
+
+\paragraph{Left vs right and center position.} We coded studies that manipulated the left vs right position of alternatives or attributes in horizontal arrays as left vs right position (Kreplin et al., 2014). We coded studies that manipulated the centrality of alternative or attribute position in one or two-dimensional arrays as center position (Atalay et al., 2012, experiment 1A & 1B; Meissner, 2016a).
+
+\paragraph{Set size.} We coded studies as set size if they manipulated the number of alternatives or attributes in a given choice task, e.g., studying the effect of a two- vs. three-alternative choice task (Hong et al., 2016). We also coded whether the set size was manipulated at the level of the alternative or the attribute. 
+
+\paragraph{Inferential viewing.} We coded studies on inferential viewing if they presented participants with identical stimuli under different task instructions, e.g., presented participants with the same choice alternatives under a preferential choice task vs. a healthy choice task (Orquin et al., 2019). We also coded whether the unit of analysis was at the level of the alternative or the attribute, i.e. whether AOIs contained alternatives or attributes. 
+
+\paragraph{Preferential viewing.} We coded studies on preferential viewing if they measured the effect of preferences on eye movements. We also coded whether the unit of analysis was at the level of the alternative, e.g. when participants prefer one alternative over another because it is cheaper or has a better flavor (Gidlöf et al., 2017), or at the level of attributes, e.g. when price is more important than flavor (Meissner et al., 2016a). 
+
+\paragraph{Choice bias.} We coded studies as choice bias if they reported the difference in eye movements between the chosen alternative and all other (not chosen) alternatives. Studies that operationalized choice bias in specific time windows, e.g., the first 500 msec after stimulus onset or last 500 msec prior to choice (Shimojo et al., 2003) were excluded. Based on the research domain we coded choice bias in two subgroups: preferential tasks where participants performed a preferential choice task, that is where participants were instructed to choose in accordance with their preferences (Schotter et al., 2010) and inferential tasks where participants were instructed to choose in accordance with a predetermined goal, such as choosing the healthiest option (Schotter et al., 2012).
+
+
+\subsection{Construct validity of the dependent variable}
+
+A possible concern in meta-analyses of eye movements is that the included studies use different eye trackers since data quality varies considerably across different eye-tracking equipment. Precision, which is the reliability of an eye tracker, can vary as much as from .005\degree root mean square in the best to .5\degree in the poorest remote eye-trackers (Holmqvist et al., 2015). Accuracy, which is the validity of an eye tracker, vary from around .4\degree to around 2\degree (Holmqvist et al., 2015). With an accuracy of 2\degree, the measured fixation, will on average fall as far as 2\degree away from the true fixation point. Simulations have shown that both accuracy and precision influence the capture rate, i.e., the percentage of eye movements correctly recorded within the boundaries of stimuli, which determines the degree of false positive and false negative observations (Orquin \& Holmqvist, 2018, 2019). The level of false positive vs. negative fixations has been shown to influence effect sizes (Orquin, Ashby, \& Clarke, 2016). These differences in measurement validity across eye trackers may therefore introduce a bias in the meta-analysis of eye movements, since studies with lower accuracy and precision have lower validity, which, on average, attenuate effect sizes (Hunter \& Schmidt, 2004). To inspect whether the precision and validity of eye tracker attenuate effect sizes, and potentially correct for this, we ran a regression analysis on all included effect sizes with the absolute observed effect size correlation as the dependent variable and reported precision and accuracy of the eye tracking equipment as the independent variables. We fitted different models using a step-up approach based on AIC and BIC, including models with a fixed effect for the independent variable type (salience, surface size etc.). The final model included the main effect of accuracy and a random intercept grouped by study. The second-best model also included a fixed effect for independent variable type, and the estimates of the two models were comparable.
+
+The accuracy and precision of eye trackers are highly correlated ($r = .63$), and presumably for this reason model fit did not improve when including precision. Despite analyzing across different study subgroups and other sources of noise, the results suggest that studies using eye trackers with lower levels of accuracy, on average, yield lower effect sizes as predicted by the psychometric meta-analysis methods, $\beta_0 = 0.569$, $\SE = 0.09$, $t = 6.293$, $p < .001$, $\beta_{\textrm{accuracy}} = -0.382$, $\SE = 0.158$, $t = -2.422$, $p = .018$, (Figure~\ref{fig:scatter_fix_likelihood_count}). Having demonstrated that the accuracy of eye trackers attenuates effect sizes, the next step is to correct for this phenomenon. Psychometric meta-analysis offers a method for correcting the attenuating effects of artifacts, such as the lack of validity or reliability. The correction involves an artifact multiplier, $a_a$, which is a measure of the expected attenuation of the true effect size ρ caused by the artifacts in study $i$. The observed study effect size $\rho_0$ is a function of the true effect size and the artifact multiplier, $\rho_0 = a_a \rho$. In the case of measurement validity, the artifact multiplier is the square root of the validity of the measurement, $a_a = \sqrt{r_{yy}}$. From this calculation, it follows that the artifact multiplier, and, hence the validity of the measurement, can be obtained as $a_a = \rho_0 / \rho$ (Hunter & Schmidt, 2004) From our model, we have estimated the observed attenuated effect size, $\rho_0$, of study $i$ as $\beta_0 + \beta_1 \textrm{accuracy}$. Given perfect accuracy, i.e. accuracy takes the value zero, the expected effect size of study i is equal to the intercept, $\beta_0$, which corresponds to the expected unattenuated effect size, $\rho$. From this it follows that the artifact multiplier, $a_a$, can be computed as the ratio of the attenuated effect size proportional to the unattenuated effect size:
+%
+\begin{equation}
+\label{eq:artifact_multiplier}
+a_a = \frac{\beta_0 + \beta_1 \textrm{accuracy}}{\beta_0}
+\end{equation}
+
+For example, if a study uses an eye tracker with an accuracy of $.50$, this yields an artifact multiplier equal to $(.66 – .553*.50)/.66 = .581$, meaning that studies with this level of accuracy will, on average, experience effect sizes that are $58.1\%$ of the true population effect size $\rho$. To compute the true average effect, $\rho$, we follow the psychometric meta-analysis method proposed by Hunter and Schmidt (2004). We first compute the unattenuated effect size correlation for each study, $r_i^u$, by dividing the Fisher $z$ transformed attenuated effect size with the artifact multiplier that corresponds to the level of the eye tracker accuracy and then applying the inverse Fisher transformation, $r_i^u = \tanh(\artanh(r_i)/a_a)$. Then, we weight each study by its sample size and its level of validity, so that studies using low accuracy eye trackers are corrected upwards, in terms of their effect sizes and variance (see Equation~\ref{eq:psychometric_rho}). A full list of eye trackers and their accuracy and precision can be found in Appendix~\ref{appendix}.
+
+
+\subsection{Multiple metrics}
+
+A second methodological issue in meta-analyses of eye movements is that studies often rely on different eye movement metrics as their dependent variable. However, to perform a meta-analysis, we need to compare studies across a common dependent variable. The many different eye-movement metrics stem from different research designs and research questions and, perhaps, also a lack of consensus about when and why to use which metrics. Many studies on bottom-up factors report fixation likelihood while studies on top-down factors often report fixation or dwell count. We focus on fixation likelihood and fixation count since they are easier to interpret than both the total fixation duration and the dwell count. The total fixation duration can, for instance, be difficult to interpret when there is a correlation between the fixation duration and the fixation count (Orquin \& Holmqvist, 2018, 2019). The dwell count is similarly difficult to interpret if there is a correlation between the number of or the duration of fixations per dwell and the probability of a dwell. In order to inspect whether it would be meaningful to average effect sizes across different eye tracking metrics, we reviewed the identified articles for studies that reported effect sizes in multiple metrics. We identified in total $43$ studies reporting fixation likelihood along with one additional metric and $48$ studies reporting fixation count along with one additional metric. To investigate the strength of the relationship between metrics, we inspected the linearity of the relationship between fixation likelihood and fixation count against other metrics by plotting all observations (Figure~\ref{fig:scatter_fix_likelihood_count}). Since the four eye movement metrics are highly correlated, we assume that the metrics related to the same underlying construct. 
+
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth]{flow}
+\centering
+\caption{Scatterplots showing the relationship between effect sizes expressed in fixation likelihood and fixation count A), between total fixation duration and fixation likelihood B), between total fixation duration and fixation count C), between total fixation duration and dwell count D), and between eye tracker accuracy and observed absolute effect size E). The trend line in each plot represents the best-fitting linear regression line, and the shaded area around the trend line its 95\% confidence interval.}
+\label{fig:scatter_fix_likelihood_count}
+\end{figure}
+
+
+While effect sizes expressed in different metrics are highly correlated, we should expect some differences between them. One mechanism that could lead to differences in effect size estimates between fixation likelihood and the remaining metrics is artificial dichotomization since fixation count, dwell count and total fixation duration are categorized as a binary outcome (fixated or not fixated). Artificial dichotomization of a naturally continuous variable attenuates correlations with other variables (Hunter \& Schmidt, 2004), and we should, therefore, expect effect sizes expressed in fixation likelihood to be somewhat smaller. Correcting for artificial dichotomization requires knowledge about the true distributional split. Since none of the included studies provide information about the true distributional split of the dichotomization and since we do not have access to all data sets, we are unable to compute the artifact multiplier as proposed by Hunter and Schmidt (2004). Furthermore, since the distributions of the eye tracking metrics either zero inflated normal distributed (total fixation duration) or Poisson distributed (fixation and dwell count), no such adjustments for dichotomization currently exist. Instead, we propose an empirically derived correction factor, am, to convert effect sizes expressed in one metric to another. We propose to estimate the correction factor based on our sample of studies reporting multiple metrics, by taking the ratio of the sample size weighted means expressed in the two metrics of interest:
+%
+\begin{equation}
+\label{eq:metrics_correction}
+a_m = \frac{\artanh \left( \frac{\sum M_i^1 N_i}{\sum N_i} \right)}{\artanh \left( \frac{\sum M_i^2 N_i}{\sum N_i} \right)}
+\end{equation}
+%
+where $\artanh \left( \frac{\sum M_i N_i}{\sum N_i} \right)$ is the Fisher $z$ transformed average effect size for metric $M^1$ and $M^2$ respectively weighted by sample sizes, $N$. The ratio is computed on the Fisher $z$ transformed effect sizes in order to meaningfully compare ratios across the whole range of correlations. For similar reasons, the correction factor is applied to Fisher $z$ transformed effect sizes which are then transformed back with the inverse Fisher transformation: $\tanh(\artanh(r_i)*a_m)$. The method takes advantage of the fact that effect sizes from the same study expressed in different metrics control for all factors that could influence the ratio.    
+
+As expected, we find that effect sizes reported in fixation likelihood are on average smaller than those reported in metrics that are not artificially dichotomized, i.e. fixation count, dwell count, and total fixation duration. An effect size estimate expressed in fixation likelihood is, for instance, $97.2\%$ of the effect expressed in fixation likelihood. SI Table~\ref{tab:metric_correction} shows an overview of the correction factor $a_m$ when correcting to fixation likelihood (all bottom-up studies) and fixation count (all top-down studies). The correction factor is applied to each individual study effect size, but not to the study variance. When a study effect size is reported in the desired metric, e.g., fixation count for top-down studies, $a_m$ takes the value $1$.  
+
+
+\subsection{Computation of effect sizes}
+
+Effect size information was transformed into a common effect size, the Pearson’s correlation coefficient r using the R package compute.es (Del Re, A. C., \& Del Re, M. A., 2012). When multiple sources for computation of effect sizes were available, priority was given in decreasing order to other effect size measures such as eta squared, chi square, or odds ratio, means, and standard deviations, test statistics (e.g., F, t, wald), beta coefficient, or p values. For studies reporting effect sizes as correlations, no further computations were performed. If a study reported p values as a threshold value, e.g., $p < .05$, we used a conservative p value equal to .05. When studies reported effect sizes for multiple AOIs, we computed the average effect size across AOIs (for a similar approach, see Chita-Teigmark, 2016). Effect sizes were extracted from the available dependent variables. 
+
+
+\subsection{Weighting of effect sizes, tests of heterogeneity}
+
+The effect sizes were analyzed with a psychometric meta-analysis following the Hunter and Schmidt approach. Individual effect sizes were first corrected using the metric correction factor, $a_m$, to yield a common dependent variable. Studies on bottom-up factors were corrected to fixation likelihood, and studies on top-down factors were corrected to fixation count. The psychometric meta-analysis computes the true average effect size $\rho$ based on the unattenuated correlation coefficients, $r_i^u$, weighted by sample size $n_i$, and corrected for validity by the artifact multiplier, $a_a$: 
+%
+\begin{equation}
+\label{eq:psychometric_rho}
+\rho = \frac{\sum_{i=1}^k n_i a_a^2 r_i^u}{\sum_{i=1}^k n_i a_a^2}
+\end{equation}
+
+To inspect the degree of heterogeneity in the meta-analysis, we computed the $I^2$ statistic. The $I^2$ is the proportion of variance in the observed (attenuated) effect estimates explained by artifacts and sampling error (Borenstein et al. 2011): 
+%
+\begin{equation}
+\label{eq:i2_statistic}
+I^2 = \frac{(T^u)^2}{(S^u)^2}
+\end{equation}
+%
+where $(S^u)^2$ is the weighted variance of the unattenuated effect size $\rho$
+%
+\begin{equation}
+\label{eq:Su2_var}
+(S^u)^2 = \frac{\sum_{i=1}^k n_i a_a^2 (\rho_i - \hat{\rho})^2}{\sum_{i=1}^k n_i a_a^2}
+\end{equation}
+%
+and $(T^u)^2$ is the between-studies variance component of the unattenuated effect size $\rho$
+%
+\begin{equation}
+\label{eq:Tu2_var}
+(T^u)^2 = (S^u)^2 \frac{\sum_{i=1}^k n_i a_a^2 v_i}{\sum_{i=1}^k n_i a_a^2}
+\end{equation}
+%
+where $v_i$ is the variance of study $i$ computed as $(1 - \hat{r}^2)^2 / (n_i - 1)$ and $\hat{r}$ is the sample size weighted average effect size.
+
+
+% -----------------------------------------------------------
+% Bibliography
+% -----------------------------------------------------------
+
+\bibliography{library.bib}
+
+
+
+% -----------------------------------------------------------
+% Appendix
+% -----------------------------------------------------------
+
+\section{Appendix}
+\label{appendix}
+
+
+\begin{table*}
+\caption{Eye tracker specifications table}
+\label{tab:eyetracker_specifications}
+\centering
+\begin{tabularx}{\columnwidth}{p{0.23\columnwidth}p{0.18\columnwidth}p{0.52\columnwidth}}
+  \cmidrule(lr){1-3}
+    \multicolumn{1}{l}{Parameter} &
+    \multicolumn{1}{l}{Prior} &
+    \multicolumn{1}{l}{Hyperpriors} \\
+  \cmidrule(lr){1-3}
+
+  \cmidrule(lr){1-3}
+
+\multicolumn{3}{p{0.95\columnwidth}}{\textit{Note}. blah.}
+\end{tabularx}
+\end{table*}
+\clearpage
+
+
+
+\begin{table*}
+\caption{Metric correction factor $a_m$ when correcting to either fixation count or fixation likelihood}
+\label{tab:metric_correction}
+\centering
+\begin{tabularx}{\columnwidth}{p{0.23\columnwidth}p{0.18\columnwidth}p{0.52\columnwidth}}
+  \cmidrule(lr){1-3}
+    \multicolumn{1}{l}{Parameter} &
+    \multicolumn{1}{l}{Prior} &
+    \multicolumn{1}{l}{Hyperpriors} \\
+  \cmidrule(lr){1-3}
+
+  \cmidrule(lr){1-3}
+
+\multicolumn{3}{p{0.95\columnwidth}}{\textit{Note}. blah.}
+\end{tabularx}
+\end{table*}
+\clearpage
+
+
+\begin{table*}
+\caption{Trim and fill analysis for each independent subgroup.}
+\label{tab:trim_and_fill}
+\centering
+\begin{tabularx}{\columnwidth}{p{0.23\columnwidth}p{0.18\columnwidth}p{0.52\columnwidth}}
+  \cmidrule(lr){1-3}
+    \multicolumn{1}{l}{Parameter} &
+    \multicolumn{1}{l}{Prior} &
+    \multicolumn{1}{l}{Hyperpriors} \\
+  \cmidrule(lr){1-3}
+
+  \cmidrule(lr){1-3}
+
+\multicolumn{3}{p{0.95\columnwidth}}{\textit{Note}. blah.}
+\end{tabularx}
+\end{table*}
+\clearpage
+
+\end{document}
