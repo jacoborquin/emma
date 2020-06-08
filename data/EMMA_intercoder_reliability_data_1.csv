@@ -1,0 +1,21 @@
+Paper ,DV,IV,EyeTracker,ES,N,Domain
+kim et al. 2012,FC,pref.view,EyeLink II,0.61,24,Risky Gamble
+Bialkova et al. 2014 Study 1 ,FC,Task,SMI RED,0.35,80,inf consumer choice
+Cavanagh et al. 2014,TFD,Choice.bias,EyeLink 1000,0.7387612,20,Risky Gamble
+Paernamets et al. 2016 Study 1,TFD,Task,SMI RED,0.489897948556636,58,pref. Non-consumer choice
+Guyader et al. 2016,TFD,Task,SMI Glasses,0.472801415647384,66,inf consumer choice
+Pieters & Warlop 1999,fix.like,Task,NA,0.053028954003499,54,pref. Consumer choice
+Braendstaatter & Koerner 2014,FC,Choice.bias,EyeLink II,0.774596669241483,80,Risky Gamble
+Van der Laan et al. 2017,TFD,Pref.view,Easygaze,0.254251218375118,107,pref. Consumer choice
+Van der Laan et al. 2015,TFD,Choice.bias,Easygaze,0.438175243107747,22,pref. Consumer choice
+Graham & Roberto 2016,fix.like,Size,EyeLink 1000,0.106884183846037,155,pref. Consumer choice
+Huang & Kuo 2011,fix.like,Task,EyeLink II,0.229563157512554,91,NA
+Krajbich et al. 2010,fix.ord,pref.view,NA,0.024174421758901,39,pref. Consumer choice
+Hwang & Lee 2017,TFD,Task,Tobii X2,0.122015015879562,42,inf. Consumer choice
+Keller et al. 2014,fix.count,Task,SMI iview,0.4224,159,inf. Non-consumer choice
+Kreplin et al. 2014 a,fix.count,LR.position,ASL6000,0.4,19,pref. Non-consumer choice
+Kreplin et al. 2014 b,TFD,LR.position,ASL6000,0.27,19,pref. Non-consumer choice
+Lohse 1997 a,fix.like,Salience,NA,0.08,32,pref. Consumer choice
+Lohse 1997 b,TFD,Size,NA,0.167828558,32,pref. Consumer choice
+Glaholt et al. 2009,TFD,Choice.bias,EyeLink 1000,0.74,16,inf. Non-consumer choice
+Nittono & Wada 2009 Study 1,TFD,Task,Nihon-Kohden EEG-1100,0.063127568087389,10,inf. Non-consumer choice
