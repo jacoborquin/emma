@@ -46,7 +46,7 @@ fontSize <- 1.75
 pointSize <- 1
 lineSize <- 0.5
 themeFontSize <- 6
-mt <- 1
+mt <- 0.9
 inch <- 0.3937008
 cm <- 2.54
 
@@ -59,6 +59,7 @@ fd_1c_1x0.66 <- c(height, 0.66*width)
 fd_1c_1x1 <- c(height, width)
 fd_1c_2x2 <- c(2*height, 2*width)
 fd_1c_2.5x2 <- c(2.5*height, 2*width)
+fd_1c_3x1 <- c(3*height, 1*width)
 fd_1c_3x2 <- c(3*height, 2*width)
 
 
@@ -84,6 +85,8 @@ fd_SI_3x2 <- c(3*height, 2*width)
 
 tufte <- 
     theme(
+        plot.title = element_text(
+            size = themeFontSize+1, hjust = 0.5, face = "bold"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.border = element_blank(),
@@ -184,7 +187,7 @@ genForest = function(rmaobj, data, IV_level, label, varname) {
 }
 
 # funnel plot function
-genFunnel = function(rmaobj, data, varname) { 
+genFunnel = function(rmaobj, data, varname, label) { 
 	fig = 
 		data %>%
 		select(DV = varname, vi.c) %>%
@@ -199,16 +202,25 @@ genFunnel = function(rmaobj, data, varname) {
  	plot <- 
 		ggplot(aes(x = SE, y = DV), data = fig) +
 		geom_segment(
-			aes(x=sqrt(max(data$vi.c)),xend=0,y=estimate,yend=estimate),
-			size = lineSize
+			aes(x=sqrt(max(data$vi.c)), xend=0, y=estimate, yend=estimate),
+			size = lineSize, color = "grey"
 		) +
 		geom_point(shape = 16, size = pointSize) +
 		xlab('Standard Error') + 
-		ylab('z') +
-		geom_line(aes(x = se.seq, y = ll95), data = dfCI, size = lineSize) +
-		geom_line(aes(x = se.seq, y = ul95), data = dfCI, size = lineSize) +
+		ylab('Effect size (Fisher transformed)') +
+		geom_line(
+            aes(x = se.seq, y = ll95), 
+            data = dfCI, size = lineSize,
+            color = "grey"
+        ) +
+		geom_line(
+            aes(x = se.seq, y = ul95), 
+            data = dfCI, size = lineSize,
+            color = "grey"
+        ) +
 		scale_x_reverse() +
 		coord_flip() +
+        ggtitle(label) +
 		mytheme 
 
 	return(plot)        

@@ -61,7 +61,9 @@ TEMP = data[, fix.count:N]
 TEMP = TEMP[TEMP$dwell.count != "NA" & TEMP$TFD != "NA"]
 DC_to_TFD = FisherZ(sum(TEMP$TFD*TEMP$N)/sum(TEMP$N))/
             FisherZ(sum(TEMP$dwell.count*TEMP$N)/sum(TEMP$N))
-DC_to_FC = DC_to_TFD*TFD_to_FC # no cases for computing DC to FC or FL hence the current approach
+
+# no cases for computing DC to FC or FL hence the current approach
+DC_to_FC = DC_to_TFD*TFD_to_FC 
 DC_to_FL = DC_to_TFD*TFD_to_FL
   
 # correcting effect sizes to fixation count and fixation likelihood based on observed metric type
@@ -100,10 +102,16 @@ colnames(metric_correction_factors)[1:3] <- c(
 write_csv(metric_correction_factors, file.path(tablesDir, "metric_correction.csv"))
 
 # latex version
-tab_caption <- "Metric correction factor $a_m$ when correcting to either fixation count or fixation likelihood"
+tab_caption <- "Metric correction factor $a_m$ when correcting to either fixation count or fixation likelihood. These correction factors were used to make sure all dependent variables are comparable."
 tab_label <- "tab:metric_correction"
 print(
-	xtable(metric_correction_factors, caption=tab_caption, label=tab_label), 
+	xtable(
+		metric_correction_factors, 
+		caption = tab_caption, 
+		label = tab_label, 
+		align = "lllc",
+		digits = 3
+	), 
 	include.rownames = FALSE,
 	caption.placement = "top", 
     sanitize.text.function = function(x){x},

@@ -64,6 +64,8 @@ data_long = data_long[,
 	), 
 	by = c("Study", "IV")
 ]
+# verify
+any(table(data_long$Study, data_long$IV) > 1) == FALSE
 
 # chi square test
 table = table(data_long$IV, data_long$Eye.tracker)
@@ -83,15 +85,16 @@ model212 <- lmer(R_abs~ Accuracy + IV + (1|Study), data_long)
 model22 <- lmer(R_abs~ Precision + (1|Study), data_long)
 model222 <- lmer(R_abs~ Precision + IV + (1|Study), data_long)
 model23 <- lmer(R_abs~ Precision + Accuracy + (1|Study), data_long)
+model24 <- lmer(R_abs~ Precision + Accuracy + IV + (1|Study), data_long)
 
 # winning model21 has lowest BIC
 # includes accuracy, but not precision
-anova(model1,model2,model3,model21,model22,model23,model212,model222) 
+anova(model1,model2,model3,model21,model22,model23,model24,model212,model222) 
 
 # compute artefact multiplier based on accuracy for psychometric meta-analysis
 b0 = coef(summary(model21))[1,1] 
 b1 = coef(summary(model21))[2,1]
-data$a_acc = (b0 + b1*data$Accuracy)/b0 # see eq. 1 in manuscript
+data$a_acc = (b0 + b1*data$Accuracy)/b0 
 
 
 # -----
@@ -114,8 +117,8 @@ figure <-
 	geom_point(alpha = .5, size = pointSize) +
 	# geom_smooth(method = "lm", color = "black", size = lineSize*2) +
 	geom_abline(intercept = b0, slope = b1, size = lineSize*1) +
-	scale_x_continuous("Eye tracker accuracy", breaks = seq(0.4, 1, by=.1)) +
-	ylab("Observed effect size") +
+	scale_x_continuous("Eye tracker accuracy (visual angle)", breaks = seq(0.4, 1, by=.1)) +
+	ylab("Observed effect size (|correlation|)") +
 	mytheme
 filename <- file.path(figsDir, "ET_accuracy_effectsize.pdf")
 savePlots(figure, filename, fd_SI_1x1.5)
@@ -128,10 +131,9 @@ savePlots(figure, filename, fd_SI_1x1.5)
 acc_table = data.table(summary(model21)$coef) 
 obs = data.table("Number of observations =",NROW(data_long),NA,NA,NA)
 Ll = data.table("Log likelihood =",as.numeric(summary(model21)$logLik),NA,NA,NA)
-AIC = data.table("AIC =",AIC(model21),NA,NA,NA)
 BIC = data.table("BIC =",BIC(model21),NA,NA,NA)
 Raneff = data.table("SD(study) =",data.frame(summary(model21)$varcor)[1,5],NA,NA,NA)
-l = list(acc_table,obs,Ll,AIC,BIC,Raneff)
+l = list(acc_table,obs,Ll,BIC,Raneff)
 acc_table = rbindlist(l)
 acc_table = acc_table %>% mutate_at(vars(2:5), round, 3)
 setnames(acc_table, c(2:5), c("SE", "df","t","p"))
@@ -152,16 +154,22 @@ print(
 # make eye tracker specifications table for manuscript appendix
 ET_specs_final = data[, list(A = unique(a_acc), accuracy = unique(Accuracy), precision = unique(Precision)), by= c("Eye.tracker")]
 ET_specs_final$A <- round(ET_specs_final$A, 4)
-setnames(ET_specs_final, c(1:2), c("Eye tracker model", "$a_a$"))
+setnames(ET_specs_final, c(1:4), c("Eye tracker model", "$a_a$", "Accuracy", "Precision"))
 write_csv(ET_specs_final, file.path(tablesDir, "eyetracker_specs.csv"))
 
 # latex version
-tab_caption <- "Eye tracker specifications table"
+tab_caption <- "Eye tracker specifications table, with accuracy and precision for each eye tracker as extracted from the manufacturer website, and computed artifact multiplier used for correcting for a bias in effect size estimates."
 tab_label <- "tab:eyetracker_specifications"
 tab_note <- paste0("\\hline \n \\multicolumn{4}{l}",
            "{\\scriptsize{\\textit{Note.} $a_a$ = artifact multiplier.}} \n")
 print(
-	xtable(ET_specs_final, caption=tab_caption, label=tab_label), 
+	xtable(
+		ET_specs_final, 
+		caption = tab_caption, 
+		label = tab_label, 
+		align = "llccc",
+		digits = c(0,0,4,2,2)
+	), 
 	include.rownames = FALSE,
 	caption.placement = "top", 
 	hline.after = c(-1, 0),

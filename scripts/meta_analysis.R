@@ -166,36 +166,44 @@ cat(result, file = file.path(tablesDir, "moderator_choicebias.tex"))
 # -----
 
 mainresults = data.frame(rbind(
+  c("\\textbf{Visual factors}",NA,NA,NA,NA),
   c("Salience",salres$k,sum(saldata$N),coef(summary(salres)),salres$I2),
   c("Surface size",sizeres$k,sum(sizedata$N),coef(summary(sizeres)),sizeres$I2),
   c("Left vs right position",LRres$k,sum(LRdata$N),coef(summary(LRres)),LRres$I2),
   c("Center position",centerres$k,sum(centerdata$N),coef(summary(centerres)),centerres$I2),
   c("Set size",setres$k,sum(setdata$N),coef(summary(setres)),setres$I2),
-  c("\\textit{Alternative}",setmod_alt$k,sum(setdata$N[setdata$Alt.att == "alternative"]),coef(summary(setmod_alt)),setmod_alt$I2),
-  c("\\textit{Attribute}",setmod_att$k,sum(setdata$N[setdata$Alt.att == "attribute"]),coef(summary(setmod_att)),setmod_att$I2),
+  c("\\hspace{2mm}\\textit{Alternative}",setmod_alt$k,sum(setdata$N[setdata$Alt.att == "alternative"]),coef(summary(setmod_alt)),setmod_alt$I2),
+  c("\\hspace{2mm}\\textit{Attribute}",setmod_att$k,sum(setdata$N[setdata$Alt.att == "attribute"]),coef(summary(setmod_att)),setmod_att$I2),
+  c("\\textbf{Cognitive factors}",NA,NA,NA,NA),
   c("Task instruction",taskres$k,sum(taskdata$N),coef(summary(taskres)),taskres$I2),
-  c("\\textit{Alternative}",taskmod_alt$k,sum(taskdata$N[taskdata$Alt.att == "alternative"]),coef(summary(taskmod_alt)),taskmod_alt$I2),
-  c("\\textit{Attribute}",taskmod_att$k,sum(taskdata$N[taskdata$Alt.att == "attribute"]),coef(summary(taskmod_att)),taskmod_att$I2),
+  c("\\hspace{2mm}\\textit{Alternative}",taskmod_alt$k,sum(taskdata$N[taskdata$Alt.att == "alternative"]),coef(summary(taskmod_alt)),taskmod_alt$I2),
+  c("\\hspace{2mm}\\textit{Attribute}",taskmod_att$k,sum(taskdata$N[taskdata$Alt.att == "attribute"]),coef(summary(taskmod_att)),taskmod_att$I2),
   c("Preferential viewing",prefres$k,sum(prefdata$N),coef(summary(prefres)),prefres$I2),
-  c("\\textit{Alternative}",prefmod_alt$k,sum(prefdata$N[prefdata$Alt.att == "alternative"]),coef(summary(prefmod_alt)),prefmod_alt$I2),
-  c("\\textit{Attribute}",prefmod_att$k,sum(prefdata$N[prefdata$Alt.att == "attribute"]),coef(summary(prefmod_att)),prefmod_att$I2),
+  c("\\hspace{2mm}\\textit{Alternative}",prefmod_alt$k,sum(prefdata$N[prefdata$Alt.att == "alternative"]),coef(summary(prefmod_alt)),prefmod_alt$I2),
+  c("\\hspace{2mm}\\textit{Attribute}",prefmod_att$k,sum(prefdata$N[prefdata$Alt.att == "attribute"]),coef(summary(prefmod_att)),prefmod_att$I2),
   c("Choice bias",choiceres$k,sum(choicedata$N),coef(summary(choiceres)),choiceres$I2)
-  ))
+))
 
 # format main results table, e.g. rounding, variable naming etc.
 mainresults[2:10] <- sapply(mainresults[2:10], as.numeric)
 mainresults = mainresults %>% mutate_at(vars(4:10), round, 3)
-setnames(mainresults, c(1:10), c("Group","$k$","$N$","Estimate","SE","$Z$","$p$","$\\textrm{CI}_{95}$ LL","$\\textrm{CI}_{95}$ UL","$I^2$"))
+setnames(mainresults, c(1:10), c("Group","$k$","$N$","$\\rho$","SE","$Z$","$p$","$\\textrm{CI}_{95}$ LL","$\\textrm{CI}_{95}$ UL","$I^2$"))
 mainresults$Group = as.character(mainresults$Group)
 write_csv(mainresults, file.path(tablesDir, "main_results.csv"))
 
 # latex version
-tab_caption <- "Main results of the meta-analysis divided into independent variable subgroups."
+tab_caption <- "Main results of the meta-analysis, divided into visual and cognitive factor groups, and individual factors within them, including sub-factors used in the moderator analyses."
 tab_label <- "tab:main_results"
 tab_note <- paste0("\\hline \n \\multicolumn{10}{p{0.9\\textwidth}}",
-           "{\\scriptsize{\\textit{Note.} $k$ = number of studies; $N$ = number of participants; Estimate = unattenuated effect size estimate, SE = standard error of estimate; $Z$ = Z statistic; $p$ = significance level; $\\textrm{CI}_{95}$ LL = lower limit of the 95\\% confidence interval; $\\textrm{CI}_{95}$ UL = upper limit of the 95\\% confidence interval, $I^2$ = within-group heterogeneity. Italicized groups are moderator subgroups.}} \n")
+           "{\\scriptsize{\\textit{Note.} $k$ = number of studies; $N$ = number of participants; $\\rho$ = unattenuated effect size estimate, SE = standard error of estimate; $Z$ = Z statistic; $p$ = significance level; $\\textrm{CI}_{95}$ LL = lower limit of the 95\\% confidence interval; $\\textrm{CI}_{95}$ UL = upper limit of the 95\\% confidence interval, $I^2$ = within-group heterogeneity. Italicized groups are moderator subgroups.}} \n")
 print(
-	xtable(mainresults, caption=tab_caption, label=tab_label), 
+	xtable(
+		mainresults, 
+		caption = tab_caption, 
+		label = tab_label,
+		align = "llccccccccc",
+		digits = c(0,0,0,0,3,3,3,3,3,3,3)
+	), 
 	include.rownames = FALSE,
 	caption.placement = "top", 
 	hline.after = c(-1, 0),
@@ -213,36 +221,44 @@ print(
 # -----
 
 trimresults = data.frame(rbind(
+  c("\\textbf{Visual factors}",NA,NA),
   c("Salience",salTrim$k0,coef(summary(salTrim))),
   c("Surface size",sizeTrim$k0,coef(summary(sizeTrim))),
   c("Left vs right position",LRTrim$k0,coef(summary(LRTrim))),
   c("Center position",centerTrim$k0,coef(summary(centerTrim))),
   c("Set size",setTrim$k0,coef(summary(setTrim))),
-  c("\\textit{Alternative}",setmod_altTrim$k0,coef(summary(setmod_altTrim))),
-  c("\\textit{Attribute}",setmod_attTrim$k0,coef(summary(setmod_attTrim))),
+  c("\\hspace{2mm}\\textit{Alternative}",setmod_altTrim$k0,coef(summary(setmod_altTrim))),
+  c("\\hspace{2mm}\\textit{Attribute}",setmod_attTrim$k0,coef(summary(setmod_attTrim))),
+  c("\\textbf{Cognitive factors}",NA,NA),
   c("Task instruction",taskTrim$k0,coef(summary(taskTrim))),
-  c("\\textit{Alternative}",taskmod_altTrim$k0,coef(summary(taskmod_altTrim))),
-  c("\\textit{Attribute}",taskmod_attTrim$k0,coef(summary(taskmod_attTrim))),
+  c("\\hspace{2mm}\\textit{Alternative}",taskmod_altTrim$k0,coef(summary(taskmod_altTrim))),
+  c("\\hspace{2mm}\\textit{Attribute}",taskmod_attTrim$k0,coef(summary(taskmod_attTrim))),
   c("Preferential viewing",prefTrim$k0,coef(summary(prefTrim))),
-  c("\\textit{Alternative}",prefmod_altTrim$k0,coef(summary(prefmod_altTrim))),
-  c("\\textit{Attribute}",prefmod_attTrim$k0,coef(summary(prefmod_attTrim))),
+  c("\\hspace{2mm}\\textit{Alternative}",prefmod_altTrim$k0,coef(summary(prefmod_altTrim))),
+  c("\\hspace{2mm}\\textit{Attribute}",prefmod_attTrim$k0,coef(summary(prefmod_attTrim))),
   c("Choice bias",choiceTrim$k0,coef(summary(choiceTrim)))
-  ))
+))
 
 # format trim and fill results table, e.g. rounding, variable naming etc.
 trimresults[2:8] <- sapply(trimresults[2:8],as.numeric)
 trimresults = trimresults %>% mutate_at(vars(2:8), round, 3)
-setnames(trimresults, c(1:8), c("Group","Studies filled","Estimate","SE","$Z$","$p$","$\\textrm{CI}_{95}$ LL","$\\textrm{CI}_{95}$ UL"))
+setnames(trimresults, c(1:8), c("Group","Studies filled","$\\rho$","SE","$Z$","$p$","$\\textrm{CI}_{95}$ LL","$\\textrm{CI}_{95}$ UL"))
 trimresults$Group = as.character(trimresults$Group)
 write_csv(trimresults, file.path(tablesDir, "trim_fill_results.csv"))
 
 # latex version
-tab_caption <- "Trim and fill analysis for each independent subgroup."
+tab_caption <- "Trim and fill analysis for each visual and cognitive factor, including sub-factors used in the moderator analyses."
 tab_label <- "tab:trim_fill_results"
 tab_note <- paste0("\\hline \n \\multicolumn{8}{p{0.9\\textwidth}}",
-           "{\\scriptsize{\\textit{Note.} Estimate = unattenuated effect size estimate, SE = standard error of estimate; $Z$ = Z statistic; $p$ = significance level; $\\textrm{CI}_{95}$ LL = lower limit of the 95\\% confidence interval; $\\textrm{CI}_{95}$ UL = upper limit of the 95\\% confidence interval. Italicized groups are moderator subgroups.}} \n")
+           "{\\scriptsize{\\textit{Note.} $\\rho$ = unattenuated effect size estimate, SE = standard error of estimate; $Z$ = Z statistic; $p$ = significance level; $\\textrm{CI}_{95}$ LL = lower limit of the 95\\% confidence interval; $\\textrm{CI}_{95}$ UL = upper limit of the 95\\% confidence interval. Italicized groups are moderator subgroups.}} \n")
 print(
-	xtable(trimresults, caption=tab_caption, label=tab_label), 
+	xtable(
+		trimresults, 
+		caption = tab_caption, 
+		label = tab_label,
+		align = "llccccccc",
+		digits = c(0,0,0,3,3,3,3,3,3)
+	), 
 	include.rownames = FALSE,
 	caption.placement = "top", 
 	hline.after = c(-1, 0),
@@ -309,27 +325,35 @@ prefplot_alt = genForest(prefmod_alt,prefdata[Alt.att == "alternative"],"Pref.vi
 prefplot_att = genForest(prefmod_att,prefdata[Alt.att == "attribute"],"Pref.view", "Preferential viewing - attribute", "yi.c.FC") 
 
 # arange all forest plots in panel plot for manuscript - main ones
-BUleftside = plot_grid(salplot,LRplot,setplot_alt,labels = c("A","C","E"), ncol = 1, rel_heights = c(9,5,7))
-BUrightside = plot_grid(sizeplot,centerplot,setplot_att,labels = c("B","D","F"), ncol = 1, rel_heights = c(7,11,6))
-BUplot = plot_grid(BUleftside, BUrightside, ncol = 2)
-TDleftside = plot_grid(taskplot_alt,prefplot_alt,choiceplot,labels = c("G","I","K"), ncol = 1, rel_heights = c(8,6,11))
-TDrightside = plot_grid(taskplot_att,prefplot_att,labels = c("H","J","F"), nrow = 3, rel_heights = c(11,12,9))
-TDplot = plot_grid(TDleftside,TDrightside, ncol = 2)
-forestpanel = plot_grid(BUplot,TDplot, nrow = 2, rel_heights = c(2,3))
-filename <- file.path(figsDir, "forest_plots.pdf")
-savePlots(forestpanel, filename, fd_1c_3x2)
+# BUleftside = plot_grid(salplot,LRplot,setplot_alt,labels = c("A","C","E"), ncol = 1, rel_heights = c(9,5,7))
+# BUrightside = plot_grid(sizeplot,centerplot,setplot_att,labels = c("B","D","F"), ncol = 1, rel_heights = c(7,11,6))
+# BUplot = plot_grid(BUleftside, BUrightside, ncol = 2)
+# TDleftside = plot_grid(taskplot_alt,prefplot_alt,choiceplot,labels = c("G","I","K"), ncol = 1, rel_heights = c(8,6,11))
+# TDrightside = plot_grid(taskplot_att,prefplot_att,labels = c("H","J","F"), nrow = 3, rel_heights = c(11,12,9))
+# TDplot = plot_grid(TDleftside,TDrightside, ncol = 2)
+# forestpanel = plot_grid(BUplot,TDplot, nrow = 2, rel_heights = c(2,3))
+# filename <- file.path(figsDir, "forest_plots.pdf")
+# savePlots(forestpanel, filename, fd_1c_3x2)
 
-# arange all forest plots in panel plot for manuscript - main ones
+# arange all forest plots in panel plot for manuscript - visual factors
 forestpanel = plot_grid(
 	salplot, centerplot,
 	LRplot, sizeplot,
-	setplot, taskplot,
-	prefplot, choiceplot, 
-    labels = LETTERS[1:8], 
+	setplot, 
+    labels = LETTERS[1:5], 
     ncol = 2
 )
-filename <- file.path(figsDir, "forest_plots.pdf")
+filename <- file.path(figsDir, "forest_plots_visual.pdf")
 savePlots(forestpanel, filename, fd_1c_3x2)
+
+# arange all forest plots in panel plot for manuscript - visual factors
+forestpanel = plot_grid(
+	taskplot, prefplot, choiceplot, 
+    labels = LETTERS[1:3], 
+    ncol = 1
+)
+filename <- file.path(figsDir, "forest_plots_cognitive.pdf")
+savePlots(forestpanel, filename, fd_1c_3x1)
 
 # arange all forest plots in panel plot for manuscript - alt vs att ones
 forestpanel = plot_grid(
@@ -348,20 +372,20 @@ savePlots(forestpanel, filename, fd_SI_3x2)
 # -----
 
 # generating funnel plots for each main and subgroup
-salfunnel = genFunnel(salres,saldata,"yi.c.FL")
-sizefunnel = genFunnel(sizeres,sizedata,"yi.c.FL")
-LRfunnel = genFunnel(LRres,LRdata,"yi.c.FL")
-centerfunnel = genFunnel(centerres,centerdata,"yi.c.FL")
-setfunnel = genFunnel(setres,setdata,"yi.c.FL")
-setfunnel_alt = genFunnel(setmod_alt,setdata[setdata$Alt.att == "alternative"],"yi.c.FL")
-setfunnel_att = genFunnel(setmod_att,setdata[setdata$Alt.att == "attribute"],"yi.c.FL")
-taskfunnel = genFunnel(taskres,taskdata,"yi.c.FC")
-taskfunnel_alt = genFunnel(taskmod_alt,taskdata[taskdata$Alt.att == "alternative"],"yi.c.FC")
-taskfunnel_att = genFunnel(taskmod_att,taskdata[taskdata$Alt.att == "attribute"],"yi.c.FC")
-preffunnel = genFunnel(prefres,prefdata,"yi.c.FC")
-preffunnel_alt = genFunnel(prefmod_alt,prefdata[prefdata$Alt.att == "alternative"],"yi.c.FC")
-preffunnel_att = genFunnel(prefmod_att,prefdata[prefdata$Alt.att == "attribute"],"yi.c.FC")
-choicefunnel = genFunnel(choiceres,choicedata,"yi.c.FC")
+salfunnel = genFunnel(salres,saldata,"yi.c.FL","Salience")
+sizefunnel = genFunnel(sizeres,sizedata,"yi.c.FL", "Surface size")
+LRfunnel = genFunnel(LRres,LRdata,"yi.c.FL", "Left vs right position")
+centerfunnel = genFunnel(centerres,centerdata,"yi.c.FL", "Center position")
+setfunnel = genFunnel(setres,setdata,"yi.c.FL", "Set size")
+setfunnel_alt = genFunnel(setmod_alt,setdata[setdata$Alt.att == "alternative"],"yi.c.FL", "Set size - altenrative")
+setfunnel_att = genFunnel(setmod_att,setdata[setdata$Alt.att == "attribute"],"yi.c.FL", "Set size - attribute")
+taskfunnel = genFunnel(taskres,taskdata,"yi.c.FC", "Inferential viewing")
+taskfunnel_alt = genFunnel(taskmod_alt,taskdata[taskdata$Alt.att == "alternative"],"yi.c.FC", "Inferential viewing - alternative")
+taskfunnel_att = genFunnel(taskmod_att,taskdata[taskdata$Alt.att == "attribute"],"yi.c.FC", "Inferential viewing - attribute")
+preffunnel = genFunnel(prefres,prefdata,"yi.c.FC", "Preferential viewing")
+preffunnel_alt = genFunnel(prefmod_alt,prefdata[prefdata$Alt.att == "alternative"],"yi.c.FC", "Preferential viewing - alternative")
+preffunnel_att = genFunnel(prefmod_att,prefdata[prefdata$Alt.att == "attribute"],"yi.c.FC", "Preferential viewing - attribute")
+choicefunnel = genFunnel(choiceres,choicedata,"yi.c.FC", "Choice bias")
 
 # arrange funnel plots in panel plot - main ones
 funnelpanel = plot_grid(
