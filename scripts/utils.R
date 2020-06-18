@@ -173,11 +173,14 @@ genForest = function(rmaobj, data, IV_level, label, varname) {
 		ggplot(fig, aes(x = reorder(Study,-DV), y = DV)) +
 		geom_hline(yintercept = 0, size = lineSize, color = "grey") +
 		geom_point(size = pointSize) +
-		geom_errorbar(aes(ymin=LL, ymax=UL), width = .2, size = lineSize*1) +
+		geom_errorbar(
+            aes(ymin = LL, ymax = UL), 
+            width = .2, size = lineSize*1
+        ) +
 		coord_flip() +
-		facet_grid(Domain ~., scales = "free_y",space = "free")+
+		facet_grid(Domain ~., scales = "free_y", space = "free")+
 		mytheme +
-		ylim(-1, 1) +
+		ylim(-1.05, 1.05) +
 		xlab("") +
 		ylab("") + 
 		scale_color_manual(values = "black")+
