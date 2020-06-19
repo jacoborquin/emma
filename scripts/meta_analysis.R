@@ -277,9 +277,9 @@ mainresults = data.frame(rbind(
   extractInfo("Set size",setres,setTrimZ,setdata),
 
   c("\\textbf{Cognitive factors}", rep(NA, 9)),
-  extractInfo("Left vs right position",taskres,taskTrimZ,taskdata),
-  extractInfo("Center position",prefres,prefTrimZ,prefdata),
-  extractInfo("Set size",choiceres,choiceTrimZ,choicedata)
+  extractInfo("Task instructions",taskres,taskTrimZ,taskdata),
+  extractInfo("Preferential viewing",prefres,prefTrimZ,prefdata),
+  extractInfo("Choice bias",choiceres,choiceTrimZ,choicedata)
 ), stringsAsFactors = FALSE)
 
 # format main results table, e.g. rounding, variable naming etc.
