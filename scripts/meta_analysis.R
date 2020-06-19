@@ -363,7 +363,7 @@ print(
   caption.placement = "top", 
   hline.after = c(-1, 0),
   add.to.row = list(
-    pos = list(nrow(mainresults)),
+    pos = list(nrow(modresults)),
         command = tab_note
     ),
     sanitize.text.function = function(x){x},
