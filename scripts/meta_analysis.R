@@ -47,7 +47,7 @@ data$yi.c.FC = FisherZInv(FisherZ(data$fix.count.m)/data$a_acc)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # visual salience
-saldata = data.table(escalc(measure="COR", ri=fix.like.m, ni=N, data=data[data$IV == "Salience"], vtype="AV")[,c(1:17,19)])
+saldata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Salience"], vtype="AV")[,c(1:17,19)])
 saldata$vi.c = saldata$vi/saldata$a_acc^2 # compute corrected variances based on artefact multiplier
 salres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=saldata, method="HS")
 salTrim = trimfill(salres)
@@ -59,7 +59,7 @@ salTrimZ$ci.ub = FisherZInv(salTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # surface size
-sizedata = data.table(escalc(measure="COR", ri=fix.like.m, ni=N, data=data[data$IV == "Size"], vtype="AV")[,c(1:17,19)])
+sizedata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Size"], vtype="AV")[,c(1:17,19)])
 sizedata$vi.c = sizedata$vi/sizedata$a_acc^2
 sizeres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=sizedata, method="HS")
 sizeTrim = trimfill(sizeres)
@@ -71,7 +71,7 @@ sizeTrimZ$ci.ub = FisherZInv(sizeTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # left v right position
-LRdata = data.table(escalc(measure="COR", ri=fix.like.m, ni=N, data=data[data$IV == "LR.position"], vtype="AV")[,c(1:17,19)])
+LRdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "LR.position"], vtype="AV")[,c(1:17,19)])
 LRdata$vi.c = LRdata$vi/LRdata$a_acc^2
 LRres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=LRdata, method="HS")
 LRTrim = trimfill(LRres)
@@ -83,7 +83,7 @@ LRTrimZ$ci.ub = FisherZInv(LRTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # centrality position
-centerdata = data.table(escalc(measure="COR", ri=fix.like.m, ni=N, data=data[data$IV == "Center.position"], vtype="AV")[,c(1:17,19)])
+centerdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Center.position"], vtype="AV")[,c(1:17,19)])
 centerdata$vi.c = centerdata$vi/centerdata$a_acc^2
 centerres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=centerdata, method="HS")
 centerTrim = trimfill(centerres)
@@ -95,7 +95,7 @@ centerTrimZ$ci.ub = FisherZInv(centerTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # set size
-setdata = data.table(escalc(measure="COR", ri=fix.like.m, ni=N, data=data[data$IV == "Setsize"], vtype="AV")[,c(1:17,19)])
+setdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Setsize"], vtype="AV")[,c(1:17,19)])
 setdata$vi.c = setdata$vi/setdata$a_acc^2
 setres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata, method="HS")
 setTrim = trimfill(setres)
@@ -245,19 +245,16 @@ cat(result, file = file.path(tablesDir, "moderator_choicebias.tex"))
 # Table with main results for manuscript
 # -----
 
-extractInfo <- function(name, mainres, trimres=choiceTrimZ, data) {
+extractInfo <- function(name, mainres, trimres, data) {
     res <- c(
         name,
         paste0(mainres$k, " (", trimres$k0, ")"),
         paste0(sum(data$N)),
         paste0(round(coef(summary(mainres))$estimate, 3), " (", 
             round(trimres$b, 3), ")"),
-        paste0(round(coef(summary(mainres))$se, 3), " (", 
-            round(coef(summary(trimres))$se, 3), ")"),
-        paste0(round(coef(summary(mainres))$zval, 3), " (", 
-            round(coef(summary(trimres))$zval, 3), ")"),
-        paste0(round(coef(summary(mainres))$pval, 3), " (", 
-            round(coef(summary(trimres))$pval, 3), ")"),
+        paste0(round(coef(summary(mainres))$se, 3)),
+        paste0(round(coef(summary(mainres))$zval, 3)),
+        paste0(round(coef(summary(mainres))$pval, 3)),
         paste0(round(coef(summary(mainres))$ci.lb, 3), " (", 
             round(trimres$ci.lb, 3), ")"),
         paste0(round(coef(summary(mainres))$ci.ub, 3), " (", 
