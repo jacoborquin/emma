@@ -51,11 +51,11 @@ saldata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$
 saldata$vi.c = saldata$vi/saldata$a_acc^2 # compute corrected variances based on artefact multiplier
 salres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=saldata, method="HS")
 salTrim = trimfill(salres)
-salresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=saldata)
-salTrimZ = trimfill(salresZ)
-salTrimZ$b = FisherZInv(salTrimZ$b)
-salTrimZ$ci.lb = FisherZInv(salTrimZ$ci.lb)
-salTrimZ$ci.ub = FisherZInv(salTrimZ$ci.ub)
+# salresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=saldata)
+# salTrimZ = trimfill(salresZ)
+# salTrimZ$b = FisherZInv(salTrimZ$b)
+# salTrimZ$ci.lb = FisherZInv(salTrimZ$ci.lb)
+# salTrimZ$ci.ub = FisherZInv(salTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # surface size
@@ -63,11 +63,11 @@ sizedata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data
 sizedata$vi.c = sizedata$vi/sizedata$a_acc^2
 sizeres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=sizedata, method="HS")
 sizeTrim = trimfill(sizeres)
-sizeresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=sizedata)
-sizeTrimZ = trimfill(sizeresZ)
-sizeTrimZ$b = FisherZInv(sizeTrimZ$b)
-sizeTrimZ$ci.lb = FisherZInv(sizeTrimZ$ci.lb)
-sizeTrimZ$ci.ub = FisherZInv(sizeTrimZ$ci.ub)
+# sizeresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=sizedata)
+# sizeTrimZ = trimfill(sizeresZ)
+# sizeTrimZ$b = FisherZInv(sizeTrimZ$b)
+# sizeTrimZ$ci.lb = FisherZInv(sizeTrimZ$ci.lb)
+# sizeTrimZ$ci.ub = FisherZInv(sizeTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # left v right position
@@ -75,11 +75,11 @@ LRdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$I
 LRdata$vi.c = LRdata$vi/LRdata$a_acc^2
 LRres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=LRdata, method="HS")
 LRTrim = trimfill(LRres)
-LRresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=LRdata)
-LRTrimZ = trimfill(LRresZ)
-LRTrimZ$b = FisherZInv(LRTrimZ$b)
-LRTrimZ$ci.lb = FisherZInv(LRTrimZ$ci.lb)
-LRTrimZ$ci.ub = FisherZInv(LRTrimZ$ci.ub)
+# LRresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=LRdata)
+# LRTrimZ = trimfill(LRresZ)
+# LRTrimZ$b = FisherZInv(LRTrimZ$b)
+# LRTrimZ$ci.lb = FisherZInv(LRTrimZ$ci.lb)
+# LRTrimZ$ci.ub = FisherZInv(LRTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # centrality position
@@ -87,11 +87,11 @@ centerdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[da
 centerdata$vi.c = centerdata$vi/centerdata$a_acc^2
 centerres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=centerdata, method="HS")
 centerTrim = trimfill(centerres)
-centerresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=centerdata)
-centerTrimZ = trimfill(centerresZ)
-centerTrimZ$b = FisherZInv(centerTrimZ$b)
-centerTrimZ$ci.lb = FisherZInv(centerTrimZ$ci.lb)
-centerTrimZ$ci.ub = FisherZInv(centerTrimZ$ci.ub)
+# centerresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=centerdata)
+# centerTrimZ = trimfill(centerresZ)
+# centerTrimZ$b = FisherZInv(centerTrimZ$b)
+# centerTrimZ$ci.lb = FisherZInv(centerTrimZ$ci.lb)
+# centerTrimZ$ci.ub = FisherZInv(centerTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # set size
@@ -99,11 +99,11 @@ setdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$
 setdata$vi.c = setdata$vi/setdata$a_acc^2
 setres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata, method="HS")
 setTrim = trimfill(setres)
-setresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=setdata)
-setTrimZ = trimfill(setresZ)
-setTrimZ$b = FisherZInv(setTrimZ$b)
-setTrimZ$ci.lb = FisherZInv(setTrimZ$ci.lb)
-setTrimZ$ci.ub = FisherZInv(setTrimZ$ci.ub)
+# setresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=setdata)
+# setTrimZ = trimfill(setresZ)
+# setTrimZ$b = FisherZInv(setTrimZ$b)
+# setTrimZ$ci.lb = FisherZInv(setTrimZ$ci.lb)
+# setTrimZ$ci.ub = FisherZInv(setTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # set size moderator analysis - effect of attribute vs alternatives
@@ -113,17 +113,17 @@ setmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata[setdata$Alt.att == 
 setmod_attTrim = trimfill(setmod_att)
 setmod_altTrim = trimfill(setmod_alt)
 
-setmod_attZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=setdata[setdata$Alt.att == "attribute",])
-setmod_attTrimZ = trimfill(setmod_attZ)
-setmod_attTrimZ$b = FisherZInv(setmod_attTrimZ$b)
-setmod_attTrimZ$ci.lb = FisherZInv(setmod_attTrimZ$ci.lb)
-setmod_attTrimZ$ci.ub = FisherZInv(setmod_attTrimZ$ci.ub)
+# setmod_attZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=setdata[setdata$Alt.att == "attribute",])
+# setmod_attTrimZ = trimfill(setmod_attZ)
+# setmod_attTrimZ$b = FisherZInv(setmod_attTrimZ$b)
+# setmod_attTrimZ$ci.lb = FisherZInv(setmod_attTrimZ$ci.lb)
+# setmod_attTrimZ$ci.ub = FisherZInv(setmod_attTrimZ$ci.ub)
 
-setmod_altZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=setdata[setdata$Alt.att == "alternative",])
-setmod_altTrimZ = trimfill(setmod_altZ)
-setmod_altTrimZ$b = FisherZInv(setmod_altTrimZ$b)
-setmod_altTrimZ$ci.lb = FisherZInv(setmod_altTrimZ$ci.lb)
-setmod_altTrimZ$ci.ub = FisherZInv(setmod_altTrimZ$ci.ub)
+# setmod_altZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=setdata[setdata$Alt.att == "alternative",])
+# setmod_altTrimZ = trimfill(setmod_altZ)
+# setmod_altTrimZ$b = FisherZInv(setmod_altTrimZ$b)
+# setmod_altTrimZ$ci.lb = FisherZInv(setmod_altTrimZ$ci.lb)
+# setmod_altTrimZ$ci.ub = FisherZInv(setmod_altTrimZ$ci.ub)
 
 
 # -----
@@ -136,11 +136,11 @@ taskdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data
 taskdata$vi.c = taskdata$vi/taskdata$a_acc^2
 taskres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata, method="HS")
 taskTrim = trimfill(taskres)
-taskresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=taskdata)
-taskTrimZ = trimfill(taskresZ)
-taskTrimZ$b = FisherZInv(taskTrimZ$b)
-taskTrimZ$ci.lb = FisherZInv(taskTrimZ$ci.lb)
-taskTrimZ$ci.ub = FisherZInv(taskTrimZ$ci.ub)
+# taskresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=taskdata)
+# taskTrimZ = trimfill(taskresZ)
+# taskTrimZ$b = FisherZInv(taskTrimZ$b)
+# taskTrimZ$ci.lb = FisherZInv(taskTrimZ$ci.lb)
+# taskTrimZ$ci.ub = FisherZInv(taskTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # task instruction moderator analysis - effect of attribute vs alternative 
@@ -150,17 +150,17 @@ taskmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata[taskdata$Alt.att 
 taskmod_altTrim = trimfill(taskmod_alt)
 taskmod_attTrim = trimfill(taskmod_att)
 
-taskmod_attZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=taskdata[taskdata$Alt.att == "attribute",])
-taskmod_attTrimZ = trimfill(taskmod_attZ)
-taskmod_attTrimZ$b = FisherZInv(taskmod_attTrimZ$b)
-taskmod_attTrimZ$ci.lb = FisherZInv(taskmod_attTrimZ$ci.lb)
-taskmod_attTrimZ$ci.ub = FisherZInv(taskmod_attTrimZ$ci.ub)
+# taskmod_attZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=taskdata[taskdata$Alt.att == "attribute",])
+# taskmod_attTrimZ = trimfill(taskmod_attZ)
+# taskmod_attTrimZ$b = FisherZInv(taskmod_attTrimZ$b)
+# taskmod_attTrimZ$ci.lb = FisherZInv(taskmod_attTrimZ$ci.lb)
+# taskmod_attTrimZ$ci.ub = FisherZInv(taskmod_attTrimZ$ci.ub)
 
-taskmod_altZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=taskdata[taskdata$Alt.att == "alternative",])
-taskmod_altTrimZ = trimfill(taskmod_altZ)
-taskmod_altTrimZ$b = FisherZInv(taskmod_altTrimZ$b)
-taskmod_altTrimZ$ci.lb = FisherZInv(taskmod_altTrimZ$ci.lb)
-taskmod_altTrimZ$ci.ub = FisherZInv(taskmod_altTrimZ$ci.ub)
+# taskmod_altZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=taskdata[taskdata$Alt.att == "alternative",])
+# taskmod_altTrimZ = trimfill(taskmod_altZ)
+# taskmod_altTrimZ$b = FisherZInv(taskmod_altTrimZ$b)
+# taskmod_altTrimZ$ci.lb = FisherZInv(taskmod_altTrimZ$ci.lb)
+# taskmod_altTrimZ$ci.ub = FisherZInv(taskmod_altTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # preferential viewing
@@ -168,11 +168,11 @@ prefdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data
 prefdata$vi.c = prefdata$vi/prefdata$a_acc^2
 prefres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata, method="HS")
 prefTrim = trimfill(prefres)
-prefresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=prefdata)
-prefTrimZ = trimfill(prefresZ)
-prefTrimZ$b = FisherZInv(prefTrimZ$b)
-prefTrimZ$ci.lb = FisherZInv(prefTrimZ$ci.lb)
-prefTrimZ$ci.ub = FisherZInv(prefTrimZ$ci.ub)
+# prefresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=prefdata)
+# prefTrimZ = trimfill(prefresZ)
+# prefTrimZ$b = FisherZInv(prefTrimZ$b)
+# prefTrimZ$ci.lb = FisherZInv(prefTrimZ$ci.lb)
+# prefTrimZ$ci.ub = FisherZInv(prefTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # preferential viewing moderator analysis - effect of alternative vs attribute 
@@ -182,17 +182,17 @@ prefmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata[prefdata$Alt.att 
 prefmod_altTrim = trimfill(prefmod_alt)
 prefmod_attTrim = trimfill(prefmod_att)
 
-prefmod_attZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=prefdata[prefdata$Alt.att == "attribute",])
-prefmod_attTrimZ = trimfill(prefmod_attZ)
-prefmod_attTrimZ$b = FisherZInv(prefmod_attTrimZ$b)
-prefmod_attTrimZ$ci.lb = FisherZInv(prefmod_attTrimZ$ci.lb)
-prefmod_attTrimZ$ci.ub = FisherZInv(prefmod_attTrimZ$ci.ub)
+# prefmod_attZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=prefdata[prefdata$Alt.att == "attribute",])
+# prefmod_attTrimZ = trimfill(prefmod_attZ)
+# prefmod_attTrimZ$b = FisherZInv(prefmod_attTrimZ$b)
+# prefmod_attTrimZ$ci.lb = FisherZInv(prefmod_attTrimZ$ci.lb)
+# prefmod_attTrimZ$ci.ub = FisherZInv(prefmod_attTrimZ$ci.ub)
 
-prefmod_altZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=prefdata[prefdata$Alt.att == "alternative",])
-prefmod_altTrimZ = trimfill(prefmod_altZ)
-prefmod_altTrimZ$b = FisherZInv(prefmod_altTrimZ$b)
-prefmod_altTrimZ$ci.lb = FisherZInv(prefmod_altTrimZ$ci.lb)
-prefmod_altTrimZ$ci.ub = FisherZInv(prefmod_altTrimZ$ci.ub)
+# prefmod_altZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=prefdata[prefdata$Alt.att == "alternative",])
+# prefmod_altTrimZ = trimfill(prefmod_altZ)
+# prefmod_altTrimZ$b = FisherZInv(prefmod_altTrimZ$b)
+# prefmod_altTrimZ$ci.lb = FisherZInv(prefmod_altTrimZ$ci.lb)
+# prefmod_altTrimZ$ci.ub = FisherZInv(prefmod_altTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # choice bias moderator analysis - effect of inferential vs preferential choice
@@ -210,11 +210,11 @@ choicemod = rma(yi.c.FC, vi.c, weights=1/vi.c, mods = ~ inf_prefmod, data=choice
 choicedata = choicedata_mod[, list(yi.c.FC = mean(yi.c.FC), vi.c = mean(vi.c), IV = unique(IV), N = unique(N)), by = Study]
 choiceres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=choicedata, method="HS")
 choiceTrim = trimfill(choiceres)
-choiceresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=choicedata)
-choiceTrimZ = trimfill(choiceresZ)
-choiceTrimZ$b = FisherZInv(choiceTrimZ$b)
-choiceTrimZ$ci.lb = FisherZInv(choiceTrimZ$ci.lb)
-choiceTrimZ$ci.ub = FisherZInv(choiceTrimZ$ci.ub)
+# choiceresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=choicedata)
+# choiceTrimZ = trimfill(choiceresZ)
+# choiceTrimZ$b = FisherZInv(choiceTrimZ$b)
+# choiceTrimZ$ci.lb = FisherZInv(choiceTrimZ$ci.lb)
+# choiceTrimZ$ci.ub = FisherZInv(choiceTrimZ$ci.ub)
 
 # -----
 # Moderator results text for manuscript
@@ -250,15 +250,30 @@ extractInfo <- function(name, mainres, trimres, data) {
         name,
         paste0(mainres$k, " (", trimres$k0, ")"),
         paste0(sum(data$N)),
-        paste0(round(coef(summary(mainres))$estimate, 3), " (", 
-            round(trimres$b, 3), ")"),
-        paste0(round(coef(summary(mainres))$se, 3)),
-        paste0(round(coef(summary(mainres))$zval, 3)),
-        paste0(round(coef(summary(mainres))$pval, 3)),
-        paste0(round(coef(summary(mainres))$ci.lb, 3), " (", 
-            round(trimres$ci.lb, 3), ")"),
-        paste0(round(coef(summary(mainres))$ci.ub, 3), " (", 
-            round(trimres$ci.ub, 3), ")"),
+        paste0(
+            round(coef(summary(mainres))$estimate, 3), " (", 
+            round(coef(summary(trimres))$estimate, 3), ")"
+        ),
+        paste0(
+            round(coef(summary(mainres))$se, 3), " (", 
+            round(coef(summary(trimres))$se, 3), ")"
+        ),
+        paste0(
+            round(coef(summary(mainres))$zval, 3), " (", 
+            round(coef(summary(trimres))$zval, 3), ")"
+        ),
+        paste0(
+            round(coef(summary(mainres))$pval, 3), " (", 
+            round(coef(summary(trimres))$pval, 3), ")"
+        ),
+        paste0(
+            round(coef(summary(mainres))$ci.lb, 3), " (", 
+            round(coef(summary(trimres))$ci.lb, 3), ")"
+        ),
+        paste0(
+            round(coef(summary(mainres))$ci.ub, 3), " (", 
+            round(coef(summary(trimres))$ci.ub, 3), ")"
+        ),
         round(mainres$I2, 2)
     )
     return(res)
@@ -266,16 +281,16 @@ extractInfo <- function(name, mainres, trimres, data) {
 
 mainresults = data.frame(rbind(
   c("\\textbf{Visual factors}", rep(NA, 9)),
-  extractInfo("Salience",salres,salTrimZ,saldata),
-  extractInfo("Surface size",sizeres,sizeTrimZ,sizedata),
-  extractInfo("Left vs right position",LRres,LRTrimZ,LRdata),
-  extractInfo("Center position",centerres,centerTrimZ,centerdata),
-  extractInfo("Set size",setres,setTrimZ,setdata),
+  extractInfo("Salience",salres,salTrim,saldata),
+  extractInfo("Surface size",sizeres,sizeTrim,sizedata),
+  extractInfo("Left vs right position",LRres,LRTrim,LRdata),
+  extractInfo("Center position",centerres,centerTrim,centerdata),
+  extractInfo("Set size",setres,setTrim,setdata),
 
   c("\\textbf{Cognitive factors}", rep(NA, 9)),
-  extractInfo("Task instructions",taskres,taskTrimZ,taskdata),
-  extractInfo("Preferential viewing",prefres,prefTrimZ,prefdata),
-  extractInfo("Choice bias",choiceres,choiceTrimZ,choicedata)
+  extractInfo("Task instructions",taskres,taskTrim,taskdata),
+  extractInfo("Preferential viewing",prefres,prefTrim,prefdata),
+  extractInfo("Choice bias",choiceres,choiceTrim,choicedata)
 ), stringsAsFactors = FALSE)
 
 # format main results table, e.g. rounding, variable naming etc.
@@ -315,26 +330,26 @@ print(
 modresults = data.frame(rbind(
     c("\\textbf{Set size}", rep(NA, 9)),
     extractInfo("\\hspace{2mm}\\textit{Alternative}",
-        setmod_alt,setmod_altTrimZ,
+        setmod_alt,setmod_altTrim,
         setdata[setdata$Alt.att == "alternative",]),
     extractInfo("\\hspace{2mm}\\textit{Attribute}",
-        setmod_att,setmod_attTrimZ,
+        setmod_att,setmod_attTrim,
         setdata[setdata$Alt.att == "attribute",]),
     
     c("\\textbf{Task instruction}", rep(NA, 9)),
     extractInfo("\\hspace{2mm}\\textit{Alternative}",
-        taskmod_alt,taskmod_altTrimZ,
+        taskmod_alt,taskmod_altTrim,
         taskdata[taskdata$Alt.att == "alternative",]),
     extractInfo("\\hspace{2mm}\\textit{Attribute}",
-        taskmod_att,taskmod_attTrimZ,
+        taskmod_att,taskmod_attTrim,
         taskdata[taskdata$Alt.att == "attribute",]),
 
     c("\\textbf{Preferential viewing}", rep(NA, 9)),
     extractInfo("\\hspace{2mm}\\textit{Alternative}",
-        prefmod_alt,prefmod_altTrimZ,
+        prefmod_alt,prefmod_altTrim,
         prefdata[prefdata$Alt.att == "alternative",]),
     extractInfo("\\hspace{2mm}\\textit{Attribute}",
-        prefmod_att,prefmod_attTrimZ,
+        prefmod_att,prefmod_attTrim,
         prefdata[prefdata$Alt.att == "attribute",])
 
 ), stringsAsFactors = FALSE)
