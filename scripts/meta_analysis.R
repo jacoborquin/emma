@@ -250,7 +250,7 @@ extractInfo <- function(name, mainres, trimres, data) {
     res <- c(
         name,
         paste0(mainres$k, " (", trimres$k0, ")"),
-        paste0(sum(saldata$N)),
+        paste0(sum(data$N)),
         paste0(round(coef(summary(mainres))$estimate, 3), " (", 
             round(coef(summary(trimres))$estimate, 3), ")"),
         paste0(round(coef(summary(mainres))$se, 3), " (", 
@@ -263,7 +263,7 @@ extractInfo <- function(name, mainres, trimres, data) {
             round(coef(summary(trimres))$ci.lb, 3), ")"),
         paste0(round(coef(summary(mainres))$ci.ub, 3), " (", 
             round(coef(summary(trimres))$ci.ub, 3), ")"),
-        round(mainres$I2, 3)
+        round(mainres$I2, 2)
     )
     return(res)
 }
@@ -295,10 +295,11 @@ print(
 	xtable(
 		mainresults, 
 		caption = tab_caption, 
-		label = tab_label,
-		align = "llccccccccc",
-		digits = c(0,0,0,0,3,3,3,3,3,3,3)
-	), 
+    label = tab_label,
+    align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
+    digits = c(0,0,0,0,3,3,3,3,3,3,3)
+  ), 
+  size = "\\small",
 	include.rownames = FALSE,
 	caption.placement = "top", 
 	hline.after = c(-1, 0),
@@ -356,9 +357,10 @@ print(
     modresults, 
     caption = tab_caption, 
     label = tab_label,
-    align = "llccccccccc",
+    align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
     digits = c(0,0,0,0,3,3,3,3,3,3,3)
   ), 
+  size = "\\small",
   include.rownames = FALSE,
   caption.placement = "top", 
   hline.after = c(-1, 0),
