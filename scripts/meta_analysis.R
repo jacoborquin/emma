@@ -245,7 +245,7 @@ cat(result, file = file.path(tablesDir, "moderator_choicebias.tex"))
 # Table with main results for manuscript
 # -----
 
-extractMain <- function(name, mainres, data) {
+extractMain <- function(name, mainres=centerres, data) {
     res <- c(
         name,
         paste0(mainres$k),
@@ -253,8 +253,8 @@ extractMain <- function(name, mainres, data) {
         paste0(round(coef(summary(mainres))$estimate, 2)),
         paste0(round(coef(summary(mainres))$se, 2)),
         paste0(round(coef(summary(mainres))$zval, 2)),
-        ifelse(coef(summary(mainres))$pval < 0.001), "(<0.001)",
-            paste0("(", round(coef(summary(mainres))$pval, 3), ")")),
+        ifelse(coef(summary(mainres))$pval < 0.001, "<0.001",
+            paste0(round(coef(summary(mainres))$pval, 3))),
         paste0(round(coef(summary(mainres))$ci.lb, 2)),
         paste0(round(coef(summary(mainres))$ci.ub, 2)),
         round(mainres$I2, 2)
@@ -270,7 +270,7 @@ extractTrim <- function(trimres) {
         paste0("(", round(coef(summary(trimres))$estimate, 2), ")"),
         paste0("(", round(coef(summary(trimres))$se, 2), ")"),
         paste0("(", round(coef(summary(trimres))$zval, 2), ")"),
-        ifelse(coef(summary(trimres))$pval < 0.001), "(<0.001)",
+        ifelse(coef(summary(trimres))$pval < 0.001, "(<0.001)",
             paste0("(", round(coef(summary(trimres))$pval, 3), ")")),
         paste0("(", round(coef(summary(trimres))$ci.lb, 2), ")"),
         paste0("(", round(coef(summary(trimres))$ci.ub, 2), ")"),
