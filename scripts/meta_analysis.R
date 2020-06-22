@@ -245,52 +245,59 @@ cat(result, file = file.path(tablesDir, "moderator_choicebias.tex"))
 # Table with main results for manuscript
 # -----
 
-extractInfo <- function(name, mainres, trimres, data) {
+extractMain <- function(name, mainres, data) {
     res <- c(
         name,
-        paste0(mainres$k, " (", trimres$k0, ")"),
+        paste0(mainres$k),
         paste0(sum(data$N)),
-        paste0(
-            round(coef(summary(mainres))$estimate, 3), " (", 
-            round(coef(summary(trimres))$estimate, 3), ")"
-        ),
-        paste0(
-            round(coef(summary(mainres))$se, 3), " (", 
-            round(coef(summary(trimres))$se, 3), ")"
-        ),
-        paste0(
-            round(coef(summary(mainres))$zval, 3), " (", 
-            round(coef(summary(trimres))$zval, 3), ")"
-        ),
-        paste0(
-            round(coef(summary(mainres))$pval, 3), " (", 
-            round(coef(summary(trimres))$pval, 3), ")"
-        ),
-        paste0(
-            round(coef(summary(mainres))$ci.lb, 3), " (", 
-            round(coef(summary(trimres))$ci.lb, 3), ")"
-        ),
-        paste0(
-            round(coef(summary(mainres))$ci.ub, 3), " (", 
-            round(coef(summary(trimres))$ci.ub, 3), ")"
-        ),
+        paste0(round(coef(summary(mainres))$estimate, 2)),
+        paste0(round(coef(summary(mainres))$se, 2)),
+        paste0(round(coef(summary(mainres))$zval, 2)),
+        ifelse(coef(summary(mainres))$pval < 0.001), "(<0.001)",
+            paste0("(", round(coef(summary(mainres))$pval, 3), ")")),
+        paste0(round(coef(summary(mainres))$ci.lb, 2)),
+        paste0(round(coef(summary(mainres))$ci.ub, 2)),
         round(mainres$I2, 2)
+    )
+    return(res)
+}
+
+extractTrim <- function(trimres) {
+    res <- c(
+        NA,
+        paste0("(", trimres$k0, ")"),
+        NA,
+        paste0("(", round(coef(summary(trimres))$estimate, 2), ")"),
+        paste0("(", round(coef(summary(trimres))$se, 2), ")"),
+        paste0("(", round(coef(summary(trimres))$zval, 2), ")"),
+        ifelse(coef(summary(trimres))$pval < 0.001), "(<0.001)",
+            paste0("(", round(coef(summary(trimres))$pval, 3), ")")),
+        paste0("(", round(coef(summary(trimres))$ci.lb, 2), ")"),
+        paste0("(", round(coef(summary(trimres))$ci.ub, 2), ")"),
+        NA
     )
     return(res)
 }
 
 mainresults = data.frame(rbind(
   c("\\textbf{Visual factors}", rep(NA, 9)),
-  extractInfo("Salience",salres,salTrim,saldata),
-  extractInfo("Surface size",sizeres,sizeTrim,sizedata),
-  extractInfo("Left vs right position",LRres,LRTrim,LRdata),
-  extractInfo("Center position",centerres,centerTrim,centerdata),
-  extractInfo("Set size",setres,setTrim,setdata),
-
+  extractMain("Salience",salres,saldata),
+  extractTrim(salTrim),
+  extractMain("Surface size",sizeres,sizedata),
+  extractTrim(sizeTrim),
+  extractMain("Left vs right position",LRres,LRdata),
+  extractTrim(LRTrim),
+  extractMain("Center position",centerres,centerdata),
+  extractTrim(centerTrim),
+  extractMain("Set size",setres,setdata),
+  extractTrim(setTrim),
   c("\\textbf{Cognitive factors}", rep(NA, 9)),
-  extractInfo("Task instructions",taskres,taskTrim,taskdata),
-  extractInfo("Preferential viewing",prefres,prefTrim,prefdata),
-  extractInfo("Choice bias",choiceres,choiceTrim,choicedata)
+  extractMain("Task instructions",taskres,taskdata),
+  extractTrim(taskTrim),
+  extractMain("Preferential viewing",prefres,prefdata),
+  extractTrim(prefTrim),
+  extractMain("Choice bias",choiceres,choicedata),
+  extractTrim(choiceTrim)
 ), stringsAsFactors = FALSE)
 
 # format main results table, e.g. rounding, variable naming etc.
@@ -300,15 +307,16 @@ write_csv(mainresults, file.path(tablesDir, "main_results.csv"))
 # latex version
 tab_caption <- "Main results of the meta-analysis, divided into visual and cognitive factor groups, and individual factors within them. The most important values are the corrected effect size estimate, $\\rho$, and the associated heterogeneity, $I^2$. Results of trim and fill analysis are in the parentesis."
 tab_label <- "tab:main_results"
-tab_note <- paste0("\\hline \n \\multicolumn{10}{p{0.9\\textwidth}}",
+tab_note <- paste0("\\hline \n \\multicolumn{10}{p{0.95\\textwidth}}",
            "{\\scriptsize{\\textit{Note.} $k$ = number of studies (for trim and fill analysis number of imputed studies); $N$ = number of participants; $\\rho$ = unattenuated effect size estimate, SE = standard error of estimate; $Z$ = Z statistic; $p$ = significance level; $\\textrm{CI}_{95}$ LL = lower limit of the 95\\% confidence interval; $\\textrm{CI}_{95}$ UL = upper limit of the 95\\% confidence interval, $I^2$ = within-group heterogeneity.}} \n")
 print(
 	xtable(
 		mainresults, 
 		caption = tab_caption, 
     label = tab_label,
-    align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
-    digits = c(0,0,0,0,3,3,3,3,3,3,3)
+    # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
+    align = "llccccccccc"
+    # digits = c(0,0,0,0,3,3,3,3,3,3,3)
   ), 
   size = "\\small",
 	include.rownames = FALSE,
@@ -329,28 +337,28 @@ print(
 
 modresults = data.frame(rbind(
     c("\\textbf{Set size}", rep(NA, 9)),
-    extractInfo("\\hspace{2mm}\\textit{Alternative}",
-        setmod_alt,setmod_altTrim,
-        setdata[setdata$Alt.att == "alternative",]),
-    extractInfo("\\hspace{2mm}\\textit{Attribute}",
-        setmod_att,setmod_attTrim,
-        setdata[setdata$Alt.att == "attribute",]),
+    extractMain("\\hspace{2mm}\\textit{Alternative}",
+        setmod_alt,setdata[setdata$Alt.att == "alternative",]),
+    extractTrim(setmod_altTrim),
+    extractMain("\\hspace{2mm}\\textit{Attribute}",
+        setmod_att,setdata[setdata$Alt.att == "attribute",]),
+    extractTrim(setmod_attTrim),
     
     c("\\textbf{Task instruction}", rep(NA, 9)),
-    extractInfo("\\hspace{2mm}\\textit{Alternative}",
-        taskmod_alt,taskmod_altTrim,
-        taskdata[taskdata$Alt.att == "alternative",]),
-    extractInfo("\\hspace{2mm}\\textit{Attribute}",
-        taskmod_att,taskmod_attTrim,
-        taskdata[taskdata$Alt.att == "attribute",]),
+    extractMain("\\hspace{2mm}\\textit{Alternative}",
+        taskmod_alt,taskdata[taskdata$Alt.att == "alternative",]),
+    extractTrim(taskmod_altTrim),
+    extractMain("\\hspace{2mm}\\textit{Attribute}",
+        taskmod_att,taskdata[taskdata$Alt.att == "attribute",]),
+    extractTrim(taskmod_attTrim),
 
     c("\\textbf{Preferential viewing}", rep(NA, 9)),
-    extractInfo("\\hspace{2mm}\\textit{Alternative}",
-        prefmod_alt,prefmod_altTrim,
-        prefdata[prefdata$Alt.att == "alternative",]),
-    extractInfo("\\hspace{2mm}\\textit{Attribute}",
-        prefmod_att,prefmod_attTrim,
-        prefdata[prefdata$Alt.att == "attribute",])
+    extractMain("\\hspace{2mm}\\textit{Alternative}",
+        prefmod_alt,prefdata[prefdata$Alt.att == "alternative",]),
+    extractTrim(prefmod_altTrim),
+    extractMain("\\hspace{2mm}\\textit{Attribute}",
+        prefmod_att,prefdata[prefdata$Alt.att == "attribute",]),
+    extractTrim(prefmod_attTrim)
 
 ), stringsAsFactors = FALSE)
 
@@ -368,8 +376,9 @@ print(
     modresults, 
     caption = tab_caption, 
     label = tab_label,
-    align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
-    digits = c(0,0,0,0,3,3,3,3,3,3,3)
+    align = "llccccccccc"
+    # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
+    # digits = c(0,0,0,0,3,3,3,3,3,3,3)
   ), 
   size = "\\small",
   include.rownames = FALSE,
