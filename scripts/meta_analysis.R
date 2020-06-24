@@ -3,11 +3,7 @@
 # ----------------------------------------------------------------------
 
 # main analysis + trim and fill analysis
-
-# analyses of bottom up factors (salience, surface size, left vs right 
-# position, central position, and set size)
-# are performed using fixation likelihood. Analyses of top down factors 
-# are performed on fixation count
+# all analyses are performed on fixation count
 
 
 # ----------------------------------------------------------------------

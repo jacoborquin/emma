@@ -111,7 +111,7 @@ write_csv(data, file.path(dataDir, "EMMA_ES_data_corrected.csv"))
 # strangely, has two columns with same name??
 data_long[,7] <- NULL
 
-# perhaps add slope coeff?
+# create ES-accuracy  scatter plot
 figure <- 
 	ggplot(data = data_long, aes(Accuracy, R_abs)) +
 	geom_point(alpha = .5, size = pointSize) +
