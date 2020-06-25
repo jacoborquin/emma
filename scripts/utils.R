@@ -16,8 +16,8 @@ packages <- c(
     # 'gtable', 
     # 'directlabels', 'ggrepel', 
     'tidyverse', 'extrafont', 'gridExtra', 
-    'xtable', 'stargazer', 
-    # 'readxl',
+    'xtable', 'stargazer',
+    'readxl',
     'data.table',
     'lme4',
     'lmerTest',
@@ -34,11 +34,13 @@ lapply(packages, library, character.only = TRUE)
 # ----------------------------------------------------------------------
 # Variables 
 # ----------------------------------------------------------------------
+# set the root directory for the project here:
+root = "/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma"
 
 # directory paths
-figsDir <- file.path("..", "figs")
-tablesDir <- file.path("..", "tables")
-dataDir <- file.path("..", "data")
+figsDir <- file.path(root, "figs")
+tablesDir <- file.path(root, "tables")
+dataDir <- file.path(root, "data")
 
 # font setup
 fontSetup <- "Arial"

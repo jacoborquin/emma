@@ -13,6 +13,7 @@
 # specify your path here if you want to use this script interactively, 
 # and uncomment the line:
 # setwd("/home/hstojic/Research/project/attention_meta/scripts")
+# setwd("/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma/scripts")
 
 # housekeeping
 rm(list = ls())
@@ -418,6 +419,10 @@ result <- paste0(
 	"$z=", round(pref_vs_choice_z, 3), "$, $p=", round(pref_vs_choice_p, 3), "$"
 )
 cat(result, file = file.path(tablesDir, "difftest_pref_choice.tex"))
+
+# -----
+# Table with raw data for appendix
+# -----
 
 
 # -----
