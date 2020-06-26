@@ -44,7 +44,7 @@ data$yi.c.FC = FisherZInv(FisherZ(data$fix.count.m)/data$a_acc)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # visual salience
-saldata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Salience"], vtype="AV")[,c(1:17,19)])
+saldata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Salience"], vtype="AV")[,c(1:19,20)])
 saldata$vi.c = saldata$vi/saldata$a_acc^2 # compute corrected variances based on artefact multiplier
 salres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=saldata, method="HS")
 salTrim = trimfill(salres)
@@ -56,7 +56,7 @@ salTrim = trimfill(salres)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # surface size
-sizedata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Size"], vtype="AV")[,c(1:17,19)])
+sizedata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Size"], vtype="AV")[,c(1:19,20)])
 sizedata$vi.c = sizedata$vi/sizedata$a_acc^2
 sizeres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=sizedata, method="HS")
 sizeTrim = trimfill(sizeres)
@@ -68,7 +68,7 @@ sizeTrim = trimfill(sizeres)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # left v right position
-LRdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "LR.position"], vtype="AV")[,c(1:17,19)])
+LRdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "LR.position"], vtype="AV")[,c(1:19,20)])
 LRdata$vi.c = LRdata$vi/LRdata$a_acc^2
 LRres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=LRdata, method="HS")
 LRTrim = trimfill(LRres)
@@ -80,7 +80,7 @@ LRTrim = trimfill(LRres)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # centrality position
-centerdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Center.position"], vtype="AV")[,c(1:17,19)])
+centerdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Center.position"], vtype="AV")[,c(1:19,20)])
 centerdata$vi.c = centerdata$vi/centerdata$a_acc^2
 centerres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=centerdata, method="HS")
 centerTrim = trimfill(centerres)
@@ -92,7 +92,7 @@ centerTrim = trimfill(centerres)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # set size
-setdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Setsize"], vtype="AV")[,c(1:17,19)])
+setdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Setsize"], vtype="AV")[,c(1:19,20)])
 setdata$vi.c = setdata$vi/setdata$a_acc^2
 setres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata, method="HS")
 setTrim = trimfill(setres)
@@ -129,7 +129,7 @@ setmod_altTrim = trimfill(setmod_alt)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # task instruction 
-taskdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Task"], vtype="AV")[,c(1:17,19)])
+taskdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Task"], vtype="AV")[,c(1:19,20)])
 taskdata$vi.c = taskdata$vi/taskdata$a_acc^2
 taskres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata, method="HS")
 taskTrim = trimfill(taskres)
@@ -161,7 +161,7 @@ taskmod_attTrim = trimfill(taskmod_att)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # preferential viewing
-prefdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Pref.view"], vtype="AV")[,c(1:17,19)])
+prefdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Pref.view"], vtype="AV")[,c(1:19,20)])
 prefdata$vi.c = prefdata$vi/prefdata$a_acc^2
 prefres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata, method="HS")
 prefTrim = trimfill(prefres)
@@ -193,7 +193,7 @@ prefmod_attTrim = trimfill(prefmod_att)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # choice bias moderator analysis - effect of inferential vs preferential choice
-choicedata_mod = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Choice.bias"], vtype="AV")[,c(1:17,19)])
+choicedata_mod = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Choice.bias"], vtype="AV")[,c(1:19,20)])
 choicedata_mod$vi.c = choicedata_mod$vi/choicedata_mod$a_acc^2
 choicedata_mod$inf_prefmod = ifelse(choicedata_mod$Research.Domain == "Risky Gamble", "preferential", # create inferential vs preferential task moderator variable
                          ifelse(choicedata_mod$Research.Domain == "pref. Consumer choice", "preferential",
@@ -424,6 +424,31 @@ cat(result, file = file.path(tablesDir, "difftest_pref_choice.tex"))
 # Table with raw data for appendix
 # -----
 
+overviewtabel = data[, c(2,4,9,14,15,1)]
+tab_caption <- "Overview of studies"
+tab_label <- "tab:overview"
+tab_note <- paste0("\\hline \n \\multicolumn{10}{p{0.95\\textwidth}}",
+                   "{\\scriptsize{\\textit{Note.} $k$ = number of studies (for trim and fill analysis number of imputed studies); $N$ = number of participants; $\\rho$ = unattenuated effect size estimate, SE = standard error of estimate; $Z$ = Z statistic; $p$ = significance level; $\\textrm{CI}_{95}$ LL = lower limit of the 95\\% confidence interval; $\\textrm{CI}_{95}$ UL = upper limit of the 95\\% confidence interval, $I^2$ = within-group heterogeneity.}} \n")
+print(
+  xtable(
+    overviewtabel, 
+    caption = tab_caption, 
+    label = tab_label,
+    # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
+    #align = "llccccccccc"
+    # digits = c(0,0,0,0,3,3,3,3,3,3,3)
+  ), 
+  size = "\\small",
+  include.rownames = FALSE,
+  caption.placement = "top", 
+  hline.after = c(-1, 0),
+  add.to.row = list(
+    pos = list(nrow(overviewtabel)),
+    command = tab_note
+  ),
+  sanitize.text.function = function(x){x},
+  file = file.path(tablesDir, "overviewtabel.tex")
+)
 
 # -----
 # Forrest plots 

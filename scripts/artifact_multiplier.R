@@ -23,8 +23,8 @@ rm(list = ls())
 source("utils.R")
 
 # loading data
-data = as.data.table(read_csv2(
-	file.path(dataDir, "EMMA_ES_data.csv")
+data = as.data.table(read_excel(
+	file.path(dataDir, "EMMA_ES_data.xlsx")
 ))
 ET_specs = as.data.table(read_csv2(
 	file.path(dataDir, "EMMA_ET_specs_data.csv")
