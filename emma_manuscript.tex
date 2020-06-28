@@ -48,6 +48,9 @@
 \usepackage{graphicx}      
 \graphicspath{{./figs/}}  
 
+% for long tables
+\usepackage{longtable}
+
 % linenumbers
 \usepackage[mathlines]{lineno}
 
@@ -93,15 +96,11 @@
 \threeauthors{Jacob L. Orquin*}{Erik S. Lahm}{Hrvoje Stojić}
 \threeaffiliations{Aarhus University and Reykjavik University}{Aarhus University}{University College London}
 
-\authornote{Jacob L. Orquin and Erik S. Lahm, Department of Management/MAPP, Aarhus University, Fuglesangs alle 4, 8210 Aarhus V - Denmark; Hrvoje Stojić, Max Planck UCL Centre for Computational Psychiatry and Ageing Research, University College London, 10-12 Russell Square, London, WC1B 5EH, United Kingdom. The authors thank Martin Meissner, Tobias Otterbring, Sonja Perković, and Valdimar Sigurdsson. This research was supported by the Independent Research Fund Denmark, grant number: 8046-00014A. *Correspondence concerning this article should be addressed to Jacob L. Orquin, Department of Management/MAPP, Aarhus University, Fuglesangs alle 4, 8210 Aarhus V - Denmark. E-mail: jalo@mgmt.au.dk. 
-}
+\authornote{Jacob L. Orquin and Erik S. Lahm, Department of Management/MAPP, Aarhus University, Fuglesangs alle 4, 8210 Aarhus V - Denmark; Hrvoje Stojić, Max Planck UCL Centre for Computational Psychiatry and Ageing Research, University College London, 10-12 Russell Square, London, WC1B 5EH, United Kingdom. The authors thank Martin Meissner, Tobias Otterbring, Sonja Perković, and Valdimar Sigurdsson. This research was supported by the Independent Research Fund Denmark, grant number: 8046-00014A. *Correspondence concerning this article should be addressed to Jacob L. Orquin, Department of Management/MAPP, Aarhus University, Fuglesangs alle 4, 8210 Aarhus V - Denmark. E-mail: jalo@mgmt.au.dk.}
 
 \rightheader{Orquin, Lahm, Stojic}
 \leftheader{The visual environment, attention and decision making}
 
-
-% \begin{document}
-% \maketitle
 
 % ---------------------------------------------------------
 % Abstract
@@ -186,7 +185,7 @@ Overall, three factors show reliable effect sizes: center position, surface size
 \input{tables/main_results.tex}
 
 
-\begin{figure}[!H]
+\begin{figure}[h]
 \includegraphics{forest_plots_visual}
 \centering
 \caption{Effect sizes of the visual factors are moderate, except for salience and left-vs-right position, which have small effect sizes, if any. Forest plots show the unattenuated effect size correlations for each study in a group, as well as average effect across the group. Forest plot in (A) shows the effect sizes for salience factor, in (B) for center position, in (C) for left vs right position, in  (D) for surface size, and in (E) for set size factor. Error bars represent the 95\% confidence interval around the mean.}
@@ -203,7 +202,7 @@ In studies on task instructions, participants receive instructions concerning a 
 Choice bias refers to an effect in attention whereby decision makers spend more time gazing at the eventually chosen alternative. This effect, originally introduced by Shimojo and colleagues \citep{shimojo2003a} as a ``gaze-cascade'' effect, is well-established in the literature, prompting us to study it as a separate factor. This factor consists of studies reporting the difference in eye movements between the chosen alternative and all other (not chosen) alternatives. We find that choice bias has a large effect on eye movements, $\rho = 0.69$ (95\% CI = $[0.53,0.86]$; $p<0.001$) (Table~\ref{tab:main_results} and Figure~\ref{fig:forest_plots_cognitive}). The effect decreases to moderate size after publication bias adjustment ($\rho = 0.49$; 95\% CI = $[0.31,0.67]$; Table~\ref{tab:main_results} in parenthesis)
 
 
-\begin{figure}[!H]
+\begin{figure}[h]
 \includegraphics{forest_plots_cognitive}
 \centering
 \caption{Effect sizes of the three cognitive factors are moderate to large. Forest plots show the unattenuated effect size correlations for each study in a group, as well as average effect across the group. Forest plot in (A) shows the effect sizes for task instructions factor, in (B) for preferential viewing, and in (C) for the choice bias factor. Error bars represent the 95\% confidence interval around the mean.}
@@ -222,7 +221,7 @@ We also performed a moderator analysis for the choice bias factor, to assess whe
 We assessed potential publication bias using trim and fill analysis of each factor \citep{duval2000trim}. In addition, we plotted the  Fisher transformed correlation coefficients of each study by its respective standard error (so-called funnel plots; Figure~\ref{fig:funnel_plots} for main results, and Figure~\ref{fig:funnel_plots_altatt} for moderator analyses). The symmetry of the funnel plots provides a qualitative picture of whether there is a file drawer problem. We expect that studies with smaller sample sizes and hence higher standard errors yield more variable effect sizes, the smallest of which are less likely to be published, leading to an asymmetric funnel plot. Judging from the funnel plots, it is not obvious whether there is a problem with publication bias. However, the trim and fill analysis resulted in a downward adjustment of the average effect size for most of the factors. The corrected effect sizes in Table~\ref{tab:main_results} (in parentheses) provide a more conservative estimate of the true population effects, but are also subject to some uncertainty. Specifically, the interpretation of the corrected results may be biased due to heterogeneity in many of the factors as well as a relatively small number of studies in the group of visual factors. 
 
 
-\begin{figure}[!H]
+\begin{figure}[h]
 \includegraphics{funnel_plots}
 \centering
 \caption{Funnel plots for each factor that can be used as a qualitative check of a publication bias. Points are Fisher transformed correlation coefficients against their standard error. Asymmetric distributions of points can indicate the presence of publication bias since smaller studies (those with higher standard errors) have more variable effect sizes and are less likely to be published unless the effect is large. Funnel plot for (A) salience, (B) surface size, (C) left vs right position, (D) central position, (E) set size, (F) task instructions, (G) preferential viewing, and (H) choice bias.}
@@ -444,8 +443,8 @@ JLO and ESL developed study concept. ESL performed literature search. JLO and ES
 \clearpage
 
 % \label{tab:overview}
-%\input{./tables/overviewtable.tex}
-%\clearpage
+\input{./tables/overviewtable.tex}
+\clearpage
 
 
 \begin{figure}%[H]
