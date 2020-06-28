@@ -29,6 +29,65 @@ Abrams, R\BPBI A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Ares%
+, Mawad%
+, Gim{\'e}nez%
+\BCBL {}\ \BBA {} Maiche%
+}{%
+Ares%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+ares2014}
+\APACinsertmetastar {%
+ares2014}%
+\begin{APACrefauthors}%
+Ares, G.%
+, Mawad, F.%
+, Gim{\'e}nez, A.%
+\BCBL {}\ \BBA {} Maiche, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Influence of rational and intuitive thinking styles on
+  food choice: Preliminary evidence from an eye-tracking study with yogurt
+  labels} {Influence of rational and intuitive thinking styles on food choice:
+  Preliminary evidence from an eye-tracking study with yogurt labels}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Food Quality and Preference}{31}{}{28--37}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ashby%
+, Walasek%
+\BCBL {}\ \BBA {} Gl{\"o}ckner%
+}{%
+Ashby%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+ashby2015}
+\APACinsertmetastar {%
+ashby2015}%
+\begin{APACrefauthors}%
+Ashby, N\BPBI J.%
+, Walasek, L.%
+\BCBL {}\ \BBA {} Gl{\"o}ckner, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The effect of consumer ratings and attentional
+  allocation on product valuations.} {The effect of consumer ratings and
+  attentional allocation on product valuations.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Judgment \& Decision Making}{10}{2}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Atalay%
 , Bodur%
 \BCBL {}\ \BBA {} Rasolofoarison%
@@ -56,6 +115,127 @@ Atalay, A\BPBI S.%
 \APACjournalVolNumPages{Journal of Consumer Research}{39}{4}{848–866}.
 \newblock
 \begin{APACrefDOI} \doi{10.1086/665984} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bagger%
+}{%
+Bagger%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+bagger2016}
+\APACinsertmetastar {%
+bagger2016}%
+\begin{APACrefauthors}%
+Bagger, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2016}.
+\unskip\
+\newblock
+\APACrefbtitle {Attention and Decision-Making: Separating Top-Down from
+  Bottom-Up Components} {Attention and decision-making: Separating top-down
+  from bottom-up components}\ \APACtypeAddressSchool {\BUPhD}{}{}.
+\unskip\
+\newblock
+\APACaddressSchool {}{Institut for {\O}konomi, Aarhus Universitet}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Behe%
+, Bae%
+, Huddleston%
+\BCBL {}\ \BBA {} Sage%
+}{%
+Behe%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+behe2015}
+\APACinsertmetastar {%
+behe2015}%
+\begin{APACrefauthors}%
+Behe, B\BPBI K.%
+, Bae, M.%
+, Huddleston, P\BPBI T.%
+\BCBL {}\ \BBA {} Sage, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The effect of involvement on visual attention and
+  product choice} {The effect of involvement on visual attention and product
+  choice}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Retailing and Consumer
+  Services}{24}{}{10--21}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Behe%
+\ \protect \BOthers {.}}{%
+Behe%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+behe2014}
+\APACinsertmetastar {%
+behe2014}%
+\begin{APACrefauthors}%
+Behe, B\BPBI K.%
+, Campbell, B\BPBI L.%
+, Khachatryan, H.%
+, Hall, C\BPBI R.%
+, Dennis, J\BPBI H.%
+, Huddleston, P\BPBI T.%
+\BCBL {}\ \BBA {} Fernandez, R\BPBI T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Incorporating eye tracking technology and conjoint
+  analysis to better understand the green industry consumer} {Incorporating eye
+  tracking technology and conjoint analysis to better understand the green
+  industry consumer}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{HortScience}{49}{12}{1550--1557}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Behe%
+, Huddleston%
+, Hall%
+, Khachatryan%
+\BCBL {}\ \BBA {} Campbell%
+}{%
+Behe%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+behe2017}
+\APACinsertmetastar {%
+behe2017}%
+\begin{APACrefauthors}%
+Behe, B\BPBI K.%
+, Huddleston, P\BPBI T.%
+, Hall, C\BPBI R.%
+, Khachatryan, H.%
+\BCBL {}\ \BBA {} Campbell, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Do Real and Fictitious Plant Brands Differ in Brand
+  Recognition, Awareness, Purchase Intention, and Visual Activity?} {Do real
+  and fictitious plant brands differ in brand recognition, awareness, purchase
+  intention, and visual activity?}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{HortScience}{52}{4}{612--621}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -89,6 +269,34 @@ Bialkova, S.%
 \APACjournalVolNumPages{Appetite}{76}{}{66–75}.
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.appet.2013.11.021} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bialkova%
+\ \BBA {} van Trijp%
+}{%
+Bialkova%
+\ \BBA {} van Trijp%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+bialkova2011}
+\APACinsertmetastar {%
+bialkova2011}%
+\begin{APACrefauthors}%
+Bialkova, S.%
+\BCBT {}\ \BBA {} van Trijp, H\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {An efficient methodology for assessing attention to and
+  effect of nutrition information displayed front-of-pack} {An efficient
+  methodology for assessing attention to and effect of nutrition information
+  displayed front-of-pack}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Food Quality and Preference}{22}{6}{592--601}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -262,6 +470,37 @@ Callaway, F.%
   sampling.} {Attention in value-based choice as optimal sequential sampling.}
 \newblock
 \begin{APACrefDOI} \doi{10.31234/osf.io/57v6k} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Cavanagh%
+, Wiecki%
+, Kochar%
+\BCBL {}\ \BBA {} Frank%
+}{%
+Cavanagh%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+cavanagh2014}
+\APACinsertmetastar {%
+cavanagh2014}%
+\begin{APACrefauthors}%
+Cavanagh, J\BPBI F.%
+, Wiecki, T\BPBI V.%
+, Kochar, A.%
+\BCBL {}\ \BBA {} Frank, M\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Eye tracking and pupillometry are indicators of
+  dissociable latent decision processes.} {Eye tracking and pupillometry are
+  indicators of dissociable latent decision processes.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Experimental Psychology:
+  General}{143}{4}{1476}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -498,6 +737,33 @@ Dowle, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Du%
+\ \BBA {} MacDonald%
+}{%
+Du%
+\ \BBA {} MacDonald%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+du2014}
+\APACinsertmetastar {%
+du2014}%
+\begin{APACrefauthors}%
+Du, P.%
+\BCBT {}\ \BBA {} MacDonald, E\BPBI F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Eye-tracking data predict importance of product features
+  and saliency of size change} {Eye-tracking data predict importance of product
+  features and saliency of size change}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Mechanical Design}{136}{8}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Duval%
 \ \BBA {} Tweedie%
 }{%
@@ -525,6 +791,63 @@ Duval, S.%
 \APACjournalVolNumPages{Biometrics}{56}{2}{455--463}.
 \newblock
 \begin{APACrefDOI} \doi{10.1111/j.0006-341X.2000.00455.x} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Fiedler%
+\ \BBA {} Gl{\"o}ckner%
+}{%
+Fiedler%
+\ \BBA {} Gl{\"o}ckner%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+fiedler2012}
+\APACinsertmetastar {%
+fiedler2012}%
+\begin{APACrefauthors}%
+Fiedler, S.%
+\BCBT {}\ \BBA {} Gl{\"o}ckner, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The dynamics of decision making in risky choice: An
+  eye-tracking analysis} {The dynamics of decision making in risky choice: An
+  eye-tracking analysis}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Frontiers in psychology}{3}{}{335}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Folke%
+, Jacobsen%
+, Fleming%
+\BCBL {}\ \BBA {} De~Martino%
+}{%
+Folke%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+folke2016}
+\APACinsertmetastar {%
+folke2016}%
+\begin{APACrefauthors}%
+Folke, T.%
+, Jacobsen, C.%
+, Fleming, S\BPBI M.%
+\BCBL {}\ \BBA {} De~Martino, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Explicit representation of confidence informs future
+  value-based decisions} {Explicit representation of confidence informs future
+  value-based decisions}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nature Human Behaviour}{1}{1}{1--8}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -620,6 +943,37 @@ Gidlof, K.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Gidl{\"o}f%
+, Wallin%
+, Dewhurst%
+\BCBL {}\ \BBA {} Holmqvist%
+}{%
+Gidl{\"o}f%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+gidlof2013}
+\APACinsertmetastar {%
+gidlof2013}%
+\begin{APACrefauthors}%
+Gidl{\"o}f, K.%
+, Wallin, A.%
+, Dewhurst, R.%
+\BCBL {}\ \BBA {} Holmqvist, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Using eye tracking to trace a cognitive process: Gaze
+  behaviour during decision making in a natural environment} {Using eye
+  tracking to trace a cognitive process: Gaze behaviour during decision making
+  in a natural environment}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Gigerenzer%
 \ \BBA {} Goldstein%
 }{%
@@ -646,6 +1000,143 @@ Gigerenzer, G.%
 \APACjournalVolNumPages{Psychological Review}{103}{4}{650--669}.
 \newblock
 \begin{APACrefDOI} \doi{10.1037/0033-295X.103.4.650} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Glaholt%
+\ \BBA {} Reingold%
+}{%
+Glaholt%
+\ \BBA {} Reingold%
+}{%
+{\protect \APACyear {2009}}%
+{\protect \APACexlab {{\protect \BCnt {1}}}}}]{%
+glaholt2009a}
+\APACinsertmetastar {%
+glaholt2009a}%
+\begin{APACrefauthors}%
+Glaholt, M\BPBI G.%
+\BCBT {}\ \BBA {} Reingold, E\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009{\protect \BCnt {1}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Stimulus exposure and gaze bias: A further test of the
+  gaze cascade model} {Stimulus exposure and gaze bias: A further test of the
+  gaze cascade model}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Attention, Perception, \&
+  Psychophysics}{71}{3}{445--450}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Glaholt%
+\ \BBA {} Reingold%
+}{%
+Glaholt%
+\ \BBA {} Reingold%
+}{%
+{\protect \APACyear {2009}}%
+{\protect \APACexlab {{\protect \BCnt {2}}}}}]{%
+glaholt2009b}
+\APACinsertmetastar {%
+glaholt2009b}%
+\begin{APACrefauthors}%
+Glaholt, M\BPBI G.%
+\BCBT {}\ \BBA {} Reingold, E\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009{\protect \BCnt {2}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The time course of gaze bias in visual decision tasks}
+  {The time course of gaze bias in visual decision tasks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Visual Cognition}{17}{8}{1228--1243}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Glaholt%
+\ \BBA {} Reingold%
+}{%
+Glaholt%
+\ \BBA {} Reingold%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+glaholt2012}
+\APACinsertmetastar {%
+glaholt2012}%
+\begin{APACrefauthors}%
+Glaholt, M\BPBI G.%
+\BCBT {}\ \BBA {} Reingold, E\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Direct control of fixation times in scene viewing:
+  Evidence from analysis of the distribution of first fixation duration}
+  {Direct control of fixation times in scene viewing: Evidence from analysis of
+  the distribution of first fixation duration}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Visual Cognition}{20}{6}{605--626}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Glaholt%
+, Wu%
+\BCBL {}\ \BBA {} Reingold%
+}{%
+Glaholt%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+glaholt2009c}
+\APACinsertmetastar {%
+glaholt2009c}%
+\begin{APACrefauthors}%
+Glaholt, M\BPBI G.%
+, Wu, M\BHBI C.%
+\BCBL {}\ \BBA {} Reingold, E\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Predicting preference from fixations.} {Predicting
+  preference from fixations.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{PsychNology Journal}{7}{2}{141--158}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Glaholt%
+, Wu%
+\BCBL {}\ \BBA {} Reingold%
+}{%
+Glaholt%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+glaholt2010}
+\APACinsertmetastar {%
+glaholt2010}%
+\begin{APACrefauthors}%
+Glaholt, M\BPBI G.%
+, Wu, M\BHBI C.%
+\BCBL {}\ \BBA {} Reingold, E\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Evidence for top-down control of eye movements during
+  visual decision making} {Evidence for top-down control of eye movements
+  during visual decision making}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of vision}{10}{5}{15--15}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -739,6 +1230,93 @@ Glöckner, A.%
 \APACjournalVolNumPages{Journal of Behavioral Decision Making}{24}{1}{71–98}.
 \newblock
 \begin{APACrefDOI} \doi{10.1002/bdm.684} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Graham%
+\ \BBA {} Roberto%
+}{%
+Graham%
+\ \BBA {} Roberto%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+graham2016}
+\APACinsertmetastar {%
+graham2016}%
+\begin{APACrefauthors}%
+Graham, D\BPBI J.%
+\BCBT {}\ \BBA {} Roberto, C\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Evaluating the impact of US Food and Drug
+  Administration--proposed nutrition facts label changes on young adults’
+  visual attention and purchase intentions} {Evaluating the impact of us food
+  and drug administration--proposed nutrition facts label changes on young
+  adults’ visual attention and purchase intentions}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Health Education \& Behavior}{43}{4}{389--398}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Grebitus%
+, Roosen%
+\BCBL {}\ \BBA {} Seitz%
+}{%
+Grebitus%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+grebitus2015}
+\APACinsertmetastar {%
+grebitus2015}%
+\begin{APACrefauthors}%
+Grebitus, C.%
+, Roosen, J.%
+\BCBL {}\ \BBA {} Seitz, C\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Visual attention and Choice: A behavioral economics
+  perspective on food decisions} {Visual attention and choice: A behavioral
+  economics perspective on food decisions}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Agricultural \& Food Industrial
+  Organization}{13}{1}{73--81}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Guyader%
+, Ottosson%
+\BCBL {}\ \BBA {} Witell%
+}{%
+Guyader%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+guyader2017}
+\APACinsertmetastar {%
+guyader2017}%
+\begin{APACrefauthors}%
+Guyader, H.%
+, Ottosson, M.%
+\BCBL {}\ \BBA {} Witell, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {You can't buy what you can't see: Retailer practices to
+  increase the green premium} {You can't buy what you can't see: Retailer
+  practices to increase the green premium}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Retailing and Consumer
+  Services}{34}{}{319--325}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -893,6 +1471,33 @@ Hong, S.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Huang%
+\ \BBA {} Kuo%
+}{%
+Huang%
+\ \BBA {} Kuo%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+huang2011}
+\APACinsertmetastar {%
+huang2011}%
+\begin{APACrefauthors}%
+Huang, Y\BHBI f.%
+\BCBT {}\ \BBA {} Kuo, F\BHBI y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {An eye-tracking investigation of internet consumers'
+  decision deliberateness} {An eye-tracking investigation of internet
+  consumers' decision deliberateness}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Internet Research}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Hunter%
 \ \BBA {} Schmidt%
 }{%
@@ -919,6 +1524,35 @@ Hunter, J.%
 \APACaddressPublisher{}{SAGE}.
 \newblock
 \begin{APACrefDOI} \doi{10.4135/9781483398105} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hwang%
+\ \BBA {} Lee%
+}{%
+Hwang%
+\ \BBA {} Lee%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+hwang2017}
+\APACinsertmetastar {%
+hwang2017}%
+\begin{APACrefauthors}%
+Hwang, Y\BPBI M.%
+\BCBT {}\ \BBA {} Lee, K\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Using Eye Tracking to Explore Consumers' Visual Behavior
+  According to Their Shopping Motivation in Mobile Environments} {Using eye
+  tracking to explore consumers' visual behavior according to their shopping
+  motivation in mobile environments}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cyberpsychology, Behavior, and Social
+  Networking}{20}{7}{442--447}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -976,6 +1610,38 @@ Jonides, J.%
 \APACjournalVolNumPages{Perception \& Psychophysics}{43}{4}{346--354}.
 \newblock
 \begin{APACrefDOI} \doi{10.3758/BF03208805} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Keller%
+, Kreuzmair%
+, Leins-Hess%
+\BCBL {}\ \BBA {} Michael%
+}{%
+Keller%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+keller2014}
+\APACinsertmetastar {%
+keller2014}%
+\begin{APACrefauthors}%
+Keller, C.%
+, Kreuzmair, C.%
+, Leins-Hess, R.%
+\BCBL {}\ \BBA {} Michael, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Numeric and graphic risk information processing of high
+  and low numerates in the intuitive and deliberative decision modes: An
+  eye-tracker study} {Numeric and graphic risk information processing of high
+  and low numerates in the intuitive and deliberative decision modes: An
+  eye-tracker study}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Judgment and Decision making}{9}{5}{420--432}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1128,6 +1794,36 @@ Kvarven, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+LeBoeuf%
+, Choplin%
+\BCBL {}\ \BBA {} Stark%
+}{%
+LeBoeuf%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+leboeuf2016}
+\APACinsertmetastar {%
+leboeuf2016}%
+\begin{APACrefauthors}%
+LeBoeuf, M\BPBI A.%
+, Choplin, J\BPBI M.%
+\BCBL {}\ \BBA {} Stark, D\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Eye See What You Are Saying: Testing Conversational
+  Influences on the Information Gleaned from Home-Loan Disclosure Forms} {Eye
+  see what you are saying: Testing conversational influences on the information
+  gleaned from home-loan disclosure forms}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Behavioral Decision
+  Making}{29}{2-3}{307--321}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Le~Pelley%
 , Pearson%
 , Griffiths%
@@ -1159,6 +1855,35 @@ Le~Pelley, M\BPBI E.%
   General}{144}{1}{158--171}.
 \newblock
 \begin{APACrefDOI} \doi{10.1037/xge0000037} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lindner%
+\ \protect \BOthers {.}}{%
+Lindner%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+lindner2014}
+\APACinsertmetastar {%
+lindner2014}%
+\begin{APACrefauthors}%
+Lindner, M\BPBI A.%
+, Eitel, A.%
+, Thoma, G\BHBI B.%
+, Dalehefte, I\BPBI M.%
+, Ihme, J\BPBI M.%
+\BCBL {}\ \BBA {} K{\"o}ller, O.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Tracking the decision-making process in multiple-choice
+  assessment: Evidence from eye movements} {Tracking the decision-making
+  process in multiple-choice assessment: Evidence from eye movements}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Applied Cognitive Psychology}{28}{5}{738--752}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1216,6 +1941,35 @@ Manohar, S\BPBI G.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Meissner%
+, Oppewal%
+\BCBL {}\ \BBA {} Huber%
+}{%
+Meissner%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+meissner2016b}
+\APACinsertmetastar {%
+meissner2016b}%
+\begin{APACrefauthors}%
+Meissner, M.%
+, Oppewal, H.%
+\BCBL {}\ \BBA {} Huber, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {How many options? Behavioral responses to two versus
+  five alternatives per choice} {How many options? behavioral responses to two
+  versus five alternatives per choice}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Sawtooth Software Conference} {Sawtooth software
+  conference}\ (\BPG~20–26).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Meißner%
 , Musalem%
 \BCBL {}\ \BBA {} Huber%
@@ -1244,6 +1998,36 @@ Meißner, M.%
 \APACjournalVolNumPages{Journal of Marketing Research}{53}{1}{1–17}.
 \newblock
 \begin{APACrefDOI} \doi{10.1509/jmr.13.0467} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Miller%
+\ \protect \BOthers {.}}{%
+Miller%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+miller2015}
+\APACinsertmetastar {%
+miller2015}%
+\begin{APACrefauthors}%
+Miller, L\BPBI M\BPBI S.%
+, Cassady, D\BPBI L.%
+, Applegate, E\BPBI A.%
+, Beckett, L\BPBI A.%
+, Wilson, M\BPBI D.%
+, Gibson, T\BPBI N.%
+\BCBL {}\ \BBA {} Ellwood, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Relationships among food label use, motivation, and
+  dietary quality} {Relationships among food label use, motivation, and dietary
+  quality}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nutrients}{7}{2}{1068--1080}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1276,6 +2060,34 @@ Milosavljevic, M.%
 \APACjournalVolNumPages{Journal of Consumer Psychology}{22}{1}{67–74}.
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.jcps.2011.10.002} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mitsuda%
+\ \BBA {} Glaholt%
+}{%
+Mitsuda%
+\ \BBA {} Glaholt%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+mitsuda2014}
+\APACinsertmetastar {%
+mitsuda2014}%
+\begin{APACrefauthors}%
+Mitsuda, T.%
+\BCBT {}\ \BBA {} Glaholt, M\BPBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Gaze bias during visual preference judgements: Effects
+  of stimulus category and decision instructions} {Gaze bias during visual
+  preference judgements: Effects of stimulus category and decision
+  instructions}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Visual Cognition}{22}{1}{11--29}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1376,6 +2188,33 @@ Navalpakkam, V.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Nittono%
+\ \BBA {} Wada%
+}{%
+Nittono%
+\ \BBA {} Wada%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+nittono2009}
+\APACinsertmetastar {%
+nittono2009}%
+\begin{APACrefauthors}%
+Nittono, H.%
+\BCBT {}\ \BBA {} Wada, Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Gaze shifts do not affect preference judgments of
+  graphic patterns} {Gaze shifts do not affect preference judgments of graphic
+  patterns}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Perceptual and motor skills}{109}{1}{79--94}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Noguchi%
 \ \BBA {} Stewart%
 }{%
@@ -1434,6 +2273,33 @@ Nyström, M.%
 \APACjournalVolNumPages{Behavior Research Methods}{45}{1}{272–288}.
 \newblock
 \begin{APACrefDOI} \doi{10.3758/s13428-012-0247-4} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Orquin%
+}{%
+Orquin%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+orquin2020osfb}
+\APACinsertmetastar {%
+orquin2020osfb}%
+\begin{APACrefauthors}%
+Orquin, J\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{Jul}{}.
+\newblock
+\APACrefbtitle {Project files for "Search and stop".} {Project files for
+  "search and stop".}
+\newblock
+\APACaddressPublisher{}{Open Science Framework}.
+\newblock
+\begin{APACrefURL}
+  \url{https://osf.io/uhcbr/?view_only=955f52abf6cd49319b283f23dbb116a8}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1498,6 +2364,34 @@ Orquin, J\BPBI L.%
 \APACjournalVolNumPages{Journal of Business Research}{}{}{187-195}.
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.jbusres.2019.01.043} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Orquin%
+, Bagger%
+, Loose%
+\BCBL {}\ \protect \BOthers {.}}{%
+Orquin%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+orquin2013}
+\APACinsertmetastar {%
+orquin2013}%
+\begin{APACrefauthors}%
+Orquin, J\BPBI L.%
+, Bagger, M\BPBI P.%
+, Loose, S\BPBI M.%
+\BCBL {}\ \BOthersPeriod {.}\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning affects top down and bottom up modulation of
+  eye movements in decision making} {Learning affects top down and bottom up
+  modulation of eye movements in decision making}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Judgment and Decision making}{8}{6}{700--716}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1769,6 +2663,34 @@ Peschel, A\BPBI O.%
 
 \bibitem [\protect \citeauthoryear {%
 Pieters%
+\ \BBA {} Warlop%
+}{%
+Pieters%
+\ \BBA {} Warlop%
+}{%
+{\protect \APACyear {1999}}%
+}]{%
+pieters1999}
+\APACinsertmetastar {%
+pieters1999}%
+\begin{APACrefauthors}%
+Pieters, R.%
+\BCBT {}\ \BBA {} Warlop, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1999}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Visual attention during brand choice: The impact of time
+  pressure and task motivation} {Visual attention during brand choice: The
+  impact of time pressure and task motivation}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{International Journal of research in
+  Marketing}{16}{1}{1--16}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pieters%
 \ \BBA {} Wedel%
 }{%
 Pieters%
@@ -1946,6 +2868,35 @@ Rosenholtz, R.%
 \APACjournalVolNumPages{Journal of Vision}{7}{2}{17}.
 \newblock
 \begin{APACrefDOI} \doi{10.1167/7.2.17} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rubaltelli%
+, Dickert%
+\BCBL {}\ \BBA {} Slovic%
+}{%
+Rubaltelli%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+rubaltelli2012}
+\APACinsertmetastar {%
+rubaltelli2012}%
+\begin{APACrefauthors}%
+Rubaltelli, E.%
+, Dickert, S.%
+\BCBL {}\ \BBA {} Slovic, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Response mode, compatibility, and dual-processes in the
+  evaluation of simple gambles: An eye-tracking investigation} {Response mode,
+  compatibility, and dual-processes in the evaluation of simple gambles: An
+  eye-tracking investigation}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Judgment and Decision making}{7}{4}{427}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2206,6 +3157,38 @@ Simon, H.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Spinks%
+\ \BBA {} Mortimer%
+}{%
+Spinks%
+\ \BBA {} Mortimer%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+spinks2016a}
+\APACinsertmetastar {%
+spinks2016a}%
+\begin{APACrefauthors}%
+Spinks, J.%
+\BCBT {}\ \BBA {} Mortimer, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Lost in the crowd? Using eye-tracking to investigate the
+  effect of complexity on attribute non-attendance in discrete choice
+  experiments} {Lost in the crowd? using eye-tracking to investigate the effect
+  of complexity on attribute non-attendance in discrete choice
+  experiments}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{BMC Medical Informatics and Decision
+  Making}{16}{1}{14}.
+\newblock
+\begin{APACrefDOI} \doi{10.1186/s12911-016-0251-1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Stojic%
 , Orquin%
 , Dayan%
@@ -2301,6 +3284,36 @@ St{\"u}ttgen, P.%
 \APACjournalVolNumPages{Marketing Science}{31}{6}{878--899}.
 \newblock
 \begin{APACrefDOI} \doi{10.1287/mksc.1120.0732} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Su%
+\ \protect \BOthers {.}}{%
+Su%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+su2013}
+\APACinsertmetastar {%
+su2013}%
+\begin{APACrefauthors}%
+Su, Y.%
+, Rao, L\BHBI L.%
+, Sun, H\BHBI Y.%
+, Du, X\BHBI L.%
+, Li, X.%
+\BCBL {}\ \BBA {} Li, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Is making a risky choice based on a weighting and adding
+  process? An eye-tracking investigation.} {Is making a risky choice based on a
+  weighting and adding process? an eye-tracking investigation.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Experimental Psychology: Learning, Memory,
+  and Cognition}{39}{6}{1765}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2456,6 +3469,39 @@ Towal, R.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Turner%
+, Skubisz%
+, Pandya%
+, Silverman%
+\BCBL {}\ \BBA {} Austin%
+}{%
+Turner%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+turner2014}
+\APACinsertmetastar {%
+turner2014}%
+\begin{APACrefauthors}%
+Turner, M\BPBI M.%
+, Skubisz, C.%
+, Pandya, S\BPBI P.%
+, Silverman, M.%
+\BCBL {}\ \BBA {} Austin, L\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Predicting visual attention to nutrition information on
+  food products: the influence of motivation and ability} {Predicting visual
+  attention to nutrition information on food products: the influence of
+  motivation and ability}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of health communication}{19}{9}{1017--1029}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Tversky%
 }{%
 Tversky%
@@ -2542,6 +3588,69 @@ Usher, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+van~der Laan%
+, Hooge%
+, De~Ridder%
+, Viergever%
+\BCBL {}\ \BBA {} Smeets%
+}{%
+van~der Laan%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+vanderlaan2015}
+\APACinsertmetastar {%
+vanderlaan2015}%
+\begin{APACrefauthors}%
+van~der Laan, L\BPBI N.%
+, Hooge, I\BPBI T.%
+, De~Ridder, D\BPBI T.%
+, Viergever, M\BPBI A.%
+\BCBL {}\ \BBA {} Smeets, P\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Do you like what you see? The role of first fixation and
+  total fixation duration in consumer choice} {Do you like what you see? the
+  role of first fixation and total fixation duration in consumer
+  choice}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Food Quality and Preference}{39}{}{46--55}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+van~der Laan%
+, Papies%
+, Hooge%
+\BCBL {}\ \BBA {} Smeets%
+}{%
+van~der Laan%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+vanderlaan2017}
+\APACinsertmetastar {%
+vanderlaan2017}%
+\begin{APACrefauthors}%
+van~der Laan, L\BPBI N.%
+, Papies, E\BPBI K.%
+, Hooge, I\BPBI T.%
+\BCBL {}\ \BBA {} Smeets, P\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Goal-directed visual attention drives health goal
+  priming: An eye-tracking experiment.} {Goal-directed visual attention drives
+  health goal priming: An eye-tracking experiment.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Health Psychology}{36}{1}{82}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Van~der Lans%
 , Pieters%
 \BCBL {}\ \BBA {} Wedel%
@@ -2571,6 +3680,66 @@ Van~der Lans, R.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Van~Herpen%
+\ \BBA {} Van~Trijp%
+}{%
+Van~Herpen%
+\ \BBA {} Van~Trijp%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+vanherpen2011}
+\APACinsertmetastar {%
+vanherpen2011}%
+\begin{APACrefauthors}%
+Van~Herpen, E.%
+\BCBT {}\ \BBA {} Van~Trijp, H\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Front-of-pack nutrition labels. Their effect on
+  attention and choices when consumers have varying goals and time constraints}
+  {Front-of-pack nutrition labels. their effect on attention and choices when
+  consumers have varying goals and time constraints}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Appetite}{57}{1}{148--160}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Van~Loo%
+\ \protect \BOthers {.}}{%
+Van~Loo%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+vanloo2015}
+\APACinsertmetastar {%
+vanloo2015}%
+\begin{APACrefauthors}%
+Van~Loo, E.%
+, Caputo, V.%
+, Nayga, R.%
+, Seo, H\BHBI S.%
+, Zhang, B.%
+\BCBL {}\ \BBA {} Verbeke, W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Sustainability labels on coffee: Consumer preferences,
+  willingness-to-pay and visual attention to attributes} {Sustainability labels
+  on coffee: Consumer preferences, willingness-to-pay and visual attention to
+  attributes}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Ecological Economics}{118}{}{215–225}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.ecolecon.2015.07.011} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Viechtbauer%
 }{%
 Viechtbauer%
@@ -2593,6 +3762,37 @@ Viechtbauer, W.%
 \APACjournalVolNumPages{Journal of Statistical Software}{36}{3}{1--48}.
 \newblock
 \begin{APACrefDOI} \doi{10.18637/jss.v036.i03} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+W{\"a}stlund%
+, Otterbring%
+, Gustafsson%
+\BCBL {}\ \BBA {} Shams%
+}{%
+W{\"a}stlund%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+wastlund2015}
+\APACinsertmetastar {%
+wastlund2015}%
+\begin{APACrefauthors}%
+W{\"a}stlund, E.%
+, Otterbring, T.%
+, Gustafsson, A.%
+\BCBL {}\ \BBA {} Shams, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Heuristics and resource depletion: eye-tracking
+  customers’ in situ gaze behavior in the field} {Heuristics and resource
+  depletion: eye-tracking customers’ in situ gaze behavior in the
+  field}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Business Research}{68}{1}{95--101}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2668,6 +3868,36 @@ Wolfe, J\BPBI M.%
 {\BBOQ}\APACrefatitle {Visual search} {Visual search}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Current biology}{20}{8}{R346--R349}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wolfson%
+, Graham%
+\BCBL {}\ \BBA {} Bleich%
+}{%
+Wolfson%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+wolfson2017}
+\APACinsertmetastar {%
+wolfson2017}%
+\begin{APACrefauthors}%
+Wolfson, J\BPBI A.%
+, Graham, D\BPBI J.%
+\BCBL {}\ \BBA {} Bleich, S\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Attention to physical activity--equivalent calorie
+  information on nutrition facts labels: an eye-tracking investigation}
+  {Attention to physical activity--equivalent calorie information on nutrition
+  facts labels: an eye-tracking investigation}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of nutrition education and
+  behavior}{49}{1}{35--42}.
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

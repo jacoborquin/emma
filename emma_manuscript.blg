@@ -11,6 +11,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated field_info (elt_size=4) to 11336 items from 5000.
 Database file #1: references.bib
 I was expecting a `,' or a `}'---line 104 of file references.bib
  :   
@@ -18,45 +19,47 @@ I was expecting a `,' or a `}'---line 104 of file references.bib
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-You've used 90 entries,
+Warning--No journal in gidlof2013
+Warning--`others' not consistent with 6th ed. of the APA Manual
+You've used 132 entries,
             6951 wiz_defined-function locations,
-            1857 strings with 27196 characters,
-and the built_in function-call counts, 177892 in all, are:
-= -- 21482
-> -- 1563
-< -- 8910
-+ -- 8958
-- -- 182
-* -- 12068
-:= -- 33007
-add.period$ -- 369
-call.type$ -- 90
-change.case$ -- 1535
+            2065 strings with 35664 characters,
+and the built_in function-call counts, 276209 in all, are:
+= -- 33451
+> -- 2381
+< -- 14453
++ -- 14803
+- -- 269
+* -- 18803
+:= -- 52092
+add.period$ -- 540
+call.type$ -- 132
+change.case$ -- 2268
 chr.to.int$ -- 0
-cite$ -- 180
-duplicate$ -- 4858
-empty$ -- 6889
-format.name$ -- 2679
-if$ -- 33280
+cite$ -- 265
+duplicate$ -- 7570
+empty$ -- 10156
+format.name$ -- 4128
+if$ -- 51052
 int.to.chr$ -- 0
-int.to.str$ -- 270
+int.to.str$ -- 400
 missing$ -- 0
-newline$ -- 2491
-num.names$ -- 720
-pop$ -- 2749
+newline$ -- 3604
+num.names$ -- 1056
+pop$ -- 3976
 preamble$ -- 1
-purify$ -- 362
+purify$ -- 532
 quote$ -- 0
-skip$ -- 11041
+skip$ -- 16780
 stack$ -- 0
-substring$ -- 9606
-swap$ -- 2945
-text.length$ -- 189
+substring$ -- 15887
+swap$ -- 4415
+text.length$ -- 283
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 7392
-warning$ -- 0
-while$ -- 901
+type$ -- 10880
+warning$ -- 2
+while$ -- 1383
 width$ -- 0
-write$ -- 3174
+write$ -- 4646
 (There was 1 error message)
