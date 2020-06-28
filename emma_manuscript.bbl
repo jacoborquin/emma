@@ -2206,13 +2206,13 @@ Simon, H.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Stoji{\'c}%
+Stojic%
 , Orquin%
 , Dayan%
 , Dolan%
 \BCBL {}\ \BBA {} Speekenbrink%
 }{%
-Stoji{\'c}%
+Stojic%
 , Orquin%
 \BCBL {}\ \protect \BOthers {.}}{%
 {\protect \APACyear {2020}}%
@@ -2221,7 +2221,7 @@ stojic2020uncertainty}
 \APACinsertmetastar {%
 stojic2020uncertainty}%
 \begin{APACrefauthors}%
-Stoji{\'c}, H.%
+Stojic, H.%
 , Orquin, J\BPBI L.%
 , Dayan, P.%
 , Dolan, R\BPBI J.%
@@ -2241,12 +2241,12 @@ Stoji{\'c}, H.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Stoji{\'c}%
+Stojic%
 , Schulz%
 , Analytis%
 \BCBL {}\ \BBA {} Speekenbrink%
 }{%
-Stoji{\'c}%
+Stojic%
 , Schulz%
 \BCBL {}\ \protect \BOthers {.}}{%
 {\protect \APACyear {2020}}%
@@ -2255,7 +2255,7 @@ stojic2020s}
 \APACinsertmetastar {%
 stojic2020s}%
 \begin{APACrefauthors}%
-Stoji{\'c}, H.%
+Stojic, H.%
 , Schulz, E.%
 , Analytis, P\BPBI P.%
 \BCBL {}\ \BBA {} Speekenbrink, M.%
@@ -2264,8 +2264,8 @@ Stoji{\'c}, H.%
 \newblock
 \APACrefYearMonthDay{2020}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {It’s new, but is it good? How generalization and
-  uncertainty guide the exploration of novel options.} {It’s new, but is it
+{\BBOQ}\APACrefatitle {Its new, but is it good? How generalization and
+  uncertainty guide the exploration of novel options.} {Its new, but is it
   good? how generalization and uncertainty guide the exploration of novel
   options.}{\BBCQ}
 \newblock
