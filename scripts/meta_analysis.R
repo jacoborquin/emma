@@ -434,10 +434,10 @@ overviewtabel$IV = ifelse(overviewtabel$IV == "LR.position", "LvR",
                                                ifelse(overviewtabel$IV == "Salience", "Sal",overviewtabel$IV)))))
 overviewtabel = overviewtabel[order(Authors),]
 
-tab_caption <- "Overview table."
+tab_caption <- "Overview of individual effect sizes."
 tab_label <- "tab:overviewtable"
 tab_note <- paste0("\\hline \n \\multicolumn{4}{l}",
-                   "{\\scriptsize{\\textit{Note.} $a_a$ = artifact multiplier.}} \n")
+                   "{\\scriptsize{\\textit{Note.} $N$ = number of participants; $a_a$ = artifact multiplier; $r$ = effect size correlation expressed in fixation count metric.}} \n")
 
 add.to.row <- list(pos = list(0), command = NULL)
 command <- paste0("\\hline\n\\endhead\n","\\hline\n","\\multicolumn{", dim(overviewtabel)[2] + 1, "}{l}","{\\footnotesize Continued on next page}\n","\\endfoot\n","\\endlastfoot\n")
