@@ -425,30 +425,36 @@ cat(result, file = file.path(tablesDir, "difftest_pref_choice.tex"))
 # -----
 
 overviewtabel = data[, c(2,4,9,14,15,1)]
-tab_caption <- "Overview of studies"
-tab_label <- "tab:overview"
-tab_note <- paste0("\\hline \n \\multicolumn{10}{p{0.95\\textwidth}}",
-                   "{\\scriptsize{\\textit{Note.} $k$ = number of studies (for trim and fill analysis number of imputed studies); $N$ = number of participants; $\\rho$ = unattenuated effect size estimate, SE = standard error of estimate; $Z$ = Z statistic; $p$ = significance level; $\\textrm{CI}_{95}$ LL = lower limit of the 95\\% confidence interval; $\\textrm{CI}_{95}$ UL = upper limit of the 95\\% confidence interval, $I^2$ = within-group heterogeneity.}} \n")
+tab_caption <- "Overview table."
+tab_label <- "tab:overviewtable"
+tab_note <- paste0("\\hline \n \\multicolumn{4}{l}",
+                   "{\\scriptsize{\\textit{Note.} $a_a$ = artifact multiplier.}} \n")
+
+add.to.row <- list(pos = list(0), command = NULL)
+command <- paste0("\\hline\n\\endhead\n","\\hline\n","\\multicolumn{", dim(overviewtabel)[2] + 1, "}{l}","{\\footnotesize Continued on next page}\n","\\endfoot\n","\\endlastfoot\n")
+add.to.row$command <- command
+
 print(
   xtable(
     overviewtabel, 
     caption = tab_caption, 
-    label = tab_label,
-    # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
-    #align = "llccccccccc"
-    # digits = c(0,0,0,0,3,3,3,3,3,3,3)
+    label = tab_label, 
+    #align = "llccc",
+    #digits = c(0,0,4,2,2)
   ), 
-  size = "\\small",
   include.rownames = FALSE,
   caption.placement = "top", 
   hline.after = c(-1, 0),
-  add.to.row = list(
-    pos = list(nrow(overviewtabel)),
-    command = tab_note
-  ),
+  # add.to.row = list(
+  #   pos = list(nrow(overviewtabel)),
+  #   command = tab_note
+  # ),
+  add.to.row = add.to.row,
+  tabular.environment = "longtable",
   sanitize.text.function = function(x){x},
   file = file.path(tablesDir, "overviewtabel.tex")
 )
+
 
 # -----
 # Forrest plots 

@@ -14,7 +14,7 @@
 # specify your path here if you want to use this script interactively, 
 # and uncomment the line:
 # setwd("/home/hstojic/Research/project/attention_meta/scripts")
-setwd("/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma/scripts/")
+ setwd("/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma/scripts/")
 
 # adds eye tracker artifact multiplier to the data
 # produces associated figures and tables

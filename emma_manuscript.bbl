@@ -24,6 +24,8 @@ Abrams, R\BPBI A.%
   attention}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Psychological Science}{14}{5}{427--432}.
+\newblock
+\begin{APACrefDOI} \doi{10.1111/1467-9280.01458} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -39,21 +41,19 @@ atalay2012a}
 \APACinsertmetastar {%
 atalay2012a}%
 \begin{APACrefauthors}%
-Atalay, A.%
-, Bodur, H.%
+Atalay, A\BPBI S.%
+, Bodur, O\BPBI H.%
 \BCBL {}\ \BBA {} Rasolofoarison, D.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
 \APACrefYearMonthDay{2012}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Shining in the Center: Central Gaze Cascade Effect on
-  Product Choice} {Shining in the center: Central gaze cascade effect on
+{\BBOQ}\APACrefatitle {Shining in the center: Central gaze cascade effect on
+  product choice} {Shining in the center: Central gaze cascade effect on
   product choice}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Consumer Research}{39}{4}{848–866}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1086/665984} \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1086/665984} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -70,11 +70,11 @@ bialkova2014a}
 bialkova2014a}%
 \begin{APACrefauthors}%
 Bialkova, S.%
-, Grunert, K.%
+, Grunert, K\BPBI G.%
 , Juhl, H.%
 , Wasowicz-Kirylo, G.%
 , Stysko-Kunkowska, M.%
-\BCBL {}\ \BBA {} Trijp, H.%
+\BCBL {}\ \BBA {} Trijp, H\BPBI C.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -87,9 +87,6 @@ Bialkova, S.%
   involving eye-tracking}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Appetite}{76}{}{66–75}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1016/j.appet.2013.11.021}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.appet.2013.11.021} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -120,6 +117,8 @@ Borenstein, M.%
 \APACrefbtitle {Introduction to meta-analysis} {Introduction to meta-analysis}.
 \newblock
 \APACaddressPublisher{}{John Wiley \& Sons}.
+\newblock
+\begin{APACrefDOI} \doi{10.1002/9780470743386} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -148,8 +147,6 @@ Borji, A.%
 \APACjournalVolNumPages{IEEE Transactions on Pattern Analysis and Machine
   Intelligence}{35}{1}{185–207}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1109/TPAMI.2012.89} \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1109/TPAMI.2012.89} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -177,6 +174,8 @@ Brandst{\"a}tter, E.%
   choice}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Acta psychologica}{152}{}{166--176}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.actpsy.2014.08.008} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -208,9 +207,7 @@ Bulling, A.%
 \newblock
 \APACaddressPublisher{}{Taylor \& Francis}.
 \newblock
-\begin{APACrefURL}
-  \url{https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_2473160}
-  \end{APACrefURL}
+\begin{APACrefDOI} \doi{10.4324/9781315160559} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -237,6 +234,8 @@ Busemeyer, J\BPBI R.%
   {Fundamental derivations from decision field theory}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Mathematical Social Sciences}{23}{3}{255--282}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/0165-4896(92)90043-5} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -261,8 +260,6 @@ Callaway, F.%
 \newblock
 \APACrefbtitle {Attention in value-based choice as optimal sequential
   sampling.} {Attention in value-based choice as optimal sequential sampling.}
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.31234/osf.io/57v6k} \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.31234/osf.io/57v6k} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -290,15 +287,13 @@ Chandon, P.%
 \newblock
 \APACrefYearMonthDay{2009}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Does In-Store Marketing Work? Effects of the Number and
-  Position of Shelf Facings on Brand Attention and Evaluation at the Point of
-  Purchase} {Does in-store marketing work? effects of the number and position
+{\BBOQ}\APACrefatitle {Does in-store marketing work? Effects of the number and
+  position of shelf facings on brand attention and evaluation at the point of
+  purchase} {Does in-store marketing work? effects of the number and position
   of shelf facings on brand attention and evaluation at the point of
   purchase}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of Marketing}{73}{6}{1–17}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1509/jmkg.73.6.1} \end{APACrefURL}
+\APACjournalVolNumPages{Journal of Marketing}{73}{6}{1–-17}.
 \newblock
 \begin{APACrefDOI} \doi{10.1509/jmkg.73.6.1} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -330,7 +325,9 @@ Chen, X.%
   value-based decisions} {Mechanisms underlying the influence of saliency on
   value-based decisions}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of vision}{13}{12}{18--18}.
+\APACjournalVolNumPages{Journal of Vision}{13}{12}{18--18}.
+\newblock
+\begin{APACrefDOI} \doi{10.1167/13.12.18} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -356,6 +353,8 @@ Chita-Tegmark, M.%
 \newblock
 \APACjournalVolNumPages{Review Journal of Autism and Developmental
   Disorders}{3}{3}{209--223}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s40489-016-0077-x} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -382,10 +381,7 @@ Clarke, A.%
   behaviour} {Deriving an appropriate baseline for describing fixation
   behaviour}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Vision Research}{102}{}{41–51}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1016/j.visres.2014.06.016}
-  \end{APACrefURL}
+\APACjournalVolNumPages{Vision Research}{102}{}{41–-51}.
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.visres.2014.06.016} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -414,9 +410,7 @@ Corbetta, M.%
   in the brain} {Control of goal-directed and stimulus-driven attention in the
   brain}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Nature Reviews Neuroscience}{3}{3}{201–215}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1038/nrn755} \end{APACrefURL}
+\APACjournalVolNumPages{Nature Reviews Neuroscience}{3}{3}{201–-215}.
 \newblock
 \begin{APACrefDOI} \doi{10.1038/nrn755} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -438,14 +432,11 @@ Dehaene, S.%
 \newblock
 \APACrefYearMonthDay{2003}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {The neural basis of the Weber–Fechner law: a
+{\BBOQ}\APACrefatitle {The neural basis of the Weber–Fechner law: A
   logarithmic mental number line} {The neural basis of the weber–fechner law:
-  a logarithmic mental number line}.{\BBCQ}
+  A logarithmic mental number line}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Trends in Cognitive Sciences}{7}{4}{145–147}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1016/S1364-6613(03)00055-X}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1016/S1364-6613(03)00055-X} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -471,6 +462,10 @@ Del~Re, A.%
 \APACrefYearMonthDay{2012}{}{}.
 \newblock
 \APACrefbtitle {Package ‘compute. es.} {Package ‘compute. es.}
+\newblock
+\begin{APACrefURL}
+  \url{https://cran.r-project.org/web/packages/compute.es/index.html}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -522,12 +517,14 @@ Duval, S.%
 \newblock
 \APACrefYearMonthDay{2000}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Trim and fill: a simple funnel-plot--based method of
+{\BBOQ}\APACrefatitle {Trim and fill: A simple funnel-plot--based method of
   testing and adjusting for publication bias in meta-analysis} {Trim and fill:
-  a simple funnel-plot--based method of testing and adjusting for publication
+  A simple funnel-plot--based method of testing and adjusting for publication
   bias in meta-analysis}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Biometrics}{56}{2}{455--463}.
+\newblock
+\begin{APACrefDOI} \doi{10.1111/j.0006-341X.2000.00455.x} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -545,7 +542,7 @@ forstmann2016}%
 \begin{APACrefauthors}%
 Forstmann, B\BPBI U.%
 , Ratcliff, R.%
-\BCBL {}\ \BBA {} Wagenmakers, E\BHBI J.%
+\BCBL {}\ \BBA {} Wagenmakers, E.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -555,7 +552,9 @@ Forstmann, B\BPBI U.%
   Advantages, applications, and extensions} {Sequential sampling models in
   cognitive neuroscience: Advantages, applications, and extensions}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Annual review of psychology}{67}{}{641--666}.
+\APACjournalVolNumPages{Annual Review of Psychology}{67}{}{641--666}.
+\newblock
+\begin{APACrefDOI} \doi{10.1146/annurev-psych-122414-033645} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -578,14 +577,11 @@ Ghaffari, M.%
 \newblock
 \APACrefYearMonthDay{2018}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {The Power of Attention: Using Eye Gaze to Predict
-  Other-Regarding and Moral Choices} {The power of attention: Using eye gaze to
+{\BBOQ}\APACrefatitle {The power of attention: Using eye gaze to predict
+  other-regarding and moral choices} {The power of attention: Using eye gaze to
   predict other-regarding and moral choices}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Psychological Science}{29}{11}{1878–1889}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1177/0956797618799301}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1177/0956797618799301} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -620,9 +616,6 @@ Gidlof, K.%
 \newblock
 \APACjournalVolNumPages{Appetite}{116}{}{29–38}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1016/j.appet.2017.04.020}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1016/j.appet.2017.04.020} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -650,7 +643,9 @@ Gigerenzer, G.%
   rationality.} {Reasoning the fast and frugal way: models of bounded
   rationality.}{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Psychological Review}{103}{4}{650}.
+\APACjournalVolNumPages{Psychological Review}{103}{4}{650--669}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/0033-295X.103.4.650} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -682,6 +677,8 @@ Gluth, S.%
   alternatives}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Nature Human Behaviour}{}{}{1--12}.
+\newblock
+\begin{APACrefDOI} \doi{10.1038/s41562-020-0822-0} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -710,6 +707,8 @@ Gluth, S.%
   multi-alternative decision making}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Elife}{7}{}{e39659}.
+\newblock
+\begin{APACrefDOI} \doi{10.7554/eLife.39659.001} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -726,7 +725,7 @@ gloeckner2011a}
 gloeckner2011a}%
 \begin{APACrefauthors}%
 Glöckner, A.%
-\BCBT {}\ \BBA {} Herbold, A\BHBI K.%
+\BCBT {}\ \BBA {} Herbold, A.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -738,8 +737,6 @@ Glöckner, A.%
   for compensatory strategies based on automatic processes}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Behavioral Decision Making}{24}{1}{71–98}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1002/bdm.684} \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1002/bdm.684} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -767,7 +764,9 @@ Hayhoe, M.%
 {\BBOQ}\APACrefatitle {Eye movements in natural behavior} {Eye movements in
   natural behavior}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Trends in cognitive sciences}{9}{4}{188--194}.
+\APACjournalVolNumPages{Trends in Cognitive Cciences}{9}{4}{188--194}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.tics.2005.02.009} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -790,13 +789,10 @@ Hayhoe, M.%
 \newblock
 \APACrefYearMonthDay{2014}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Modeling Task Control of Eye Movements} {Modeling task
+{\BBOQ}\APACrefatitle {Modeling task control of eye movements} {Modeling task
   control of eye movements}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Current Biology}{24}{13}{622– 628}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1016/j.cub.2014.05.020}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.cub.2014.05.020} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -825,7 +821,9 @@ Hogarth, R\BPBI M.%
   and environments.} {Heuristic and linear models of judgment: Matching rules
   and environments.}{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Psychological Review}{114}{3}{733}.
+\APACjournalVolNumPages{Psychological Review}{114}{3}{733--758}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/0033-295X.114.3.733} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -859,6 +857,8 @@ Holmqvist, K.%
 \newblock
 \BIn{} \APACrefbtitle {18th European Conference on Eye Movements.} {18th
   european conference on eye movements.}
+\newblock
+\begin{APACrefDOI} \doi{10.16910/jemr.8.4.1} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -882,14 +882,12 @@ Hong, S.%
 \newblock
 \APACrefYearMonthDay{2016}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {The Perils of Category Management: The Effect of Product
-  Assortment on Multicategory Purchase Incidence} {The perils of category
+{\BBOQ}\APACrefatitle {The perils of category management: The effect of product
+  assortment on multicategory purchase incidence} {The perils of category
   management: The effect of product assortment on multicategory purchase
   incidence}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Marketing}{80}{5}{34–52}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1509/jm.15.0060} \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1509/jm.15.0060} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -914,14 +912,13 @@ Hunter, J.%
 \newblock
 \APACrefYear{2004}.
 \newblock
-\APACrefbtitle {Methods of Meta-Analysis: Correcting Error and Bias in Research
-  Findings} {Methods of meta-analysis: Correcting error and bias in research
+\APACrefbtitle {Methods of meta-analysis: Correcting error and bias in research
+  findings} {Methods of meta-analysis: Correcting error and bias in research
   findings}.
 \newblock
 \APACaddressPublisher{}{SAGE}.
 \newblock
-\begin{APACrefURL} \url{https://books.google.dk/books?id=IHSBTHEmYNgC}
-  \end{APACrefURL}
+\begin{APACrefDOI} \doi{10.4135/9781483398105} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -949,6 +946,8 @@ Itti, L.%
   covert shifts of visual attention}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Vision research}{40}{10-12}{1489--1506}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/S0042-6989(99)00163-7} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -974,7 +973,9 @@ Jonides, J.%
 {\BBOQ}\APACrefatitle {Uniqueness of abrupt visual onset in capturing
   attention} {Uniqueness of abrupt visual onset in capturing attention}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Perception \& psychophysics}{43}{4}{346--354}.
+\APACjournalVolNumPages{Perception \& Psychophysics}{43}{4}{346--354}.
+\newblock
+\begin{APACrefDOI} \doi{10.3758/BF03208805} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -998,15 +999,12 @@ Kim, B.%
 \newblock
 \APACrefYearMonthDay{2012}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Preference Reversals in Decision Making Under Risk are
-  Accompanied by Changes in Attention to Different Attributes} {Preference
+{\BBOQ}\APACrefatitle {Preference reversals in decision making under risk are
+  accompanied by changes in attention to different attributes} {Preference
   reversals in decision making under risk are accompanied by changes in
   attention to different attributes}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Frontiers in Neuroscience}{6}{}{}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.3389/fnins.2012.00109}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.3389/fnins.2012.00109} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -1038,8 +1036,6 @@ Krajbich, I.%
 \newblock
 \APACjournalVolNumPages{Nature Neuroscience}{13}{10}{1292–1298}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1038/nn.2635} \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1038/nn.2635} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -1067,8 +1063,6 @@ Krefeld-Schwalb, A.%
   memory availability on strategy selection and attribute weights.}
   {Retro-cueing in multi-attribute choices: The influence of memory
   availability on strategy selection and attribute weights.}
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.31234/osf.io/2xm9w} \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.31234/osf.io/2xm9w} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -1100,9 +1094,6 @@ Kreplin, U.%
 \newblock
 \APACjournalVolNumPages{Acta Psychologica}{152}{}{100–108}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1016/j.actpsy.2014.08.003}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1016/j.actpsy.2014.08.003} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -1132,6 +1123,8 @@ Kvarven, A.%
   preregistered multiple-laboratory replication projects}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Nature Human Behaviour}{4}{4}{423--434}.
+\newblock
+\begin{APACrefDOI} \doi{10.1038/s41562-019-0787-z} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1163,7 +1156,9 @@ Le~Pelley, M\BPBI E.%
   reward-related stimuli.}{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Experimental Psychology:
-  General}{144}{1}{158}.
+  General}{144}{1}{158--171}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/xge0000037} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1183,16 +1178,41 @@ Lohse, G.%
 \newblock
 \APACrefYearMonthDay{1997}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Consumer Eye Movement Patterns on Yellow Pages
-  Advertising} {Consumer eye movement patterns on yellow pages
+{\BBOQ}\APACrefatitle {Consumer eye movement patterns on yellow pages
+  advertising} {Consumer eye movement patterns on yellow pages
   advertising}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Advertising}{26}{1}{61–73}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1080/00913367.1997.10673518}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1080/00913367.1997.10673518} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Manohar%
+\ \BBA {} Husain%
+}{%
+Manohar%
+\ \BBA {} Husain%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+manohar2013}
+\APACinsertmetastar {%
+manohar2013}%
+\begin{APACrefauthors}%
+Manohar, S\BPBI G.%
+\BCBT {}\ \BBA {} Husain, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Attention as foraging for information and value}
+  {Attention as foraging for information and value}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Frontiers in Human Neuroscience}{7}{}{711}.
+\newblock
+\begin{APACrefDOI} \doi{10.3389/fnhum.2013.00711} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1216,21 +1236,55 @@ Meißner, M.%
 \newblock
 \APACrefYearMonthDay{2016}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Eye Tracking Reveals Processes that Enable Conjoint
-  Choices to Become Increasingly Efficient with Practice} {Eye tracking reveals
+{\BBOQ}\APACrefatitle {Eye tracking reveals processes that enable conjoint
+  choices to become increasingly efficient with practice} {Eye tracking reveals
   processes that enable conjoint choices to become increasingly efficient with
   practice}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Marketing Research}{53}{1}{1–17}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1509/jmr.13.0467} \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1509/jmr.13.0467} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Moher%
+Milosavljevic%
+, Navalpakkam%
+, Koch%
+\BCBL {}\ \BBA {} Rangel%
+}{%
+Milosavljevic%
 \ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+milosavljevic2012a}
+\APACinsertmetastar {%
+milosavljevic2012a}%
+\begin{APACrefauthors}%
+Milosavljevic, M.%
+, Navalpakkam, V.%
+, Koch, C.%
+\BCBL {}\ \BBA {} Rangel, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Relative visual saliency differences induce sizable bias
+  in consumer choice} {Relative visual saliency differences induce sizable bias
+  in consumer choice}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Consumer Psychology}{22}{1}{67–74}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.jcps.2011.10.002} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Moher%
+, Liberati%
+, Tetzlaff%
+, Altman%
+\BCBL {}\ \BBA {} Group%
+}{%
 Moher%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2009}}%
@@ -1243,48 +1297,19 @@ Moher, D.%
 , Liberati, A.%
 , Tetzlaff, J.%
 , Altman, D\BPBI G.%
-, Group, P.%
-\BCBL {}\ \BOthersPeriod {.}\end{APACrefauthors}%
+\BCBL {}\ \BBA {} Group, P.%
+\end{APACrefauthors}%
 \unskip\
 \newblock
 \APACrefYearMonthDay{2009}{}{}.
 \newblock
 {\BBOQ}\APACrefatitle {Preferred reporting items for systematic reviews and
-  meta-analyses: the PRISMA statement} {Preferred reporting items for
-  systematic reviews and meta-analyses: the prisma statement}.{\BBCQ}
+  meta-analyses: The PRISMA statement.} {Preferred reporting items for
+  systematic reviews and meta-analyses: The prisma statement.}{\BBCQ}
 \newblock
 \APACjournalVolNumPages{PLoS med}{6}{7}{e1000097}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Mullett%
-\ \BBA {} Stewart%
-}{%
-Mullett%
-\ \BBA {} Stewart%
-}{%
-{\protect \APACyear {2016}}%
-}]{%
-mullett2016a}
-\APACinsertmetastar {%
-mullett2016a}%
-\begin{APACrefauthors}%
-Mullett, T.%
-\BCBT {}\ \BBA {} Stewart, N.%
-\end{APACrefauthors}%
-\unskip\
 \newblock
-\APACrefYearMonthDay{2016}{}{}.
-\newblock
-\APACrefbtitle {Implications of Visual Attention Phenomena for Models of
-  Preferential Choice. Decision} {Implications of visual attention phenomena
-  for models of preferential choice. decision}\ (\BVOL~3).
-\newblock
-\APACaddressPublisher{Washington, D.C}{}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1037/dec0000049} \end{APACrefURL}
-\newblock
-\begin{APACrefDOI} \doi{10.1037/dec0000049} \end{APACrefDOI}
+\begin{APACrefDOI} \doi{10.1371/journal.pmed.1000097} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1308,13 +1333,11 @@ Münscher, R.%
 \newblock
 \APACrefYearMonthDay{2016}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {A Review and Taxonomy of Choice Architecture Techniques}
+{\BBOQ}\APACrefatitle {A review and taxonomy of choice architecture Techniques}
   {A review and taxonomy of choice architecture techniques}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Behavioral Decision
   Making}{29}{5}{511–524}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1002/bdm.1897} \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1002/bdm.1897} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -1348,6 +1371,8 @@ Navalpakkam, V.%
 \newblock
 \APACjournalVolNumPages{Proceedings of the National Academy of
   Sciences}{107}{11}{5232--5237}.
+\newblock
+\begin{APACrefDOI} \doi{10.1073/pnas.0911972107} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1374,7 +1399,9 @@ Noguchi, T.%
   decision making constrained by process data.} {Multialternative decision by
   sampling: A model of decision making constrained by process data.}{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Psychological review}{125}{4}{512}.
+\APACjournalVolNumPages{Psychological Review}{125}{4}{512-544}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/rev0000102} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1401,23 +1428,20 @@ Nyström, M.%
 \APACrefYearMonthDay{2013}{}{}.
 \newblock
 {\BBOQ}\APACrefatitle {The influence of calibration method and eye physiology
-  on eyetracking data quality} {The influence of calibration method and eye
-  physiology on eyetracking data quality}.{\BBCQ}
+  on eye tracking data quality} {The influence of calibration method and eye
+  physiology on eye tracking data quality}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Behavior Research Methods}{45}{1}{272–288}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.3758/s13428-012-0247-4}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.3758/s13428-012-0247-4} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-J.~Orquin%
+Orquin%
 , Ashby%
 \BCBL {}\ \BBA {} Clarke%
 }{%
-J.~Orquin%
+Orquin%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2016}}%
 }]{%
@@ -1425,7 +1449,7 @@ orquin2016a}
 \APACinsertmetastar {%
 orquin2016a}%
 \begin{APACrefauthors}%
-Orquin, J.%
+Orquin, J\BPBI L.%
 , Ashby, N.%
 \BCBL {}\ \BBA {} Clarke, A.%
 \end{APACrefauthors}%
@@ -1433,88 +1457,23 @@ Orquin, J.%
 \newblock
 \APACrefYearMonthDay{2016}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Areas of Interest as a Signal Detection Problem in
-  Behavioral Eye-Tracking Research} {Areas of interest as a signal detection
+{\BBOQ}\APACrefatitle {Areas of interest as a signal detection problem in
+  behavioral eye-tracking research} {Areas of interest as a signal detection
   problem in behavioral eye-tracking research}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of Behavioral Decision Making}{29}{2–3}{}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1002/bdm.1867} \end{APACrefURL}
+\APACjournalVolNumPages{Journal of Behavioral Decision Making}{29}{}{103-115}.
 \newblock
 \begin{APACrefDOI} \doi{10.1002/bdm.1867} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-J.~Orquin%
-\ \BBA {} Lagerkvist%
-}{%
-J.~Orquin%
-\ \BBA {} Lagerkvist%
-}{%
-{\protect \APACyear {2015}}%
-}]{%
-orquin2015a}
-\APACinsertmetastar {%
-orquin2015a}%
-\begin{APACrefauthors}%
-Orquin, J.%
-\BCBT {}\ \BBA {} Lagerkvist, C.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2015}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Effects of salience are both short- and long-lived}
-  {Effects of salience are both short- and long-lived}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Acta Psychologica}{160}{}{}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1016/j.actpsy.2015.07.001}
-  \end{APACrefURL}
-\newblock
-\begin{APACrefDOI} \doi{10.1016/j.actpsy.2015.07.001} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-J.~Orquin%
-\ \BBA {} Mueller~Loose%
-}{%
-J.~Orquin%
-\ \BBA {} Mueller~Loose%
-}{%
-{\protect \APACyear {2013}}%
-}]{%
-orquin2013a}
-\APACinsertmetastar {%
-orquin2013a}%
-\begin{APACrefauthors}%
-Orquin, J.%
-\BCBT {}\ \BBA {} Mueller~Loose, S.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2013}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Attention and choice: A review on eye movements in
-  decision making} {Attention and choice: A review on eye movements in decision
-  making}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Acta Psychologica}{144}{1}{}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1016/j.actpsy.2013.06.003}
-  \end{APACrefURL}
-\newblock
-\begin{APACrefDOI} \doi{10.1016/j.actpsy.2013.06.003} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-J\BPBI L.~Orquin%
+Orquin%
 , Bagger%
 , Lahm%
 , Grunert%
 \BCBL {}\ \BBA {} Scholderer%
 }{%
-J\BPBI L.~Orquin%
+Orquin%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2019}}%
 }]{%
@@ -1523,9 +1482,9 @@ orquin2019a}
 orquin2019a}%
 \begin{APACrefauthors}%
 Orquin, J\BPBI L.%
-, Bagger, M.%
-, Lahm, E.%
-, Grunert, K.%
+, Bagger, M\BPBI P.%
+, Lahm, E\BPBI S.%
+, Grunert, K\BPBI G.%
 \BCBL {}\ \BBA {} Scholderer, J.%
 \end{APACrefauthors}%
 \unskip\
@@ -1536,19 +1495,16 @@ Orquin, J\BPBI L.%
   on consumer attention} {The visual ecology of product packaging and its
   effects on consumer attention}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of Business Research}{}{}{}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1016/j.jbusres.2019.01.043}
-  \end{APACrefURL}
+\APACjournalVolNumPages{Journal of Business Research}{}{}{187-195}.
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.jbusres.2019.01.043} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-J\BPBI L.~Orquin%
+Orquin%
 \ \BBA {} Holmqvist%
 }{%
-J\BPBI L.~Orquin%
+Orquin%
 \ \BBA {} Holmqvist%
 }{%
 {\protect \APACyear {2018}}%
@@ -1570,45 +1526,103 @@ Orquin, J\BPBI L.%
 \newblock
 \APACjournalVolNumPages{Behavior Research Methods}{50}{4}{1645–1656}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.3758/s13428-017-0998-z}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.3758/s13428-017-0998-z} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-J\BPBI L.~Orquin%
-, Lahm%
-\BCBL {}\ \BBA {} Stojic%
+Orquin%
+\ \BBA {} Lagerkvist%
 }{%
-J\BPBI L.~Orquin%
+Orquin%
+\ \BBA {} Lagerkvist%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+orquin2015a}
+\APACinsertmetastar {%
+orquin2015a}%
+\begin{APACrefauthors}%
+Orquin, J\BPBI L.%
+\BCBT {}\ \BBA {} Lagerkvist, C\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Effects of salience are both short- and long-lived}
+  {Effects of salience are both short- and long-lived}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Acta Psychologica}{160}{}{69-76}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.actpsy.2015.07.001} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Orquin%
+, Lahm%
+\BCBL {}\ \BBA {} Stoji{\'c}%
+}{%
+Orquin%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2020}}%
 }]{%
-osfrepo}
+orquin2020osfa}
 \APACinsertmetastar {%
-osfrepo}%
+orquin2020osfa}%
 \begin{APACrefauthors}%
 Orquin, J\BPBI L.%
 , Lahm, E\BPBI S.%
-\BCBL {}\ \BBA {} Stojic, H.%
+\BCBL {}\ \BBA {} Stoji{\'c}, H.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
 \APACrefYearMonthDay{2020}{Jul}{}.
 \newblock
-\APACrefbtitle {Project files for "XXX".} {Project files for "xxx".}
+\APACrefbtitle {Project files for "The visual environment, attention and
+  decision making".} {Project files for "the visual environment, attention and
+  decision making".}
 \newblock
 \APACaddressPublisher{}{Open Science Framework}.
 \newblock
-\begin{APACrefURL} \url{osf.io/buk7p} \end{APACrefURL}
+\begin{APACrefURL}
+  \url{https://osf.io/buk7p/?view_only=a93dee569eb44ebeb427e2d3b260db64}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-J\BPBI L.~Orquin%
+Orquin%
+\ \BBA {} Mueller~Loose%
+}{%
+Orquin%
+\ \BBA {} Mueller~Loose%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+orquin2013a}
+\APACinsertmetastar {%
+orquin2013a}%
+\begin{APACrefauthors}%
+Orquin, J\BPBI L.%
+\BCBT {}\ \BBA {} Mueller~Loose, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Attention and choice: A review on eye movements in
+  decision making} {Attention and choice: A review on eye movements in decision
+  making}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Acta Psychologica}{144}{1}{190-206}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.actpsy.2013.06.003} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Orquin%
 \ \BBA {} Wedel%
 }{%
-J\BPBI L.~Orquin%
+Orquin%
 \ \BBA {} Wedel%
 }{%
 {\protect \APACyear {2020}}%
@@ -1629,6 +1643,8 @@ Orquin, J\BPBI L.%
   Foundations, insights, and challenges}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Business Research}{111}{}{85-90}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.jbusres.2020.02.012} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1656,7 +1672,9 @@ Payne, J\BPBI W.%
   {Adaptive strategy selection in decision making.}{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of experimental psychology: Learning, Memory,
-  and Cognition}{14}{3}{534}.
+  and Cognition}{14}{3}{534–552}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/0278-7393.14.3.534} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1686,13 +1704,15 @@ Perkovic, S.%
 \newblock
 \APACjournalVolNumPages{Journal of Behavioral Decision
   Making}{31}{5}{673--685}.
+\newblock
+\begin{APACrefDOI} \doi{10.1002/bdm.2082} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-A.~Peschel%
+Peschel%
 \ \BBA {} Orquin%
 }{%
-A.~Peschel%
+Peschel%
 \ \BBA {} Orquin%
 }{%
 {\protect \APACyear {2013}}%
@@ -1701,8 +1721,8 @@ peschel2013a}
 \APACinsertmetastar {%
 peschel2013a}%
 \begin{APACrefauthors}%
-Peschel, A.%
-\BCBT {}\ \BBA {} Orquin, J.%
+Peschel, A\BPBI O.%
+\BCBT {}\ \BBA {} Orquin, J\BPBI L.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -1714,18 +1734,15 @@ Peschel, A.%
 \newblock
 \APACjournalVolNumPages{Frontiers in Psychology}{4}{DEC}{}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.3389/fpsyg.2013.00902}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.3389/fpsyg.2013.00902} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-A\BPBI O.~Peschel%
+Peschel%
 , Orquin%
 \BCBL {}\ \BBA {} Loose%
 }{%
-A\BPBI O.~Peschel%
+Peschel%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2019}}%
 }]{%
@@ -1746,6 +1763,8 @@ Peschel, A\BPBI O.%
   choice through bottom-up effects}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Appetite}{132}{}{1-7}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.appet.2018.09.015} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1775,38 +1794,8 @@ Pieters, R.%
   research}\ (\BPGS\ 143--167).
 \newblock
 \APACaddressPublisher{}{Routledge}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Pieters%
-, Wedel%
-\BCBL {}\ \BBA {} Batra%
-}{%
-Pieters%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2010}}%
-}]{%
-pieters2010a}
-\APACinsertmetastar {%
-pieters2010a}%
-\begin{APACrefauthors}%
-Pieters, R.%
-, Wedel, M.%
-\BCBL {}\ \BBA {} Batra, R.%
-\end{APACrefauthors}%
-\unskip\
 \newblock
-\APACrefYearMonthDay{2010}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {The Stopping Power of Advertising: Measures and Effects
-  of Visual Complexity} {The stopping power of advertising: Measures and
-  effects of visual complexity}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Journal of Marketing}{74}{5}{48–60}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1509/jmkg.74.5.048} \end{APACrefURL}
-\newblock
-\begin{APACrefDOI} \doi{10.1509/jmkg.74.5.048} \end{APACrefDOI}
+\begin{APACrefDOI} \doi{10.1108/S1548-6435(2008)0000004009} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1838,9 +1827,6 @@ Pärnamets, P.%
 \APACjournalVolNumPages{Proceedings of the National Academy of
   Sciences}{112}{13}{4170–4175}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1073/pnas.1415250112}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1073/pnas.1415250112} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -1861,9 +1847,9 @@ R2020}%
 \newblock
 \APACrefYearMonthDay{2020}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{R: A Language and Environment for Statistical
-  Computing}} {{R: A Language and Environment for Statistical
-  Computing}}{\BBCQ}\ [\bibcomputersoftwaremanual].
+{\BBOQ}\APACrefatitle {{R: A language and environment for statistical
+  computing}} {{R: A language and environment for statistical
+  computing}}{\BBCQ}\ [\bibcomputersoftwaremanual].
 \newblock
 \APACaddressPublisher{Vienna, Austria}{}.
 \newblock
@@ -1898,9 +1884,6 @@ Reeck, C.%
 \APACjournalVolNumPages{Proceedings of the National Academy of
   Sciences}{114}{45}{11890–11895}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1073/pnas.1707040114}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1073/pnas.1707040114} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -1932,6 +1915,8 @@ Reutskaja, E.%
   pressure: An eye-tracking study}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{American Economic Review}{101}{2}{900--926}.
+\newblock
+\begin{APACrefDOI} \doi{10.1257/aer.101.2.900} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1960,8 +1945,6 @@ Rosenholtz, R.%
 \newblock
 \APACjournalVolNumPages{Journal of Vision}{7}{2}{17}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1167/7.2.17} \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1167/7.2.17} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -1987,6 +1970,8 @@ Ryoo, J\BPBI H.%
   longitudinal data}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Multivariate Behavioral Research}{46}{4}{598--624}.
+\newblock
+\begin{APACrefDOI} \doi{10.1080/00273171.2011.589264} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2016,9 +2001,6 @@ Schotter, E.%
   bias: Selective encoding and liking effects}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Visual Cognition}{18}{8}{1113–1132}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1080/13506281003668900}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1080/13506281003668900} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -2051,9 +2033,6 @@ Schotter, E.%
 \newblock
 \APACjournalVolNumPages{Visual Cognition}{20}{9}{1110–1129}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1080/13506285.2012.735719}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1080/13506285.2012.735719} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -2083,7 +2062,9 @@ Schulz, E.%
   learning supports decision making.}{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Experimental Psychology: Learning, Memory,
-  and Cognition}{44}{6}{927}.
+  and Cognition}{44}{6}{927--943}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/xlm0000463} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2103,10 +2084,10 @@ Schwarz, G.%
 \newblock
 \APACrefYearMonthDay{1978}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Estimating the dimension of a model}} {{Estimating the
-  dimension of a model}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Estimating the dimension of a model} {Estimating the
+  dimension of a model}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{The Annals of Satistics}{6}{}{461--464}.
+\APACjournalVolNumPages{The Annals of Statistics}{6}{}{461--464}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2137,8 +2118,6 @@ Shimojo, S.%
 \newblock
 \APACjournalVolNumPages{Nature Neuroscience}{6}{12}{1317–1322}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1038/nn1150} \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1038/nn1150} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -2167,9 +2146,6 @@ Shrout, P.%
   reliability}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Psychological Bulletin}{86}{2}{420–428}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1037/0033-2909.86.2.420}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1037/0033-2909.86.2.420} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -2201,9 +2177,6 @@ Simola, J.%
 \newblock
 \APACjournalVolNumPages{Journal of Business Research}{}{}{}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1016/j.jbusres.2019.06.028}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1016/j.jbusres.2019.06.028} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -2228,8 +2201,6 @@ Simon, H.%
   {Rational choice and the structure of the environment}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Psychological Review}{63}{2}{129–138}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1037/h0042769} \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1037/h0042769} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -2265,12 +2236,14 @@ Stoji{\'c}, H.%
 \newblock
 \APACjournalVolNumPages{Proceedings of the National Academy of
   Sciences}{117}{6}{3291--3300}.
+\newblock
+\begin{APACrefDOI} \doi{10.1073/pnas.1911348117} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
 Stoji{\'c}%
 , Schulz%
-, P~Analytis%
+, Analytis%
 \BCBL {}\ \BBA {} Speekenbrink%
 }{%
 Stoji{\'c}%
@@ -2284,7 +2257,7 @@ stojic2020s}%
 \begin{APACrefauthors}%
 Stoji{\'c}, H.%
 , Schulz, E.%
-, P~Analytis, P.%
+, Analytis, P\BPBI P.%
 \BCBL {}\ \BBA {} Speekenbrink, M.%
 \end{APACrefauthors}%
 \unskip\
@@ -2297,6 +2270,8 @@ Stoji{\'c}, H.%
   options.}{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Experimental Psychology: General}{}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/xge0000749} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2324,6 +2299,8 @@ St{\"u}ttgen, P.%
   model}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Marketing Science}{31}{6}{878--899}.
+\newblock
+\begin{APACrefDOI} \doi{10.1287/mksc.1120.0732} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2354,8 +2331,6 @@ Tatler, B.%
 \newblock
 \APACjournalVolNumPages{Journal of Vision}{11}{5}{5}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1167/11.5.5} \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1167/11.5.5} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -2380,14 +2355,16 @@ Theeuwes, J.%
   {Top--down and bottom--up control of visual selection}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Acta psychologica}{135}{2}{77--99}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.actpsy.2010.02.006} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-A.~Thomas%
+Thomas%
 , Molter%
 \BCBL {}\ \BBA {} Krajbich%
 }{%
-A.~Thomas%
+Thomas%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2020}}%
 }]{%
@@ -2395,7 +2372,7 @@ thomas2020}
 \APACinsertmetastar {%
 thomas2020}%
 \begin{APACrefauthors}%
-Thomas, A.%
+Thomas, A\BPBI W.%
 , Molter, F.%
 \BCBL {}\ \BBA {} Krajbich, I.%
 \end{APACrefauthors}%
@@ -2403,21 +2380,23 @@ Thomas, A.%
 \newblock
 \APACrefYearMonthDay{2020}{}{}.
 \newblock
-\APACrefbtitle {Uncovering the Computational Mechanisms Underlying
-  Many-Alternative Choice.} {Uncovering the computational mechanisms underlying
+\APACrefbtitle {Uncovering the computational mechanisms underlying
+  many-alternative choice.} {Uncovering the computational mechanisms underlying
   many-alternative choice.}
 \newblock
 \APACaddressPublisher{}{PsyArXiv}.
+\newblock
+\begin{APACrefDOI} \doi{10.31234/osf.io/tk6qe} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-A\BPBI W.~Thomas%
+Thomas%
 , Molter%
 , Krajbich%
 , Heekeren%
 \BCBL {}\ \BBA {} Mohr%
 }{%
-A\BPBI W.~Thomas%
+Thomas%
 \ \protect \BOthers {.}}{%
 {\protect \APACyear {2019}}%
 }]{%
@@ -2440,6 +2419,8 @@ Thomas, A\BPBI W.%
   behaviour}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Nature human behaviour}{3}{6}{625--635}.
+\newblock
+\begin{APACrefDOI} \doi{10.1038/s41562-019-0584-8} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2471,9 +2452,6 @@ Towal, R.%
 \APACjournalVolNumPages{Proceedings of the National Academy of Sciences of the
   United States of America}{110}{40}{3858–3867}.
 \newblock
-\begin{APACrefURL} \url{https://doi.org/10.1073/pnas.1304429110}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1073/pnas.1304429110} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -2497,7 +2475,9 @@ Tversky, A.%
 {\BBOQ}\APACrefatitle {Elimination by aspects: A theory of choice.}
   {Elimination by aspects: A theory of choice.}{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Psychological Review}{79}{4}{281}.
+\APACjournalVolNumPages{Psychological Review}{79}{4}{281--299}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/h0032955} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2524,6 +2504,8 @@ Tversky, A.%
   {Prospect theory: An analysis of decision under risk}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Econometrica}{47}{2}{263--291}.
+\newblock
+\begin{APACrefDOI} \doi{10.1142/9789814417358_0006} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2549,12 +2531,14 @@ Usher, M.%
 \newblock
 \APACrefYearMonthDay{2019}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Selective Integration: An Attentional Theory of Choice
-  Biases and Adaptive Choice} {Selective integration: An attentional theory of
+{\BBOQ}\APACrefatitle {Selective integration: An attentional theory of choice
+  biases and adaptive choice} {Selective integration: An attentional theory of
   choice biases and adaptive choice}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Current Directions in Psychological
   Science}{28}{6}{552--559}.
+\newblock
+\begin{APACrefDOI} \doi{10.1177/0963721419862277} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2578,10 +2562,12 @@ Van~der Lans, R.%
 \newblock
 \APACrefYearMonthDay{2008}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Research Note—Competitive Brand Salience} {Research
-  note—competitive brand salience}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Research note — competitive brand salience} {Research
+  note — competitive brand salience}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Marketing Science}{27}{5}{922--931}.
+\newblock
+\begin{APACrefDOI} \doi{10.1287/mksc.1070.0327} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2606,7 +2592,7 @@ Viechtbauer, W.%
 \newblock
 \APACjournalVolNumPages{Journal of Statistical Software}{36}{3}{1--48}.
 \newblock
-\begin{APACrefURL} \url{https://www.jstatsoft.org/v36/i03/} \end{APACrefURL}
+\begin{APACrefDOI} \doi{10.18637/jss.v036.i03} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2633,6 +2619,8 @@ Wedel, M.%
   marketing}.
 \newblock
 \APACaddressPublisher{}{Now Publishers Inc}.
+\newblock
+\begin{APACrefDOI} \doi{10.1561/1700000011} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -2652,7 +2640,7 @@ Wickham, H.%
 \newblock
 \APACrefYear{2016}.
 \newblock
-\APACrefbtitle {ggplot2: Elegant Graphics for Data Analysis} {ggplot2: Elegant
+\APACrefbtitle {ggplot2: Elegant graphics for data analysis} {ggplot2: Elegant
   graphics for data analysis}.
 \newblock
 \APACaddressPublisher{}{Springer-Verlag New York}.
