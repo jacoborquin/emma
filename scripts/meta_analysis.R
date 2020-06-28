@@ -425,6 +425,15 @@ cat(result, file = file.path(tablesDir, "difftest_pref_choice.tex"))
 # -----
 
 overviewtabel = data[, c(2,4,9,14,15,1)]
+setnames(overviewtabel, c("N","a_acc","fix.count.m","Eye.tracker"), c("$N$","$a_a$","$r$","Eye tracker"))
+overviewtabel$`Eye tracker` = ifelse(overviewtabel$`Eye tracker` == "Nihon-Kohden EEG-1100", "Nihon-Kohden", overviewtabel$`Eye tracker`)
+overviewtabel$IV = ifelse(overviewtabel$IV == "LR.position", "LvR",
+                          ifelse(overviewtabel$IV == "Center.position", "Center",
+                                 ifelse(overviewtabel$IV == "Pref.view", "Pref",
+                                        ifelse(overviewtabel$IV == "Choice.bias", "Choice",
+                                               ifelse(overviewtabel$IV == "Salience", "Sal",overviewtabel$IV)))))
+overviewtabel = overviewtabel[order(Authors),]
+
 tab_caption <- "Overview table."
 tab_label <- "tab:overviewtable"
 tab_note <- paste0("\\hline \n \\multicolumn{4}{l}",
@@ -434,21 +443,18 @@ add.to.row <- list(pos = list(0), command = NULL)
 command <- paste0("\\hline\n\\endhead\n","\\hline\n","\\multicolumn{", dim(overviewtabel)[2] + 1, "}{l}","{\\footnotesize Continued on next page}\n","\\endfoot\n","\\endlastfoot\n")
 add.to.row$command <- command
 
-print(
-  xtable(
-    overviewtabel, 
-    caption = tab_caption, 
-    label = tab_label, 
-    #align = "llccc",
-    #digits = c(0,0,4,2,2)
-  ), 
+otab = xtable(
+  overviewtabel, 
+  caption = tab_caption, 
+  label = tab_label, 
+  digits = c(0,0,0,0,3,3,0)
+)
+align(otab) = "cp{8cm}lcccl"
+print(otab
+, 
   include.rownames = FALSE,
   caption.placement = "top", 
   hline.after = c(-1, 0),
-  # add.to.row = list(
-  #   pos = list(nrow(overviewtabel)),
-  #   command = tab_note
-  # ),
   add.to.row = add.to.row,
   tabular.environment = "longtable",
   sanitize.text.function = function(x){x},

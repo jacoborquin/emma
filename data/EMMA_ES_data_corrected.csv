@@ -54,11 +54,11 @@ ISCAN,\cite{chandon2009a},Chandon et al. 2009,Size,NA,0.358357398,NA,NA,348,pref
 ISCAN,\cite{chandon2009a},Chandon et al. 2009,Task,NA,0.148,NA,NA,348,pref. Consumer choice,alternative,1,0.5,0.3288661309733984,0.15226619163832364,0.14799999999999996
 Nihon-Kohden EEG-1100,\cite{nittono2009},Nittono & Wada 2009 Study 1,Choice.bias,0.248371832,NA,0.13498666,NA,10,inf. Non-consumer choice,NA,1,0.5,0.3288661309733984,0.248371832,0.24158999648554466
 Nihon-Kohden EEG-1100,\cite{nittono2009},Nittono & Wada 2009 Study 1,Task,-0.061606393,NA,0.063127568,NA,10,inf. Non-consumer choice,alternative,1,0.5,0.3288661309733984,-0.06160639300000001,-0.059858482484157725
-SMI Glasses,\cite{gidlof2017a},Gidloef et al. 2017,Choice.bias,NA,NA,NA,0.998084566,50,pref. Consumer choice,NA,0.5,0.5,0.6644330654866992,0.9977400405267902,0.9886666498531835
-SMI Glasses,\cite{gidlof2017a},Gidloef et al. 2017,Center.position,NA,0.54,NA,NA,38,pref. Consumer choice,NA,0.5,0.5,0.6644330654866992,0.5524089042065191,0.54
-SMI Glasses,\cite{gidlof2017a},Gidloef et al. 2017,Pref.view,NA,NA,NA,0.099667995,50,pref. Consumer choice,alternative,0.5,0.5,0.6644330654866992,0.0973087296333884,0.07421537570787645
-SMI Glasses,\cite{gidlof2017a},Gidloef et al. 2017,Salience,NA,0.02,NA,NA,38,pref. Consumer choice,NA,0.5,0.5,0.6644330654866992,0.020585312702816428,0.02000000000000002
-SMI Glasses,\cite{gidlof2017a},Gidloef et al. 2017,Size,NA,0.48,NA,NA,38,pref. Consumer choice,NA,0.5,0.5,0.6644330654866992,0.4916955087600531,0.4799999999999999
+SMI Glasses,\cite{gidloef2017a},Gidloef et al. 2017,Choice.bias,NA,NA,NA,0.998084566,50,pref. Consumer choice,NA,0.5,0.5,0.6644330654866992,0.9977400405267902,0.9886666498531835
+SMI Glasses,\cite{gidloef2017a},Gidloef et al. 2017,Center.position,NA,0.54,NA,NA,38,pref. Consumer choice,NA,0.5,0.5,0.6644330654866992,0.5524089042065191,0.54
+SMI Glasses,\cite{gidloef2017a},Gidloef et al. 2017,Pref.view,NA,NA,NA,0.099667995,50,pref. Consumer choice,alternative,0.5,0.5,0.6644330654866992,0.0973087296333884,0.07421537570787645
+SMI Glasses,\cite{gidloef2017a},Gidloef et al. 2017,Salience,NA,0.02,NA,NA,38,pref. Consumer choice,NA,0.5,0.5,0.6644330654866992,0.020585312702816428,0.02000000000000002
+SMI Glasses,\cite{gidloef2017a},Gidloef et al. 2017,Size,NA,0.48,NA,NA,38,pref. Consumer choice,NA,0.5,0.5,0.6644330654866992,0.4916955087600531,0.4799999999999999
 SMI Glasses,\cite{guyader2017},Guyader et al. 2017,Task,NA,NA,0.472801416,NA,66,inf. Consumer choice,alternative,0.5,0.5,0.6644330654866992,0.49921827154903775,0.3949021403130643
 SMI RED,\cite{bialkova2011},Bialkova & van Trijp 2011,Task,0.867629651,NA,0.841317968,NA,10,inf. Consumer choice,attribute,0.4,0.03,0.7315464523893593,0.867629651,0.8580150389938743
 SMI RED,\cite{bialkova2014a},Bialkova et al. 2014 Study 1,Task,0.346748618,NA,0.273212885,NA,80,inf. Consumer choice,attribute,0.4,0.03,0.7315464523893593,0.34674861799999995,0.3376651420827741
