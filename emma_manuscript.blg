@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: emma_manuscript.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: references.bib
+I was expecting a `,' or a `}'---line 104 of file references.bib
+ :   
+ :   year={2006},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+You've used 90 entries,
+            6951 wiz_defined-function locations,
+            1857 strings with 27196 characters,
+and the built_in function-call counts, 177892 in all, are:
+= -- 21482
+> -- 1563
+< -- 8910
++ -- 8958
+- -- 182
+* -- 12068
+:= -- 33007
+add.period$ -- 369
+call.type$ -- 90
+change.case$ -- 1535
+chr.to.int$ -- 0
+cite$ -- 180
+duplicate$ -- 4858
+empty$ -- 6889
+format.name$ -- 2679
+if$ -- 33280
+int.to.chr$ -- 0
+int.to.str$ -- 270
+missing$ -- 0
+newline$ -- 2491
+num.names$ -- 720
+pop$ -- 2749
+preamble$ -- 1
+purify$ -- 362
+quote$ -- 0
+skip$ -- 11041
+stack$ -- 0
+substring$ -- 9606
+swap$ -- 2945
+text.length$ -- 189
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 7392
+warning$ -- 0
+while$ -- 901
+width$ -- 0
+write$ -- 3174
+(There was 1 error message)
