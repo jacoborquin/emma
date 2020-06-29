@@ -97,6 +97,28 @@ b0 = coef(summary(model21))[1,1]
 b1 = coef(summary(model21))[2,1]
 data$a_acc = (b0 + b1*data$Accuracy)/b0 
 
+# paste result for manuscript
+#     -0.382$, $\SE = 0.158$, $t = -2.422$, $p = .018$
+result <- paste0(
+  "$\\beta_0=", 
+  round(coef(summary(model21))[1,1], 3), 
+  "$, $\\SE=", 
+  round(coef(summary(model21))[1,2], 3), 
+  "$, $t=", 
+  round(coef(summary(model21))[1,4], 3), 
+  "$, $", 
+  ifelse(round(coef(summary(model21))[1,5], 3) == 0, "p<0.001", paste0("p=", round(coef(summary(model21))[1,5], 3))), 
+  "$, $\\beta_{\\textrm{accuracy}} =",
+  round(coef(summary(model21))[2,1], 3), 
+  "$, $\\SE=", 
+  round(coef(summary(model21))[2,2], 3), 
+  "$, $t=", 
+  round(coef(summary(model21))[2,4], 3), 
+  "$, $", 
+  ifelse(round(coef(summary(model21))[2,5], 3) == 0, "p<0.001", paste0("p=", round(coef(summary(model21))[2,5], 3))), 
+  "$;"
+)
+cat(result, file = file.path(tablesDir, "artifactregresult.tex"))
 
 # -----
 # Save corrected data

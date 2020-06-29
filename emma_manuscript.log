@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.20)  28 JUN 2020 14:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.20)  29 JUN 2020 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -688,6 +688,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 118.
 LaTeX Info: Redefining \pageref on input line 118.
 LaTeX Info: Redefining \nameref on input line 118.
+ (./emma_manuscript.out) (./emma_manuscript.out)
 \@outlinefile=\write5
 \openout5 = `emma_manuscript.out'.
 
@@ -702,7 +703,8 @@ LaTeX Info: Redefining \showhyphens on input line 118.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
@@ -745,45 +747,44 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-<./figs/prisma.pdf, id=274, 479.7925pt x 361.35pt>
+<./figs/prisma.pdf, id=363, 479.7925pt x 361.35pt>
 File: ./figs/prisma.pdf Graphic file (type pdf)
 <use ./figs/prisma.pdf>
 Package pdftex.def Info: ./figs/prisma.pdf  used on input line 165.
 (pdftex.def)             Requested size: 375.80544pt x 283.03732pt.
 
-[9 <./figs/prisma.pdf>]
+[9 <./figs/prisma.pdf>] (./tables/rhorange.tex
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-79.
+.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-79.
+.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-179.
+1.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-179.
+1.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 179.
+(Font)              <12> on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 179.
+(Font)              <8> on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 179.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 179
-.
+(Font)              <6> on input line 1.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -791,16 +792,17 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 179
-.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [10]
-(./tables/main_results.tex
+))
+(./tables/I2range.tex) (./tables/saliencesummary.tex)
+(./tables/saliencetrimsummary.tex) (./tables/centersummary.tex)
+(./tables/centertrimsummary.tex) [10] (./tables/main_results.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 8.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -811,51 +813,52 @@ Overfull \hbox (16.06024pt too wide) in paragraph at lines 8--34
  []
 
 )
-<./figs/forest_plots_visual.pdf, id=330, 450.68375pt x 460.72125pt>
+<./figs/forest_plots_visual.pdf, id=417, 450.68375pt x 460.72125pt>
 File: ./figs/forest_plots_visual.pdf Graphic file (type pdf)
 <use ./figs/forest_plots_visual.pdf>
-Package pdftex.def Info: ./figs/forest_plots_visual.pdf  used on input line 190
+Package pdftex.def Info: ./figs/forest_plots_visual.pdf  used on input line 191
 .
 (pdftex.def)             Requested size: 450.68263pt x 460.72012pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(./tables/difftest_task_pref.tex) [11]
+(./tables/tasksummary.tex) (./tables/prefsummary.tex)
+(./tables/difftest_task_pref.tex) (./tables/tasktrimsummary.tex)
+(./tables/preftrimsummary.tex) [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-<./figs/forest_plots_cognitive.pdf, id=373, 224.84pt x 460.72125pt>
+(./tables/choicesummary.tex) (./tables/choicetrimsummary.tex)
+Underfull \vbox (badness 7595) has occurred while \output is active []
+
+ [13 <./figs/forest_plots_visual.pdf>]
+<./figs/forest_plots_cognitive.pdf, id=479, 224.84pt x 460.72125pt>
 File: ./figs/forest_plots_cognitive.pdf Graphic file (type pdf)
 <use ./figs/forest_plots_cognitive.pdf>
 Package pdftex.def Info: ./figs/forest_plots_cognitive.pdf  used on input line 
-207.
+210.
 (pdftex.def)             Requested size: 224.83945pt x 460.72012pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 (./tables/moderator_setsize.tex) (./tables/moderator_pref.tex)
-(./tables/moderator_task.tex) [13] (./tables/moderator_choicebias.tex)
-<./figs/funnel_plots.pdf, id=416, 450.68375pt x 460.72125pt>
+(./tables/moderator_task.tex) (./tables/moderator_choicebias.tex) [14] [15 <./f
+igs/forest_plots_cognitive.pdf>]
+<./figs/funnel_plots.pdf, id=538, 450.68375pt x 460.72125pt>
 File: ./figs/funnel_plots.pdf Graphic file (type pdf)
 <use ./figs/funnel_plots.pdf>
-Package pdftex.def Info: ./figs/funnel_plots.pdf  used on input line 226.
+Package pdftex.def Info: ./figs/funnel_plots.pdf  used on input line 229.
 (pdftex.def)             Requested size: 450.68263pt x 460.72012pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14]
+[16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17]
+ [17 <./figs/funnel_plots.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
@@ -865,24 +868,30 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
-[21] (./tables/intercoder_reliability.tex) [22] [23] [24]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
-
-Package hyperref Warning: Suppressing empty link on input line 322.
-
-
+ [21]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26]
-[27]
-Underfull \vbox (badness 2600) has occurred while \output is active []
+ [22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+[24] (./tables/intercoder_reliability.tex) [25] [26]
+(./tables/artifactregresult.tex) [27]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28]
+
+Package hyperref Warning: Suppressing empty link on input line 325.
+
 [29]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+[31] [32]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-88.
+91.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -890,17 +899,19 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [30]
 
-Class apa6 Warning: \bibliographystyle command ignored on input line 397.
 
-(./emma_manuscript.bbl [31] [32 <./figs/forest_plots_visual.pdf>] [33 <./figs/f
-orest_plots_cognitive.pdf>] [34 <./figs/funnel_plots.pdf>]
+Class apa6 Warning: \bibliographystyle command ignored on input line 400.
+
+(./emma_manuscript.bbl [33]
 Underfull \vbox (badness 1028) has occurred while \output is active []
 
- [35
+ [34
 
 ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36]
@@ -933,51 +944,39 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [45]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [47])
-<./figs/ET_accuracy_effectsize.pdf, id=895, 341.275pt x 191.71625pt>
+ [46])
+<./figs/ET_accuracy_effectsize.pdf, id=962, 341.275pt x 191.71625pt>
 File: ./figs/ET_accuracy_effectsize.pdf Graphic file (type pdf)
 <use ./figs/ET_accuracy_effectsize.pdf>
 Package pdftex.def Info: ./figs/ET_accuracy_effectsize.pdf  used on input line 
-412.
+415.
 (pdftex.def)             Requested size: 341.27415pt x 191.71577pt.
 
-[48 <./figs/ET_accuracy_effectsize.pdf>] (./tables/eyetracker_specs.tex)
-[49
+[47 <./figs/ET_accuracy_effectsize.pdf>] (./tables/eyetracker_specs.tex)
+[48
 
 ]
-<./figs/metric_correction.pdf, id=915, 455.7025pt x 383.4325pt>
+<./figs/metric_correction.pdf, id=980, 455.7025pt x 383.4325pt>
 File: ./figs/metric_correction.pdf Graphic file (type pdf)
 <use ./figs/metric_correction.pdf>
-Package pdftex.def Info: ./figs/metric_correction.pdf  used on input line 427.
+Package pdftex.def Info: ./figs/metric_correction.pdf  used on input line 430.
 (pdftex.def)             Requested size: 455.70137pt x 383.43156pt.
- [50
+ [49
 
  <./figs/metric_correction.pdf>] (./tables/metric_correction.tex)
-[51
+[50
 
 ] (./tables/mod_results.tex
 Overfull \hbox (25.69156pt too wide) in paragraph at lines 8--31
  [][] 
  []
 
-) [52
+) [51
 
 ] (./tables/overviewtabel.tex
 Overfull \hbox (21.17967pt too wide) in alignment at lines 3--8
  [] [] [] [] [] [] 
  []
-
-! Extra alignment tab has been changed to \cr.
-<template> \endtemplate 
-                        
-l.10 ...}{l}{\footnotesize Continued on next page}
-                                                  
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
 
 
 Overfull \hbox (21.17967pt too wide) in alignment at lines 8--11
@@ -990,58 +989,6 @@ Overfull \hbox (21.17967pt too wide) in alignment at lines 11--12
  []
 
 
-Package natbib Warning: Citation `ares2014' on page 53 undefined on input line 
-14.
-
-
-Package natbib Warning: Citation `ashby2015' on page 53 undefined on input line
- 15.
-
-
-Package natbib Warning: Citation `ashby2015' on page 53 undefined on input line
- 16.
-
-
-Package natbib Warning: Citation `ashby2015' on page 53 undefined on input line
- 17.
-
-
-Package natbib Warning: Citation `bagger2016' on page 53 undefined on input lin
-e 20.
-
-
-Package natbib Warning: Citation `bagger2016' on page 53 undefined on input lin
-e 21.
-
-
-Package natbib Warning: Citation `bagger2016' on page 53 undefined on input lin
-e 22.
-
-
-Package natbib Warning: Citation `bagger2016' on page 53 undefined on input lin
-e 23.
-
-
-Package natbib Warning: Citation `behe2014' on page 53 undefined on input line 
-24.
-
-
-Package natbib Warning: Citation `behe2015' on page 53 undefined on input line 
-25.
-
-
-Package natbib Warning: Citation `behe2017' on page 53 undefined on input line 
-26.
-
-
-Package natbib Warning: Citation `bialkova2011' on page 53 undefined on input l
-ine 27.
-
-
-Package natbib Warning: Citation `cavanagh2014' on page 53 undefined on input l
-ine 31.
-
-
 Overfull \hbox (21.17967pt too wide) in alignment at lines 12--34
  [] [] [] [] [] [] 
  []
@@ -1051,282 +998,78 @@ Underfull \vbox (badness 10000) detected at line 34
  []
 
 
-Package natbib Warning: Citation `du2014' on page 53 undefined on input line 36
-.
-
-
-Package natbib Warning: Citation `fiedler2012' on page 53 undefined on input li
-ne 37.
-
-
-Package natbib Warning: Citation `fiedler2012' on page 53 undefined on input li
-ne 38.
-
-
-Package natbib Warning: Citation `folke2016' on page 53 undefined on input line
- 39.
-
-
-Package natbib Warning: Citation `folke2016' on page 53 undefined on input line
- 40.
-
-
-Package natbib Warning: Citation `gidlof2013' on page 53 undefined on input lin
-e 46.
-
-
-Package natbib Warning: Citation `glaholt2009a' on page 53 undefined on input l
-ine 47.
-
-
-Package natbib Warning: Citation `glaholt2009b' on page 53 undefined on input l
-ine 48.
-
-
-Package natbib Warning: Citation `glaholt2009b' on page 53 undefined on input l
-ine 49.
-
-
-Package natbib Warning: Citation `glaholt2009b' on page 53 undefined on input l
-ine 50.
-
-
-Package natbib Warning: Citation `glaholt2009b' on page 53 undefined on input l
-ine 51.
-
-
-Package natbib Warning: Citation `glaholt2009c' on page 53 undefined on input l
-ine 52.
-
-
-Package natbib Warning: Citation `glaholt2010' on page 53 undefined on input li
-ne 53.
-
-
 Overfull \hbox (21.17967pt too wide) in alignment at lines 34--54
  [] [] [] [] [] [] 
  []
-
-
-Package natbib Warning: Citation `glaholt2010' on page 53 undefined on input li
-ne 54.
-
-
-Package natbib Warning: Citation `glaholt2012' on page 53 undefined on input li
-ne 55.
-
-
-Package natbib Warning: Citation `glaholt2012' on page 53 undefined on input li
-ne 56.
-
-
-Package natbib Warning: Citation `graham2016' on page 53 undefined on input lin
-e 57.
-
-
-Package natbib Warning: Citation `grebitus2015' on page 53 undefined on input l
-ine 58.
-
-
-Package natbib Warning: Citation `guyader2017' on page 53 undefined on input li
-ne 59.
-
-
-Package natbib Warning: Citation `huang2011' on page 53 undefined on input line
- 61.
-
-
-Package natbib Warning: Citation `hwang2017' on page 53 undefined on input line
- 62.
-
-
-Package natbib Warning: Citation `keller2014' on page 53 undefined on input lin
-e 63.
-
-
-Package natbib Warning: Citation `leboeuf2016' on page 53 undefined on input li
-ne 68.
-
-
-Package natbib Warning: Citation `lindner2014' on page 53 undefined on input li
-ne 69.
-
-
-Package natbib Warning: Citation `lindner2014' on page 53 undefined on input li
-ne 70.
 
 
 Overfull \hbox (21.17967pt too wide) in alignment at lines 54--74
  [] [] [] [] [] [] 
  []
 
-[53
+[52
 
 ]
-
-Package natbib Warning: Citation `meissner2016b' on page 54 undefined on input 
-line 82.
-
-
-Package natbib Warning: Citation `miller2015' on page 54 undefined on input lin
-e 83.
-
-
-Package natbib Warning: Citation `mitsuda2014' on page 54 undefined on input li
-ne 84.
-
-
-Package natbib Warning: Citation `nittono2009' on page 54 undefined on input li
-ne 85.
-
-
-Package natbib Warning: Citation `nittono2009' on page 54 undefined on input li
-ne 86.
-
-
-Package natbib Warning: Citation `orquin2013' on page 54 undefined on input lin
-e 87.
-
-
 Overfull \hbox (21.17967pt too wide) in alignment at lines 74--94
  [] [] [] [] [] [] 
  []
 
-[54]
-
-Package natbib Warning: Citation `orquin2020osfb' on page 55 undefined on input
- line 99.
-
-
-Package natbib Warning: Citation `orquin2020osfb' on page 55 undefined on input
- line 100.
-
-
-Package natbib Warning: Citation `orquin2020osfb' on page 55 undefined on input
- line 101.
-
-
-Package natbib Warning: Citation `orquin2020osfb' on page 55 undefined on input
- line 102.
-
-
-Package natbib Warning: Citation `pieters1999' on page 55 undefined on input li
-ne 105.
-
-
-Package natbib Warning: Citation `rubaltelli2012' on page 55 undefined on input
- line 106.
-
-
-Package natbib Warning: Citation `spinks2016a' on page 55 undefined on input li
-ne 110.
-
-
-Package natbib Warning: Citation `su2013' on page 55 undefined on input line 11
-1.
-
-
-Package natbib Warning: Citation `turner2014' on page 55 undefined on input lin
-e 112.
-
-
-Package natbib Warning: Citation `vanderlaan2015' on page 55 undefined on input
- line 113.
-
-
+[53]
 Overfull \hbox (21.17967pt too wide) in alignment at lines 94--114
  [] [] [] [] [] [] 
  []
 
-[55]
-
-Package natbib Warning: Citation `vanderlaan2017' on page 56 undefined on input
- line 114.
-
-
-Package natbib Warning: Citation `vanherpen2011' on page 56 undefined on input 
-line 115.
-
-
-Package natbib Warning: Citation `vanloo2015' on page 56 undefined on input lin
-e 116.
-
-
-Package natbib Warning: Citation `wastlund2015' on page 56 undefined on input l
-ine 117.
-
-
-Package natbib Warning: Citation `wastlund2015' on page 56 undefined on input l
-ine 118.
-
-
-Package natbib Warning: Citation `wolfson2017' on page 56 undefined on input li
-ne 119.
+[54]
+Underfull \hbox (badness 3503) in paragraph at lines 117--117
+[]|[][]\T1/lmr/m/n/12 (+20) Wästlund, Ot-ter-bring, Gustafs-son, and
+ []
 
 
 Overfull \hbox (21.17967pt too wide) in alignment at lines 114--122
  [] [] [] [] [] [] 
  []
 
-[56]) [57]
-<./figs/forest_plots_altatt.pdf, id=1059, 455.7025pt x 576.1525pt>
+[55] [56]) [57]
+<./figs/forest_plots_altatt.pdf, id=1253, 455.7025pt x 576.1525pt>
 File: ./figs/forest_plots_altatt.pdf Graphic file (type pdf)
 <use ./figs/forest_plots_altatt.pdf>
-Package pdftex.def Info: ./figs/forest_plots_altatt.pdf  used on input line 452
+Package pdftex.def Info: ./figs/forest_plots_altatt.pdf  used on input line 455
 .
 (pdftex.def)             Requested size: 455.70137pt x 576.15108pt.
 
 
-LaTeX Warning: Float too large for page by 37.22105pt on input line 457.
+LaTeX Warning: Float too large for page by 37.22105pt on input line 460.
 
 [58 <./figs/forest_plots_altatt.pdf>]
-<./figs/funnel_plots_altatt.pdf, id=1078, 455.7025pt x 576.1525pt>
+<./figs/funnel_plots_altatt.pdf, id=1273, 455.7025pt x 576.1525pt>
 File: ./figs/funnel_plots_altatt.pdf Graphic file (type pdf)
 <use ./figs/funnel_plots_altatt.pdf>
-Package pdftex.def Info: ./figs/funnel_plots_altatt.pdf  used on input line 462
+Package pdftex.def Info: ./figs/funnel_plots_altatt.pdf  used on input line 465
 .
 (pdftex.def)             Requested size: 455.70137pt x 576.15108pt.
 
 
-LaTeX Warning: Float too large for page by 37.22105pt on input line 467.
+LaTeX Warning: Float too large for page by 37.22105pt on input line 470.
 
 [59 <./figs/funnel_plots_altatt.pdf>]
-
-Package natbib Warning: There were undefined citations.
-
 AED endfloat: Processing end Figures and Tables
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 470.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 470.
- (./emma_manuscript.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 470.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 470.
-
-
-Package rerunfilecheck Warning: File `emma_manuscript.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `emma_manuscript.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  9C4A13DC3764867DDAFE90D288D94BE2;1480.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 470.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 473.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 473.
+ (./emma_manuscript.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 473.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 473.
+Package rerunfilecheck Info: File `emma_manuscript.out' has not changed.
+(rerunfilecheck)             Checksum: 9C4A13DC3764867DDAFE90D288D94BE2;1480.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 473.
  ) 
 Here is how much of TeX's memory you used:
- 13989 strings out of 480608
- 214814 string characters out of 5903630
- 550775 words of memory out of 5000000
- 29180 multiletter control sequences out of 15000+600000
- 642836 words of font info for 146 fonts, out of 8000000 for 9000
+ 14111 strings out of 480608
+ 216931 string characters out of 5903630
+ 555654 words of memory out of 5000000
+ 29259 multiletter control sequences out of 15000+600000
+ 642840 words of font info for 146 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,14n,51p,4174b,821s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,14n,51p,4196b,765s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 20/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2020/texmf-d
@@ -1348,10 +1091,10 @@ e1/public/lm/lmri8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/l
 m/lmss8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pf
 b></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/loc
 al/texlive/2020/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on emma_manuscript.pdf (59 pages, 783762 bytes).
+Output written on emma_manuscript.pdf (59 pages, 792311 bytes).
 PDF statistics:
- 1220 PDF objects out of 1440 (max. 8388607)
- 1089 compressed objects within 11 object streams
+ 1416 PDF objects out of 1440 (max. 8388607)
+ 1283 compressed objects within 13 object streams
  241 named destinations out of 1000 (max. 500000)
- 29737 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 29921 words of extra memory for PDF output out of 35830 (max. 10000000)
 

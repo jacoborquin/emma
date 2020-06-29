@@ -37,7 +37,6 @@ data = as.data.table(read_csv(
 data$yi.c.FL = FisherZInv(FisherZ(data$fix.like.m)/data$a_acc)
 data$yi.c.FC = FisherZInv(FisherZ(data$fix.count.m)/data$a_acc)
 
-
 # -----
 # Meta analyses - visual factors
 # -----
@@ -48,11 +47,6 @@ saldata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$
 saldata$vi.c = saldata$vi/saldata$a_acc^2 # compute corrected variances based on artefact multiplier
 salres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=saldata, method="HS")
 salTrim = trimfill(salres)
-# salresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=saldata)
-# salTrimZ = trimfill(salresZ)
-# salTrimZ$b = FisherZInv(salTrimZ$b)
-# salTrimZ$ci.lb = FisherZInv(salTrimZ$ci.lb)
-# salTrimZ$ci.ub = FisherZInv(salTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # surface size
@@ -60,11 +54,6 @@ sizedata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data
 sizedata$vi.c = sizedata$vi/sizedata$a_acc^2
 sizeres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=sizedata, method="HS")
 sizeTrim = trimfill(sizeres)
-# sizeresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=sizedata)
-# sizeTrimZ = trimfill(sizeresZ)
-# sizeTrimZ$b = FisherZInv(sizeTrimZ$b)
-# sizeTrimZ$ci.lb = FisherZInv(sizeTrimZ$ci.lb)
-# sizeTrimZ$ci.ub = FisherZInv(sizeTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # left v right position
@@ -72,11 +61,6 @@ LRdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$I
 LRdata$vi.c = LRdata$vi/LRdata$a_acc^2
 LRres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=LRdata, method="HS")
 LRTrim = trimfill(LRres)
-# LRresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=LRdata)
-# LRTrimZ = trimfill(LRresZ)
-# LRTrimZ$b = FisherZInv(LRTrimZ$b)
-# LRTrimZ$ci.lb = FisherZInv(LRTrimZ$ci.lb)
-# LRTrimZ$ci.ub = FisherZInv(LRTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # centrality position
@@ -84,11 +68,6 @@ centerdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[da
 centerdata$vi.c = centerdata$vi/centerdata$a_acc^2
 centerres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=centerdata, method="HS")
 centerTrim = trimfill(centerres)
-# centerresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=centerdata)
-# centerTrimZ = trimfill(centerresZ)
-# centerTrimZ$b = FisherZInv(centerTrimZ$b)
-# centerTrimZ$ci.lb = FisherZInv(centerTrimZ$ci.lb)
-# centerTrimZ$ci.ub = FisherZInv(centerTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # set size
@@ -96,11 +75,6 @@ setdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$
 setdata$vi.c = setdata$vi/setdata$a_acc^2
 setres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata, method="HS")
 setTrim = trimfill(setres)
-# setresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=setdata)
-# setTrimZ = trimfill(setresZ)
-# setTrimZ$b = FisherZInv(setTrimZ$b)
-# setTrimZ$ci.lb = FisherZInv(setTrimZ$ci.lb)
-# setTrimZ$ci.ub = FisherZInv(setTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # set size moderator analysis - effect of attribute vs alternatives
@@ -109,19 +83,6 @@ setmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata[setdata$Alt.att == 
 setmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata[setdata$Alt.att == "alternative",], method="HS") 
 setmod_attTrim = trimfill(setmod_att)
 setmod_altTrim = trimfill(setmod_alt)
-
-# setmod_attZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=setdata[setdata$Alt.att == "attribute",])
-# setmod_attTrimZ = trimfill(setmod_attZ)
-# setmod_attTrimZ$b = FisherZInv(setmod_attTrimZ$b)
-# setmod_attTrimZ$ci.lb = FisherZInv(setmod_attTrimZ$ci.lb)
-# setmod_attTrimZ$ci.ub = FisherZInv(setmod_attTrimZ$ci.ub)
-
-# setmod_altZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=setdata[setdata$Alt.att == "alternative",])
-# setmod_altTrimZ = trimfill(setmod_altZ)
-# setmod_altTrimZ$b = FisherZInv(setmod_altTrimZ$b)
-# setmod_altTrimZ$ci.lb = FisherZInv(setmod_altTrimZ$ci.lb)
-# setmod_altTrimZ$ci.ub = FisherZInv(setmod_altTrimZ$ci.ub)
-
 
 # -----
 # Meta analyses - cognitive factors
@@ -133,11 +94,6 @@ taskdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data
 taskdata$vi.c = taskdata$vi/taskdata$a_acc^2
 taskres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata, method="HS")
 taskTrim = trimfill(taskres)
-# taskresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=taskdata)
-# taskTrimZ = trimfill(taskresZ)
-# taskTrimZ$b = FisherZInv(taskTrimZ$b)
-# taskTrimZ$ci.lb = FisherZInv(taskTrimZ$ci.lb)
-# taskTrimZ$ci.ub = FisherZInv(taskTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # task instruction moderator analysis - effect of attribute vs alternative 
@@ -147,29 +103,12 @@ taskmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata[taskdata$Alt.att 
 taskmod_altTrim = trimfill(taskmod_alt)
 taskmod_attTrim = trimfill(taskmod_att)
 
-# taskmod_attZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=taskdata[taskdata$Alt.att == "attribute",])
-# taskmod_attTrimZ = trimfill(taskmod_attZ)
-# taskmod_attTrimZ$b = FisherZInv(taskmod_attTrimZ$b)
-# taskmod_attTrimZ$ci.lb = FisherZInv(taskmod_attTrimZ$ci.lb)
-# taskmod_attTrimZ$ci.ub = FisherZInv(taskmod_attTrimZ$ci.ub)
-
-# taskmod_altZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=taskdata[taskdata$Alt.att == "alternative",])
-# taskmod_altTrimZ = trimfill(taskmod_altZ)
-# taskmod_altTrimZ$b = FisherZInv(taskmod_altTrimZ$b)
-# taskmod_altTrimZ$ci.lb = FisherZInv(taskmod_altTrimZ$ci.lb)
-# taskmod_altTrimZ$ci.ub = FisherZInv(taskmod_altTrimZ$ci.ub)
-
 # psychometric meta-analysis and trim and fill analysis of 
 # preferential viewing
 prefdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Pref.view"], vtype="AV")[,c(1:19,20)])
 prefdata$vi.c = prefdata$vi/prefdata$a_acc^2
 prefres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata, method="HS")
 prefTrim = trimfill(prefres)
-# prefresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=prefdata)
-# prefTrimZ = trimfill(prefresZ)
-# prefTrimZ$b = FisherZInv(prefTrimZ$b)
-# prefTrimZ$ci.lb = FisherZInv(prefTrimZ$ci.lb)
-# prefTrimZ$ci.ub = FisherZInv(prefTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # preferential viewing moderator analysis - effect of alternative vs attribute 
@@ -178,18 +117,6 @@ prefmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata[prefdata$Alt.att 
 prefmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata[prefdata$Alt.att == "attribute",], method="HS")
 prefmod_altTrim = trimfill(prefmod_alt)
 prefmod_attTrim = trimfill(prefmod_att)
-
-# prefmod_attZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=prefdata[prefdata$Alt.att == "attribute",])
-# prefmod_attTrimZ = trimfill(prefmod_attZ)
-# prefmod_attTrimZ$b = FisherZInv(prefmod_attTrimZ$b)
-# prefmod_attTrimZ$ci.lb = FisherZInv(prefmod_attTrimZ$ci.lb)
-# prefmod_attTrimZ$ci.ub = FisherZInv(prefmod_attTrimZ$ci.ub)
-
-# prefmod_altZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=prefdata[prefdata$Alt.att == "alternative",])
-# prefmod_altTrimZ = trimfill(prefmod_altZ)
-# prefmod_altTrimZ$b = FisherZInv(prefmod_altTrimZ$b)
-# prefmod_altTrimZ$ci.lb = FisherZInv(prefmod_altTrimZ$ci.lb)
-# prefmod_altTrimZ$ci.ub = FisherZInv(prefmod_altTrimZ$ci.ub)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # choice bias moderator analysis - effect of inferential vs preferential choice
@@ -207,31 +134,161 @@ choicemod = rma(yi.c.FC, vi.c, weights=1/vi.c, mods = ~ inf_prefmod, data=choice
 choicedata = choicedata_mod[, list(yi.c.FC = mean(yi.c.FC), vi.c = mean(vi.c), IV = unique(IV), N = unique(N)), by = Study]
 choiceres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=choicedata, method="HS")
 choiceTrim = trimfill(choiceres)
-# choiceresZ = rma(FisherZ(yi.c.FC), 1/sqrt(N-3), data=choicedata)
-# choiceTrimZ = trimfill(choiceresZ)
-# choiceTrimZ$b = FisherZInv(choiceTrimZ$b)
-# choiceTrimZ$ci.lb = FisherZInv(choiceTrimZ$ci.lb)
-# choiceTrimZ$ci.ub = FisherZInv(choiceTrimZ$ci.ub)
 
 # -----
-# Moderator results text for manuscript
+# Main and Moderator results text for manuscript
 # -----
-
+# rho range
 result <- paste0(
-	"$Q_M(1)=", round(setmod$QM, 3),"$, $p=", round(setmod$QMp, 3), "$"
+  "$\\rho=", round(salres$b, 3),"$ to $\\rho=", round(choiceres$b, 3), "$"
 )
-cat(result, file = file.path(tablesDir, "moderator_setsize.tex"))
+cat(result, file = file.path(tablesDir, "rhorange.tex"))
 
+# I2 range
+result <- paste0(
+  "$I^2=", round(salres$I2, 3),"$ to $I^2=", round(prefres$I2, 3), "$"
+)
+cat(result, file = file.path(tablesDir, "I2range.tex"))
+
+# salience summary
+result <- paste0(
+	"($\\rho=", round(salres$b, 2), "$; 95\\% confidence interval (CI) = $[", 
+	round(salres$ci.lb, 2), ",", round(salres$ci.ub, 2), "]$; $p=", round(salres$pval, 3), "$)"
+)
+cat(result, file = file.path(tablesDir, "saliencesummary.tex"))
+
+# salience trim summary
+result <- paste0(
+  "$\\rho=", round(salTrim$b, 2), "$; 95\\% CI = $[", 
+  round(salTrim$ci.lb, 2), ",", round(salTrim$ci.ub, 2), "];$"
+)
+cat(result, file = file.path(tablesDir, "saliencetrimsummary.tex"))
+
+# center position summary
+result <- paste0(
+  "($\\rho=", 
+  round(centerres$b, 2), 
+  "$; 95\\% CI = $[", 
+  round(centerres$ci.lb, 2), 
+  ",", 
+  round(centerres$ci.ub, 2), 
+  "]$; $p", 
+  ifelse(round(centerres$pval, 3) == 0, "< 0.001", paste0("p=", round(centerres$pval, 3))), 
+  "$)"
+)
+cat(result, file = file.path(tablesDir, "centersummary.tex"))
+
+# center trim summary
+result <- paste0(
+  "$\\rho=", 
+  round(centerTrim$b, 2), 
+  "$; 95\\% CI = $[", 
+  round(centerTrim$ci.lb, 2), 
+  ",", 
+  round(centerTrim$ci.ub, 2), 
+  "]$; $p", 
+  ifelse(round(centerTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(centerTrim$pval, 3))), 
+  "$;"
+)
+cat(result, file = file.path(tablesDir, "centertrimsummary.tex"))
+
+# task instruction summary
+result <- paste0(
+  "($\\rho=", 
+  round(taskres$b, 2), 
+  "$; 95\\% CI = $[", 
+  round(taskres$ci.lb, 2), 
+  ",", 
+  round(taskres$ci.ub, 2), 
+  "]$; $p", 
+  ifelse(round(taskres$pval, 3) == 0, "< 0.001", paste0("p=", round(taskres$pval, 3))), 
+  "$)"
+)
+cat(result, file = file.path(tablesDir, "tasksummary.tex"))
+
+# preferential viewing summary
+result <- paste0(
+  "$\\rho=", 
+  round(prefres$b, 2), 
+  "$; 95\\% CI = $[", 
+  round(prefres$ci.lb, 2), 
+  ",", 
+  round(prefres$ci.ub, 2), 
+  "]$; $p", 
+  ifelse(round(prefres$pval, 3) == 0, "< 0.001", paste0("p=", round(prefres$pval, 3))), 
+  "$;"
+)
+cat(result, file = file.path(tablesDir, "prefsummary.tex"))
+
+# task trim summary
+result <- paste0(
+  "$\\rho=", 
+  round(taskTrim$b, 2), 
+  "$; 95\\% CI = $[", 
+  round(taskTrim$ci.lb, 2), 
+  ",", 
+  round(taskTrim$ci.ub, 2), 
+  "]$; $p", 
+  ifelse(round(taskTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(taskTrim$pval, 3))), 
+  "$;"
+)
+cat(result, file = file.path(tablesDir, "tasktrimsummary.tex"))
+
+# pref trim summary
+result <- paste0(
+  "$\\rho=", 
+  round(prefTrim$b, 2), 
+  "$; 95\\% CI = $[", 
+  round(prefTrim$ci.lb, 2), 
+  ",", 
+  round(prefTrim$ci.ub, 2), 
+  "]$; $p", 
+  ifelse(round(prefTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(prefTrim$pval, 3))), 
+  "$;"
+)
+cat(result, file = file.path(tablesDir, "preftrimsummary.tex"))
+
+# choice summary
+result <- paste0(
+  "$\\rho=", 
+  round(choiceres$b, 2), 
+  "$; 95\\% CI = $[", 
+  round(choiceres$ci.lb, 2), 
+  ",", 
+  round(choiceres$ci.ub, 2), 
+  "]$; $p", 
+  ifelse(round(choiceres$pval, 3) == 0, "< 0.001", paste0("p=", round(choiceres$pval, 3))), 
+  "$;"
+)
+cat(result, file = file.path(tablesDir, "choicesummary.tex"))
+
+# choice trim summary
+result <- paste0(
+  "$\\rho=", 
+  round(choiceTrim$b, 2), 
+  "$; 95\\% CI = $[", 
+  round(choiceTrim$ci.lb, 2), 
+  ",", 
+  round(choiceTrim$ci.ub, 2), 
+  "]$; $p", 
+  ifelse(round(choiceTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(choiceTrim$pval, 3))), 
+  "$;"
+)
+cat(result, file = file.path(tablesDir, "choicetrimsummary.tex"))
+
+# task moderator
 result <- paste0(
 	"$Q_M(1)=", round(taskmod$QM, 3),"$, $p=", round(taskmod$QMp, 3), "$"
 )
 cat(result, file = file.path(tablesDir, "moderator_task.tex"))
 
+# pref moderator
 result <- paste0(
 	"$Q_M(1)=", round(prefmod$QM, 3),"$, $p=", round(prefmod$QMp, 3), "$"
 )
 cat(result, file = file.path(tablesDir, "moderator_pref.tex"))
 
+# choice moderator
 result <- paste0(
 	"$Q_M(1)=", round(choicemod$QM, 3),"$, $p=", round(choicemod$QMp, 3), "$"
 )
@@ -327,7 +384,6 @@ print(
     file = file.path(tablesDir, "main_results.tex")
 )
 
-
 # -----
 # Table with moderator results for manuscript
 # -----
@@ -389,7 +445,6 @@ print(
     file = file.path(tablesDir, "mod_results.tex")
 )
 
-
 # -----
 # Test of task instruction vs preferential viewing vs choice bias 
 # -----
@@ -434,13 +489,10 @@ overviewtabel$IV = ifelse(overviewtabel$IV == "LR.position", "LvR",
                                                ifelse(overviewtabel$IV == "Salience", "Sal",overviewtabel$IV)))))
 overviewtabel = overviewtabel[order(Authors),]
 
-tab_caption <- "Overview of individual effect sizes."
+tab_caption <- "Overview of individual effect sizes: IV = independent variable; $N$ = number of participants; $a_a$ = artifact multiplier; $r$ = attenuated effect size correlation expressed in the fixation count metric."
 tab_label <- "tab:overviewtable"
-tab_note <- paste0("\\hline \n \\multicolumn{4}{l}",
-                   "{\\scriptsize{\\textit{Note.} $N$ = number of participants; $a_a$ = artifact multiplier; $r$ = effect size correlation expressed in fixation count metric.}} \n")
-
 add.to.row <- list(pos = list(0), command = NULL)
-command <- paste0("\\hline\n\\endhead\n","\\hline\n","\\multicolumn{", dim(overviewtabel)[2] + 1, "}{l}","{\\footnotesize Continued on next page}\n","\\endfoot\n","\\endlastfoot\n")
+command <- paste0("\\hline\n\\endhead\n","\\hline\n","\\multicolumn{", dim(overviewtabel)[2], "}{l}","{\\footnotesize Continued on next page}\n","\\endfoot\n","\\endlastfoot\n")
 add.to.row$command <- command
 
 otab = xtable(
@@ -460,7 +512,6 @@ print(otab
   sanitize.text.function = function(x){x},
   file = file.path(tablesDir, "overviewtabel.tex")
 )
-
 
 # -----
 # Forrest plots 
@@ -483,17 +534,6 @@ taskplot_alt = genForest(taskmod_alt,taskdata[Alt.att == "alternative"],"Task", 
 taskplot_att = genForest(taskmod_att,taskdata[Alt.att == "attribute"],"Task", "Task instructions - attribute", "yi.c.FC")
 prefplot_alt = genForest(prefmod_alt,prefdata[Alt.att == "alternative"],"Pref.view", "Preferential viewing - alternative", "yi.c.FC")
 prefplot_att = genForest(prefmod_att,prefdata[Alt.att == "attribute"],"Pref.view", "Preferential viewing - attribute", "yi.c.FC") 
-
-# arange all forest plots in panel plot for manuscript - main ones
-# BUleftside = plot_grid(salplot,LRplot,setplot_alt,labels = c("A","C","E"), ncol = 1, rel_heights = c(9,5,7))
-# BUrightside = plot_grid(sizeplot,centerplot,setplot_att,labels = c("B","D","F"), ncol = 1, rel_heights = c(7,11,6))
-# BUplot = plot_grid(BUleftside, BUrightside, ncol = 2)
-# TDleftside = plot_grid(taskplot_alt,prefplot_alt,choiceplot,labels = c("G","I","K"), ncol = 1, rel_heights = c(8,6,11))
-# TDrightside = plot_grid(taskplot_att,prefplot_att,labels = c("H","J","F"), nrow = 3, rel_heights = c(11,12,9))
-# TDplot = plot_grid(TDleftside,TDrightside, ncol = 2)
-# forestpanel = plot_grid(BUplot,TDplot, nrow = 2, rel_heights = c(2,3))
-# filename <- file.path(figsDir, "forest_plots.pdf")
-# savePlots(forestpanel, filename, fd_1c_3x2)
 
 # arange all forest plots in panel plot for manuscript - visual factors
 forestpanel = plot_grid(
@@ -525,7 +565,6 @@ forestpanel = plot_grid(
 )
 filename <- file.path(figsDir, "forest_plots_altatt.pdf")
 savePlots(forestpanel, filename, fd_SI_3x2)
-
 
 # -----
 # Funnel plots 
