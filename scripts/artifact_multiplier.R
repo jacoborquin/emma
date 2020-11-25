@@ -20,7 +20,7 @@
 rm(list = ls())
 
 # import packages and functions
-source("utils.R")
+source("./scripts/utils.R")
 
 # loading data
 data = as.data.table(read_excel(
@@ -29,7 +29,6 @@ data = as.data.table(read_excel(
 ET_specs = as.data.table(read_csv2(
 	file.path(dataDir, "EMMA_ET_specs_data.csv")
 ))
-
 
 # ----------------------------------------------------------------------
 # Processing
@@ -42,6 +41,10 @@ ET_specs = as.data.table(read_csv2(
 # impute eye tracker "Unknown" when eye tracker name not identified
 data$Eye.tracker[is.na(data$Eye.tracker)] = "Unknown"
 
+# impute values when ET "unknown". we use the average accuracy and precision
+ET_specs$Accuracy[is.na(ET_specs$Accuracy)] = mean(ET_specs$Accuracy, na.rm = T)
+ET_specs$Precision[is.na(ET_specs$Precision)] = mean(ET_specs$Precision, na.rm = T)
+
 # merge with data file for precision values of ET
 data = merge(data, ET_specs, by = c("Eye.tracker"), all.x = TRUE)
 
@@ -51,71 +54,62 @@ data_long = as.data.table(
 )
 data_long = data_long[data_long$R != "NA"]
 
-# the models are computed on the absolute effect sizes
-data_long$R_abs = abs(data_long$R)  
-
 # averaging studies with multiple effect sizes
 data_long = data_long[, 
 	list(
-		R_abs = mean(R_abs), 
+		R = FisherZInv(mean(FisherZ(R))),
+		Rz = mean(FisherZ(R)),
 		Precision = unique(Precision),  
 	    Accuracy = unique(Accuracy), 
-	    Eye.tracker = unique(Eye.tracker), 
-	    IV = unique(IV)
+	    Eye.tracker = unique(Eye.tracker)
 	), 
 	by = c("Study", "IV")
 ]
+
 # verify
 any(table(data_long$Study, data_long$IV) > 1) == FALSE
 
-# chi square test
-table = table(data_long$IV, data_long$Eye.tracker)
-chisq.test(table)
-
-
 # -----
-# Test whether eye tracker accuracy or precision attenuate effect sizes 
+# Test whether eye tracker accuracy and precision attenuate effect sizes 
+# While precision is a better predictor we will use accuracy for artifact multiplier
+# the reason is that we have more exact numbers on accuracy than precision
 # -----
 
 # mixed effects linear models
-model1 <- lmer(R_abs~ + (1|Eye.tracker), data_long)
-model2 <- lmer(R_abs~ + (1|Study), data_long)
-model3 <- lmer(R_abs~ + (1|Eye.tracker) + (1|Study), data_long)
-model21 <- lmer(R_abs~ Accuracy + (1|Study), data_long)
-model212 <- lmer(R_abs~ Accuracy + IV + (1|Study), data_long)
-model22 <- lmer(R_abs~ Precision + (1|Study), data_long)
-model222 <- lmer(R_abs~ Precision + IV + (1|Study), data_long)
-model23 <- lmer(R_abs~ Precision + Accuracy + (1|Study), data_long)
-model24 <- lmer(R_abs~ Precision + Accuracy + IV + (1|Study), data_long)
+model1 <- lmer(Rz ~ + (1|Study), data_long)
+model2 <- lmer(Rz ~ Accuracy + (1|Study), data_long)
+model3 <- lmer(Rz ~ Accuracy + IV + (1|Study), data_long)
+model4 <- lmer(Rz ~ Precision + (1|Study), data_long)
+model5 <- lmer(Rz ~ Precision + IV + (1|Study), data_long)
+model6 <- lmer(Rz ~ Accuracy + Precision + IV + (1|Study), data_long)
 
-# winning model21 has lowest BIC
 # includes accuracy, but not precision
-anova(model1,model2,model3,model21,model22,model23,model24,model212,model222) 
+#anova(model1,model2,model3,model4,model5,model6) 
+#summary(model3)
 
 # compute artefact multiplier based on accuracy for psychometric meta-analysis
-b0 = coef(summary(model21))[1,1] 
-b1 = coef(summary(model21))[2,1]
+b0 = coef(summary(model3))[1,1] 
+b1 = coef(summary(model3))[2,1]
 data$a_acc = (b0 + b1*data$Accuracy)/b0 
 
 # paste result for manuscript
-#     -0.382$, $\SE = 0.158$, $t = -2.422$, $p = .018$
 result <- paste0(
   "$\\beta_0=", 
-  round(coef(summary(model21))[1,1], 3), 
+  round(coef(summary(model3))[1,1], 3), 
   "$, $\\SE=", 
-  round(coef(summary(model21))[1,2], 3), 
+  round(coef(summary(model3))[1,2], 3), 
   "$, $t=", 
-  round(coef(summary(model21))[1,4], 3), 
+  round(coef(summary(model3))[1,4], 3), 
   "$, $", 
-  ifelse(round(coef(summary(model21))[1,5], 3) == 0, "p<0.001", paste0("p=", round(coef(summary(model21))[1,5], 3))), 
+  ifelse(round(coef(summary(model3))[1,5], 3) == 0, "p<0.001", paste0("p=", round(coef(summary(model3))[1,5], 3))), 
   "$, $\\beta_{\\textrm{accuracy}} =",
-  round(coef(summary(model21))[2,1], 3), 
+  round(coef(summary(model3))[2,1], 3), 
   "$, $\\SE=", 
-  round(coef(summary(model21))[2,2], 3), 
+  round(coef(summary(model3))[2,2], 3), 
   "$, $t=", 
-  round(coef(summary(model21))[2,4], 3), 
+  round(coef(summary(model3))[2,4], 3), 
   "$, $", 
-  ifelse(round(coef(summary(model21))[2,5], 3) == 0, "p<0.001", paste0("p=", round(coef(summary(model21))[2,5], 3))), 
+  ifelse(round(coef(summary(model3))[2,5], 3) == 0, "p<0.001", paste0("p=", round(coef(summary(model3))[2,5], 3))), 
   "$;"
 )
 cat(result, file = file.path(tablesDir, "artifactregresult.tex"))
@@ -126,50 +120,22 @@ cat(result, file = file.path(tablesDir, "artifactregresult.tex"))
 
 write_csv(data, file.path(dataDir, "EMMA_ES_data_corrected.csv"))
 
-
 # -----
 # Plot of accuracy on effect size
 # ----
 
-# strangely, has two columns with same name??
-data_long[,7] <- NULL
-
 # create ES-accuracy  scatter plot
 figure <- 
-	ggplot(data = data_long, aes(Accuracy, R_abs)) +
+	ggplot(data = data_long, aes(Accuracy, Rz)) +
 	geom_point(alpha = .5, size = pointSize) +
 	# geom_smooth(method = "lm", color = "black", size = lineSize*2) +
 	geom_abline(intercept = b0, slope = b1, size = lineSize*1) +
-	scale_x_continuous("Eye tracker accuracy (visual angle)", breaks = seq(0.4, 1, by=.1)) +
-	ylab("Observed effect size (|correlation|)") +
+	scale_x_continuous("Eye tracker accuracy (visual angle)", breaks = seq(0, 1.5, by=.1)) +
+	ylab("Effect size (z)") +
 	mytheme
 filename <- file.path(figsDir, "ET_accuracy_effectsize.pdf")
 savePlots(figure, filename, fd_SI_1x1.5)
   
-
-# -----
-# Make accuracy results table for manuscript
-# -----
-
-acc_table = data.table(summary(model21)$coef) 
-obs = data.table("Number of observations =",NROW(data_long),NA,NA,NA)
-Ll = data.table("Log likelihood =",as.numeric(summary(model21)$logLik),NA,NA,NA)
-BIC = data.table("BIC =",BIC(model21),NA,NA,NA)
-Raneff = data.table("SD(study) =",data.frame(summary(model21)$varcor)[1,5],NA,NA,NA)
-l = list(acc_table,obs,Ll,BIC,Raneff)
-acc_table = rbindlist(l)
-acc_table = acc_table %>% mutate_at(vars(2:5), round, 3)
-setnames(acc_table, c(2:5), c("SE", "df","t","p"))
-write_csv(acc_table, file.path(tablesDir, "accuracy_winner_model.csv"))
-
-# latex version
-print(
-	xtable(acc_table), 
-	include.rownames = FALSE,
-	file = file.path(tablesDir, "accuracy_winner_model.tex")
-)
-
-
 # -----
 # Make eye tracker specifications table for manuscript
 # -----

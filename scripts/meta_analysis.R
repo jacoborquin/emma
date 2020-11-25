@@ -2,9 +2,8 @@
 # Information
 # ----------------------------------------------------------------------
 
-# main analysis + trim and fill analysis
+# main analysis + publication bias analyses
 # all analyses are performed on fixation count
-
 
 # ----------------------------------------------------------------------
 # Loading data
@@ -19,7 +18,7 @@
 rm(list = ls())
 
 # import packages and functions
-source("utils.R")
+source("./scripts/utils.R")
 
 # loading data
 data = as.data.table(read_csv(
@@ -43,37 +42,42 @@ data$yi.c.FC = FisherZInv(FisherZ(data$fix.count.m)/data$a_acc)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # visual salience
-saldata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Salience"], vtype="AV")[,c(1:19,20)])
+saldata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Salience"], vtype="AV"))
 saldata$vi.c = saldata$vi/saldata$a_acc^2 # compute corrected variances based on artefact multiplier
 salres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=saldata, method="HS")
+salresrobu = robust(salres, cluster = saldata$Authors)
 salTrim = trimfill(salres)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # surface size
-sizedata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Size"], vtype="AV")[,c(1:19,20)])
+sizedata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Size"], vtype="AV"))
 sizedata$vi.c = sizedata$vi/sizedata$a_acc^2
 sizeres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=sizedata, method="HS")
+sizeresrobu = robust(sizeres, cluster = sizedata$Authors)
 sizeTrim = trimfill(sizeres)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # left v right position
-LRdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "LR.position"], vtype="AV")[,c(1:19,20)])
+LRdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "LR.position"], vtype="AV"))
 LRdata$vi.c = LRdata$vi/LRdata$a_acc^2
 LRres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=LRdata, method="HS")
+LRresrobu = robust(LRres, cluster = LRdata$Authors)
 LRTrim = trimfill(LRres)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # centrality position
-centerdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Center.position"], vtype="AV")[,c(1:19,20)])
+centerdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Center.position"], vtype="AV"))
 centerdata$vi.c = centerdata$vi/centerdata$a_acc^2
 centerres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=centerdata, method="HS")
+centerresrobu = robust(centerres, cluster = centerdata$Authors)
 centerTrim = trimfill(centerres)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # set size
-setdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Setsize"], vtype="AV")[,c(1:19,20)])
+setdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Setsize"], vtype="AV"))
 setdata$vi.c = setdata$vi/setdata$a_acc^2
 setres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata, method="HS")
+setresrobu = robust(setres, cluster = setdata$Authors)
 setTrim = trimfill(setres)
 
 # psychometric meta-analysis and trim and fill analysis of 
@@ -90,9 +94,10 @@ setmod_altTrim = trimfill(setmod_alt)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # task instruction 
-taskdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Task"], vtype="AV")[,c(1:19,20)])
+taskdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Task"], vtype="AV"))
 taskdata$vi.c = taskdata$vi/taskdata$a_acc^2
 taskres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata, method="HS")
+taskresrobu = robust(taskres, cluster = taskdata$Authors)
 taskTrim = trimfill(taskres)
 
 # psychometric meta-analysis and trim and fill analysis of 
@@ -105,9 +110,10 @@ taskmod_attTrim = trimfill(taskmod_att)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # preferential viewing
-prefdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Pref.view"], vtype="AV")[,c(1:19,20)])
+prefdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Pref.view"], vtype="AV"))
 prefdata$vi.c = prefdata$vi/prefdata$a_acc^2
 prefres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata, method="HS")
+prefresrobu = robust(prefres, cluster = prefdata$Authors)
 prefTrim = trimfill(prefres)
 
 # psychometric meta-analysis and trim and fill analysis of 
@@ -120,7 +126,7 @@ prefmod_attTrim = trimfill(prefmod_att)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # choice bias moderator analysis - effect of inferential vs preferential choice
-choicedata_mod = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Choice.bias"], vtype="AV")[,c(1:19,20)])
+choicedata_mod = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Choice.bias"], vtype="AV"))
 choicedata_mod$vi.c = choicedata_mod$vi/choicedata_mod$a_acc^2
 choicedata_mod$inf_prefmod = ifelse(choicedata_mod$Research.Domain == "Risky Gamble", "preferential", # create inferential vs preferential task moderator variable
                          ifelse(choicedata_mod$Research.Domain == "pref. Consumer choice", "preferential",
@@ -133,7 +139,46 @@ choicemod = rma(yi.c.FC, vi.c, weights=1/vi.c, mods = ~ inf_prefmod, data=choice
 # choice bias main analysis (averaging studies with more effect sizes)
 choicedata = choicedata_mod[, list(yi.c.FC = mean(yi.c.FC), vi.c = mean(vi.c), IV = unique(IV), N = unique(N)), by = Study]
 choiceres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=choicedata, method="HS")
+choiceresrobu = robust(choiceres, cluster = choicedata$Authors)
 choiceTrim = trimfill(choiceres)
+
+# -----
+# Publication bias analysis
+# -----
+
+# the publicatio analysis performs three tests for the degree of ES inflation due to publication bias
+# the first inflation factor is based on the difference in ES between studies with public grants vs no pub grants
+# reasoning behind the test: https://www.sciencedirect.com/science/article/abs/pii/S0895435617301348
+# second inflation factor is derived from the PEESE corrected estimate relative the fixed effects uncorrected estimate
+# third inflation factor is from the uncorrect ES relative to the trim fill corrected ES
+
+# we perform analyses on fisher z transformed ES
+data$fcz = FisherZ(data$fix.count.m) # effect in z
+data$sdz = 1/sqrt(data$N - 3) # sd in z
+data$varz = data$sdz^2 # variance in z
+
+# analyze if public grants are associated with smaller ES
+pb = rma(yi=fcz, vi=varz, mods = ~ public, data = data)
+publicFactor = pb$b[1] / (pb$b[1] + pb$b[2]) # inflation factor due to not having public grant
+
+# PET-PEESE test
+FE = lm(fcz ~ 1, weights = 1/varz, data = data) # fixed effect estimate of ES
+PET = lm(fcz ~ sdz + a_acc, weights = 1/varz, data = data) # PET test is sig therefore perfrom PEESE
+PEESE = lm(fcz ~ varz + a_acc, weights = 1/varz, data = data) # PEESE estimate
+peeseFactor = summary(FE)$coef[1] / summary(PEESE)$coef[1,1] # inflation factor according to PEESE
+
+# check inflation factor based on trim fill results
+trims = c(salres$b / salTrim$b, # extract inflation factors for each subgroup separately
+  sizeres$b / sizeTrim$b,
+  LRres$b / LRTrim$b,
+  centerres$b / centerTrim$b,
+  setres$b / setTrim$b,
+  prefres$b / prefTrim$b,
+  taskres$b / taskTrim$b,
+  choiceres$b / choiceTrim$b)
+trimFactor = mean(trims) # average inflation factor
+
+c(publicFactor, peeseFactor, trimFactor)
 
 # -----
 # Main and Moderator results text for manuscript

@@ -21,7 +21,7 @@
 rm(list = ls())
 
 # import packages and functions
-source("utils.R")
+source("./scripts/utils.R")
 
 # loading data
 data = as.data.table(read_csv(
@@ -77,13 +77,11 @@ data$fix.like.m = FisherZInv(
   ifelse(is.na(data$fix.like) & is.na(data$TFD) == F, FisherZ(data$TFD)*TFD_to_FL, 
   ifelse(is.na(data$fix.like) & is.na(data$dwell.count) == F, FisherZ(data$dwell.count)*DC_to_FL, FisherZ(data$fix.like)))))
 
-
 # -----
 # Save corrected data
 # ----
 
 write_csv(data, file.path(dataDir, "EMMA_ES_data_corrected.csv"))
-
 
 # -----
 # Make correction factor table for manuscript
@@ -117,7 +115,6 @@ print(
     sanitize.text.function = function(x){x},
     file = file.path(tablesDir, "metric_correction.tex")
 )
-
 
 # -----
 # Scatter plots

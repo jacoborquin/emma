@@ -1,22 +1,27 @@
 Eye tracker model,$a_a$,Accuracy,Precision
-ASL6000,0.3289,1,0.5
-Easygaze,0.5302,0.7,0.35
-Eye gaze 97,0.5193,0.7162,0.5
-Eye gaze tm,0.7315,0.4,0.5
-EyeLink 1000,0.6644,0.5,0.05
-EyeLink II,0.6644,0.5,0.01
-ISCAN,0.3289,1,0.5
-Nihon-Kohden EEG-1100,0.3289,1,0.5
-SMI Glasses,0.6644,0.5,0.5
-SMI RED,0.7315,0.4,0.03
-SMI iview,0.6644,0.5,0.01
-SMI iview HED,0.3289,1,0.5
-Tobii D10,0.6644,0.5,0.5
-Tobii Glasses,0.3289,1,0.5
-Tobii T120,0.7315,0.4,0.24
-Tobii T1750,0.6644,0.5,0.25
-Tobii T2150,0.6644,0.5,0.35
-Tobii T60,0.6644,0.5,0.22
-Tobii X1,0.6644,0.5,0.2
-Tobii X2,0.7315,0.4,0.32
-Unknown,0.3289,1,0.5
+ASL6000,0.5523,1,0.5
+Easygaze,0.6866,0.7,0.35
+Eye gaze 97,0.6794,0.7162,0.5
+Eye gaze tm,0.8209,0.4,0.5
+EyeLink 1000,0.7762,0.5,0.05
+EyeLink 1000 (acc = .33),0.8523,0.33,0.05
+EyeLink 1000 Plus (acc < .5),0.7762,0.5,0.05
+EyeLink II,0.7762,0.5,0.01
+ISCAN,0.5523,1,0.5
+Nihon-Kohden EEG-1100,0.5523,1,0.5
+SMI Glasses,0.4583,1.21,0.19
+SMI RED,0.8209,0.4,0.03
+SMI iview,0.7762,0.5,0.01
+SMI iview HED,0.5523,1,0.5
+SMI model unknown (acc < .5),0.7762,0.5,0.29833333333333334
+Tobii D10,0.7762,0.5,0.5
+Tobii Glasses 1,0.3643,1.42,0.5
+Tobii T120,0.8209,0.4,0.24
+Tobii T1750,0.7762,0.5,0.25
+Tobii T2150,0.7762,0.5,0.35
+Tobii T60,0.7762,0.5,0.22
+Tobii X1,0.7762,0.5,0.2
+Tobii X2,0.8209,0.4,0.32
+Tobii X60,0.7762,0.5,0.29833333333333334
+Tobii glasses 2,0.3643,1.42,0.34
+Unknown,0.6919,0.6883153846153847,0.29833333333333334

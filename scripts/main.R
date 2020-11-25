@@ -18,11 +18,11 @@
 
 # adds eye tracker artifact multiplier to the data
 # produces associated figures and tables
-source("artifact_multiplier.R")
+source("./scripts/artifact_multiplier.R")
 
 # adds metric correction factors to the data
 # produces associated figures and tables
-source("metric_correction.R")
+source("./scripts/metric_correction.R")
 
 # psychometric meta-analysis
 # produces tables with main results, forest and funnel plots
