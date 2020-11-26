@@ -32,6 +32,8 @@ rawdata = rawdata[rawdata$author_confirm != "glaholt 2009b 1"] # initial coding 
 rawdata$EM1_2[rawdata$author == "Gidloef et al. 2017"] = 0.8845253
 rawdata$EM1_2[rawdata$author == "Hwang & Lee 2017"] = 798.7778
 rawdata$EM1_7[rawdata$author == "Hwang & Lee 2017"] = 652.3333
+rawdata$EM3_2[rawdata$author == "Peschel et al. 2019"] = 247.2184
+rawdata$EM3_7[rawdata$author == "Peschel et al. 2019"] = 237.4305
 
 # ----------------------------------------------------------------------
 # Processing of conditional AOIs
@@ -155,42 +157,43 @@ EMwide = cbind(temp3, cbind(value.x,value.y))
 # aligning x,y data points so that the effect lands on the lower half of the scatter plot
 EMwide$maxval = ifelse(EMwide$value.x > EMwide$value.y, EMwide$value.x, EMwide$value.y)
 EMwide$minval = ifelse(EMwide$value.x > EMwide$value.y, EMwide$value.y, EMwide$value.x)
-EMwide = EMwide[, - c(13:14)]
+EMwide = EMwide[, - c("value.x", "value.y")]
 
 # plot function
-EMplot = function(data, DV){
-  if (DV == "Fixation likelihood") {
-    xymax = 1 
-  } else {
-    xymax = max(data$maxval)}
-  ggplot(data, aes(maxval,minval))+
-    geom_point()+
-    geom_segment(aes(x=0,y=0,xend=xymax,yend=xymax), linetype = "dashed")+
-    xlab(paste(DV, "Condition 1"))+
-    ylab(paste(DV, "Condition 2"))+
-    facet_grid(~IV)+
-    mytheme
-}
-
-flplot = EMplot(EMwide[EMwide$DV == "Fixation likelihood"], DV = "Fixation likelihood")
-fcplot = EMplot(EMwide[EMwide$DV == "Fixation count"], DV = "Fixation count")
-TDTplot = EMplot(EMwide[EMwide$DV == "Total dwell time"], DV = "Total dwell time")
-dcplot = EMplot(EMwide[EMwide$DV == "Dwell count"], DV = "Dwell count")
-
-plot_grid(flplot, fcplot, TDTplot, dcplot, nrow = 4)
+# EMplot = function(data, DV){
+#   if (DV == "Fixation likelihood") {
+#     xymax = 1 
+#   } else {
+#     xymax = max(data$maxval)}
+#   ggplot(data, aes(maxval,minval))+
+#     geom_point()+
+#     geom_segment(aes(x=0,y=0,xend=xymax,yend=xymax), linetype = "dashed")+
+#     xlab(paste(DV, "Condition 1"))+
+#     ylab(paste(DV, "Condition 2"))+
+#     facet_grid(~IV)+
+#     mytheme
+# }
+# 
+# flplot = EMplot(EMwide[EMwide$DV == "Fixation likelihood"], DV = "Fixation likelihood")
+# fcplot = EMplot(EMwide[EMwide$DV == "Fixation count"], DV = "Fixation count")
+# TDTplot = EMplot(EMwide[EMwide$DV == "Total dwell time"], DV = "Total dwell time")
+# dcplot = EMplot(EMwide[EMwide$DV == "Dwell count"], DV = "Dwell count")
+# 
+# plot_grid(flplot, fcplot, TDTplot, dcplot, nrow = 4)
 
 # ----------------------------------------------------------------------
 # Examine relation between EM and ES
 # ----------------------------------------------------------------------
 
 # compute transformations of EM differences across conditions
+# fixation likelihood is transformed into logits, fix count and TDT are log transformed
 EMwide$diff = EMwide$maxval - EMwide$minval
 EMwide$diffPercent = (EMwide$maxval - EMwide$minval)/EMwide$minval
 EMwide$diffLog = log(EMwide$maxval) - log(EMwide$minval)
 EMwide$diffLogit = log(EMwide$maxval/(1 - EMwide$maxval)) - log(EMwide$minval/(1 - EMwide$minval)) 
 EMwide$diffLogit = ifelse(EMwide$diffLogit == Inf, max(EMwide$diffLogit[is.na(EMwide$diffLogit) == F & EMwide$diffLogit != Inf]), EMwide$diffLogit)
 
-# make vectors for correlations
+# make vectors for correlations between ES and EM data
 fldiff = EMwide$diffLogit[is.na(EMwide$fix.like) == F & EMwide$DV == "Fixation likelihood"]
 flES = EMwide$fix.like[is.na(EMwide$fix.like) == F & EMwide$DV == "Fixation likelihood"]
 fcdiff = EMwide$diffLog[is.na(EMwide$fix.count) == F & EMwide$DV == "Fixation count"]
@@ -198,7 +201,7 @@ fcES = EMwide$fix.count[is.na(EMwide$fix.count) == F & EMwide$DV == "Fixation co
 tdtdiff = EMwide$diffLog[is.na(EMwide$TFD) == F & EMwide$DV == "Total dwell time" & EMwide$author != "Orquin et al. 2019a Study 1"]
 tdtES = EMwide$TFD[is.na(EMwide$TFD) == F & EMwide$DV == "Total dwell time" & EMwide$author != "Orquin et al. 2019a Study 1"]
 
-# correlations
+# correlations between EM and ES data for FL, FC, and TDT
 cor(fldiff,flES)
 cor(fcdiff,fcES)
 cor(tdtdiff,tdtES)
@@ -276,6 +279,7 @@ EMoverall = merge(EMoverall, EMoverallComp, by = c("author", "DV"), all = T)
 EMoverall$average = ifelse(is.na(EMoverall$value.x), EMoverall$value.y, EMoverall$value.x)
 EMoverall[, c(3:4) := NULL]
 
+# figures with overall distributions
 flavg = EMoverall[DV == "Fixation likelihood"]
 flavgfig = ggplot(flavg, aes(DV, average))+
   geom_violin()+
@@ -313,11 +317,107 @@ ggsave(filename, EMtoES, width = 8, height = 6)
 # ES to EM conversion table
 # ----------------------------------------------------------------------
 
+# overall EM means
+flmean = mean(EMoverall$average[EMoverall$DV == "Fixation likelihood"])
+fcmean = mean(EMoverall$average[EMoverall$DV == "Fixation count"])
+tdtmean = mean(EMoverall$average[EMoverall$DV == "Total dwell time"])
+
+# overall EM logits and logs
+flmean = mean(EMoverall$average[EMoverall$DV == "Fixation likelihood"])
+fcmean = mean(EMoverall$average[EMoverall$DV == "Fixation count"])
+tdtmean = mean(EMoverall$average[EMoverall$DV == "Total dwell time"])
+flmeanLogit = log(flmean/(1 - flmean))
+fcmeanLog = log(fcmean)
+tdtmeanLog = log(tdtmean)
+
+# ES to EM conversion models
 flmodel = lmer(diffLogit ~ fix.like + (1|author), data = EMwide[EMwide$DV == "Fixation likelihood"])
-summary(flmodel)
-
 fcmodel = lmer(diffLog ~ fix.count + (1|author), data = EMwide[EMwide$DV == "Fixation count"])
-summary(fcmodel)
-
 tdtmodel = lmer(diffLog ~ TFD + (1|author), data = EMwide[EMwide$DV == "Total dwell time"])
-summary(tdtmodel)
+
+# get main results expressed in correlations
+EMresults = as.data.table(read.csv(
+  file.path(tablesDir, "main_results.csv")
+))
+
+EMresults = EMresults[is.na(EMresults$Group) == F & is.na(EMresults$X..rho.) == F, c(1,4)]
+EMresults$rho = as.numeric(as.character(EMresults$X..rho.))
+EMresults[, "X..rho." := NULL]
+
+# transformation functions
+logitTransform = function(IV, model){
+  ES = EMresults$rho[EMresults$Group == IV]
+  ESasLogit = summary(model)$coef[1,1] + summary(model)$coef[2,1] * ES
+  upperLogit = ESasLogit + flmeanLogit
+  EMupper = exp(upperLogit)/(exp(upperLogit) + 1)
+  EMupper
+}
+
+logTransform = function(IV, model, mean){
+  ES = EMresults$rho[EMresults$Group == IV]
+  ESasLog = summary(model)$coef[1,1] + summary(model)$coef[2,1] * ES
+  upperLog = ESasLog + mean
+  EMupper = exp(upperLog)
+  EMupper
+}
+
+FL = c(logitTransform("Salience", flmodel),
+logitTransform("Surface size", flmodel),
+logitTransform("Left vs right position", flmodel),
+logitTransform("Center position", flmodel),
+logitTransform("Set size", flmodel),
+logitTransform("Task instructions", flmodel),
+logitTransform("Preferential viewing", flmodel),
+logitTransform("Choice bias", flmodel))
+
+FC = c(logTransform("Salience", fcmodel, fcmeanLog),
+logTransform("Surface size", fcmodel, fcmeanLog),
+logTransform("Left vs right position", fcmodel, fcmeanLog),
+logTransform("Center position", fcmodel, fcmeanLog),
+logTransform("Set size", fcmodel, fcmeanLog),
+logTransform("Task instructions", fcmodel, fcmeanLog),
+logTransform("Preferential viewing", fcmodel, fcmeanLog),
+logTransform("Choice bias", fcmodel, fcmeanLog))
+
+TDT = c(logTransform("Salience", tdtmodel, tdtmeanLog),
+logTransform("Surface size", tdtmodel, tdtmeanLog),
+logTransform("Left vs right position", tdtmodel, tdtmeanLog),
+logTransform("Center position", tdtmodel, tdtmeanLog),
+logTransform("Set size", tdtmodel, tdtmeanLog),
+logTransform("Task instructions", tdtmodel, tdtmeanLog),
+logTransform("Preferential viewing", tdtmodel, tdtmeanLog),
+logTransform("Choice bias", tdtmodel, tdtmeanLog))
+
+EMresults$'FL mean' = round(flmean, digits = 3)
+EMresults$'FL increase' = round(FL, digits = 3)
+EMresults$'FC mean' = round(fcmean, digits = 3)
+EMresults$'FC increase' = round(FC, digits = 3)
+EMresults$'TDT mean' = round(tdtmean, digits = 3)
+EMresults$'TDT increase' = round(TDT, digits = 3)
+
+# latex version
+tab_caption <- "Main effects expressed as absolute changes in the fixation likelihood, fixation count, and total dwell time."
+tab_label <- "tab:em_results"
+tab_note <- paste0("\\hline \n \\multicolumn{10}{p{0.95\\textwidth}}",
+                   "{\\scriptsize{\\textit{Note.} FL = fixation likelihood, FC = fixation count, TDT = total dwell time}} \n")
+print(
+  xtable(
+    EMresults, 
+    caption = tab_caption, 
+    label = tab_label,
+    # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
+    align = "llccccccc"
+    # digits = c(0,0,0,0,3,3,3,3,3,3,3)
+  ), 
+  size = "\\small",
+  include.rownames = FALSE,
+  caption.placement = "top", 
+  hline.after = c(-1, 0),
+  add.to.row = list(
+    pos = list(nrow(EMresults)),
+    command = tab_note
+  ),
+  sanitize.text.function = function(x){x},
+  file = file.path(tablesDir, "em_results.tex")
+)
+
