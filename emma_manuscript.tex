@@ -403,7 +403,6 @@ Easy: cite Andi and his favorite literature
 \input{discussion}
 
 \subsection{Data availability}
-
 The data, code used for analyzing the data and other project related files are available at: \url{https://osf.io/buk7p} %\citep{orquin2020osfa}.
 
 %\subsection{Author contributions}
@@ -417,73 +416,6 @@ The data, code used for analyzing the data and other project related files are a
 \bibliography{references.bib}
 \clearpage
 
-
-% -----------------------------------------------------------
-% Appendix
-% -----------------------------------------------------------
-
-\FloatBarrier
-\section{Appendix}
-\label{appendix}
-
-
-\begin{figure}
-\includegraphics{ET_accuracy_effectsize}
-\centering
-\caption{Accuracy of the eye-tracker affects the ability to reliably measure effect sizes in each study. Points denote accuracy of an eye-tracker used in a study and absolute effect size (all converted to correlation coefficients) measured with it. The line is based on the estimated intercept and slope from the best fitting mixed-effect model which was used to compute artifact multiplier, $a_a$. The multiplier was used to correct for a bias in estimated effect sizes due to differences in measurement accuracy of eye-trackers.}
-\label{fig:ET_accuracy_effectsize}
-\end{figure}
-\clearpage
-
-
-% \caption{eye-tracker specifications table}
-% \label{tab:eyetracker_specs}
-\input{./tables/eyetracker_specs.tex}
-\clearpage
-
-
-\begin{figure}%[H]
-\includegraphics{metric_correction}
-\centering
-\caption{A variety of eye movement measures are used as a metric for dependent variable, but they are all highly correlated, suggesting they are all measuring the same underlying construct. Scatterplots show the relationship (A) between effect sizes expressed in fixation likelihood and fixation count, (B) between total fixation duration and fixation likelihood, (C) between total fixation duration and fixation count, (D) between total fixation duration and dwell count. Lines in each plot represent the best-fitting linear regression line, and the shaded area 95\% confidence interval.}
-\label{fig:metric_correction}
-\end{figure}
-\clearpage
-
-
-% \caption{Metric correction factor $a_m$ when correcting to either fixation count or fixation likelihood}
-% \label{tab:metric_correction}
-\input{./tables/metric_correction.tex}
-\clearpage
-
-
-% \caption{Moderator analysis results.}
-% \label{tab:mod_results}
-\input{./tables/mod_results.tex}
-\clearpage
-
-%\label{tab:overview}
-\input{./tables/overviewtabel}
-\clearpage
-
-
-\begin{figure}%[H]
-\includegraphics{forest_plots_altatt}
-\centering
-\singlespace
-\caption{Effect sizes of the factors that were decomposed into alternative and attribute parts for moderator analyses. Forest plots show the unattenuated effect size correlations for each study in a group, as well as average effect across the group. Forest plot in (A) shows the effect sizes for set size -- alternative, in (B) for set size -- attribute, in (C) for task instructions -- alternative, in (D) for task instructions -- attribute, in (E) for preferential viewing -- alternative, and in (F) for preferential viewing -- attribute. Error bars represent the 95\% confidence interval around the mean.}
-\label{fig:forest_plots_altatt}
-\end{figure}
-\clearpage
-
-
-\begin{figure}%[H]
-\includegraphics{funnel_plots_altatt}
-\centering
-\singlespace
-\caption{Funnel plots for factors that were decomposed into alternative and attribute parts for moderator analyses. Points are Fisher transformed correlation coefficients against their standard error. Asymmetric distributions of points can indicate the presence of publication bias since smaller studies (those with higher standard errors) have more variable effect sizes and are less likely to be published unless the effect is large. Funnel plot for (A) set size -- alternative, (B) set size -- attribute, (C) task instructions -- alternative, (D) task instructions -- attribute, (E) preferential viewing -- alternative, (F) preferential viewing -- attribute.}
-\label{fig:funnel_plots_altatt}
-\end{figure}
-\clearpage
+\input{appendix}
 
 \end{document}
