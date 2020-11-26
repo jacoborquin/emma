@@ -411,7 +411,7 @@ print(
     caption = tab_caption, 
     label = tab_label,
     # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
-    align = "llccccccc"
+    align = "lp{2cm}ccccccc"
     # digits = c(0,0,0,0,3,3,3,3,3,3,3)
   ), 
   size = "\\small",
