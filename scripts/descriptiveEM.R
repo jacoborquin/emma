@@ -311,7 +311,7 @@ EMtoES = plot_grid(flavgfig, fcavgfig, tdtavgfig,
                    flfig, fcfig, tdtfig, labels = c("A", "B", "C", "D", "E", "F"), ncol = 3)
 
 filename <- file.path(figsDir, "EMtoES.pdf")
-savePlots(EMtoES, filename, c(1.5*height, 2.5*width))
+savePlots(EMtoES, filename, c(1.5*height, 2*width))
 
 # ----------------------------------------------------------------------
 # ES to EM conversion table
