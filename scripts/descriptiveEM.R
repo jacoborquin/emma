@@ -310,8 +310,8 @@ tdtavgfig = ggplot(tdtavg, aes(DV, average))+
 EMtoES = plot_grid(flavgfig, fcavgfig, tdtavgfig,
                    flfig, fcfig, tdtfig, labels = c("A", "B", "C", "D", "E", "F"), ncol = 3)
 
-filename <- file.path(figsDir, "EMtoES.jpg")
-ggsave(filename, EMtoES, width = 8, height = 6)
+filename <- file.path(figsDir, "EMtoES.pdf")
+savePlots(EMtoES, filename, c(2*height, 3*width))
 
 # ----------------------------------------------------------------------
 # ES to EM conversion table
