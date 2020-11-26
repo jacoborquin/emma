@@ -403,7 +403,7 @@ EMresults$'TDT increase' = round(TDT, digits = 3)
 # latex version
 tab_caption <- "Main effects expressed as absolute changes in the fixation likelihood, fixation count, and total dwell time."
 tab_label <- "tab:em_results"
-tab_note <- paste0("\\hline \n \\multicolumn{10}{p{0.95\\textwidth}}",
+tab_note <- paste0("\\hline \n \\multicolumn{8}{p{0.95\\textwidth}}",
                    "{\\scriptsize{\\textit{Note.} FL = fixation likelihood, FC = fixation count, TDT = total dwell time}} \n")
 print(
   xtable(
@@ -411,7 +411,7 @@ print(
     caption = tab_caption, 
     label = tab_label,
     # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
-    align = "lp{2cm}ccccccc"
+    align = "lp{4cm}ccccccc"
     # digits = c(0,0,0,0,3,3,3,3,3,3,3)
   ), 
   size = "\\small",
