@@ -1,0 +1,89 @@
+% -------------------------------------------------------
+% Results
+% -------------------------------------------------------
+
+\section{Results}
+
+Our initial literature search retrieved 1981 articles, of which 454 remained after screening of the title and abstract. Following a more detailed evaluation of whether studies were on decision making and used eye-tracking, we identified 291 articles as potentially eligible studies. Based on detailed inspection of their full texts, 58 articles satisfied all inclusion criteria and were included in the meta-analysis. Figure~\ref{fig:flow_diagram} illustrates the PRISMA flow diagram \citep{moher2009preferred}. Many of the articles consisted of multiple experiments and some experiments operationalized more than one factor. This resulted in 106 independent effect size estimates, out of which 39 were effects of visual factors and 67 were effects of cognitive factors.
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth]{prisma}
+\centering
+\caption{The PRISMA flow diagram showing the results of the literature search.}
+\label{fig:flow_diagram}
+\end{figure}
+
+
+Meta-analyses of eye movements are relatively rare and it could be due to some methodological challenges in combining effect sizes from different eye-tracking studies. Two main challenges are how to handle measurement validity across eye-tracker types and how to compare different eye movement dependent variables. To handle these issues, we developed correction procedures to be integrated in a psychometric meta-analysis \citep{hunter2004a}, which allows us to quantify the interference of measurement validity or multiple metrics. The measurement validity issue stems from differences in the accuracy and precision of eye-tracking equipment \citep{holmqvist2015a}, which can affect the data quality and bias effect sizes \citep{orquin2016a}. We developed a correction method that relies on an empirical estimate of the relationship between eye-tracker characteristics and observed effect sizes (see \textit{Methods}; Figure~\ref{fig:ET_accuracy_effectsize}; Table~\ref{tab:eyetracker_specifications}) since there are multiple eye movement dependent variables commonly used. Most metrics are based on fixations -- defined as maintaining the gaze on a single location or area of interest (AOI), such as fixation count, fixation likelihood, total fixation duration and so on. This leads to a potential issue with comparing effect sizes reported with different dependent variables. We developed a correction method that makes the dependent variables comparable, where we empirically estimate correction factors based on a subset of studies in our sample that report multiple dependent variables (see \textit{Methods}; Figure~\ref{fig:metric_correction}; Table~\ref{tab:metric_correction}). This method allowed us to transform all effect sizes to a single metric; we decided for fixation count which was used in all meta-analyses. 
+
+In what follows, we first analyse the group of visual factors and then the group of cognitive factors. We perform meta-analysis on each individual factor  separately. We next perform a small moderator analysis and finish with an analysis of publication bias in all the meta-analyses.  
+
+
+\subsection{Visual factors}
+
+We focused on four major groups of visual factors -- salience, position, surface size and set size (see \textit{Methods} for coding procedure). The summary effects of the visual factors on attention during decision making show that, except for salience and left vs right position, all factors have medium effect sizes ranging from \input{./tables/rhorange}, with moderate amounts of heterogeneity ranging from \input{./tables/I2range} (Table~\ref{tab:main_results} and Figure~\ref{fig:forest_plots_visual}). 
+Salience, which so far has been taking the central stage in vision science, surprisingly has the smallest summary effect \input{./tables/saliencesummary}, practically indistinguishable from a null effect. When we adjust the summary effect using the trim and fill method (see \textit{Publication bias} section), one imputed study decreases the effect size to (\input{./tables/saliencetrimsummary} Table~\ref{tab:main_results}). 
+The position factor was decomposed into a left-vs-right (reading direction) and a center factor (tendency to attend to the center of the visual field). The center factor has the largest summary effect among visual factors \input{./tables/centersummary}, which decreases somewhat after the trim and fill adjustment (\input{./tables/centertrimsummary} Table~\ref{tab:main_results}). 
+
+Overall, three factors show reliable effect sizes: center position, surface size and set size. Considering that there is no (natural) environment free of visual factors, it is reasonable to expect that multiple visual factors influence eye movements at the same time. Hence, even though individual effect sizes are not large, jointly they can be a major driver of attention during decision making.
+
+
+% \caption{Main results of the meta-analysis divided into independent variable subgroups }
+% \label{tab:main_results}
+\input{tables/main_results.tex}
+
+\begin{figure}[!h]
+\includegraphics{forest_plots_visual}
+\centering
+\caption{Effect sizes of the visual factors are moderate, except for salience and left-vs-right position, which have small effect sizes, if any. Forest plots show the unattenuated effect size correlations for each study in a group, as well as average effect across the group. Forest plot in (A) shows the effect sizes for salience factor, in (B) for center position, in (C) for left vs right position, in  (D) for surface size, and in (E) for set size factor. Error bars represent the 95\% confidence interval around the mean.}
+\label{fig:forest_plots_visual}
+\end{figure}
+
+\subsection{Cognitive factors}
+
+Previous research has identified a wide range of cognitive factors that influence attention, such as goals, task instructions, and preferences \citep[for a review see][]{orquin2013a}. Here, we divided cognitive control factors into three groups: task instruction, preferential viewing and choice bias. 
+
+In studies on task instructions, participants receive instructions concerning a specific decision goal, and with that, what is relevant to gaze at. For instance, the participants may be instructed on the validity of stimulus attributes \citep{krefeld-schwalb2019a}, or infer the level of validity themselves \citep{bialkova2014a}. In preferential viewing studies, the relevance should be equal to the subjective preferences. For example, some alternatives have higher subjective values than others \citep{kim2012a}. Because of this qualitative difference between the two domains, we treated studies on task instructions and preferential viewing separately. 
+The inspection of the effect sizes reveals that the summary effects in the two types of studies are moderate and similar in magnitude -- in task instructions \input{./tables/tasksummary} 
+and in preferential viewing (\input{./tables/prefsummary} Table~\ref{tab:main_results} and Figure~\ref{fig:forest_plots_cognitive}). Using a Wald test, we find that effect sizes of task instructions and preferential viewing are unlikely to differ, \input{./tables/difftest_task_pref.tex}. 
+When we adjust the effects for publication bias using the trim and fill method, the effect size for task instructions decreases to (\input{./tables/tasktrimsummary} Table~\ref{tab:main_results}) and for preferential viewing to (\input{./tables/preftrimsummary} Table~\ref{tab:main_results}). This result suggests that it makes no difference to eye movements whether the relevance of information is defined according to an externally specified goal or according to preferences. 
+
+Choice bias refers to an effect in attention whereby decision makers spend more time gazing at the eventually chosen alternative. This effect, originally introduced by Shimojo and colleagues \citep{shimojo2003a} as a ``gaze-cascade'' effect, is well-established in the literature, prompting us to study it as a separate factor. This factor consists of studies reporting the difference in eye movements between the chosen alternative and all other (not chosen) alternatives. We find that choice bias has a large effect on eye movements, (\input{./tables/choicesummary} Table~\ref{tab:main_results} and Figure~\ref{fig:forest_plots_cognitive}). The effect decreases to moderate size after publication bias adjustment (\input{./tables/choicetrimsummary} Table~\ref{tab:main_results})
+
+
+\begin{figure}[!h]
+\includegraphics{forest_plots_cognitive}
+\centering
+\caption{Effect sizes of the three cognitive factors are moderate to large. Forest plots show the unattenuated effect size correlations for each study in a group, as well as average effect across the group. Forest plot in (A) shows the effect sizes for task instructions factor, in (B) for preferential viewing, and in (C) for the choice bias factor. Error bars represent the 95\% confidence interval around the mean.}
+\label{fig:forest_plots_cognitive}
+\end{figure}
+
+
+\subsection{Moderator analyses}
+
+Alternatives that participants in judgment and decision making studies choose between can often be decomposed into constituent elements, commonly called attributes, cues or features \citep{payne1988,tversky1972elimination,stojic2020s,gigerenzer1996reasoning,schulz2018putting,hogarth2007heuristic}. For example, in classical lottery tasks \citep{tversky1979}, the probabilities and values of an alternative can be viewed as attributes. Or, in multi-cue judgment tasks, alternatives are more explicitly composed of cues -- university, major football team or main city in the German city size task \citep{gigerenzer1996reasoning}. This has consequences for both modelling of decision processes and units of analysis. Consequently, some studies in our sample focused on attention effects at either alternative or attribute level, or both. This was in particular the case for studies involving set size, task instructions, and preferential viewing factors. Since the alternative vs attribute dimension might be an important moderator in these groups, we decomposed them further with regards to the effect of alternatives vs attributes (Table~\ref{tab:mod_results} and Figure~\ref{fig:forest_plots_altatt}). Moderator analyses shows a support for the alternative vs attribute moderator across set size, \input{./tables/moderator_setsize.tex}, weak support for preferential viewing, \input{./tables/moderator_pref.tex}, and no support for task instructions, \input{./tables/moderator_task.tex}. It is noteworthy that effect sizes are consistently larger when operationalized at the level of alternatives compared to attributes (Table~\ref{tab:mod_results} and Figure~\ref{fig:forest_plots_altatt}). 
+
+We also performed a moderator analysis for the choice bias factor, to assess whether the effect is driven by preferential viewing as proposed by \cite{shimojo2003a}. We compare studies with preferential vs inferential choice tasks and find no support for moderation by decision type, \input{./tables/moderator_choicebias.tex}, and only report results for the main group. 
+
+\subsection{Publication bias}
+
+We assessed potential publication bias using trim and fill analysis of each factor \citep{duval2000trim}. In addition, we plotted the  Fisher transformed correlation coefficients of each study by its respective standard error (so-called funnel plots; Figure~\ref{fig:funnel_plots} for main results, and Figure~\ref{fig:funnel_plots_altatt} for moderator analyses). The symmetry of the funnel plots provides a qualitative picture of whether there is a file drawer problem. We expect that studies with smaller sample sizes and hence higher standard errors yield more variable effect sizes, the smallest of which are less likely to be published, leading to an asymmetric funnel plot. Judging from the funnel plots, it is not obvious whether there is a problem with publication bias. However, the trim and fill analysis resulted in a downward adjustment of the average effect size for most of the factors. The corrected effect sizes in Table~\ref{tab:main_results} (in parentheses) provide a more conservative estimate of the true population effects, but are also subject to some uncertainty. Specifically, the interpretation of the corrected results may be biased due to heterogeneity in many of the factors as well as a relatively small number of studies in the group of visual factors. 
+
+
+\begin{figure}[!h]
+\includegraphics{funnel_plots}
+\centering
+\caption{Funnel plots for each factor that can be used as a qualitative check of a publication bias. Points are Fisher transformed correlation coefficients against their standard error. Asymmetric distributions of points can indicate the presence of publication bias since smaller studies (those with higher standard errors) have more variable effect sizes and are less likely to be published unless the effect is large. Funnel plot for (A) salience, (B) surface size, (C) left vs right position, (D) central position, (E) set size, (F) task instructions, (G) preferential viewing, and (H) choice bias.}
+\label{fig:funnel_plots}
+\end{figure}
+
+\chg{EM section}{
+\subsection{Descriptive eye movement data}
+To better understand the results of the meta-analysis we extract for each effect size the corresponding descriptive eye movement data whenever the included article reports this information.} 
+
+%\begin{figure}[!h]
+%\includegraphics{}
+%\centering
+%\caption{}
+%\label{fig:em_figure}
+%\end{figure}
