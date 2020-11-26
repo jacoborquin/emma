@@ -335,6 +335,11 @@ flmodel = lmer(diffLogit ~ fix.like + (1|author), data = EMwide[EMwide$DV == "Fi
 fcmodel = lmer(diffLog ~ fix.count + (1|author), data = EMwide[EMwide$DV == "Fixation count"])
 tdtmodel = lmer(diffLog ~ TFD + (1|author), data = EMwide[EMwide$DV == "Total dwell time"])
 
+# print .tex model output
+twocoefTex(flmodel, "FLtoLogitModel.tex")
+twocoefTex(fcmodel, "FCtoLogModel.tex")
+twocoefTex(tdtmodel, "TDTtoLogModel.tex")
+
 # get main results expressed in correlations
 EMresults = as.data.table(read.csv(
   file.path(tablesDir, "main_results.csv")
