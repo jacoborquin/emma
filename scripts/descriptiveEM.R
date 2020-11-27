@@ -346,12 +346,12 @@ EMresults = as.data.table(read.csv(
 ))
 
 EMresults = EMresults[is.na(EMresults$Group) == F & is.na(EMresults$X..rho.) == F, c(1,4)]
-EMresults$rho = as.numeric(as.character(EMresults$X..rho.))
+EMresults$'\\rho' = as.numeric(as.character(EMresults$X..rho.))
 EMresults[, "X..rho." := NULL]
 
 # transformation functions
 logitTransform = function(IV, model){
-  ES = EMresults$rho[EMresults$Group == IV]
+  ES = EMresults$'\\rho'[EMresults$Group == IV]
   ESasLogit = summary(model)$coef[1,1] + summary(model)$coef[2,1] * ES
   upperLogit = ESasLogit + flmeanLogit
   EMupper = exp(upperLogit)/(exp(upperLogit) + 1)
@@ -359,7 +359,7 @@ logitTransform = function(IV, model){
 }
 
 logTransform = function(IV, model, mean){
-  ES = EMresults$rho[EMresults$Group == IV]
+  ES = EMresults$'\\rho'[EMresults$Group == IV]
   ESasLog = summary(model)$coef[1,1] + summary(model)$coef[2,1] * ES
   upperLog = ESasLog + mean
   EMupper = exp(upperLog)
@@ -393,12 +393,12 @@ logTransform("Task instructions", tdtmodel, tdtmeanLog),
 logTransform("Preferential viewing", tdtmodel, tdtmeanLog),
 logTransform("Choice bias", tdtmodel, tdtmeanLog))
 
-EMresults$'FL mean' = round(flmean, digits = 3)
-EMresults$'FL increase' = round(FL, digits = 3)
-EMresults$'FC mean' = round(fcmean, digits = 3)
-EMresults$'FC increase' = round(FC, digits = 3)
-EMresults$'TDT mean' = round(tdtmean, digits = 3)
-EMresults$'TDT increase' = round(TDT, digits = 3)
+EMresults$'FL \\n mean' = round(flmean, digits = 3)
+EMresults$'FL \\n increase' = round(FL, digits = 3)
+EMresults$'FC \\n mean' = round(fcmean, digits = 3)
+EMresults$'FC \\n increase' = round(FC, digits = 3)
+EMresults$'TDT \\n mean' = round(tdtmean, digits = 3)
+EMresults$'TDT \\n increase' = round(TDT, digits = 3)
 
 # latex version
 tab_caption <- "Main effects expressed as absolute changes in the fixation likelihood, fixation count, and total dwell time."
@@ -411,7 +411,7 @@ print(
     caption = tab_caption, 
     label = tab_label,
     # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
-    align = "lp{4cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}"
+    align = "lp{3.7cm}p{1cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.5cm}"
     # digits = c(0,0,0,0,3,3,3,3,3,3,3)
   ), 
   size = "\\small",
