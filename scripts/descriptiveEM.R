@@ -393,12 +393,12 @@ logTransform("Task instructions", tdtmodel, tdtmeanLog),
 logTransform("Preferential viewing", tdtmodel, tdtmeanLog),
 logTransform("Choice bias", tdtmodel, tdtmeanLog))
 
-EMresults$'FL \\n mean' = round(flmean, digits = 3)
-EMresults$'FL \\n increase' = round(FL, digits = 3)
-EMresults$'FC \\n mean' = round(fcmean, digits = 3)
-EMresults$'FC \\n increase' = round(FC, digits = 3)
-EMresults$'TDT \\n mean' = round(tdtmean, digits = 3)
-EMresults$'TDT \\n increase' = round(TDT, digits = 3)
+EMresults$'FL L' = round(flmean, digits = 3)
+EMresults$'FL U' = round(FL, digits = 3)
+EMresults$'FC L' = round(fcmean, digits = 3)
+EMresults$'FC U' = round(FC, digits = 3)
+EMresults$'TDT L' = round(tdtmean, digits = 3)
+EMresults$'TDT U' = round(TDT, digits = 3)
 
 # latex version
 tab_caption <- "Main effects expressed as absolute changes in the fixation likelihood, fixation count, and total dwell time."
@@ -411,7 +411,7 @@ print(
     caption = tab_caption, 
     label = tab_label,
     # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
-    align = "lp{3.7cm}p{1cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.5cm}"
+    align = "lp{3.7cm}ccccccc" #p{1cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.5cm}
     # digits = c(0,0,0,0,3,3,3,3,3,3,3)
   ), 
   size = "\\small",
