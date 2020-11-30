@@ -76,6 +76,13 @@ centerTrim = trimfill(centerres)
 # set size
 setdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Setsize"], vtype="AV"))
 setdata$vi.c = setdata$vi/setdata$a_acc^2
+
+setdata_att = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Setsize" & data$Alt.att == "attribute"], vtype="AV"))
+setdata_att$vi.c = setdata_att$vi/setdata_att$a_acc^2
+
+setdata_alt = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Setsize" & data$Alt.att == "alternative"], vtype="AV"))
+setdata_alt$vi.c = setdata_alt$vi/setdata_alt$a_acc^2
+
 setres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata, method="HS")
 setresrobu = robust(setres, cluster = setdata$Authors)
 setTrim = trimfill(setres)
@@ -83,8 +90,10 @@ setTrim = trimfill(setres)
 # psychometric meta-analysis and trim and fill analysis of 
 # set size moderator analysis - effect of attribute vs alternatives
 setmod = rma(yi.c.FC, vi.c, weights=1/vi.c, mods = ~ Alt.att, data=setdata, method="HS") 
-setmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata[setdata$Alt.att == "attribute",], method="HS") 
-setmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata[setdata$Alt.att == "alternative",], method="HS") 
+setmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata_att, method="HS") 
+setmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata_alt, method="HS") 
+setmod_attrobu = robust(setmod_att, cluster = setdata_att$Authors)
+setmod_altrobu = robust(setmod_alt, cluster = setdata_alt$Authors)
 setmod_attTrim = trimfill(setmod_att)
 setmod_altTrim = trimfill(setmod_alt)
 
@@ -96,6 +105,13 @@ setmod_altTrim = trimfill(setmod_alt)
 # task instruction 
 taskdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Task"], vtype="AV"))
 taskdata$vi.c = taskdata$vi/taskdata$a_acc^2
+
+taskdata_att = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Task" & data$Alt.att == "attribute"], vtype="AV"))
+taskdata_att$vi.c = taskdata_att$vi/taskdata_att$a_acc^2
+
+taskdata_alt = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Task" & data$Alt.att == "alternative"], vtype="AV"))
+taskdata_alt$vi.c = taskdata_alt$vi/taskdata_alt$a_acc^2
+
 taskres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata, method="HS")
 taskresrobu = robust(taskres, cluster = taskdata$Authors)
 taskTrim = trimfill(taskres)
@@ -103,8 +119,10 @@ taskTrim = trimfill(taskres)
 # psychometric meta-analysis and trim and fill analysis of 
 # task instruction moderator analysis - effect of attribute vs alternative 
 taskmod = rma(yi.c.FC, vi.c, weights=1/vi.c, mods = ~ Alt.att, data=taskdata, method="HS")
-taskmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata[taskdata$Alt.att == "alternative",], method="HS")
-taskmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata[taskdata$Alt.att == "attribute",], method="HS")
+taskmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata_att, method="HS")
+taskmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata_alt, method="HS")
+taskmod_attrobu = robust(taskmod_att, cluster = taskdata_att$Authors)
+taskmod_altrobu = robust(taskmod_alt, cluster = taskdata_alt$Authors)
 taskmod_altTrim = trimfill(taskmod_alt)
 taskmod_attTrim = trimfill(taskmod_att)
 
@@ -112,6 +130,13 @@ taskmod_attTrim = trimfill(taskmod_att)
 # preferential viewing
 prefdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Pref.view"], vtype="AV"))
 prefdata$vi.c = prefdata$vi/prefdata$a_acc^2
+
+prefdata_att = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Pref.view" & data$Alt.att == "attribute"], vtype="AV"))
+prefdata_att$vi.c = prefdata_att$vi/prefdata_att$a_acc^2
+
+prefdata_alt = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Pref.view" & data$Alt.att == "alternative"], vtype="AV"))
+prefdata_alt$vi.c = prefdata_alt$vi/prefdata_alt$a_acc^2
+
 prefres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata, method="HS")
 prefresrobu = robust(prefres, cluster = prefdata$Authors)
 prefTrim = trimfill(prefres)
@@ -119,10 +144,12 @@ prefTrim = trimfill(prefres)
 # psychometric meta-analysis and trim and fill analysis of 
 # preferential viewing moderator analysis - effect of alternative vs attribute 
 prefmod = rma(yi.c.FC, vi.c, weights=1/vi.c, mods = ~ Alt.att, data=prefdata, method="HS")
-prefmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata[prefdata$Alt.att == "alternative",], method="HS")
-prefmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata[prefdata$Alt.att == "attribute",], method="HS")
-prefmod_altTrim = trimfill(prefmod_alt)
+prefmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata_att, method="HS")
+prefmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata_alt, method="HS")
+prefmod_attrobu = robust(prefmod_att, cluster = prefdata_att$Authors)
+prefmod_altrobu = robust(prefmod_alt, cluster = prefdata_alt$Authors)
 prefmod_attTrim = trimfill(prefmod_att)
+prefmod_altTrim = trimfill(prefmod_alt)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # choice bias moderator analysis - effect of inferential vs preferential choice
@@ -137,7 +164,7 @@ choicemod = rma(yi.c.FC, vi.c, weights=1/vi.c, mods = ~ inf_prefmod, data=choice
 
 # psychometric meta-analysis and trim and fill analysis of 
 # choice bias main analysis (averaging studies with more effect sizes)
-choicedata = choicedata_mod[, list(yi.c.FC = mean(yi.c.FC), vi.c = mean(vi.c), IV = unique(IV), N = unique(N)), by = Study]
+choicedata = choicedata_mod[, list(yi.c.FC = mean(yi.c.FC), vi.c = mean(vi.c), IV = unique(IV), N = unique(N), Authors = unique(Authors)), by = Study]
 choiceres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=choicedata, method="HS")
 choiceresrobu = robust(choiceres, cluster = choicedata$Authors)
 choiceTrim = trimfill(choiceres)
@@ -159,13 +186,13 @@ data$varz = data$sdz^2 # variance in z
 
 # analyze if public grants are associated with smaller ES
 pb = rma(yi=fcz, vi=varz, mods = ~ public, data = data)
-publicFactor = pb$b[1] / (pb$b[1] + pb$b[2]) # inflation factor due to not having public grant
+publicFactor = round(pb$b[1] / (pb$b[1] + pb$b[2]), digits = 3) # inflation factor due to not having public grant
 
 # PET-PEESE test
 FE = lm(fcz ~ 1, weights = 1/varz, data = data) # fixed effect estimate of ES
 PET = lm(fcz ~ sdz + a_acc, weights = 1/varz, data = data) # PET test is sig therefore perfrom PEESE
 PEESE = lm(fcz ~ varz + a_acc, weights = 1/varz, data = data) # PEESE estimate
-peeseFactor = summary(FE)$coef[1] / summary(PEESE)$coef[1,1] # inflation factor according to PEESE
+peeseFactor = round(summary(FE)$coef[1] / summary(PEESE)$coef[1,1], digits = 3) # inflation factor according to PEESE
 
 # check inflation factor based on trim fill results
 trims = c(salres$b / salTrim$b, # extract inflation factors for each subgroup separately
@@ -176,9 +203,100 @@ trims = c(salres$b / salTrim$b, # extract inflation factors for each subgroup se
   prefres$b / prefTrim$b,
   taskres$b / taskTrim$b,
   choiceres$b / choiceTrim$b)
-trimFactor = mean(trims) # average inflation factor
+trimFactor = round(mean(trims), digits = 3) # average inflation factor
 
 c(publicFactor, peeseFactor, trimFactor)
+
+# -----
+# Table with publication bias results for manuscript
+# -----
+FE = round(data.frame(summary(FE)$coef), digits = 3)
+PET = round(data.frame(summary(PET)$coef), digits = 3)
+PEESE = round(data.frame(summary(PEESE)$coef), digits = 3)
+FE = cbind(Parameter="Intercept", FE)
+PET = cbind(Parameter=c("Intercept", "SD", "A"), PET)
+PEESE = cbind(Parameter=c("Intercept", "SD", "A"), PEESE)
+setnames(FE, c(3:5), c("SE","t","p"))
+setnames(PET, c(3:5), c("SE","t","p"))
+setnames(PEESE, c(3:5), c("SE","t","p"))
+
+# latex version FE
+tab_caption <- "Fixed effects analysis of complete data"
+tab_label <- "tab:FE"
+tab_note <- paste0("\\hline \n \\multicolumn{5}{p{0.95\\textwidth}}",
+                   "{\\scriptsize{\\textit{Note.}")
+print(
+  xtable(
+    FE, 
+    caption = tab_caption, 
+    label = tab_label,
+    # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
+    align = "lllccc"
+    # digits = c(0,0,0,0,3,3,3,3,3,3,3)
+  ), 
+  size = "\\small",
+  include.rownames = FALSE,
+  caption.placement = "top", 
+  hline.after = c(-1, 0),
+  add.to.row = list(
+    pos = list(nrow(FE)),
+    command = tab_note
+  ),
+  sanitize.text.function = function(x){x},
+  file = file.path(tablesDir, "FE.tex")
+)
+
+# latex version PET
+tab_caption <- "Precision-effect test (PET) of complete data"
+tab_label <- "tab:PET"
+tab_note <- paste0("\\hline \n \\multicolumn{5}{p{0.95\\textwidth}}",
+                   "{\\scriptsize{\\textit{Note.}")
+print(
+  xtable(
+    PET, 
+    caption = tab_caption, 
+    label = tab_label,
+    # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
+    align = "lllccc"
+    # digits = c(0,0,0,0,3,3,3,3,3,3,3)
+  ), 
+  size = "\\small",
+  include.rownames = FALSE,
+  caption.placement = "top", 
+  hline.after = c(-1, 0),
+  add.to.row = list(
+    pos = list(nrow(PET)),
+    command = tab_note
+  ),
+  sanitize.text.function = function(x){x},
+  file = file.path(tablesDir, "PET.tex")
+)
+
+# latex version PEESE
+tab_caption <- "Precision-effect estimate test (PEESE) of complete data"
+tab_label <- "tab:PEESE"
+tab_note <- paste0("\\hline \n \\multicolumn{5}{p{0.95\\textwidth}}",
+                   "{\\scriptsize{\\textit{Note.}")
+print(
+  xtable(
+    PEESE, 
+    caption = tab_caption, 
+    label = tab_label,
+    # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
+    align = "lllccc"
+    # digits = c(0,0,0,0,3,3,3,3,3,3,3)
+  ), 
+  size = "\\small",
+  include.rownames = FALSE,
+  caption.placement = "top", 
+  hline.after = c(-1, 0),
+  add.to.row = list(
+    pos = list(nrow(PEESE)),
+    command = tab_note
+  ),
+  sanitize.text.function = function(x){x},
+  file = file.path(tablesDir, "PEESE.tex")
+)
 
 # -----
 # Main and Moderator results text for manuscript
@@ -195,131 +313,131 @@ result <- paste0(
 )
 cat(result, file = file.path(tablesDir, "I2range.tex"))
 
-# salience summary
-result <- paste0(
-	"($\\rho=", round(salres$b, 2), "$; 95\\% confidence interval (CI) = $[", 
-	round(salres$ci.lb, 2), ",", round(salres$ci.ub, 2), "]$; $p=", round(salres$pval, 3), "$)"
-)
-cat(result, file = file.path(tablesDir, "saliencesummary.tex"))
-
-# salience trim summary
-result <- paste0(
-  "$\\rho=", round(salTrim$b, 2), "$; 95\\% CI = $[", 
-  round(salTrim$ci.lb, 2), ",", round(salTrim$ci.ub, 2), "];$"
-)
-cat(result, file = file.path(tablesDir, "saliencetrimsummary.tex"))
-
-# center position summary
-result <- paste0(
-  "($\\rho=", 
-  round(centerres$b, 2), 
-  "$; 95\\% CI = $[", 
-  round(centerres$ci.lb, 2), 
-  ",", 
-  round(centerres$ci.ub, 2), 
-  "]$; $p", 
-  ifelse(round(centerres$pval, 3) == 0, "< 0.001", paste0("p=", round(centerres$pval, 3))), 
-  "$)"
-)
-cat(result, file = file.path(tablesDir, "centersummary.tex"))
-
-# center trim summary
-result <- paste0(
-  "$\\rho=", 
-  round(centerTrim$b, 2), 
-  "$; 95\\% CI = $[", 
-  round(centerTrim$ci.lb, 2), 
-  ",", 
-  round(centerTrim$ci.ub, 2), 
-  "]$; $p", 
-  ifelse(round(centerTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(centerTrim$pval, 3))), 
-  "$;"
-)
-cat(result, file = file.path(tablesDir, "centertrimsummary.tex"))
-
-# task instruction summary
-result <- paste0(
-  "($\\rho=", 
-  round(taskres$b, 2), 
-  "$; 95\\% CI = $[", 
-  round(taskres$ci.lb, 2), 
-  ",", 
-  round(taskres$ci.ub, 2), 
-  "]$; $p", 
-  ifelse(round(taskres$pval, 3) == 0, "< 0.001", paste0("p=", round(taskres$pval, 3))), 
-  "$)"
-)
-cat(result, file = file.path(tablesDir, "tasksummary.tex"))
-
-# preferential viewing summary
-result <- paste0(
-  "$\\rho=", 
-  round(prefres$b, 2), 
-  "$; 95\\% CI = $[", 
-  round(prefres$ci.lb, 2), 
-  ",", 
-  round(prefres$ci.ub, 2), 
-  "]$; $p", 
-  ifelse(round(prefres$pval, 3) == 0, "< 0.001", paste0("p=", round(prefres$pval, 3))), 
-  "$;"
-)
-cat(result, file = file.path(tablesDir, "prefsummary.tex"))
-
-# task trim summary
-result <- paste0(
-  "$\\rho=", 
-  round(taskTrim$b, 2), 
-  "$; 95\\% CI = $[", 
-  round(taskTrim$ci.lb, 2), 
-  ",", 
-  round(taskTrim$ci.ub, 2), 
-  "]$; $p", 
-  ifelse(round(taskTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(taskTrim$pval, 3))), 
-  "$;"
-)
-cat(result, file = file.path(tablesDir, "tasktrimsummary.tex"))
-
-# pref trim summary
-result <- paste0(
-  "$\\rho=", 
-  round(prefTrim$b, 2), 
-  "$; 95\\% CI = $[", 
-  round(prefTrim$ci.lb, 2), 
-  ",", 
-  round(prefTrim$ci.ub, 2), 
-  "]$; $p", 
-  ifelse(round(prefTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(prefTrim$pval, 3))), 
-  "$;"
-)
-cat(result, file = file.path(tablesDir, "preftrimsummary.tex"))
-
-# choice summary
-result <- paste0(
-  "$\\rho=", 
-  round(choiceres$b, 2), 
-  "$; 95\\% CI = $[", 
-  round(choiceres$ci.lb, 2), 
-  ",", 
-  round(choiceres$ci.ub, 2), 
-  "]$; $p", 
-  ifelse(round(choiceres$pval, 3) == 0, "< 0.001", paste0("p=", round(choiceres$pval, 3))), 
-  "$;"
-)
-cat(result, file = file.path(tablesDir, "choicesummary.tex"))
-
-# choice trim summary
-result <- paste0(
-  "$\\rho=", 
-  round(choiceTrim$b, 2), 
-  "$; 95\\% CI = $[", 
-  round(choiceTrim$ci.lb, 2), 
-  ",", 
-  round(choiceTrim$ci.ub, 2), 
-  "]$; $p", 
-  ifelse(round(choiceTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(choiceTrim$pval, 3))), 
-  "$;"
-)
-cat(result, file = file.path(tablesDir, "choicetrimsummary.tex"))
+# # salience summary
+# result <- paste0(
+# 	"($\\rho=", round(salres$b, 2), "$; 95\\% confidence interval (CI) = $[", 
+# 	round(salres$ci.lb, 2), ",", round(salres$ci.ub, 2), "]$; $p=", round(salres$pval, 3), "$)"
+# )
+# cat(result, file = file.path(tablesDir, "saliencesummary.tex"))
+# 
+# # salience trim summary
+# result <- paste0(
+#   "$\\rho=", round(salTrim$b, 2), "$; 95\\% CI = $[", 
+#   round(salTrim$ci.lb, 2), ",", round(salTrim$ci.ub, 2), "];$"
+# )
+# cat(result, file = file.path(tablesDir, "saliencetrimsummary.tex"))
+# 
+# # center position summary
+# result <- paste0(
+#   "($\\rho=", 
+#   round(centerres$b, 2), 
+#   "$; 95\\% CI = $[", 
+#   round(centerres$ci.lb, 2), 
+#   ",", 
+#   round(centerres$ci.ub, 2), 
+#   "]$; $p", 
+#   ifelse(round(centerres$pval, 3) == 0, "< 0.001", paste0("p=", round(centerres$pval, 3))), 
+#   "$)"
+# )
+# cat(result, file = file.path(tablesDir, "centersummary.tex"))
+# 
+# # center trim summary
+# result <- paste0(
+#   "$\\rho=", 
+#   round(centerTrim$b, 2), 
+#   "$; 95\\% CI = $[", 
+#   round(centerTrim$ci.lb, 2), 
+#   ",", 
+#   round(centerTrim$ci.ub, 2), 
+#   "]$; $p", 
+#   ifelse(round(centerTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(centerTrim$pval, 3))), 
+#   "$;"
+# )
+# cat(result, file = file.path(tablesDir, "centertrimsummary.tex"))
+# 
+# # task instruction summary
+# result <- paste0(
+#   "($\\rho=", 
+#   round(taskres$b, 2), 
+#   "$; 95\\% CI = $[", 
+#   round(taskres$ci.lb, 2), 
+#   ",", 
+#   round(taskres$ci.ub, 2), 
+#   "]$; $p", 
+#   ifelse(round(taskres$pval, 3) == 0, "< 0.001", paste0("p=", round(taskres$pval, 3))), 
+#   "$)"
+# )
+# cat(result, file = file.path(tablesDir, "tasksummary.tex"))
+# 
+# # preferential viewing summary
+# result <- paste0(
+#   "$\\rho=", 
+#   round(prefres$b, 2), 
+#   "$; 95\\% CI = $[", 
+#   round(prefres$ci.lb, 2), 
+#   ",", 
+#   round(prefres$ci.ub, 2), 
+#   "]$; $p", 
+#   ifelse(round(prefres$pval, 3) == 0, "< 0.001", paste0("p=", round(prefres$pval, 3))), 
+#   "$;"
+# )
+# cat(result, file = file.path(tablesDir, "prefsummary.tex"))
+# 
+# # task trim summary
+# result <- paste0(
+#   "$\\rho=", 
+#   round(taskTrim$b, 2), 
+#   "$; 95\\% CI = $[", 
+#   round(taskTrim$ci.lb, 2), 
+#   ",", 
+#   round(taskTrim$ci.ub, 2), 
+#   "]$; $p", 
+#   ifelse(round(taskTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(taskTrim$pval, 3))), 
+#   "$;"
+# )
+# cat(result, file = file.path(tablesDir, "tasktrimsummary.tex"))
+# 
+# # pref trim summary
+# result <- paste0(
+#   "$\\rho=", 
+#   round(prefTrim$b, 2), 
+#   "$; 95\\% CI = $[", 
+#   round(prefTrim$ci.lb, 2), 
+#   ",", 
+#   round(prefTrim$ci.ub, 2), 
+#   "]$; $p", 
+#   ifelse(round(prefTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(prefTrim$pval, 3))), 
+#   "$;"
+# )
+# cat(result, file = file.path(tablesDir, "preftrimsummary.tex"))
+# 
+# # choice summary
+# result <- paste0(
+#   "$\\rho=", 
+#   round(choiceres$b, 2), 
+#   "$; 95\\% CI = $[", 
+#   round(choiceres$ci.lb, 2), 
+#   ",", 
+#   round(choiceres$ci.ub, 2), 
+#   "]$; $p", 
+#   ifelse(round(choiceres$pval, 3) == 0, "< 0.001", paste0("p=", round(choiceres$pval, 3))), 
+#   "$;"
+# )
+# cat(result, file = file.path(tablesDir, "choicesummary.tex"))
+# 
+# # choice trim summary
+# result <- paste0(
+#   "$\\rho=", 
+#   round(choiceTrim$b, 2), 
+#   "$; 95\\% CI = $[", 
+#   round(choiceTrim$ci.lb, 2), 
+#   ",", 
+#   round(choiceTrim$ci.ub, 2), 
+#   "]$; $p", 
+#   ifelse(round(choiceTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(choiceTrim$pval, 3))), 
+#   "$;"
+# )
+# cat(result, file = file.path(tablesDir, "choicetrimsummary.tex"))
 
 # task moderator
 result <- paste0(
@@ -339,7 +457,6 @@ result <- paste0(
 )
 cat(result, file = file.path(tablesDir, "moderator_choicebias.tex"))
 
-
 # -----
 # Table with main results for manuscript
 # -----
@@ -351,7 +468,7 @@ extractMain <- function(name, mainres=centerres, data) {
         paste0(sum(data$N)),
         paste0(round(coef(summary(mainres))$estimate, 2)),
         paste0(round(coef(summary(mainres))$se, 2)),
-        paste0(round(coef(summary(mainres))$zval, 2)),
+        paste0(round(coef(summary(mainres))$tval, 2)),
         ifelse(coef(summary(mainres))$pval < 0.001, "<0.001",
             paste0(round(coef(summary(mainres))$pval, 3))),
         paste0(round(coef(summary(mainres))$ci.lb, 2)),
@@ -380,27 +497,27 @@ extractTrim <- function(trimres) {
 
 mainresults = data.frame(rbind(
   c("\\textbf{Visual factors}", rep(NA, 9)),
-  extractMain("Salience",salres,saldata),
+  extractMain("Salience",salresrobu,saldata),
   extractTrim(salTrim),
-  extractMain("Surface size",sizeres,sizedata),
+  extractMain("Surface size",sizeresrobu,sizedata),
   extractTrim(sizeTrim),
-  extractMain("Left vs right position",LRres,LRdata),
+  extractMain("Left vs right position",LRresrobu,LRdata),
   extractTrim(LRTrim),
-  extractMain("Center position",centerres,centerdata),
+  extractMain("Center position",centerresrobu,centerdata),
   extractTrim(centerTrim),
-  extractMain("Set size",setres,setdata),
+  extractMain("Set size",setresrobu,setdata),
   extractTrim(setTrim),
   c("\\textbf{Cognitive factors}", rep(NA, 9)),
-  extractMain("Task instructions",taskres,taskdata),
+  extractMain("Task instructions",taskresrobu,taskdata),
   extractTrim(taskTrim),
-  extractMain("Preferential viewing",prefres,prefdata),
+  extractMain("Preferential viewing",prefresrobu,prefdata),
   extractTrim(prefTrim),
-  extractMain("Choice bias",choiceres,choicedata),
+  extractMain("Choice bias",choiceresrobu,choicedata),
   extractTrim(choiceTrim)
 ), stringsAsFactors = FALSE)
 
 # format main results table, e.g. rounding, variable naming etc.
-setnames(mainresults, c(1:10), c("Group","$k$","$N$","$\\rho$","SE","$Z$","$p$","$\\textrm{CI}_{95}$ LL","$\\textrm{CI}_{95}$ UL","$I^2$"))
+setnames(mainresults, c(1:10), c("Group","$k$","$N$","$\\rho$","SE","$t$","$p$","$\\textrm{CI}_{95}$ LL","$\\textrm{CI}_{95}$ UL","$I^2$"))
 write_csv(mainresults, file.path(tablesDir, "main_results.csv"))
 
 # latex version
@@ -436,26 +553,26 @@ print(
 modresults = data.frame(rbind(
     c("\\textbf{Set size}", rep(NA, 9)),
     extractMain("\\hspace{2mm}\\textit{Alternative}",
-        setmod_alt,setdata[setdata$Alt.att == "alternative",]),
+        setmod_altrobu,setdata[setdata$Alt.att == "alternative",]),
     extractTrim(setmod_altTrim),
     extractMain("\\hspace{2mm}\\textit{Attribute}",
-        setmod_att,setdata[setdata$Alt.att == "attribute",]),
+        setmod_attrobu,setdata[setdata$Alt.att == "attribute",]),
     extractTrim(setmod_attTrim),
     
     c("\\textbf{Task instruction}", rep(NA, 9)),
     extractMain("\\hspace{2mm}\\textit{Alternative}",
-        taskmod_alt,taskdata[taskdata$Alt.att == "alternative",]),
+        taskmod_altrobu,taskdata[taskdata$Alt.att == "alternative",]),
     extractTrim(taskmod_altTrim),
     extractMain("\\hspace{2mm}\\textit{Attribute}",
-        taskmod_att,taskdata[taskdata$Alt.att == "attribute",]),
+        taskmod_attrobu,taskdata[taskdata$Alt.att == "attribute",]),
     extractTrim(taskmod_attTrim),
 
     c("\\textbf{Preferential viewing}", rep(NA, 9)),
     extractMain("\\hspace{2mm}\\textit{Alternative}",
-        prefmod_alt,prefdata[prefdata$Alt.att == "alternative",]),
+        prefmod_altrobu,prefdata[prefdata$Alt.att == "alternative",]),
     extractTrim(prefmod_altTrim),
     extractMain("\\hspace{2mm}\\textit{Attribute}",
-        prefmod_att,prefdata[prefdata$Alt.att == "attribute",]),
+        prefmod_attrobu,prefdata[prefdata$Alt.att == "attribute",]),
     extractTrim(prefmod_attTrim)
 
 ), stringsAsFactors = FALSE)
@@ -524,7 +641,7 @@ cat(result, file = file.path(tablesDir, "difftest_pref_choice.tex"))
 # Table with raw data for appendix
 # -----
 
-overviewtabel = data[, c(2,4,9,14,15,1)]
+overviewtabel = data[, c("Authors", "IV", "N","a_acc","fix.count.m","Eye.tracker")]
 setnames(overviewtabel, c("N","a_acc","fix.count.m","Eye.tracker"), c("$N$","$a_a$","$r$","Eye tracker"))
 overviewtabel$`Eye tracker` = ifelse(overviewtabel$`Eye tracker` == "Nihon-Kohden EEG-1100", "Nihon-Kohden", overviewtabel$`Eye tracker`)
 overviewtabel$IV = ifelse(overviewtabel$IV == "LR.position", "LvR",
