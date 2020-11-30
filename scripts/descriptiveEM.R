@@ -326,6 +326,9 @@ tdtmean = mean(EMoverall$average[EMoverall$DV == "Total dwell time"])
 flmean = mean(EMoverall$average[EMoverall$DV == "Fixation likelihood"])
 fcmean = mean(EMoverall$average[EMoverall$DV == "Fixation count"])
 tdtmean = mean(EMoverall$average[EMoverall$DV == "Total dwell time"])
+flsd = sd(EMoverall$average[EMoverall$DV == "Fixation likelihood"])
+fcsd = sd(EMoverall$average[EMoverall$DV == "Fixation count"])
+tdtsd = sd(EMoverall$average[EMoverall$DV == "Total dwell time"])
 flmeanLogit = log(flmean/(1 - flmean))
 fcmeanLog = log(fcmean)
 tdtmeanLog = log(tdtmean)
@@ -431,4 +434,45 @@ print(
   sanitize.text.function = function(x){x},
   file = file.path(tablesDir, "em_results.tex")
 )
+
+# ----------------------------------------------------------------------
+# additional results for ms
+# ----------------------------------------------------------------------
+
+# count of studies reporting EM
+authorEMcount = NROW(unique(EMwide$author))
+EMcount = NROW((EMwide$author))
+flEMcount = NROW((EMwide$author[EMwide$DV == "Fixation likelihood"]))
+fcEMcount = NROW((EMwide$author[EMwide$DV == "Fixation count"]))
+tdtEMcount = NROW((EMwide$author[EMwide$DV == "Total dwell time"]))
+texPaste = function(num, name){
+  result <- paste0(
+    "$", num, "$"
+  )
+  cat(result, file = file.path(tablesDir, name))
+}
+
+texPaste(authorEMcount, "authorEMcount.tex")
+texPaste(EMcount, "EMcount.tex")
+texPaste(flEMcount, "flEMcount.tex")
+texPaste(fcEMcount, "fcEMcount.tex")
+texPaste(tdtEMcount, "tdtEMcount.tex")
+
+# fl mean and sd
+result <- paste0(
+  "$M=", round(flmean, 3), "$, $SD=", round(flsd, 3), "$"
+)
+cat(result, file = file.path(tablesDir, "flmean.tex"))
+
+# fc mean and sd
+result <- paste0(
+  "$M=", round(fcmean, 3), "$, $SD=", round(fcsd, 3), "$"
+)
+cat(result, file = file.path(tablesDir, "fcmean.tex"))
+
+# tdt mean and sd
+result <- paste0(
+  "$M=", round(tdtmean, 3), "$, $SD=", round(tdtsd, 3), "$"
+)
+cat(result, file = file.path(tablesDir, "tdtmean.tex"))
 
