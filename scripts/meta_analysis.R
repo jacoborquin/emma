@@ -187,12 +187,14 @@ data$varz = data$sdz^2 # variance in z
 # analyze if public grants are associated with smaller ES
 pb = rma(yi=fcz, vi=varz, mods = ~ public, data = data)
 publicFactor = round(pb$b[1] / (pb$b[1] + pb$b[2]), digits = 3) # inflation factor due to not having public grant
+cat(paste0("$", publicFactor, "$"), file = file.path(tablesDir, "publicFactor.tex"))
 
 # PET-PEESE test
 FE = lm(fcz ~ 1, weights = 1/varz, data = data) # fixed effect estimate of ES
 PET = lm(fcz ~ sdz + a_acc, weights = 1/varz, data = data) # PET test is sig therefore perfrom PEESE
 PEESE = lm(fcz ~ varz + a_acc, weights = 1/varz, data = data) # PEESE estimate
 peeseFactor = round(summary(FE)$coef[1] / summary(PEESE)$coef[1,1], digits = 3) # inflation factor according to PEESE
+cat(paste0("$", peeseFactor, "$"), file = file.path(tablesDir, "peeseFactor.tex"))
 
 # check inflation factor based on trim fill results
 trims = c(salres$b / salTrim$b, # extract inflation factors for each subgroup separately
@@ -204,8 +206,7 @@ trims = c(salres$b / salTrim$b, # extract inflation factors for each subgroup se
   taskres$b / taskTrim$b,
   choiceres$b / choiceTrim$b)
 trimFactor = round(mean(trims), digits = 3) # average inflation factor
-
-c(publicFactor, peeseFactor, trimFactor)
+cat(paste0("$", trimFactor, "$"), file = file.path(tablesDir, "trimFactor.tex"))
 
 # -----
 # Table with publication bias results for manuscript
@@ -223,25 +224,17 @@ setnames(PEESE, c(3:5), c("SE","t","p"))
 # latex version FE
 tab_caption <- "Fixed effects analysis of complete data"
 tab_label <- "tab:FE"
-tab_note <- paste0("\\hline \n \\multicolumn{5}{p{0.95\\textwidth}}",
-                   "{\\scriptsize{\\textit{Note.}")
 print(
   xtable(
     FE, 
     caption = tab_caption, 
     label = tab_label,
-    # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
     align = "lllccc"
-    # digits = c(0,0,0,0,3,3,3,3,3,3,3)
   ), 
   size = "\\small",
   include.rownames = FALSE,
   caption.placement = "top", 
   hline.after = c(-1, 0),
-  add.to.row = list(
-    pos = list(nrow(FE)),
-    command = tab_note
-  ),
   sanitize.text.function = function(x){x},
   file = file.path(tablesDir, "FE.tex")
 )
@@ -249,25 +242,17 @@ print(
 # latex version PET
 tab_caption <- "Precision-effect test (PET) of complete data"
 tab_label <- "tab:PET"
-tab_note <- paste0("\\hline \n \\multicolumn{5}{p{0.95\\textwidth}}",
-                   "{\\scriptsize{\\textit{Note.}")
 print(
   xtable(
     PET, 
     caption = tab_caption, 
     label = tab_label,
-    # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
     align = "lllccc"
-    # digits = c(0,0,0,0,3,3,3,3,3,3,3)
   ), 
   size = "\\small",
   include.rownames = FALSE,
   caption.placement = "top", 
   hline.after = c(-1, 0),
-  add.to.row = list(
-    pos = list(nrow(PET)),
-    command = tab_note
-  ),
   sanitize.text.function = function(x){x},
   file = file.path(tablesDir, "PET.tex")
 )
@@ -275,25 +260,17 @@ print(
 # latex version PEESE
 tab_caption <- "Precision-effect estimate test (PEESE) of complete data"
 tab_label <- "tab:PEESE"
-tab_note <- paste0("\\hline \n \\multicolumn{5}{p{0.95\\textwidth}}",
-                   "{\\scriptsize{\\textit{Note.}")
 print(
   xtable(
     PEESE, 
     caption = tab_caption, 
     label = tab_label,
-    # align = "llp{0.03\\linewidth}p{0.05\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}p{0.07\\linewidth}",
     align = "lllccc"
-    # digits = c(0,0,0,0,3,3,3,3,3,3,3)
   ), 
   size = "\\small",
   include.rownames = FALSE,
   caption.placement = "top", 
   hline.after = c(-1, 0),
-  add.to.row = list(
-    pos = list(nrow(PEESE)),
-    command = tab_note
-  ),
   sanitize.text.function = function(x){x},
   file = file.path(tablesDir, "PEESE.tex")
 )
