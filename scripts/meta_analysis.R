@@ -196,6 +196,7 @@ cat(paste0("$Q_M(1)=", round(pb$QM, 3),"$, $p=", round(pb$QMp, 3), "$"), file = 
 
 # PET-PEESE test
 FE = lm(fcz ~ 1, weights = 1/varz, data = data) # fixed effect estimate of ES
+onecoefTex(FE, "FE.tex") # save coefficient to tex
 PET = lm(fcz ~ sdz + a_acc, weights = 1/varz, data = data) # PET test is sig therefore perfrom PEESE
 PEESE = lm(fcz ~ varz + a_acc, weights = 1/varz, data = data) # PEESE estimate
 peeseFactor = round(summary(FE)$coef[1] / summary(PEESE)$coef[1,1], digits = 3) # inflation factor according to PEESE
@@ -217,33 +218,12 @@ cat(paste0("$", trimFactor, "$"), file = file.path(tablesDir, "trimFactor.tex"))
 # Table with publication bias results for manuscript
 # -----
 
-FE = round(data.frame(summary(FE)$coef), digits = 3)
 PET = round(data.frame(summary(PET)$coef), digits = 3)
 PEESE = round(data.frame(summary(PEESE)$coef), digits = 3)
-FE = cbind(Parameter="Intercept", FE)
 PET = cbind(Parameter=c("Intercept", "$SD$", "$A$"), PET)
 PEESE = cbind(Parameter=c("Intercept", "$Var$", "$A$"), PEESE)
-setnames(FE, c(3:5), c("SE","$t$","$p$"))
 setnames(PET, c(3:5), c("SE","$t$","$p$"))
 setnames(PEESE, c(3:5), c("SE","$t$","$p$"))
-
-# latex version FE
-tab_caption <- "Fixed effects analysis of complete data"
-tab_label <- "tab:FE"
-print(
-  xtable(
-    FE, 
-    caption = tab_caption, 
-    label = tab_label,
-    align = "lllccc"
-  ), 
-  size = "\\small",
-  include.rownames = FALSE,
-  caption.placement = "top", 
-  hline.after = c(-1, 0, NROW(FE)),
-  sanitize.text.function = function(x){x},
-  file = file.path(tablesDir, "FE.tex")
-)
 
 # latex version PET
 tab_caption <- "Precision-effect test (PET) of complete data"
@@ -295,132 +275,6 @@ result <- paste0(
   "$I^2=", round(salres$I2, 3),"$ to $I^2=", round(prefres$I2, 3), "$"
 )
 cat(result, file = file.path(tablesDir, "I2range.tex"))
-
-# # salience summary
-# result <- paste0(
-# 	"($\\rho=", round(salres$b, 2), "$; 95\\% confidence interval (CI) = $[", 
-# 	round(salres$ci.lb, 2), ",", round(salres$ci.ub, 2), "]$; $p=", round(salres$pval, 3), "$)"
-# )
-# cat(result, file = file.path(tablesDir, "saliencesummary.tex"))
-# 
-# # salience trim summary
-# result <- paste0(
-#   "$\\rho=", round(salTrim$b, 2), "$; 95\\% CI = $[", 
-#   round(salTrim$ci.lb, 2), ",", round(salTrim$ci.ub, 2), "];$"
-# )
-# cat(result, file = file.path(tablesDir, "saliencetrimsummary.tex"))
-# 
-# # center position summary
-# result <- paste0(
-#   "($\\rho=", 
-#   round(centerres$b, 2), 
-#   "$; 95\\% CI = $[", 
-#   round(centerres$ci.lb, 2), 
-#   ",", 
-#   round(centerres$ci.ub, 2), 
-#   "]$; $p", 
-#   ifelse(round(centerres$pval, 3) == 0, "< 0.001", paste0("p=", round(centerres$pval, 3))), 
-#   "$)"
-# )
-# cat(result, file = file.path(tablesDir, "centersummary.tex"))
-# 
-# # center trim summary
-# result <- paste0(
-#   "$\\rho=", 
-#   round(centerTrim$b, 2), 
-#   "$; 95\\% CI = $[", 
-#   round(centerTrim$ci.lb, 2), 
-#   ",", 
-#   round(centerTrim$ci.ub, 2), 
-#   "]$; $p", 
-#   ifelse(round(centerTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(centerTrim$pval, 3))), 
-#   "$;"
-# )
-# cat(result, file = file.path(tablesDir, "centertrimsummary.tex"))
-# 
-# # task instruction summary
-# result <- paste0(
-#   "($\\rho=", 
-#   round(taskres$b, 2), 
-#   "$; 95\\% CI = $[", 
-#   round(taskres$ci.lb, 2), 
-#   ",", 
-#   round(taskres$ci.ub, 2), 
-#   "]$; $p", 
-#   ifelse(round(taskres$pval, 3) == 0, "< 0.001", paste0("p=", round(taskres$pval, 3))), 
-#   "$)"
-# )
-# cat(result, file = file.path(tablesDir, "tasksummary.tex"))
-# 
-# # preferential viewing summary
-# result <- paste0(
-#   "$\\rho=", 
-#   round(prefres$b, 2), 
-#   "$; 95\\% CI = $[", 
-#   round(prefres$ci.lb, 2), 
-#   ",", 
-#   round(prefres$ci.ub, 2), 
-#   "]$; $p", 
-#   ifelse(round(prefres$pval, 3) == 0, "< 0.001", paste0("p=", round(prefres$pval, 3))), 
-#   "$;"
-# )
-# cat(result, file = file.path(tablesDir, "prefsummary.tex"))
-# 
-# # task trim summary
-# result <- paste0(
-#   "$\\rho=", 
-#   round(taskTrim$b, 2), 
-#   "$; 95\\% CI = $[", 
-#   round(taskTrim$ci.lb, 2), 
-#   ",", 
-#   round(taskTrim$ci.ub, 2), 
-#   "]$; $p", 
-#   ifelse(round(taskTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(taskTrim$pval, 3))), 
-#   "$;"
-# )
-# cat(result, file = file.path(tablesDir, "tasktrimsummary.tex"))
-# 
-# # pref trim summary
-# result <- paste0(
-#   "$\\rho=", 
-#   round(prefTrim$b, 2), 
-#   "$; 95\\% CI = $[", 
-#   round(prefTrim$ci.lb, 2), 
-#   ",", 
-#   round(prefTrim$ci.ub, 2), 
-#   "]$; $p", 
-#   ifelse(round(prefTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(prefTrim$pval, 3))), 
-#   "$;"
-# )
-# cat(result, file = file.path(tablesDir, "preftrimsummary.tex"))
-# 
-# # choice summary
-# result <- paste0(
-#   "$\\rho=", 
-#   round(choiceres$b, 2), 
-#   "$; 95\\% CI = $[", 
-#   round(choiceres$ci.lb, 2), 
-#   ",", 
-#   round(choiceres$ci.ub, 2), 
-#   "]$; $p", 
-#   ifelse(round(choiceres$pval, 3) == 0, "< 0.001", paste0("p=", round(choiceres$pval, 3))), 
-#   "$;"
-# )
-# cat(result, file = file.path(tablesDir, "choicesummary.tex"))
-# 
-# # choice trim summary
-# result <- paste0(
-#   "$\\rho=", 
-#   round(choiceTrim$b, 2), 
-#   "$; 95\\% CI = $[", 
-#   round(choiceTrim$ci.lb, 2), 
-#   ",", 
-#   round(choiceTrim$ci.ub, 2), 
-#   "]$; $p", 
-#   ifelse(round(choiceTrim$pval, 3) == 0, "< 0.001", paste0("p=", round(choiceTrim$pval, 3))), 
-#   "$;"
-# )
-# cat(result, file = file.path(tablesDir, "choicetrimsummary.tex"))
 
 # task moderator
 result <- paste0(

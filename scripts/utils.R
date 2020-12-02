@@ -283,6 +283,18 @@ savePlots <- function(figure, filename, dims, grob = FALSE, eps = FALSE) {
 # .tex functions
 # ----------------------------------------------------------------------
 
+onecoefTex = function(model, name){
+  result <- paste0(
+    "$\\beta_{0}=", 
+    round(summary(model)$coef[1], 2), 
+    "$, $SE=", 
+    round(summary(model)$coef[2], 2), 
+    "$, ", 
+    ifelse(round(summary(model)$coef[4], 2) == 0, "$p< 0.001$", paste0("$p=", round(summary(model)$coef[4], 2),"$"))
+    )
+  cat(result, file = file.path(tablesDir, name))
+}
+
 twocoefTex = function(model, name){
   result <- paste0(
     "$\\beta_{0}=", 
