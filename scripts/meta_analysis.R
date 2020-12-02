@@ -25,7 +25,6 @@ data = as.data.table(read_csv(
 	file.path(dataDir, "EMMA_ES_data_corrected.csv")
 ))
 
-
 # ----------------------------------------------------------------------
 # Processing
 # ----------------------------------------------------------------------
@@ -185,9 +184,15 @@ data$sdz = 1/sqrt(data$N - 3) # sd in z
 data$varz = data$sdz^2 # variance in z
 
 # analyze if public grants are associated with smaller ES
+grant = as.data.table(read_excel(
+  file.path(dataDir, "EMMA_grant.xlsx")
+))
+grant = grant[, list(grant = unique(grant), public = unique(public)), Study]
+data = merge(data, grant, by = "Study")
 pb = rma(yi=fcz, vi=varz, mods = ~ public, data = data)
 publicFactor = round(pb$b[1] / (pb$b[1] + pb$b[2]), digits = 3) # inflation factor due to not having public grant
 cat(paste0("$", publicFactor, "$"), file = file.path(tablesDir, "publicFactor.tex"))
+cat(paste0("$Q_M(1)=", round(pb$QM, 3),"$, $p=", round(pb$QMp, 3), "$"), file = file.path(tablesDir, "publicSig.tex"))
 
 # PET-PEESE test
 FE = lm(fcz ~ 1, weights = 1/varz, data = data) # fixed effect estimate of ES
@@ -211,15 +216,16 @@ cat(paste0("$", trimFactor, "$"), file = file.path(tablesDir, "trimFactor.tex"))
 # -----
 # Table with publication bias results for manuscript
 # -----
+
 FE = round(data.frame(summary(FE)$coef), digits = 3)
 PET = round(data.frame(summary(PET)$coef), digits = 3)
 PEESE = round(data.frame(summary(PEESE)$coef), digits = 3)
 FE = cbind(Parameter="Intercept", FE)
-PET = cbind(Parameter=c("Intercept", "SD", "A"), PET)
-PEESE = cbind(Parameter=c("Intercept", "SD", "A"), PEESE)
-setnames(FE, c(3:5), c("SE","t","p"))
-setnames(PET, c(3:5), c("SE","t","p"))
-setnames(PEESE, c(3:5), c("SE","t","p"))
+PET = cbind(Parameter=c("Intercept", "$SD$", "$A$"), PET)
+PEESE = cbind(Parameter=c("Intercept", "$Var$", "$A$"), PEESE)
+setnames(FE, c(3:5), c("SE","$t$","$p$"))
+setnames(PET, c(3:5), c("SE","$t$","$p$"))
+setnames(PEESE, c(3:5), c("SE","$t$","$p$"))
 
 # latex version FE
 tab_caption <- "Fixed effects analysis of complete data"
@@ -234,7 +240,7 @@ print(
   size = "\\small",
   include.rownames = FALSE,
   caption.placement = "top", 
-  hline.after = c(-1, 0),
+  hline.after = c(-1, 0, NROW(FE)),
   sanitize.text.function = function(x){x},
   file = file.path(tablesDir, "FE.tex")
 )
@@ -252,7 +258,7 @@ print(
   size = "\\small",
   include.rownames = FALSE,
   caption.placement = "top", 
-  hline.after = c(-1, 0),
+  hline.after = c(-1, 0, NROW(PET)),
   sanitize.text.function = function(x){x},
   file = file.path(tablesDir, "PET.tex")
 )
@@ -270,7 +276,7 @@ print(
   size = "\\small",
   include.rownames = FALSE,
   caption.placement = "top", 
-  hline.after = c(-1, 0),
+  hline.after = c(-1, 0, NROW(PEESE)),
   sanitize.text.function = function(x){x},
   file = file.path(tablesDir, "PEESE.tex")
 )
