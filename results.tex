@@ -71,9 +71,17 @@ We also performed a moderator analysis for the choice bias factor, to assess whe
 % -------------------------------------------------------
 
 \subsection{Publication bias}
-We assessed potential publication bias by initially performing a precision-effect test (PET). The test uses optimal least squares to regresses individual study effect sizes on study standard deviations weighted by the study precision. It is not recommended to use the test in case of high levels of heterogeneity or on small samples, e.g. less than 10 studies, and we therefore use to test on the complete data set. Since we know that study artifacts play an important role in determining effect sizes we control for the artifact multiplier. The PET shows a significant effect of the effect size standard deviation even when controlling for the artefact multiplier (see Table ).
+We assessed potential publication bias by initially performing a precision-effect test (PET). The test uses optimal least squares to regresses individual study effect sizes on study standard deviations weighted by the study precision. It is not recommended to use the test in case of high levels of heterogeneity or on small samples, e.g. less than 10 studies, and we therefore use to test on the complete data set. Since we know that study artifacts play an important role in determining effect sizes we control for the artifact multiplier. The PET shows a significant effect of the effect size standard deviation even when controlling for the artefact multiplier (see Table \ref{tab:PET}).
 
-Given the significant PET, we then perform the precision-effect estimate with standard errors test (PEESE). The PEESE is differs only in using the study variance instead of the standard deviation. The intercept in the PEESE is normally taken as the publication bias corrected estimate. 
+\input{tables/PET}
+
+Given the significant PET, we then perform the precision-effect estimate with standard errors test (PEESE). The PEESE is differs only in using the study variance instead of the standard deviation. The intercept in the PEESE is normally taken as the publication bias corrected estimate (see Table \ref{tab:PEESE}). 
+
+\input{tables/PEESE}
+
+The bias corrected intercept in the PEESE test is, in our case, not very informative by itself since it groups all independent variables into one estimate. However, by comparing the intercept to that obtained with from an intercept only OLS regression we can get an impression of the degree of effect size overestimation due to publication bias. This comparison suggests that publication bias leads to an overestimation factor of \input{tables/peeseFactor}\unskip. As an additional analysis we  
+
+
 
 
 using trim and fill analysis of each factor \citep{duval2000trim}. In addition, we plotted the  Fisher transformed correlation coefficients of each study by its respective standard error (so-called funnel plots; Figure~\ref{fig:funnel_plots} for main results, and Figure~\ref{fig:funnel_plots_altatt} for moderator analyses). The symmetry of the funnel plots provides a qualitative picture of whether there is a file drawer problem. We expect that studies with smaller sample sizes and hence higher standard errors yield more variable effect sizes, the smallest of which are less likely to be published, leading to an asymmetric funnel plot. Judging from the funnel plots, it is not obvious whether there is a problem with publication bias. However, the trim and fill analysis resulted in a downward adjustment of the average effect size for most of the factors. The corrected effect sizes in Table~\ref{tab:main_results} (in parentheses) provide a more conservative estimate of the true population effects, but are also subject to some uncertainty. Specifically, the interpretation of the corrected results may be biased due to heterogeneity in many of the factors as well as a relatively small number of studies in the group of visual factors.
