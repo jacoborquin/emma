@@ -35,60 +35,75 @@ data = as.data.table(read_csv(
 data$yi.c.FL = FisherZInv(FisherZ(data$fix.like.m)/data$a_acc)
 data$yi.c.FC = FisherZInv(FisherZ(data$fix.count.m)/data$a_acc)
 
-# -----
+# ----------------------------------------------------------------------
 # Meta analyses - visual factors
-# -----
+# ----------------------------------------------------------------------
 
+# -----
 # psychometric meta-analysis and trim and fill analysis of 
 # visual salience
+# -----
 saldata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Salience"], vtype="AV"))
 saldata$vi.c = saldata$vi/saldata$a_acc^2 # compute corrected variances based on artefact multiplier
 salres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=saldata, method="HS")
 salresrobu = robust(salres, cluster = saldata$Authors)
 salTrim = trimfill(salres)
 
+# -----
 # psychometric meta-analysis and trim and fill analysis of 
 # surface size
+# -----
 sizedata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Size"], vtype="AV"))
 sizedata$vi.c = sizedata$vi/sizedata$a_acc^2
 sizeres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=sizedata, method="HS")
 sizeresrobu = robust(sizeres, cluster = sizedata$Authors)
 sizeTrim = trimfill(sizeres)
 
+# -----
 # psychometric meta-analysis and trim and fill analysis of 
 # left v right position
+# -----
 LRdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "LR.position"], vtype="AV"))
 LRdata$vi.c = LRdata$vi/LRdata$a_acc^2
 LRres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=LRdata, method="HS")
 LRresrobu = robust(LRres, cluster = LRdata$Authors)
 LRTrim = trimfill(LRres)
 
+# -----
 # psychometric meta-analysis and trim and fill analysis of 
 # centrality position
+# -----
 centerdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Center.position"], vtype="AV"))
 centerdata$vi.c = centerdata$vi/centerdata$a_acc^2
 centerres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=centerdata, method="HS")
 centerresrobu = robust(centerres, cluster = centerdata$Authors)
 centerTrim = trimfill(centerres)
 
+# -----
 # psychometric meta-analysis and trim and fill analysis of 
 # set size
+# -----
+
+# preparing data sets
 setdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Setsize"], vtype="AV"))
 setdata$vi.c = setdata$vi/setdata$a_acc^2
-
 setdata_att = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Setsize" & data$Alt.att == "attribute"], vtype="AV"))
 setdata_att$vi.c = setdata_att$vi/setdata_att$a_acc^2
-
 setdata_alt = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Setsize" & data$Alt.att == "alternative"], vtype="AV"))
 setdata_alt$vi.c = setdata_alt$vi/setdata_alt$a_acc^2
 
+# main analyses
 setres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata, method="HS")
 setresrobu = robust(setres, cluster = setdata$Authors)
 setTrim = trimfill(setres)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # set size moderator analysis - effect of attribute vs alternatives
-setmod = rma(yi.c.FC, vi.c, weights=1/vi.c, mods = ~ Alt.att, data=setdata, method="HS") 
+# moderator RVE analysis relies on clubSandwich method see:
+# https://cran.r-project.org/web/packages/clubSandwich/vignettes/meta-analysis-with-CRVE.html
+setmod = rma.mv(yi.c.FC ~ Alt.att, V=vi.c, random = (~ 1|Authors), data=setdata) 
+setmod = coef_test(setmod, vcov = "CR2")
+sandwichModTest(setmod, "moderator_setsize.tex")
 setmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata_att, method="HS") 
 setmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata_alt, method="HS") 
 setmod_attrobu = robust(setmod_att, cluster = setdata_att$Authors)
@@ -96,28 +111,33 @@ setmod_altrobu = robust(setmod_alt, cluster = setdata_alt$Authors)
 setmod_attTrim = trimfill(setmod_att)
 setmod_altTrim = trimfill(setmod_alt)
 
-# -----
+# ----------------------------------------------------------------------
 # Meta analyses - cognitive factors
-# -----
+# ----------------------------------------------------------------------
 
+# -----
 # psychometric meta-analysis and trim and fill analysis of 
 # task instruction 
+# -----
+
+# preparing data
 taskdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Task"], vtype="AV"))
 taskdata$vi.c = taskdata$vi/taskdata$a_acc^2
-
 taskdata_att = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Task" & data$Alt.att == "attribute"], vtype="AV"))
 taskdata_att$vi.c = taskdata_att$vi/taskdata_att$a_acc^2
-
 taskdata_alt = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Task" & data$Alt.att == "alternative"], vtype="AV"))
 taskdata_alt$vi.c = taskdata_alt$vi/taskdata_alt$a_acc^2
 
+# main analyses
 taskres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata, method="HS")
 taskresrobu = robust(taskres, cluster = taskdata$Authors)
 taskTrim = trimfill(taskres)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # task instruction moderator analysis - effect of attribute vs alternative 
-taskmod = rma(yi.c.FC, vi.c, weights=1/vi.c, mods = ~ Alt.att, data=taskdata, method="HS")
+taskmod = rma.mv(yi.c.FC ~ Alt.att, V=vi.c, random = (~ 1|Authors), data=taskdata) 
+taskmod = coef_test(taskmod, vcov = "CR2")
+sandwichModTest(taskmod, "moderator_task.tex")
 taskmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata_att, method="HS")
 taskmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata_alt, method="HS")
 taskmod_attrobu = robust(taskmod_att, cluster = taskdata_att$Authors)
@@ -125,24 +145,29 @@ taskmod_altrobu = robust(taskmod_alt, cluster = taskdata_alt$Authors)
 taskmod_altTrim = trimfill(taskmod_alt)
 taskmod_attTrim = trimfill(taskmod_att)
 
+# -----
 # psychometric meta-analysis and trim and fill analysis of 
 # preferential viewing
+# -----
+
+# preparing data
 prefdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Pref.view"], vtype="AV"))
 prefdata$vi.c = prefdata$vi/prefdata$a_acc^2
-
 prefdata_att = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Pref.view" & data$Alt.att == "attribute"], vtype="AV"))
 prefdata_att$vi.c = prefdata_att$vi/prefdata_att$a_acc^2
-
 prefdata_alt = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Pref.view" & data$Alt.att == "alternative"], vtype="AV"))
 prefdata_alt$vi.c = prefdata_alt$vi/prefdata_alt$a_acc^2
 
+# main analyses
 prefres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata, method="HS")
 prefresrobu = robust(prefres, cluster = prefdata$Authors)
 prefTrim = trimfill(prefres)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # preferential viewing moderator analysis - effect of alternative vs attribute 
-prefmod = rma(yi.c.FC, vi.c, weights=1/vi.c, mods = ~ Alt.att, data=prefdata, method="HS")
+prefmod = rma.mv(yi.c.FC ~ Alt.att, V=vi.c, random = (~ 1|Authors), data=prefdata) 
+prefmod = coef_test(prefmod, vcov = "CR2")
+sandwichModTest(prefmod, "moderator_pref.tex")
 prefmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata_att, method="HS")
 prefmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata_alt, method="HS")
 prefmod_attrobu = robust(prefmod_att, cluster = prefdata_att$Authors)
@@ -150,8 +175,10 @@ prefmod_altrobu = robust(prefmod_alt, cluster = prefdata_alt$Authors)
 prefmod_attTrim = trimfill(prefmod_att)
 prefmod_altTrim = trimfill(prefmod_alt)
 
+# -----
 # psychometric meta-analysis and trim and fill analysis of 
 # choice bias moderator analysis - effect of inferential vs preferential choice
+# -----
 choicedata_mod = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Choice.bias"], vtype="AV"))
 choicedata_mod$vi.c = choicedata_mod$vi/choicedata_mod$a_acc^2
 choicedata_mod$inf_prefmod = ifelse(choicedata_mod$Research.Domain == "Risky Gamble", "preferential", # create inferential vs preferential task moderator variable
@@ -159,7 +186,9 @@ choicedata_mod$inf_prefmod = ifelse(choicedata_mod$Research.Domain == "Risky Gam
                          ifelse(choicedata_mod$Research.Domain == "pref. Non-consumer choice", "preferential",
                          ifelse(choicedata_mod$Research.Domain == "inf. Consumer choice", "inferential",
                          ifelse(choicedata_mod$Research.Domain == "inf. Non-consumer choice", "inferential", NA)))))
-choicemod = rma(yi.c.FC, vi.c, weights=1/vi.c, mods = ~ inf_prefmod, data=choicedata_mod, method="HS")
+choicemod = rma.mv(yi.c.FC ~ inf_prefmod, V=vi.c, random = (~ 1|Authors), data=choicedata_mod) 
+choicemod = coef_test(choicemod, vcov = "CR2")
+sandwichModTest(choicemod, "moderator_choicebias.tex")
 
 # psychometric meta-analysis and trim and fill analysis of 
 # choice bias main analysis (averaging studies with more effect sizes)
@@ -168,9 +197,9 @@ choiceres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=choicedata, method="HS")
 choiceresrobu = robust(choiceres, cluster = choicedata$Authors)
 choiceTrim = trimfill(choiceres)
 
-# -----
+# ----------------------------------------------------------------------
 # Publication bias analysis
-# -----
+# ----------------------------------------------------------------------
 
 # the publicatio analysis performs three tests for the degree of ES inflation due to publication bias
 # the first inflation factor is based on the difference in ES between studies with public grants vs no pub grants
@@ -261,9 +290,10 @@ print(
   file = file.path(tablesDir, "PEESE.tex")
 )
 
-# -----
+# ----------------------------------------------------------------------
 # Main and Moderator results text for manuscript
-# -----
+# ----------------------------------------------------------------------
+
 # rho range
 result <- paste0(
   "$\\rho=", round(salres$b, 3),"$ to $\\rho=", round(choiceres$b, 3), "$"
@@ -275,24 +305,6 @@ result <- paste0(
   "$I^2=", round(salres$I2, 3),"$ to $I^2=", round(prefres$I2, 3), "$"
 )
 cat(result, file = file.path(tablesDir, "I2range.tex"))
-
-# task moderator
-result <- paste0(
-	"$Q_M(1)=", round(taskmod$QM, 3),"$, $p=", round(taskmod$QMp, 3), "$"
-)
-cat(result, file = file.path(tablesDir, "moderator_task.tex"))
-
-# pref moderator
-result <- paste0(
-	"$Q_M(1)=", round(prefmod$QM, 3),"$, $p=", round(prefmod$QMp, 3), "$"
-)
-cat(result, file = file.path(tablesDir, "moderator_pref.tex"))
-
-# choice moderator
-result <- paste0(
-	"$Q_M(1)=", round(choicemod$QM, 3),"$, $p=", round(choicemod$QMp, 3), "$"
-)
-cat(result, file = file.path(tablesDir, "moderator_choicebias.tex"))
 
 # -----
 # Table with main results for manuscript
@@ -315,42 +327,58 @@ extractMain <- function(name, mainres=centerres, data) {
     return(res)
 }
 
-extractTrim <- function(trimres) {
+extractTrim <- function(trimres, mainres) {
+  if(trimres$side == "right"){ # if studies have been filled on the upper side
     res <- c(
-        NA,
-        paste0("(", trimres$k0, ")"),
-        NA,
-        paste0("(", round(coef(summary(trimres))$estimate, 2), ")"),
-        paste0("(", round(coef(summary(trimres))$se, 2), ")"),
-        paste0("(", round(coef(summary(trimres))$zval, 2), ")"),
-        ifelse(coef(summary(trimres))$pval < 0.001, "(<0.001)",
-            paste0("(", round(coef(summary(trimres))$pval, 3), ")")),
-        paste0("(", round(coef(summary(trimres))$ci.lb, 2), ")"),
-        paste0("(", round(coef(summary(trimres))$ci.ub, 2), ")"),
-        NA
+      NA,
+      paste0("(", 0, ")"),
+      NA,
+      paste0("(", round(coef(summary(mainres))$estimate, 2), ")"),
+      paste0("(", round(coef(summary(mainres))$se, 2), ")"),
+      paste0("(", round(summary(mainres)$zval, 2), ")"),
+      ifelse(coef(summary(mainres))$pval < 0.001, "(<0.001)",
+             paste0("(", round(coef(summary(mainres))$pval, 3), ")")),
+      paste0("(", round(coef(summary(mainres))$ci.lb, 2), ")"),
+      paste0("(", round(coef(summary(mainres))$ci.ub, 2), ")"),
+      NA
     )
-    return(res)
+  } else{
+    res <- c(
+      NA,
+      paste0("(", trimres$k0, ")"),
+      NA,
+      paste0("(", round(coef(summary(trimres))$estimate, 2), ")"),
+      paste0("(", round(coef(summary(trimres))$se, 2), ")"),
+      paste0("(", round(coef(summary(trimres))$zval, 2), ")"),
+      ifelse(coef(summary(trimres))$pval < 0.001, "(<0.001)",
+             paste0("(", round(coef(summary(trimres))$pval, 3), ")")),
+      paste0("(", round(coef(summary(trimres))$ci.lb, 2), ")"),
+      paste0("(", round(coef(summary(trimres))$ci.ub, 2), ")"),
+      NA
+    )    
+  }
+    res
 }
 
 mainresults = data.frame(rbind(
   c("\\textbf{Visual factors}", rep(NA, 9)),
   extractMain("Salience",salresrobu,saldata),
-  extractTrim(salTrim),
+  extractTrim(salTrim,salresrobu),
   extractMain("Surface size",sizeresrobu,sizedata),
-  extractTrim(sizeTrim),
+  extractTrim(sizeTrim,sizeresrobu),
   extractMain("Left vs right position",LRresrobu,LRdata),
-  extractTrim(LRTrim),
+  extractTrim(LRTrim,LRresrobu),
   extractMain("Center position",centerresrobu,centerdata),
-  extractTrim(centerTrim),
+  extractTrim(centerTrim,centerresrobu),
   extractMain("Set size",setresrobu,setdata),
-  extractTrim(setTrim),
+  extractTrim(setTrim,setresrobu),
   c("\\textbf{Cognitive factors}", rep(NA, 9)),
   extractMain("Task instructions",taskresrobu,taskdata),
-  extractTrim(taskTrim),
+  extractTrim(taskTrim,taskresrobu),
   extractMain("Preferential viewing",prefresrobu,prefdata),
-  extractTrim(prefTrim),
+  extractTrim(prefTrim,prefresrobu),
   extractMain("Choice bias",choiceresrobu,choicedata),
-  extractTrim(choiceTrim)
+  extractTrim(choiceTrim,choiceresrobu)
 ), stringsAsFactors = FALSE)
 
 # format main results table, e.g. rounding, variable naming etc.
