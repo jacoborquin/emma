@@ -404,7 +404,9 @@ EMresults$'TDT L' = round(tdtmean, digits = 3)
 EMresults$'TDT U' = round(TDT, digits = 3)
 
 # latex version
-tab_caption <- "Main effects expressed as absolute changes in the fixation likelihood, fixation count, and total dwell time."
+tab_caption <- "Main effects expressed as absolute changes in the fixation likelihood, fixation count, and total dwell time.
+                The lower bounds correspond to an average study in the data set while the upper bounds correspond to the absolute 
+                change in eye movement metrics as a consequence of the visual and cognitive factors."
 tab_label <- "tab:em_results"
 tab_note <- paste0("\\hline \n \\multicolumn{8}{p{0.95\\textwidth}}",
                    "{\\scriptsize{\\textit{Note.} 
