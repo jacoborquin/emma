@@ -229,7 +229,7 @@ onecoefTex(FE, "FE.tex") # save coefficient to tex
 PET = lm(fcz ~ sdz + a_acc, weights = 1/varz, data = data) # PET test is sig therefore perfrom PEESE
 oneofmanycoefTex(PET, "PETintext.tex", 2)
 PEESE = lm(fcz ~ varz + a_acc, weights = 1/varz, data = data) # PEESE estimate
-oneofmanycoefTex(PEESE, "PEESEintext.tex", 2)
+oneofmanycoefTex(PEESE, "PEESEintext.tex", 1)
 peeseFactor = round(summary(FE)$coef[1] / summary(PEESE)$coef[1,1], digits = 3) # inflation factor according to PEESE
 cat(paste0("$", peeseFactor, "$"), file = file.path(tablesDir, "peeseFactor.tex"))
 
