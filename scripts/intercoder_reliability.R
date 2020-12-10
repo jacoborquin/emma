@@ -18,7 +18,7 @@
 rm(list = ls())
 
 # import packages and functions
-source("utils.R")
+source("./scripts/utils.R")
 
 # loading data
 coder1 = read_csv(
@@ -27,15 +27,25 @@ coder1 = read_csv(
 coder2 = read_csv(
 	file.path(dataDir, "EMMA_intercoder_reliability_data_2.csv") 
 )
-
+coder3 = read_excel(
+  file.path(dataDir, "EMMA_intercoder_reliability_data_3.xlsx") 
+)
+coder4 = read_excel(
+  file.path(dataDir, "EMMA_ES_data.xlsx") 
+)
 
 # ----------------------------------------------------------------------
 # Processing
 # ----------------------------------------------------------------------
 
-# join coder realiability data
+# join coder realiability data for old data
 ICCdata = left_join(coder1, coder2, by = "Paper")
-# print.data.frame(ICCdata)
+
+# join coder reliability for recoded ES data (revision round 2)
+coder3 = melt(coder3, id.vars = c(2,3,10,11), measure.vars = c(4:7))
+coder4 = melt(coder4, id.vars = c(2,3,10,11), measure.vars = c(4:7))
+ESdata = data.table(merge(coder3, coder4, by = c("Study", "IV", "Research.Domain", "Alt.att", "variable"), all.x = T))
+ESdata = ESdata[is.na(ESdata$value.x) == F & is.na(ESdata$value.y) == F]
 
 # kappa for categorical variables
 DV_kappa = kappa2(ICCdata[,c("DV.x","DV.y")], "unweighted")
@@ -44,7 +54,7 @@ ET_kappa = kappa2(ICCdata[,c("EyeTracker.x","EyeTracker.y")], "unweighted")
 domain_kappa = kappa2(ICCdata[,c("Domain.x","Domain.y")], "unweighted")
 
 # ICC for continuous variables
-ES_ICC = icc(ICCdata[,c("ES.x","ES.y")], model="oneway", type="agreement")
+ES_ICC = icc(ESdata[,c("value.x","value.y")], model="oneway", type="agreement")
 N_ICC = icc(ICCdata[,c("N.x","N.y")], model="oneway", type="agreement")
 
 # paste summary of inter coder reliability for manuscript
