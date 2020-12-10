@@ -227,7 +227,9 @@ cat(paste0("$Q_M(1)=", round(pb$QM, 3),"$, $p=", round(pb$QMp, 3), "$"), file = 
 FE = lm(fcz ~ 1, weights = 1/varz, data = data) # fixed effect estimate of ES
 onecoefTex(FE, "FE.tex") # save coefficient to tex
 PET = lm(fcz ~ sdz + a_acc, weights = 1/varz, data = data) # PET test is sig therefore perfrom PEESE
+oneofmanycoefTex(PET, "PETintext.tex", 2)
 PEESE = lm(fcz ~ varz + a_acc, weights = 1/varz, data = data) # PEESE estimate
+oneofmanycoefTex(PEESE, "PEESEintext.tex", 2)
 peeseFactor = round(summary(FE)$coef[1] / summary(PEESE)$coef[1,1], digits = 3) # inflation factor according to PEESE
 cat(paste0("$", peeseFactor, "$"), file = file.path(tablesDir, "peeseFactor.tex"))
 

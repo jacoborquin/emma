@@ -295,6 +295,18 @@ onecoefTex = function(model, name){
   cat(result, file = file.path(tablesDir, name))
 }
 
+oneofmanycoefTex = function(model, name, coefnum){
+  result <- paste0(
+    "$\\beta=", 
+    round(summary(model)$coef[coefnum, 1], 2), 
+    "$, $SE=", 
+    round(summary(model)$coef[coefnum, 2], 2), 
+    "$, ", 
+    ifelse(round(summary(model)$coef[coefnum, 4], 2) == 0, "$p< 0.001$", paste0("$p=", round(summary(model)$coef[coefnum, 4], 2),"$"))
+  )
+  cat(result, file = file.path(tablesDir, name))
+}
+
 twocoefTex = function(model, name){
   result <- paste0(
     "$\\beta_{0}=", 
