@@ -8,7 +8,7 @@
 % Preamble
 % --------------------------------------------------------------
 
-\documentclass[english,natbib,man,floatsintext]{apa6}
+\documentclass[english,natbib,man,floatsintext,mask]{apa6}
 % \usepackage{arxiv}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc} % allow utf-8 input
@@ -109,24 +109,19 @@
 % A meta-analysis of eye movements in decision making
 % The visual environment influences attention during decision making
 % The visual environment, attention and decision making
-% A meta analysis of influence of the visual environement factors on  attention in decision making
+% A meta analysis of influence of the visual environment factors on  attention in decision making
 
-%%% arxiv style
-
-% \author{
-%   Jacob L. Orquin\thanks{Correspondence concerning this article should be addressed to Jacob L. Orquin, Department of Management/MAPP, Aarhus University, Fuglesangs alle 4, 8210 Aarhus V - Denmark. E-mail: jalo@mgmt.au.dk. Data and scripts are available at: \url{https://osf.io/buk7p/}. This research was supported by the Independent Research Fund Denmark, grant number: 8046-00014A. The authors thank Martin Meissner, Tobias Otterbring, Sonja Perkovic, and Valdimar Sigurdsson for feedback on earlier versions of the manuscript.}, Erik S. Lahm, Hrvoje Stojić
-% }
-
-%%% APA style
 
 \shorttitle{The visual environment, attention and decision making}
 
-%\threeauthors{Jacob L. Orquin*}{Erik S. Lahm}{Hrvoje Stojić}
-\threeaffiliations{Public significance statement\\
-Our decisions often depend on how we attend to visual information in the environment. Contrary to many theories, we show that visual features in the environment that are irrelevant to our decisions have a large effect on our attention. Policy makers and companies can leverage these features to guide our attention to information that enhances welfare supporting choices.}{}{}
-%\threeaffiliations{Aarhus University and Reykjavik University}{Aarhus University}{University College London}
+\threeauthors{Jacob L. Orquin*}{Erik S. Lahm}{Hrvoje Stojić}
+\threeaffiliations{Aarhus University and Reykjavik University}{Aarhus University}{University College London}
 
-%\authornote{Jacob L. Orquin and Erik S. Lahm, Department of Management/MAPP, Aarhus University, Fuglesangs alle 4, 8210 Aarhus V - Denmark; Hrvoje Stojić, Max Planck UCL Centre for Computational Psychiatry and Ageing Research, University College London, 10-12 Russell Square, London, WC1B 5EH, United Kingdom. The authors thank Martin Meissner, Tobias Otterbring, Sonja Perković, and Valdimar Sigurdsson. This research was supported by the Independent Research Fund Denmark, grant number: 8046-00014A and the Lundbeckfonden, grant number R281-2018-27. *Correspondence concerning this article should be addressed to Jacob L. Orquin, Department of Management/MAPP, Aarhus University, Fuglesangs alle 4, 8210 Aarhus V - Denmark. E-mail: jalo@mgmt.au.dk.}
+%This description should be included within the manuscript on the abstract/keywords page.
+
+%\authornote{Jacob L. Orquin and Erik S. Lahm, Department of Management/MAPP, Aarhus University, Fuglesangs alle 4, 8210 Aarhus V - Denmark; Hrvoje Stojić, Max Planck UCL Centre for Computational Psychiatry and Ageing Research, University College London, 10-12 Russell Square, London, WC1B 5EH, United Kingdom. The authors thank Martin Meissner, Tobias Otterbring, Sonja Perković, and Valdimar Sigurdsson. This research was supported by the Independent Research Fund Denmark, grant number: 8046-00014A and the Lundbeckfonden, grant number R281-2018-27.\par
+%Data Availability Statement. The data and code reported in the manuscript is made available at Open Science Framework at \url{https://osf.io/buk7p/} \citep{orquin2020osfa}. \par
+%*Correspondence concerning this article should be addressed to Jacob L. Orquin, Department of Management/MAPP, Aarhus University, Fuglesangs alle 4, 8210 Aarhus V - Denmark. E-mail: jalo@mgmt.au.dk.}
 
 %\rightheader{Orquin, Lahm, Stojic}
 %\leftheader{The visual environment, attention and decision making}
@@ -136,277 +131,40 @@ Our decisions often depend on how we attend to visual information in the environ
 % Abstract
 % ---------------------------------------------------------
 
-
-\abstract{% NHB limit: 150 words
+\abstract{% limit: 250 words
 Visual attention is fundamental to most everyday decisions, and governments and companies spend vast resources on competing for it. In natural environments choice options differ on a variety of visual factors, such as salience, position or surface size. However, most decision theories ignore such visual factors, focusing on cognitive factors such as preferences as determinants of attention. To provide a systematic review of how the visual environment guides attention we meta-analyze studies on eye movements in decision making. Results show that cognitive factors indeed matter the most to attention. However, visual factors like surface size, positioning, and set size have sizable effects on attention, independently of cognitive factors. While much research is concentrated on salience, we show that it has little or no effect on attention. Understanding real world decision making will require integration of both cognitive and visual factors in future theories of attention and decision making.
 }
+% limit: 5 keywords
+\keywords{eye movements, decision making, meta-analysis, visual environment, cognitive factors} 
 
-\keywords{eye movements, decision making, meta-analysis, visual environment, visual factors, cognitive factors} 
 
+% ---------------------------------------------------------
+% Text
+% ---------------------------------------------------------
 
 \begin{document}
 % \raggedbottom
 
-
-% -----------------------------------------------------------------------------
-% Review
-% -----------------------------------------------------------------------------
-
-\singlespacing
-\begin{center}
-
-{\Large \textbf{REVIEWS FOR:}}
-
-\vspace{1cm}
-
-{\Large \textbf{The visual environment, attention and decision making}}
-
-\vspace{5mm}
-
-% \textbf{authors...}
-
-\vspace{1cm}
-\end{center}
-
-
-% -----
-% Editor
-% -----
-
-\section{Editor}
-\label{rev:editor}
-
-\subsection{Overall evaluation}
-
-% by using square brackets we can optionally create comment label that we can use later on
-\com[com-editor]{Thank you for submitting "The visual environment, attention and decision making" for review and consideration for publication in Psychological Bulletin. The editorial board has completed its review. In addition to reading the manuscript myself, I was fortunate to have received reviews from three outstanding experts in the field. Their feedback is detailed and constructive, and I am grateful to them for their time and thoughtfulness.\\
-\\
-As you will see from the reviews, most of us noted that this work was conducted in a generally thorough manner and we all generally got a sense that it has some potential as a contribution to the literature. However, there are also several issues that require consideration. I will now summarize points that I viewed as central that were raised by the reviewers, provide some feedback of my own along the way, and conclude with my recommendation.\\
-\\
-My impression was that Reviewer 1 was concerned that the ultimate impact of this work might be unclear because, in its current form, it would only capture the interest of researchers who are already aware of the issues it raises. As such, it remains possible that progress might occur without requiring the publication of this meta-analysis. In my view, this mitigates the potential contribution of this work and would require some efforts on your part to appeal to a broader audience.\\ 
-\\
-Reviewer 2 noted that there were issues with the structure of the paper that affected its readability. I agree that the method should come immediately after the introduction, as is standard for APA journals.\\ 
-\\
-Reviewer 2 also raised the need to discuss more deeply the role of visual factors to clarify this paper’s potential impact.\\ 
-\\
-Finally, Reviewer 3 raised a number of critical issues that would clarify the scope and theoretical contribution of this work.\\
-\\
-Based on these brief highlights, I would expect that the reviewers’ comments can be addressed but some of them will require tight arguments, especially when addressing concerns relevant to the impact of this paper. Therefore, I invite you to submit a revision that addresses all the the points raised by the reviewers. Please let me know within a week if you will be sending us a revision by replying to this message. If you chose to resubmit, please do so within 3 months of receipt of this letter.\\
-\\
-If you decide to prepare a revision, please also address the following technical points: 
-\begin{itemize}
-    \item The literature search was conducted over 2 years ago. You should consider updating the sample.
-    \item You state on page 9 that “some experiments operationalized more than one factor”, suggesting that not all your effect sizes were independent. If that is the case, multilevel analysis with robust variance estimates should be considered to handle the dependence in effect sizes and sampling variances. It is likely that the Hunter \& Schmidt correction could still be applied in this context (see Johnson et al, 1995: https://doi.org/10.1037/0021-9010.80.1.94). In any case, this point requires clarification and possible changes to your analysis.
-    \item Like reviewer 2, I would like to see more clarity about the publication bias analysis. In addition, trim and fill is not a means to investigate the presence of a publication bias but more a way to correct for it when it is identified. “Eyeballing” the funnel plots as you did is not valid either. A more thorough approach should be considered. For a summary of available approaches, see Table 2 in van Aert et al. (2019; \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0215052}).
-    \item You should avoid presenting the same material both in tables and in the text to streamline the paper.
-    \item For the sake of reproducibility, please state in the paper which R package(s) you used in your data analyses.
-    \item Also, please add a Public Significance Statement below the abstract in the masked manuscript file. \url{http://www.apa.org/pubs/authors/guidance.aspx}
-\end{itemize}
-}
-
-We thank the editor and the reviewers for the comprehensive evaluation of our manuscript and the encouraging comments. We address each point individually below. In the revised manuscript we now introduced line numbers and for each comment we refer to a line in the document where we introduced a major change. To facilitate the revision we also marked major changes in the main text with red color. Besides the changes made to respond to reviewers' comments we worked on improving the quality of exposition throughout the manuscript.
-
-
-% -----
-% Reviewer 1
-% -----
-
-\section{Reviewer 1}
-\label{rev:r1}
-
-\subsection{Overall evaluation}
-\label{rev:r1sum}
-
-\com[com-r1-eval]{The paper is concerned with the role that aspects of the visual environment (e.g., salience, position, surface size), as opposed to internal, cognitive factors (e.g., heuristics and biases), play in decision making. Past decision-making research that employed visual displays focused on cognitive processes that followed encoding of the experimental stimuli, and ignored possible effects driven by features of the visual environment. Though this strategy no doubt simplified the problem space for these researchers by, in effect, controlling the broader context of stimulus input, the authors claim that ignoring visual features of the environment that are inevitably present in real-work circumstances has compromised the external validity of such work. The authors present a meta-analysis to support their claim that complete models of attention and decision making must include some accounting of the visual environment, and the work of the eyes.} 
-
-We thank the reviewer for the concise summary of our study and useful suggestions for improving the manuscript. We address each of the comments below. In the revised manuscript we now introduced line numbers and for each comment we refer to a line in the document where we introduced a major change. To facilitate the revision we also marked major changes in the main text with red color.
-
-
-\subsection{Comments}
-
-\com[com-r1-XX]{There's much to like in the approach the authors are taking. In effect, they are calling out the decision-making field for ignoring the world of bottom-up visual processes in favor of a focus on the (perhaps) more interesting top-down cognitive processes. That is, decision making theorists have taken an "all-things-being-equal" attitude toward the visual environment from which decision-related stimuli are sampled, but in the real world all visual scenes are not equal, so decision theorists need to model eye movements, stimulus-driven capture of attention, and other vision-based variables if they want complete models. The overall contribution of the paper is as a call for the field to integrate cognitive and visual processes in models of attention and decision making.}
-
-some answer...
-
-\quotetext{quoting directly exact text, i.e. change made in the main text} 
-
-
-\com[com-r1-XX]{The structural aspects of the meta-analysis are sound. The effects are clear, if not impressive. The paper is well-written and should be accessible to a non-specialist audience.}
-
-blah blah
-
-
-\com[com-r1-XX]{Overall, however, I'm somewhat mixed about this paper. On the plus side, the authors have revealed that an important branch of cognitive science has overlooked systematic sources of variance that could be - and should be - modeled. Moreover, their analysis yields some fairly specific directions for future research. On the minus side, it's not clear what the ultimate impact of this paper will be. In many cognitive departments vision science anchors one end of the processing spectrum while higher-level areas such as decision-making anchor a distant, opposite end. Those who are most likely to respond to this call are those already aware of the situation. Which leads to a related concern: Is this call, in fact, needed for progress to be made? While reading this ms I found myself occasionally thinking "Right - well then why don't you go ahead and just do the studies that you claim should be done?"}
-
-blah blah
-
-
-\com[com-r1-XX]{There are reasonable responses to these questions, of course, and overall, the strengths of this ms outweigh the weaknesses. For those reasons I'm favorably inclined toward publication.}
-
-blah blah
-
-
-
-% -----
-% Reviewer 2
-% -----
-
-\section{Reviewer 2}
-\label{rev:r2}
-
-\subsection{Overall evaluation}
-\label{rev:r2sum}
-
-\com[com-r2-eval]{Thank you for submitting your paper on the role of visual attention in decision-making processes. I read the paper with a great interest. I agree with the authors that it is important to gather more insights into the role of visual attention in decision making and better understand the different factors that drive attention, particularly across disciplines. There are however some elements of the paper that could be further improved and some points that require clarification. Below I discuss major problems and auxiliary issues.} 
-
-
-\subsection{Comments}
-
-\com[com-r2-XX]{First, the structure of the paper is quite surprising and makes following the authors' reasoning difficult. Including the method after the results and discussion forces the reader to search for information needed to understand what the authors did. Please change that.}
-
-easy
-
-
-\com[com-r2-XX]{I also think that the authors should elaborate on the theoretical framework behind their study. While the authors provided a rather thorough literature review in the introduction, I missed a deeper discussion on the effects of visual factors, which would substantiate the relevance of the study.}
-
-Easy
-
-
-\com[com-r2-XX]{I believe that the authors should elaborate on the visual factors more and earlier in the manuscript. I think 'silence' should be better defined, especially since the authors say in the discussion that "there are potentially other less researched visual factors not covered in our study that influence eye movements, e.g. motion or sudden onsets are known to capture eye movements involuntarily," but at the same time they claim that motion was coded as an element of silence: "We coded studies as salience if they operationalized one or more of the known dimensions of salience such as color, edge density, contrast, or motion."}
-
-Easy
-
-\com[com-r2-XX]{Relatedly, it is not clear what the authors mean by 'visual complexity,' which seems to be more than the number of alternatives (see e.g. Pieters, Wedel, \& Batra, 2010).}
-
-Easy
-
-
-\com[com-r2-XX]{I think that when defying the studied factors, the authors should also explain what the relationship between silence and the other factors, such as surface size, is.}
-
-Easy
-
-
-\com[com-r2-XX]{Finally, it is not entirely clear why the authors decided to study the chosen factors - that should be justified, especially since the authors suggest there are more relevant factors that can attract attention and affect decisions.}
-
-Easy
-
-
-\com[com-r2-XX]{In a similar vein, the authors should operationalize decision making at an earlier stage to help the reader understand the research inclusion criteria.}
-
-Easy
-
-
-\com[com-r2-XX]{Could you also discuss the publication bias a) before presenting the results and b) more in depth? Why it occurs in this type of studies and what the plausible consequences are, as well as how the adjustment improved the analysis?}
-
-Easy
-
-
-\com[com-r2-XX]{The authors noted that there are many discrepancies in the literature when it comes to analyzing and reporting eye-tracking data. I agree. Researchers focus on different metrics. Also, since eye-tracking data are often skewed and zero inflated, different authors introduce different methods of analysis but also various transformations (such as logs, etc.), hence, the reported results are difficult to compare. How did the authors account for that? Was the introduced correction enough?}
-
-The answer is twofold. First, the ES should not depend on analysis method or transformations. Second getting raw EM data would help the reader compare across studies.
-
-
-\com[com-r2-XX]{Can you really claim that no restrictions on language were imposed, since the search terms were in English?}
-
-Easy
-
-
-\com[com-r2-XX]{On p 24. The authors state that they "excluded studies where participants were selected based on clinical diagnosis or specific socio-demographic traits e.g., visual disorders, age-related visual diseases, age restrictions such as adolescents or infants." What would be the reasons for removing certain age groups and what are the possible consequences? Were the samples that were not removed representative or were these mostly student samples? Could you share more information about the studied populations?}
-
-Easy
-
-
-\com[com-r2-XX]{I am also curious why the authors decided to focus on count measures rather than time, such as dwell time? The authors explain why they did not want fixation duration. Is it due to the ease of interpretation of count variables?}
-
-Easy
-
-
-\com[com-r2-XX]{Could you explain where such low ICC for the effect size comes from?}
-
-The ICC will hopefully get better when we code the more recent papers.
-
-
-\com[com-r2-XX]{I hope my comments will help the authors move their work forward.}
-
-
-
-% -----
-% Reviewer 3
-% -----
-
-\section{Reviewer 3}
-\label{rev:r3}
-
-\subsection{Overall evaluation}
-\label{rev:r3sum}
-
-\com[com-r3-eval]{In the paper, the authors present a meta-analysis on factors influencing attention in decision making. The paper is overall very well done, makes several important methodological contributions and is very well written. Technically, this paper is also extremely sophisticated and I did not spot any substantial weakness concerning methodology.\\
-\\
-Overall, the paper has the potential to make a substantial contribution to the field and to be published in Psychological Bulletin after same revisions. In the revision, several issues should be addressed that mainly concern issues of clarification, presentation and discussion.} 
-
-
-\subsection{Comments}
-
-\com[com-r3-XX]{The title and some other parts of the text are slightly misleading in that the induce higher expectations to which the paper cannot fully live up. It should be more clearly stated that the investigation is (only) concerned with effects on attention in choices and not with the - from a decision theoretic perspective - perhaps more important link between attention and choice. This also should be acknowledged in the discussion and other parts of the paper might be toned down a bit (e.g. policy significance statement). Most of the mentioned models (and other most prominent models in choice) do not really care overly much about attention and their predictions for it. They want to predict choices, sometimes also choice processes - attention is sometimes used to test process assumptions. This should be clarified. Also it should be acknowledged that from all we know so far the causal effects of attention on choice are tiny to not existing - at least if the studies use proper controls (e.g., Ghaffari \& Fiedler, 2018). It is still important to understand attention in choice processes but it also has to be stated that we can predict choice very well and close to choice reliability by our standard models without taking any attention effects into account (e.g., Glöckner \& Pachur, 2012; Glöckner, Hilbig \& Jekel, 2014). In the eye-tracking study contained in Glöckner et al. (2014), for example, there was a huge effect of environment on choice but no effect on attention. Hence, attention seems to often not even mediate effects of context factors on choice. This should be acknowledged as well. Still, it is certainly important to understand effects on attention in choice processes but these effects have to be discussed more in relation to the core aims of the models (predicting choice).}
-
-Revise into somewhat and cite Andi Glöckner a lot 
-
-\com[com-r3-XX]{One problems with salience in the context of choice is that people deliberately try to counteract it since they might become aware of the manipulation intention, or they want to be rational and look at all information (at least once). At least in the simple standard paradigms, people mainly look up all information and then show double checking, which not necessarily have to do with the core of the decision process. It should be acknowledged that (a) it is therefore not surprising that effects of salience on attention are smaller in this context than in purely visual paradigms; (b) that people mainly look up all pieces of information at least once (the authors could provide a measure for this: the average dichotomous fixation rates (yes / no)). When just looking at the total number of fixations as it is done in the current analysis, (c) it is also not entirely clear what the attention tells us about the process since it often involves double checking and qualitatively different kinds of processes - sometimes involving long fixations indicating deliberate processes and sometimes shorter ones indicating scanning and double-checking even under typical deliberation instructions (e.g., Horstmann et al., 2009). Of course, the authors show a high correlation between various measures but it should be acknowledged that important process details are most likely missed.}
-
-Get raw data to address point b) and address the rest in the discussion. Relatively easy
-
-\com[com-r3-XX]{The left vs. right distinction is a bit oversimplified since these effects mainly concern temporal dynamics and not an overall effect: people typically start reading left and then move to right and later to the emerging favored option (e.g., Fiedler \& Glöckner, 2011). Hence, a null effect is not overly surprising. Arguably, sometimes primacy or coherence effects influence choice processes and therefore the gaze-cascade effect might lead to a left looking bias overall - as found here. It is ok to report the effect as it is now but it should be acknowledged that this is a simplification and that there are reasonable process assumptions that might explain these effects relatively easily also within established models.}
-
-Easy 
-
-
-\com[com-r3-XX]{I did not fully understand what the set size manipulation effect size means. This should be better explained. Describing an example study would be helpful - also for the manipulation of central position. Is it that fixations to EACH option reduces if more options are shown simultaneously on the screen? Since set size is numerical this could also be analyzed using absolute numbers of options (was this done here or just compared small vs. large?) -it would be great to give a bit more details; also to understand why for example Orquin found no effects at all whereas others found huge effects. I expect this not to be random.}
-
-Probably easy 
-
-
-\com[com-r3-XX]{I highly appreciate that the data is shared, but the provided data is on a very high level aggregated and descriptions for the variables are missing (code book). In the current form, the data cannot really be used for further questions that researchers (like I) might have to understand what is going on. This should be improved. If available less aggregated or if possible even raw data should be provided.}
-
-I think this means two things:
-    • Provide a codebook (easy, 1 hour tops)
-    • Code raw data in all papers, which means extract average fix likelihood, count etc per condition per study (NOT EASY, maybe a week or more)
-
-\com[com-r3-XX]{I found it unfortunate, that the gaze cascade effect is renamed in choice bias. This implies - due to conventional use - that there is a bias in choice, but this is not what is meant by it in the current context. The authors might consider using a different term or at least to add in the main tables and figures are reference to the classic term. Recently, a process model with an even more detailed prediction concerning information search, the attraction search effect, has been proposed and empirically validated (Jekel et al., 2018). This should be briefly discussed as well in the GD as current model development.}
-
-Easy 
-
-
-\com[com-r3-XX]{I was missing in the GD a brief discussion concerning the link between models for perception (e.g. McClelland / Biederman / Kintsch etc.) and choice - mentioning classic interactive activation models. Some models try to bridge the gap by using essentially the same processes in both contexts, while other assume very different processes in higher cognition (i.e. decision making). A brief discussion would be warranted given the broad readership of this journal.}
-
-Easy: cite Andi and his favorite literature
-
-
-\clearpage
-
-
-% -------------------------------------------------------
-% Introduction
-% -------------------------------------------------------
-
-% part necessary to accommodate differences between review section and main text
-\doublespacing
-\setcounter{page}{1}
-\setcounter{secnumdepth}{0}
-\linenumbers
+\input{reviews}
 
 % original part
+\linenumbers
 \maketitle
+
+\section{\normalfont\normalsize Public significance statement}
+\noindent Our decisions often depend on how we attend to visual information in the environment. Contrary to many theories, we show that visual features in the environment that are irrelevant to our decisions have a large effect on our attention. Policy makers and companies can leverage these features to guide our attention to information that enhances welfare supporting choices.\par
+\newpage
 
 \input{introduction}
 \input{method}
 \input{results}
 \input{discussion}
 
-\subsection{Data availability}
-The data, code used for analyzing the data and other project related files are available at: \url{https://osf.io/buk7p} %\citep{orquin2020osfa}.
 
 %\subsection{Author contributions}
+
 %JLO and ESL developed the study concept. ESL performed the literature search. JLO and ESL coded the studies. JLO and HS performed the analyses. JLO, ESL, and HS wrote the manuscript. 
+
 
 % -----------------------------------------------------------
 % Bibliography
@@ -416,6 +174,12 @@ The data, code used for analyzing the data and other project related files are a
 \bibliography{references.bib}
 \clearpage
 
+
+% -----------------------------------------------------------
+% Appendix
+% -----------------------------------------------------------
+
+\appendix
 \input{appendix}
 
 \end{document}
