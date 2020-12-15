@@ -69,6 +69,6 @@ ESdata = data.table(merge(coder3, coder4, by = c("Study", "IV", "Research.Domain
 ESdata = ESdata[is.na(ESdata$value.x) == F & is.na(ESdata$value.y) == F]
 ES_ICC2 = icc(ESdata[,c("value.x","value.y")], model="oneway", type="agreement")
 
-result <- paste0("$\\textrm{ICC} = ", round(ES_ICC2$value, 3),"$,")
+result <- paste0("$\\textrm{ICC} = ", round(ES_ICC2$value, 3),"$")
 cat(result, file = file.path(tablesDir, "intercoder_reliability2.tex"))
 
