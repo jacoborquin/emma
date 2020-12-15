@@ -36,6 +36,15 @@ data = as.data.table(read_csv(
 # Prepare data
 # ----
 
+# count multiple metric studies
+multiple = melt(data, id.vars = c("Study", "IV", "Research.Domain", "Alt.att"), measure.vars = c(5:8))
+multiple = multiple[is.na(multiple$value) == F]
+multiple = multiple[, list(N = NROW(value)), by = c("Study", "IV", "Research.Domain", "Alt.att")]
+num = NROW(multiple$N[multiple$N > 1])
+den = NROW(multiple$N)
+multipleMetricPercent = paste0("$", round(num/den, digits = 3), "$")
+cat(multipleMetricPercent, file = file.path(tablesDir, "multipleMetricPercent.tex"))
+
 # correction factor for fixation count to fixation likelihood and vice versa
 TEMP = data[, fix.count:N]
 TEMP = TEMP[TEMP$fix.count != "NA" & TEMP$fix.like != "NA"]
