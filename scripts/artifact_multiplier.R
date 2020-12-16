@@ -13,14 +13,14 @@
 
 # specify your path here if you want to use this script interactively, 
 # and uncomment the line:
-# setwd("/home/hstojic/Research/project/attention_meta/scripts")
+# setwd("/home/hstojic/research/project/attention_meta/scripts")
 # setwd("/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma/scripts")
 
 # housekeeping
 rm(list = ls())
 
 # import packages and functions
-source("./scripts/utils.R")
+source("utils.R")
 
 # loading data
 data = as.data.table(read_excel(

@@ -11,10 +11,6 @@
 # ----------------------------------------------------------------------
 
 packages <- c(
-    # 'reshape2', 
-    # 'scales', 
-    # 'gtable', 
-    # 'directlabels', 'ggrepel', 
     'tidyverse', 'extrafont', 'gridExtra', 
     'xtable', 'stargazer',
     'readxl',
@@ -24,9 +20,7 @@ packages <- c(
     'metafor',  # meta analysis
     'DescTools',  # Fisher transformations
     'cowplot',  # combining plots
-    # 'jpeg',
     'irr'  # interrater reliability analysis
-
 )
 lapply(packages, library, character.only = TRUE)
 
@@ -34,8 +28,11 @@ lapply(packages, library, character.only = TRUE)
 # ----------------------------------------------------------------------
 # Variables 
 # ----------------------------------------------------------------------
+
 # set the root directory for the project here:
-root = "/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma"
+# root = "/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma"
+# root = "/home/hstojic/research/project/attention_meta"
+root = ".."
 
 # directory paths
 figsDir <- file.path(root, "figs")

@@ -11,14 +11,14 @@
 
 # specify your path here if you want to use this script interactively, 
 # and uncomment the line:
-# setwd("/home/hstojic/Research/project/attention_meta/scripts")
+# setwd("/home/hstojic/research/project/attention_meta/scripts")
 # setwd("/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma/scripts")
 
 # housekeeping
 rm(list = ls())
 
 # import packages and functions
-source("./scripts/utils.R")
+source("utils.R")
 
 # loading data
 data = as.data.table(read_csv(
@@ -125,7 +125,7 @@ prefmod_altTrim = trimfill(prefmod_alt)
 prefmod_attTrim = trimfill(prefmod_att)
 
 # psychometric meta-analysis and trim and fill analysis of 
-# choice bias moderator analysis - effect of inferential vs preferential choice
+# choice-gaze effect moderator analysis - effect of inferential vs preferential choice
 choicedata_mod = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Choice.bias"], vtype="AV"))
 choicedata_mod$vi.c = choicedata_mod$vi/choicedata_mod$a_acc^2
 choicedata_mod$inf_prefmod = ifelse(choicedata_mod$Research.Domain == "Risky Gamble", "preferential", # create inferential vs preferential task moderator variable
@@ -136,7 +136,7 @@ choicedata_mod$inf_prefmod = ifelse(choicedata_mod$Research.Domain == "Risky Gam
 choicemod = rma(yi.c.FC, vi.c, weights=1/vi.c, mods = ~ inf_prefmod, data=choicedata_mod, method="HS")
 
 # psychometric meta-analysis and trim and fill analysis of 
-# choice bias main analysis (averaging studies with more effect sizes)
+# choice-gaze effect main analysis (averaging studies with more effect sizes)
 choicedata = choicedata_mod[, list(yi.c.FC = mean(yi.c.FC), vi.c = mean(vi.c), IV = unique(IV), N = unique(N)), by = Study]
 choiceres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=choicedata, method="HS")
 choiceresrobu = robust(choiceres, cluster = choicedata$Authors)
@@ -395,7 +395,7 @@ mainresults = data.frame(rbind(
   extractTrim(taskTrim),
   extractMain("Preferential viewing",prefres,prefdata),
   extractTrim(prefTrim),
-  extractMain("Choice bias",choiceres,choicedata),
+  extractMain("Choice-gaze effect",choiceres,choicedata),
   extractTrim(choiceTrim)
 ), stringsAsFactors = FALSE)
 
@@ -491,7 +491,7 @@ print(
 )
 
 # -----
-# Test of task instruction vs preferential viewing vs choice bias 
+# Test of task instruction vs preferential viewing vs choice-gaze effect 
 # -----
 
 # perform wald test to compute z score difference between effect sizes
@@ -570,7 +570,7 @@ centerplot = genForest(centerres,centerdata,"Center.position","Center position",
 setplot = genForest(setres,setdata,"Setsize", "Set size", "yi.c.FC")
 taskplot = genForest(taskres,taskdata,"Task", "Task instructions", "yi.c.FC")
 prefplot = genForest(prefres,prefdata,"Pref.view", "Preferential viewing", "yi.c.FC")
-choiceplot = genForest(choiceres,choicedata,"Choice.bias","Choice bias", "yi.c.FC")
+choiceplot = genForest(choiceres,choicedata,"Choice.bias","Choice-gaze effect", "yi.c.FC")
 
 # att vs alt
 setplot_alt = genForest(setmod_alt,setdata[Alt.att == "alternative"],"Setsize", "Set size - alternative", "yi.c.FC")
@@ -629,7 +629,7 @@ taskfunnel_att = genFunnel(taskmod_att,taskdata[taskdata$Alt.att == "attribute"]
 preffunnel = genFunnel(prefres,prefdata,"yi.c.FC", "Preferential viewing")
 preffunnel_alt = genFunnel(prefmod_alt,prefdata[prefdata$Alt.att == "alternative"],"yi.c.FC", "Preferential viewing - alternative")
 preffunnel_att = genFunnel(prefmod_att,prefdata[prefdata$Alt.att == "attribute"],"yi.c.FC", "Preferential viewing - attribute")
-choicefunnel = genFunnel(choiceres,choicedata,"yi.c.FC", "Choice bias")
+choicefunnel = genFunnel(choiceres,choicedata,"yi.c.FC", "Choice-gaze effect")
 
 # arrange funnel plots in panel plot - main ones
 funnelpanel = plot_grid(

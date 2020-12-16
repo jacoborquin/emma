@@ -7,11 +7,16 @@
 # Loading data
 # ----------------------------------------------------------------------
 
+# specify your path here if you want to use this script interactively, 
+# and uncomment the line:
+# setwd("/home/hstojic/research/project/attention_meta/scripts")
+# setwd("/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma/scripts")
+
 # housekeeping
 rm(list = ls())
 
 # import packages and functions
-source("./scripts/utils.R")
+source("utils.R")
 
 # loading data
 rawdata = as.data.table(read_excel(
@@ -92,7 +97,7 @@ ESdata = as.data.table(read_excel(
 # rename variables and IV levels in ESdata
 ESdata$IV = ifelse(ESdata$IV == "Pref.view", "Preferential viewing",
                    ifelse(ESdata$IV == "Center.position", "Central position",
-                          ifelse(ESdata$IV == "Choice.bias", "Choice bias",
+                          ifelse(ESdata$IV == "Choice.bias", "Choice-gaze effect",
                                  ifelse(ESdata$IV == "LR.position", "Left vs right position",
                                         ifelse(ESdata$IV == "Task", "Task instruction",
                                                ifelse(ESdata$IV == "Size", "Surface size",
@@ -173,12 +178,12 @@ EMwide = EMwide[, - c("value.x", "value.y")]
 #     facet_grid(~IV)+
 #     mytheme
 # }
-# 
+
 # flplot = EMplot(EMwide[EMwide$DV == "Fixation likelihood"], DV = "Fixation likelihood")
 # fcplot = EMplot(EMwide[EMwide$DV == "Fixation count"], DV = "Fixation count")
 # TDTplot = EMplot(EMwide[EMwide$DV == "Total dwell time"], DV = "Total dwell time")
 # dcplot = EMplot(EMwide[EMwide$DV == "Dwell count"], DV = "Dwell count")
-# 
+
 # plot_grid(flplot, fcplot, TDTplot, dcplot, nrow = 4)
 
 # ----------------------------------------------------------------------
@@ -373,7 +378,7 @@ logitTransform("Center position", flmodel),
 logitTransform("Set size", flmodel),
 logitTransform("Task instructions", flmodel),
 logitTransform("Preferential viewing", flmodel),
-logitTransform("Choice bias", flmodel))
+logitTransform("Choice-gaze effect", flmodel))
 
 FC = c(logTransform("Salience", fcmodel, fcmeanLog),
 logTransform("Surface size", fcmodel, fcmeanLog),
@@ -382,7 +387,7 @@ logTransform("Center position", fcmodel, fcmeanLog),
 logTransform("Set size", fcmodel, fcmeanLog),
 logTransform("Task instructions", fcmodel, fcmeanLog),
 logTransform("Preferential viewing", fcmodel, fcmeanLog),
-logTransform("Choice bias", fcmodel, fcmeanLog))
+logTransform("Choice-gaze effect", fcmodel, fcmeanLog))
 
 TDT = c(logTransform("Salience", tdtmodel, tdtmeanLog),
 logTransform("Surface size", tdtmodel, tdtmeanLog),
@@ -391,7 +396,7 @@ logTransform("Center position", tdtmodel, tdtmeanLog),
 logTransform("Set size", tdtmodel, tdtmeanLog),
 logTransform("Task instructions", tdtmodel, tdtmeanLog),
 logTransform("Preferential viewing", tdtmodel, tdtmeanLog),
-logTransform("Choice bias", tdtmodel, tdtmeanLog))
+logTransform("Choice-gaze effect", tdtmodel, tdtmeanLog))
 
 EMresults$'FL L' = round(flmean, digits = 3)
 EMresults$'FL U' = round(FL, digits = 3)
