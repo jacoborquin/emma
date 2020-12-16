@@ -95,7 +95,10 @@
 % \par\refstepcounter{paragraph}\paragraphmark{#1}
 
 % marking the changes in the main text
-\newcommand{\chg}[2]{\linelabel{#1}\textcolor{Red}{ #2}} 
+% for hyperlinks, see: https://tex.stackexchange.com/questions/129541/hyperref-and-lineno-always-jumping-to-first-page
+\newcommand{\llabel}[1]{\hypertarget{llineno:#1}{\linelabel{#1}}}
+\renewcommand{\lineref}[1]{\hyperlink{llineno:#1}{\ref*{#1}}}
+\newcommand{\chg}[2]{\llabel{#1}\textcolor{Red}{ #2}} 
 \newcommand{\quotetext}[1]{\vspace{2mm}\noindent \hangindent=-2cm \hangafter=0 ``#1''\vspace{2mm}}
 
 
@@ -103,7 +106,7 @@
 % Title, authors
 % ---------------------------------------------------------
 
-\title{The visual environment and attention in decision making}
+\title{\textcolor{Red}{The visual environment and attention in decision making}}
 
 % Alternatives
 % A meta-analysis of eye movements in decision making
@@ -132,7 +135,7 @@
 % ---------------------------------------------------------
 
 \abstract{% limit: 250 words
-Visual attention is fundamental to most everyday decisions, and governments and companies spend vast resources on competing for it. In natural environments choice options differ on a variety of visual factors, such as salience, position or surface size. However, most decision theories ignore such visual factors, focusing on cognitive factors such as preferences as determinants of attention. To provide a systematic review of how the visual environment guides attention we meta-analyze studies on eye movements in decision making. Results show that cognitive factors indeed matter the most to attention. However, visual factors like surface size, positioning, and set size have sizable effects on attention, independently of cognitive factors. While much research is concentrated on salience, we show that it has little or no effect on attention. Understanding real world decision making will require integration of both cognitive and visual factors in future theories of attention and decision making.
+\chg{abstract}{Visual attention is a fundamental aspect of most everyday decisions, and governments and companies spend vast resources competing for it. In natural environments choice options differ on a variety of visual factors, such as salience, position or surface size. However, most decision theories ignore such visual factors, focusing on cognitive factors such as preferences as determinants of attention. To provide a systematic review of how the visual environment guides attention we meta-analyze studies on eye movements in decision making. Our results show that visual factors play a similar or larger role than cognitive factors in determining attention. Understanding real world decision making will require integration of both visual and cognitive factors in future theories of attention and decision making.}
 }
 % limit: 5 keywords
 \keywords{eye movements, decision making, meta-analysis, visual environment, cognitive factors} 
@@ -152,7 +155,7 @@ Visual attention is fundamental to most everyday decisions, and governments and 
 \maketitle
 
 \section{\normalfont\normalsize Public significance statement}
-\noindent Our decisions often depend on how we attend to visual information in the environment. Contrary to many theories, we show that visual features in the environment that are irrelevant to our decisions have a large effect on our attention. Policy makers and companies can leverage these features to guide our attention to information that enhances welfare supporting choices.\par
+\noindent \chg{significance-statement}{Visual attention in decision making is influenced by the relevance of information and by how information is presented i.e., visual factors like the position, salience, and size of information and the number of competing information elements. We show that \textit{how} information is presented is more important to attention than the relevance of the information. Policy makers and companies can leverage visual factors to mislead or guide our attention to information that enhances welfare supporting behaviors.}\par
 \newpage
 
 \input{introduction}
