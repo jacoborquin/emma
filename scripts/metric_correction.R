@@ -14,19 +14,20 @@
 
 # specify your path here if you want to use this script interactively, 
 # and uncomment the line:
-# setwd("/home/hstojic/Research/project/attention_meta/scripts")
+# setwd("/home/hstojic/research/project/attention_meta/scripts")
 # setwd("/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma/scripts")
 
 # housekeeping
 rm(list = ls())
 
 # import packages and functions
-source("./scripts/utils.R")
+source("utils.R")
 
 # loading data
 data = as.data.table(read_csv(
-	file.path(dataDir, "EMMA_ES_data_corrected.csv")
+	file.path(dataDir, "data_effect_sizes_cleaned.csv")
 ))
+
 
 # ----------------------------------------------------------------------
 # Processing
@@ -53,19 +54,19 @@ FL_to_FC = FisherZ(sum(TEMP$fix.count*TEMP$N)/sum(TEMP$N))/
 FC_to_FL = FisherZ(sum(TEMP$fix.like*TEMP$N)/sum(TEMP$N))/
            FisherZ(sum(TEMP$fix.count*TEMP$N)/sum(TEMP$N))
 
-# correction factor for total fixation duration to fixation count
+# correction factor for total dwell time to fixation count
 TEMP = data[, fix.count:N]
 TEMP = TEMP[TEMP$fix.count != "NA" & TEMP$TFD != "NA"]
 TFD_to_FC = FisherZ(sum(TEMP$fix.count*TEMP$N)/sum(TEMP$N))/
             FisherZ(sum(TEMP$TFD*TEMP$N)/sum(TEMP$N))
 
-# correction factor for total fixation duration to fixation likelihood
+# correction factor for total dwell time to fixation likelihood
 TEMP = data[, fix.count:N]
 TEMP = TEMP[TEMP$fix.like != "NA" & TEMP$TFD != "NA"]
 TFD_to_FL = FisherZ(sum(TEMP$fix.like*TEMP$N)/sum(TEMP$N))/
             FisherZ(sum(TEMP$TFD*TEMP$N)/sum(TEMP$N))
 
-# correction factor for total fixation duration to fixation likelihood and fixation count
+# correction factor for total dwell time to fixation likelihood and fixation count
 TEMP = data[, fix.count:N]
 TEMP = TEMP[TEMP$dwell.count != "NA" & TEMP$TFD != "NA"]
 DC_to_TFD = FisherZ(sum(TEMP$TFD*TEMP$N)/sum(TEMP$N))/
@@ -86,19 +87,21 @@ data$fix.like.m = FisherZInv(
   ifelse(is.na(data$fix.like) & is.na(data$TFD) == F, FisherZ(data$TFD)*TFD_to_FL, 
   ifelse(is.na(data$fix.like) & is.na(data$dwell.count) == F, FisherZ(data$dwell.count)*DC_to_FL, FisherZ(data$fix.like)))))
 
+
 # -----
 # Save corrected data
 # ----
 
-write_csv(data, file.path(dataDir, "EMMA_ES_data_corrected.csv"))
+write_csv(data, file.path(dataDir, "data_effect_sizes_cleaned.csv"))
+
 
 # -----
 # Make correction factor table for manuscript
 # -----
 
 metric_correction_factors <- data.frame(
-	c("Fixation count", "Fixation likelihood", "Total fixation duration", 
-		"Total fixation duration", "Dwell count", "Dwell count"),
+	c("Fixation count", "Fixation likelihood", "Total dwell time", 
+		"Total dwell time", "Dwell count", "Dwell count"),
 	c("Fixation likelihood", "Fixation count", "Fixation likelihood", 
 		"Fixation count", "Fixation likelihood", "Fixation count"),
 	round(c(FC_to_FL, FL_to_FC, TFD_to_FL, TFD_to_FC, DC_to_FL, DC_to_FC), 3)
@@ -125,6 +128,7 @@ print(
     file = file.path(tablesDir, "metric_correction.tex")
 )
 
+
 # -----
 # Scatter plots
 # ----
@@ -145,7 +149,7 @@ FLTFDfig = data[, fix.count:N]
 FLTFDfig = FLTFDfig[FLTFDfig$TFD != "NA" & FLTFDfig$fix.like != "NA"]
 FLTFD_plot = genScatter(
 	FLTFDfig, TFD, fix.like,
-	"Total fixation duration", "Fixation likelihood"
+	"Total dwell time", "Fixation likelihood"
 )
 
 # fix count to TFD plot
@@ -153,7 +157,7 @@ FCTFDfig = data[, fix.count:N]
 FCTFDfig = FCTFDfig[FCTFDfig$TFD != "NA" & FCTFDfig$fix.count != "NA"]
 FCTFD_plot = genScatter(
 	FCTFDfig, TFD, fix.count,
-	"Total fixation duration", "Fixation count"
+	"Total dwell time", "Fixation count"
 )
 
 # dwell count to TFD plot
@@ -161,7 +165,7 @@ DCTFDfig = data[, fix.count:N]
 DCTFDfig = DCTFDfig[DCTFDfig$TFD != "NA" & DCTFDfig$dwell.count != "NA"]
 DCTFD_plot = genScatter(
 	DCTFDfig, TFD, dwell.count,
-	"Total fixation duration", "Dwell count"
+	"Total dwell time", "Dwell count"
 )
 
 # arrange plots in panel for manuscript

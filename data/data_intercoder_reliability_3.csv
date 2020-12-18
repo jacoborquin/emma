@@ -1,0 +1,107 @@
+Authors,Study,IV,fix.count,fix.like,TFD,dwell.count,N,Eye.tracker,Research.Domain,Alt.att
+\cite{ares2014},Ares et al. 2014,Pref.view,0.475267118,0.13,0.470027506,,71,Tobii T60,pref. Consumer choice,attribute
+\cite{ashby2015},Ashby et al. 2015 Study 1,Pref.view,,,0.2646,,27,Eye gaze tm,pref. Consumer choice,attribute
+\cite{ashby2015},Ashby et al. 2015 Study 2,Pref.view,,,0.441,,34,Eye gaze tm,pref. Consumer choice,attribute
+\cite{ashby2015},Ashby et al. 2015 Study 3,Pref.view,,,0.686,,81,Eye gaze tm,pref. Consumer choice,attribute
+\cite{atalay2012a},Atalay et al. 2012 Study 1a,Center.position,0.19,,0.14,,63,Tobii T1750,pref. Consumer choice,
+\cite{atalay2012a},Atalay et al. 2012 Study 1b,Center.position,0.15,,0.14,,64,Tobii T1750,pref. Consumer choice,
+\cite{bagger2016},Bagger 2016 Study 1,Salience,0.11671576,0.143635103,0.104978026,,20,EyeLink 1000,inf. Consumer choice,attribute
+\cite{bagger2016},Bagger 2016 Study 2,Salience,0.168956532,0.171940158,0.158635735,,22,EyeLink 1000,inf. Consumer choice,attribute
+\cite{bagger2016},Bagger 2016 Study 3,Salience,0.162870494,0.184020876,0.150713255,,40,EyeLink 1000,inf. Consumer choice,attribute
+\cite{bagger2016},Bagger 2016 Study 4,Salience,0.015183203,0.013312988,0.002747651,,61,EyeLink 1000,inf. Consumer choice,attribute
+\cite{behe2014},Behe et al. 2014,Pref.view,,,0.090409332,,330,Tobii X1,pref. Consumer choice,attribute
+\cite{behe2015},Behe et al. 2015,Choice.bias,,,0.076355255,,101,Tobii X1,pref. Consumer choice,
+\cite{behe2017},Behe et al. 2017,Pref.view,,0.16498366511712,,,214,Tobii X1,pref. Consumer choice,attribute
+\cite{bialkova2011},Bialkova & van Trijp 2011,Task,0.867629651,,0.841317968,,10,SMI RED,inf. Consumer choice,attribute
+\cite{bialkova2014a},Bialkova et al. 2014 Study 1,Task,0.346748618,,0.273212885,,80,SMI RED,inf. Consumer choice,attribute
+\cite{bialkova2014a},Bialkova et al. 2014 Study 2,Task,0.26978932,,0.373713259,,80,SMI RED,inf. Consumer choice,attribute
+\cite{brandstatter2014},Braendstaatter & Koerner 2014,Choice.bias,0.774596669,,,,80,EyeLink II,Risky Gamble,
+\cite{cavanagh2014},Cavanagh et al. 2014,Choice.bias,,,0.7387612,,20,EyeLink 1000,Risky Gamble,
+\cite{chandon2009a},Chandon et al. 2009,LR.position,,0.02,,,348,ISCAN,pref. Consumer choice,
+\cite{chandon2009a},Chandon et al. 2009,Center.position,,0.36,,,348,ISCAN,pref. Consumer choice,
+\cite{chandon2009a},Chandon et al. 2009,Size,,0.358357398,,,348,ISCAN,pref. Consumer choice,
+\cite{chandon2009a},Chandon et al. 2009,Task,,0.148,,,348,ISCAN,pref. Consumer choice,alternative
+\cite{du2014},Du & MacDonald 2014,Pref.view,0.2275,,0.21,,72,Tobii T120,pref. Consumer choice,attribute
+\cite{fiedler2012},Fiedler & Gloeckner 2012 Study 1,Choice.bias,0.718051801,,,,21,Eye gaze tm,Risky Gamble,
+\cite{fiedler2012},Fiedler & Gloeckner 2012 Study 2,Choice.bias,0.548421122,,,,36,Eye gaze tm,Risky Gamble,
+\cite{folke2016},Folke et al. 2016 Study 1,Choice.bias,,,0.735252756,,28,EyeLink II,pref. Consumer choice,
+\cite{folke2016},Folke et al. 2016 Study 2,Choice.bias,,,0.794163743,,24,EyeLink 1000,pref. Consumer choice,
+\cite{gidlof2013},Gidloef et al. 2013,Task,,,0.03896239,-0.002708331,40,SMI iview HED,pref. Consumer choice,alternative
+\cite{gidlof2017a},Gidloef et al. 2017,Choice.bias,,,,0.998084566,50,SMI Glasses,pref. Consumer choice,
+\cite{gidlof2017a},Gidloef et al. 2017,Center.position,,0.54,,,38,SMI Glasses,pref. Consumer choice,
+\cite{gidlof2017a},Gidloef et al. 2017,Pref.view,,,,0.099667995,50,SMI Glasses,pref. Consumer choice,alternative
+\cite{gidlof2017a},Gidloef et al. 2017,Salience,,0.02,,,38,SMI Glasses,pref. Consumer choice,
+\cite{gidlof2017a},Gidloef et al. 2017,Size,,0.48,,,38,SMI Glasses,pref. Consumer choice,
+\cite{glaholt2009a},Glaholt & Reingold 2009a,Task,,,,0,16,EyeLink 1000,inf. Non-consumer choice,alternative
+\cite{glaholt2009b},Glaholt & Reingold 2009b Study 1a,Choice.bias,,,0.093229258,0.249621089,12,EyeLink 1000,inf. Non-consumer choice,
+\cite{glaholt2009b},Glaholt & Reingold 2009b Study 1a,Choice.bias,,,0.147912071,0.334084085,12,EyeLink 1000,pref. Non-consumer choice,
+\cite{glaholt2009b},Glaholt & Reingold 2009b Study 1a,Task,,,0.147912071,0.162254635,12,EyeLink 1000,inf. Non-consumer choice,alternative
+\cite{glaholt2009b},Glaholt & Reingold 2009b Study 1c,Task,,,0.441626688,0.4950506,12,EyeLink 1000,inf. Non-consumer choice,alternative
+\cite{glaholt2012},Glaholt & Reingold 2012,Choice.bias,,0.663478381,0.875756332,0.923845015,24,EyeLink 1000,inf. Non-consumer choice,
+\cite{glaholt2012},Glaholt & Reingold 2012,Task,,0.466666667,,0.619771702,24,EyeLink 1000,inf. Non-consumer choice,alternative
+\cite{glaholt2009c},Glaholt et al. 2009,Choice.bias,,,0.74,,16,EyeLink 1000,inf. Non-consumer choice,
+\cite{glaholt2010},Glaholt et al. 2010,LR.position,,,0.53,0.68,48,EyeLink 1000,inf. Non-consumer choice,
+\cite{glaholt2010},Glaholt et al. 2010,Center.position,,,0.63,,48,EyeLink 1000,inf. Non-consumer choice,
+\cite{graham2016},Graham & Roberto 2016,Size,,0.11,,,155,EyeLink 1000,pref. Consumer choice,
+\cite{grebitus2015},Grebitus et al. 2015,Setsize,,,0.018813266,,130,Tobii T60,pref. Consumer choice,attribute
+\cite{guyader2017},Guyader et al. 2017,Task,,,0.472801416,,66,SMI Glasses,inf. Consumer choice,alternative
+\cite{hong2016a},Hong et al. 2016,Setsize,0.44,,,,75,Tobii T120,pref. Consumer choice,alternative
+\cite{huang2011},Huang & Kuo 2011,Task,,0.229563158,,,88,EyeLink II,pref. Non-consumer choice,attribute
+\cite{hwang2017},Hwang & Lee 2017,Task,,,0.122015016,,42,Tobii X2,inf. Consumer choice,attribute
+\cite{keller2014},Keller et al. 2014,Task,0.388052493,,,,159,SMI iview,inf. Non-consumer choice,attribute
+\cite{kim2012a},Kim et al. 2012,Pref.view,0.61,,0.61,,24,EyeLink II,Risky Gamble,alternative
+\cite{krajbich2010a},Krajbich et al. 2010,Choice.bias,,,0.917651034,,39,Tobii T2150,pref. Consumer choice,
+\cite{kreplin2014a},Kreplin et al. 2014,LR.position,0.27,,0.4,,19,ASL6000,pref. Non-consumer choice,
+\cite{kreplin2014a},Kreplin et al. 2014,Center.position,0.73,,0.22,,19,ASL6000,pref. Non-consumer choice,
+\cite{leboeuf2016},Leboeuf et al. 2016,Task,,0.743923506,,,54,EyeLink 1000,inf. Consumer choice,attribute
+\cite{lindner2014},Lindner et al. 2014,Choice.bias,,,0.439824858,,30,SMI iview,inf. Non-consumer choice,
+\cite{lindner2014},Lindner et al. 2014,Pref.view,,,0.885437745,,26,SMI iview,inf. Non-consumer choice,alternative
+\cite{lohse1997a},Lohse 1997,Salience,,0.08,0.03,,32,Eye gaze 97,pref. Consumer choice,
+\cite{lohse1997a},Lohse 1997,Size,,,0.167828558,,32,Eye gaze 97,pref. Consumer choice,
+\cite{meissner2016b},Meissner  et al. 2016b,Setsize,0.690462646,0.839340497,,,40,Tobii T120,pref. Consumer choice,alternative
+\cite{meissner2016a},Meissner et al. 2016a Study 1,Center.position,0.23,,,,60,EyeLink II,pref. Consumer choice,
+\cite{meissner2016a},Meissner et al. 2016a Study 1,Pref.view,0.79767375,,,,60,EyeLink II,pref. Consumer choice,alternative
+\cite{meissner2016a},Meissner et al. 2016a Study 1,Pref.view,0.836267927,,,,60,EyeLink II,pref. Consumer choice,attribute
+\cite{meissner2016a},Meissner et al. 2016a Study 2,Center.position,0.12,,,,35,Tobii T120,pref. Consumer choice,
+\cite{meissner2016a},Meissner et al. 2016a Study 2,Pref.view,0.775103033,,,,35,Tobii T120,pref. Consumer choice,attribute
+\cite{meissner2016a},Meissner et al. 2016a Study 2,Pref.view,0.881406974,,,,35,Tobii T120,pref. Consumer choice,alternative
+\cite{meissner2016a},Meissner et al. 2016a Study 3,Center.position,0.22,,,,70,,pref. Consumer choice,
+\cite{meissner2016a},Meissner et al. 2016a Study 3,Pref.view,0.90630422,,,,70,Tobii T2150,pref. Consumer choice,alternative
+\cite{meissner2016a},Meissner et al. 2016a Study 3,Pref.view,0.930398296,,,,70,Tobii T2150,pref. Consumer choice,attribute
+\cite{miller2015},Miller et al. 2015,Pref.view,,,0.37,,358,EyeLink 1000,pref. Consumer choice,attribute
+\cite{mitsuda2014},Mitsuda & Glaholt 2014,Choice.bias,,,0.8296559,0.856038976,48,EyeLink II,inf. Non-consumer choice,
+\cite{nittono2009},Nittono & Wada 2009 Study 1,Choice.bias,0.248371832,,0.13498666,,10,Nihon-Kohden EEG-1100,inf. Non-consumer choice,
+\cite{nittono2009},Nittono & Wada 2009 Study 1,Task,-0.061606393,,0.063127568,,10,Nihon-Kohden EEG-1100,inf. Non-consumer choice,alternative
+\cite{orquin2015a},Orquin & Lagerkvist 2015,Salience,0.067357264,0.070604246,0.053836508,,150,Tobii T60,pref. Consumer choice,attribute
+\cite{orquin2015a},Orquin & Lagerkvist 2015,Task,0.052237084,0.135232744,0.084912469,,100,Tobii T60,pref. Consumer choice,attribute
+\cite{orquin2019a},Orquin et al. 2019a Study 1,Center.position,0.267195832,0.299371253,0.234351367,,91,Tobii T2150,pref. Consumer choice,attribute
+\cite{orquin2019a},Orquin et al. 2019a Study 1,Salience,0.088265062,0.136703564,0.086391139,,91,Tobii T2150,pref. Consumer choice,attribute
+\cite{orquin2019a},Orquin et al. 2019a Study 1,Setsize,0.077840191,0.064698644,0.064173708,,91,Tobii T2150,pref. Consumer choice,attribute
+\cite{orquin2019a},Orquin et al. 2019a Study 1,Size,0.222238718,0.190103704,0.168300567,,91,Tobii T2150,pref. Consumer choice,attribute
+\cite{orquin2019a},Orquin et al. 2019a Study 2,Center.position,0.067883758,0.060962818,0.064337264,,76,EyeLink 1000,inf. Consumer choice,attribute
+\cite{orquin2019a},Orquin et al. 2019a Study 2,Salience,0.047791045,0.054969443,0.037049078,,76,EyeLink 1000,inf. Consumer choice,attribute
+\cite{orquin2019a},Orquin et al. 2019a Study 2,Setsize,0.020263628,0.045578747,0.026439858,,76,EyeLink 1000,inf. Consumer choice,attribute
+\cite{orquin2019a},Orquin et al. 2019a Study 2,Size,0.230162917,0.249612238,0.169184272,,76,EyeLink 1000,inf. Consumer choice,attribute
+\cite{orquin2019a},Orquin et al. 2019a Study 2,Task,0.082750442,0.121465718,0.092021542,,52,EyeLink 1000,inf. Consumer choice,attribute
+\cite{orquin2020osfb},Orquin et al. 2019b Study 1,Setsize,0.212471292,0.164910608,0.227708949,0.216892371,71,Tobii T60,pref. Consumer choice,alternative
+\cite{orquin2020osfb},Orquin et al. 2019b Study 2,Setsize,0.032738514,0.089125613,0.071161731,0.085255748,16,Tobii T60,pref. Consumer choice,alternative
+\cite{orquin2020osfb},Orquin et al. 2019b Study 3,Setsize,0.026875958,0.090325424,0.074760618,0.085357327,11,Tobii T60,pref. Consumer choice,alternative
+\cite{orquin2020osfb},Orquin et al. 2019b Study 4,Setsize,0.245157538,0.179774618,0.248528589,0.230007078,68,Tobii T60,pref. Consumer choice,alternative
+\cite{orquin2013},"Orquin, Bagger & Mueller Loose 2013",Pref.view,,0.203120936,,,68,Tobii T2150,pref. Consumer choice,attribute
+\cite{paernamets2015a},Paernamets et al. 2015 Study 1,Task,,,0.489897949,,58,SMI RED,pref. Non-consumer choice,alternative
+\cite{paernamets2015a},Paernamets et al. 2015 Study 2,Task,,,0.331662479,,37,SMI RED,pref. Non-consumer choice,alternative
+\cite{pieters1999},Pieters & Warlop 1999,Task,,0.053028954,,,54,,pref. Consumer choice,attribute
+\cite{rubaltelli2012},Rubaltelli et al. 2012,Task,0.323874885,,,,37,Eye gaze tm,Risky Gamble,attribute
+\cite{schotter2010a},Schotter et al. 2010,Choice.bias,,,,0.273529985,32,EyeLink II,inf. Non-consumer choice,
+\cite{schotter2010a},Schotter et al. 2010,Choice.bias,,,,0.302030834,32,EyeLink II,pref. Non-consumer choice,
+\cite{schotter2012a},Schotter et al. 2012,Choice.bias,,,,0.3048,32,EyeLink 1000,inf. Non-consumer choice,
+\cite{spinks2016a},Spinks & Mortimer 2016,Setsize,,0.62,,,32,Tobii T120,inf. Non-consumer choice,attribute
+\cite{su2013},Su et al 2013,Task,,0.707106781,,,49,EyeLink II,Risky Gamble,attribute
+\cite{turner2014},Turner et al. 2014,Task,,,0.519615242,,89,Tobii D10,pref. Consumer choice,attribute
+\cite{vanloo2015},Van Loo et al. 2015,Pref.view,0.257,,0.27525,,81,SMI RED,pref. Consumer choice,attribute
+\cite{vanderlaan2015},Van der Laan et al. 2015,Choice.bias,,,0.438175243,,22,Easygaze,inf. Consumer choice,
+\cite{vanderlaan2017},Van der Laan et al. 2017,Pref.view,,,0.254251218,,125,Easygaze,pref. Consumer choice,alternative
+\cite{wastlund2015},Waestlund et al. 2014 Study 2,Task,,0.256484604,,,98,Tobii Glasses,inf. Consumer choice,alternative
+\cite{wastlund2015},Waestlund et al. 2014 Study 3,Task,,0.395027751,,,66,Tobii Glasses,inf. Consumer choice,alternative
+\cite{wolfson2017},Wolfson et al. 2016,Pref.view,,0.074373627,,,234,EyeLink 1000,pref. Consumer choice,attribute
+\cite{vanherpen2011},van Herpen & van Trijp 2011 Study 1,Task,,0.156209137,0.323229968,,309,SMI RED,pref. Consumer choice,attribute

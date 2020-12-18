@@ -11,28 +11,29 @@
 
 # specify your path here if you want to use this script interactively, 
 # and uncomment the line:
-# setwd("/home/hstojic/Research/project/attention_meta/scripts")
+# setwd("/home/hstojic/research/project/attention_meta/scripts")
 # setwd("/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma/scripts")
 
 # housekeeping
 rm(list = ls())
 
 # import packages and functions
-source("./scripts/utils.R")
+source("utils.R")
 
 # loading data
 coder1 = read_csv(
-	file.path(dataDir, "EMMA_intercoder_reliability_data_1.csv")
+	file.path(dataDir, "data_intercoder_reliability_1.csv")
 )
 coder2 = read_csv(
-	file.path(dataDir, "EMMA_intercoder_reliability_data_2.csv") 
+	file.path(dataDir, "data_intercoder_reliability_2.csv") 
 )
-coder3 = read_excel(
-  file.path(dataDir, "EMMA_intercoder_reliability_data_3.xlsx") 
+coder3 = read_csv(
+  file.path(dataDir, "data_intercoder_reliability_3.csv") 
 )
-coder4 = read_excel(
-  file.path(dataDir, "EMMA_ES_data.xlsx") 
+coder4 = read_csv(
+  file.path(dataDir, "data_effect_sizes.csv") 
 )
+
 
 # ----------------------------------------------------------------------
 # Processing
@@ -63,10 +64,10 @@ result <- paste0(
 cat(result, file = file.path(tablesDir, "intercoder_reliability.tex"))
 
 # join coder reliability for recoded ES data (revision round 2)
-coder3 = melt(coder3, id.vars = c(2,3,10,11), measure.vars = c(4:7))
-coder4 = melt(coder4, id.vars = c(2,3,10,11), measure.vars = c(4:7))
-ESdata = data.table(merge(coder3, coder4, by = c("Study", "IV", "Research.Domain", "Alt.att", "variable"), all.x = T))
-ESdata = ESdata[is.na(ESdata$value.x) == F & is.na(ESdata$value.y) == F]
+coder3 = melt(as.data.table(coder3), id.vars = c(2,3,10,11), measure.vars = c(4:7))
+coder4 = melt(as.data.table(coder4), id.vars = c(2,3,10,11), measure.vars = c(4:7))
+ESdata = data.table(merge(coder3, coder4, by = c("Study", "IV", "Research.Domain", "Alt.att", "variable"), all.x = TRUE))
+ESdata = ESdata[is.na(ESdata$value.x) == FALSE & is.na(ESdata$value.y) == FALSE]
 ES_ICC2 = icc(ESdata[,c("value.x","value.y")], model="oneway", type="agreement")
 
 result <- paste0("$\\textrm{ICC} = ", round(ES_ICC2$value, 3),"$")

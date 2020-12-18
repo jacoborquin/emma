@@ -1,7 +1,7 @@
 Correcting from,Correcting to,$a_m$
 Fixation count,Fixation likelihood,1.041
 Fixation likelihood,Fixation count,0.961
-Total fixation duration,Fixation likelihood,0.913
-Total fixation duration,Fixation count,1.035
+Total dwell time,Fixation likelihood,0.913
+Total dwell time,Fixation count,1.035
 Dwell count,Fixation likelihood,0.844
 Dwell count,Fixation count,0.957

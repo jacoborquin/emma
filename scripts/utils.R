@@ -11,21 +11,16 @@
 # ----------------------------------------------------------------------
 
 packages <- c(
-    # 'reshape2', 
-    # 'scales', 
-    # 'gtable', 
-    # 'directlabels', 'ggrepel', 
     'tidyverse', 'extrafont', 'gridExtra', 
     'xtable', 'stargazer',
     'readxl',
     'data.table',
     'lme4',
     'lmerTest',
-    'metafor',  # meta analysis
-    'DescTools',  # Fisher transformations
-    'cowplot',  # combining plots
-    # 'jpeg',
-    'irr',  # interrater reliability analysis,
+    'metafor',  
+    'DescTools',  
+    'cowplot',
+    'irr',  
     'clubSandwich'
 )
 lapply(packages, library, character.only = TRUE)
@@ -34,8 +29,11 @@ lapply(packages, library, character.only = TRUE)
 # ----------------------------------------------------------------------
 # Variables 
 # ----------------------------------------------------------------------
+
 # set the root directory for the project here:
-root = "/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma"
+# root = "/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma"
+# root = "/home/hstojic/research/project/attention_meta"
+root = ".."
 
 # directory paths
 figsDir <- file.path(root, "figs")
@@ -59,9 +57,11 @@ fd_1c_1x0.33 <- c(height, 0.33*width)
 fd_1c_1x0.5 <- c(height, 0.5*width)
 fd_1c_1x0.66 <- c(height, 0.66*width)
 fd_1c_1x1 <- c(height, width)
+fd_1c_1.5x2 <- c(1.5*height, 2*width)
 fd_1c_2x2 <- c(2*height, 2*width)
 fd_1c_2.5x2 <- c(2.5*height, 2*width)
 fd_1c_3x1 <- c(3*height, 1*width)
+fd_1c_3.5x1 <- c(3.5*height, 1*width)
 fd_1c_3x2 <- c(3*height, 2*width)
 
 

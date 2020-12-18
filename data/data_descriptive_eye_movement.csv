@@ -1,0 +1,977 @@
+StartDate,EndDate,Status,IPAddress,Progress,Duration (in seconds),Finished,RecordedDate,ResponseId,RecipientLastName,RecipientFirstName,RecipientEmail,ExternalReference,LocationLatitude,LocationLongitude,DistributionChannel,UserLanguage,coder,other_coder,author,author_confirm,comments,ET,ET_other,accuracy,precision,research_domain,N,IV1,alt_att1,DV1,ESd1,ES1,EMd1,EM1_1,EM1_2,EM1_3,EM1_4,EM1_5,EM1_6,EM1_7,EM1_8,EM1_9,EM1_10,EM1_11,fc1,IV2,alt_att2,DV2,ESd2,ES2,EMd2,EM2_1,EM2_2,EM2_3,EM2_4,EM2_5,EM2_6,EM2_7,EM2_8,EM2_9,EM2_10,EM2_11,fc2,IV3,alt_att3,DV3,ESd3,ES3,EMd3,EM3_1,EM3_2,EM3_3,EM3_4,EM3_5,EM3_6,EM3_7,EM3_8,EM3_9,EM3_10,EM3_11,fc3,IV4,alt_att4,DV4,ESd4,ES4,EMd4,EM4_1,EM4_2,EM4_3,EM4_4,EM4_5,EM4_6,EM4_7,EM4_8,EM4_9,EM4_10,EM4_11,fc4,IV5,alt_att5,DV5,ESd5,ES5,EMd5,EM5_1,EM5_2,EM5_3,EM5_4,EM5_5,EM5_6,EM5_7,EM5_8,EM5_9,EM5_10,EM5_11,fc5,IV6,alt_att6,DV6,ESd6,ES6,EMd6,EM6_1,EM6_2,EM6_3,EM6_4,EM6_5,EM6_6,EM6_7,EM6_8,EM6_9,EM6_10,EM6_11,fc6,IV7,alt_att7,DV7,ESd7,ES7,EMd7,EM7_1,EM7_2,EM7_3,EM7_4,EM7_5,EM7_6,EM7_7,EM7_8,EM7_9,EM7_10,EM7_11,fc7,IV8,alt_att8,DV8,ESd8,ES8,EMd8,EM8_1,EM8_2,EM8_3,EM8_4,EM8_5,EM8_6,EM8_7,EM8_8,EM8_9,EM8_10,EM8_11
+Start Date,End Date,Response Type,IP Address,Progress,Duration (in seconds),Finished,Recorded Date,Response ID,Recipient Last Name,Recipient First Name,Recipient Email,External Data Reference,Location Latitude,Location Longitude,Distribution Channel,User Language,Name of coder,"If other, please write name below:",Choose the name of the Article and Study,"Please confirm the name of article and study, e.g. Shimojo et al. 2003 Study 1","Any other comments to the coding, e.g. ""test coding to be deleted"".",Name of Eye Tracker,If other please write name below,"Obtained eye tracker accuracy/offset, e.g. 1.5 degrees. 
+
+(note that most authors do not report this, or only report the official hardware producer estimates of accuracy)","Obtained eye tracker precision, e.g. 0.01 degrees. 
+
+(note that most authors do not report this, or only report the official hardware producer estimates of precision)",What is the research domain?,Sample size (# participants),Choose the Independent Variable,Is the Independent Variable operationalized at the level of choice alternatives or choice attributes?,Choose the Dependent Variable,"Effect size details and description. The more the better! 
+e.g:
+
+F(1, 200) = 4.24
+
+p. 253 left column
+
+ 
+
+or:
+
+M (sd) = 2.62 (1.72) vs 6.92 (2.6)
+
+N1 = 49 N2 = 55
+
+page 624 Table 3",Effect size transformed to Pearson r,"Descriptive Eye Movement data explanation
+
+e.g.
+
+average fixation count across AOIs (picture, brand and price) = 3.82
+
+this should go under ""average AOI""
+
+ 
+
+or:
+
+fixation likelihood for high salience vs low salience options = .23 vs .38
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+ 
+
+or:
+
+fixation count for high vs low importance choice options = 2.3 vs 5.2
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+
+ 
+
+
+or:
+
+dwell count on price AOI for price motivated vs price indifferent consumers = 10.3 vs 7.4
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - average AOI","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 2",Are there more DVs / IVs to report?,Choose the Independent Variable,Is the Independent Variable operationalized at the level of choice alternatives or choice attributes?,Choose the Dependent Variable,"Effect size details and description. The more the better! 
+e.g:
+
+F(1, 200) = 4.24
+
+p. 253 left column
+
+ 
+
+or:
+
+M (sd) = 2.62 (1.72) vs 6.92 (2.6)
+
+N1 = 49 N2 = 55
+
+page 624 Table 3",Effect size transformed to Pearson r,"Descriptive Eye Movement data explanation
+
+e.g.
+
+average fixation count across AOIs (picture, brand and price) = 3.82
+
+this should go under ""average AOI""
+
+ 
+
+or:
+
+fixation likelihood for high salience vs low salience options = .23 vs .38
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+ 
+
+or:
+
+fixation count for high vs low importance choice options = 2.3 vs 5.2
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+
+ 
+
+
+or:
+
+dwell count on price AOI for price motivated vs price indifferent consumers = 10.3 vs 7.4
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - average AOI","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 2",Are there more DVs / IVs to report?,Choose the Independent Variable,Is the Independent Variable operationalized at the level of choice alternatives or choice attributes?,Choose the Dependent Variable,"Effect size details and description. The more the better! 
+e.g:
+
+F(1, 200) = 4.24
+
+p. 253 left column
+
+ 
+
+or:
+
+M (sd) = 2.62 (1.72) vs 6.92 (2.6)
+
+N1 = 49 N2 = 55
+
+page 624 Table 3",Effect size transformed to Pearson r,"Descriptive Eye Movement data explanation
+
+e.g.
+
+average fixation count across AOIs (picture, brand and price) = 3.82
+
+this should go under ""average AOI""
+
+ 
+
+or:
+
+fixation likelihood for high salience vs low salience options = .23 vs .38
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+ 
+
+or:
+
+fixation count for high vs low importance choice options = 2.3 vs 5.2
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+
+ 
+
+
+or:
+
+dwell count on price AOI for price motivated vs price indifferent consumers = 10.3 vs 7.4
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - average AOI","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 2",Are there more DVs / IVs to report?,Choose the Independent Variable,Is the Independent Variable operationalized at the level of choice alternatives or choice attributes?,Choose the Dependent Variable,"Effect size details and description. The more the better! 
+e.g:
+
+F(1, 200) = 4.24
+
+p. 253 left column
+
+ 
+
+or:
+
+M (sd) = 2.62 (1.72) vs 6.92 (2.6)
+
+N1 = 49 N2 = 55
+
+page 624 Table 3",Effect size transformed to Pearson r,"Descriptive Eye Movement data explanation
+
+e.g.
+
+average fixation count across AOIs (picture, brand and price) = 3.82
+
+this should go under ""average AOI""
+
+ 
+
+or:
+
+fixation likelihood for high salience vs low salience options = .23 vs .38
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+ 
+
+or:
+
+fixation count for high vs low importance choice options = 2.3 vs 5.2
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+
+ 
+
+
+or:
+
+dwell count on price AOI for price motivated vs price indifferent consumers = 10.3 vs 7.4
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - average AOI","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 2",Are there more DVs / IVs to report?,Choose the Independent Variable,Is the Independent Variable operationalized at the level of choice alternatives or choice attributes?,Choose the Dependent Variable,"Effect size details and description. The more the better! 
+e.g:
+
+F(1, 200) = 4.24
+
+p. 253 left column
+
+ 
+
+or:
+
+M (sd) = 2.62 (1.72) vs 6.92 (2.6)
+
+N1 = 49 N2 = 55
+
+page 624 Table 3",Effect size transformed to Pearson r,"Descriptive Eye Movement data explanation
+
+e.g.
+
+average fixation count across AOIs (picture, brand and price) = 3.82
+
+this should go under ""average AOI""
+
+ 
+
+or:
+
+fixation likelihood for high salience vs low salience options = .23 vs .38
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+ 
+
+or:
+
+fixation count for high vs low importance choice options = 2.3 vs 5.2
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+
+ 
+
+
+or:
+
+dwell count on price AOI for price motivated vs price indifferent consumers = 10.3 vs 7.4
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - average AOI","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 2",Are there more DVs / IVs to report?,Choose the Independent Variable,Is the Independent Variable operationalized at the level of choice alternatives or choice attributes?,Choose the Dependent Variable,"Effect size details and description. The more the better! 
+e.g:
+
+F(1, 200) = 4.24
+
+p. 253 left column
+
+ 
+
+or:
+
+M (sd) = 2.62 (1.72) vs 6.92 (2.6)
+
+N1 = 49 N2 = 55
+
+page 624 Table 3",Effect size transformed to Pearson r,"Descriptive Eye Movement data explanation
+
+e.g.
+
+average fixation count across AOIs (picture, brand and price) = 3.82
+
+this should go under ""average AOI""
+
+ 
+
+or:
+
+fixation likelihood for high salience vs low salience options = .23 vs .38
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+ 
+
+or:
+
+fixation count for high vs low importance choice options = 2.3 vs 5.2
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+
+ 
+
+
+or:
+
+dwell count on price AOI for price motivated vs price indifferent consumers = 10.3 vs 7.4
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - average AOI","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 2",Are there more DVs / IVs to report?,Choose the Independent Variable,Is the Independent Variable operationalized at the level of choice alternatives or choice attributes?,Choose the Dependent Variable,"Effect size details and description. The more the better! 
+e.g:
+
+F(1, 200) = 4.24
+
+p. 253 left column
+
+ 
+
+or:
+
+M (sd) = 2.62 (1.72) vs 6.92 (2.6)
+
+N1 = 49 N2 = 55
+
+page 624 Table 3",Effect size transformed to Pearson r,"Descriptive Eye Movement data explanation
+
+e.g.
+
+average fixation count across AOIs (picture, brand and price) = 3.82
+
+this should go under ""average AOI""
+
+ 
+
+or:
+
+fixation likelihood for high salience vs low salience options = .23 vs .38
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+ 
+
+or:
+
+fixation count for high vs low importance choice options = 2.3 vs 5.2
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+
+ 
+
+
+or:
+
+dwell count on price AOI for price motivated vs price indifferent consumers = 10.3 vs 7.4
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - average AOI","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 2",Are there more DVs / IVs to report?,Choose the Independent Variable,Is the Independent Variable operationalized at the level of choice alternatives or choice attributes?,Choose the Dependent Variable,"Effect size details and description. The more the better! 
+e.g:
+
+F(1, 200) = 4.24
+
+p. 253 left column
+
+ 
+
+or:
+
+M (sd) = 2.62 (1.72) vs 6.92 (2.6)
+
+N1 = 49 N2 = 55
+
+page 624 Table 3",Effect size transformed to Pearson r,"Descriptive Eye Movement data explanation
+
+e.g.
+
+average fixation count across AOIs (picture, brand and price) = 3.82
+
+this should go under ""average AOI""
+
+ 
+
+or:
+
+fixation likelihood for high salience vs low salience options = .23 vs .38
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+ 
+
+or:
+
+fixation count for high vs low importance choice options = 2.3 vs 5.2
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""
+
+
+ 
+
+
+or:
+
+dwell count on price AOI for price motivated vs price indifferent consumers = 10.3 vs 7.4
+
+this should go under ""AOI 1 condition 1"" and ""AOI 1 condition 2""","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - average AOI","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 1","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 1 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 2 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 3 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 4 condition 2","Descriptive Eye Movement data expressed in the chosen Dependent Variable. Please remember the following: 
+
+fixation count as float, e.g. 3.6
+fixation likelihood as probability, e.g. .51total dwell time in msec, e.g. 2480 
+dwell count as float, e.g. 3.6
+If more AOIs are reported then please type all. - AOI 5 condition 2"
+15/10/2020 08:23,15/10/2020 09:11,IP Address,185.45.22.140,100,2894,True,15/10/2020 09:11,R_3D8BCo56CMB7oRm,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Ares et al. 2014,ares,,,,,,,,Preferential viewing,,Dwell count,,,"aoi 1-3: image, traffic light label, nutrition information
+table 5 p 35",,3.1,2.5,2.4,,,2.6,2.3,1.7,,,yes,,,Fixation count,,,,,6.2,5.4,7.2,,,4.9,4.8,3.4,,,yes,,,Total dwell time (total fixation duration),,,,,1.1,1.3,1.9,,,0.8,1.1,0.8,,,yes,,,Fixation likelihood,,,,,.87,.78,.77,,,.91,.79,.52,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 09:14,15/10/2020 09:27,IP Address,185.45.22.140,100,806,True,15/10/2020 09:27,R_3qdRk3QIDh7fXDw,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Ashby et al. 2015 Study 1,ashby 1,,,,,,,,,,Fixation likelihood,,,valuations based on ratings from 2 aois,.9,,,,,,,,,,,yes,,,Fixation count,,,,2.9844,,,,,,,,,,,yes,,,Total dwell time (total fixation duration),,,,7100,,,,,,,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 09:27,15/10/2020 09:29,IP Address,185.45.22.140,100,91,True,15/10/2020 09:29,R_29m67s6A8TA3ej4,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Ashby et al. 2015 Study 2,ashby 2,,,,,,,,,,Fixation likelihood,,,valuations based on ratings from 5 aois,.62,,,,,,,,,,,yes,,,Fixation count,,,,1.7585,,,,,,,,,,,yes,,,Total dwell time (total fixation duration),,,,.35,,,,,,,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 09:29,15/10/2020 09:30,IP Address,185.45.22.140,100,94,True,15/10/2020 09:30,R_1o5Ro4usxlOa6Fk,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Ashby et al. 2015 Study 3,ashby 3,,,,,,,,,,Fixation likelihood,,,valuations based on ratings from 5 aois,.65,,,,,,,,,,,yes,,,Fixation count,,,,1.7251,,,,,,,,,,,yes,,,Total dwell time (total fixation duration),,,,3493,,,,,,,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 09:31,15/10/2020 09:37,IP Address,185.45.22.140,100,333,True,15/10/2020 09:37,R_cVhvHJv7uPaZYxH,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Atalay et al. 2012 Study 1a,atalay 1a,,,,,,,,,,Fixation count,,,nine options. EM data on p 853,,60.9,,,,,48.7,,,,,yes,,,Total dwell time (total fixation duration),,,,,15100,,,,,12600,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 09:37,15/10/2020 09:38,IP Address,185.45.22.140,100,100,True,15/10/2020 09:38,R_QmsnFlCZcKKRugx,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Atalay et al. 2012 Study 1b,atalay 1b,,,,,,,,,,Fixation count,"nine options, p 859",,,,57.38,,,,,49.3,,,,,yes,,,Total dwell time (total fixation duration),,,,,14500,,,,,12500,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 09:40,15/10/2020 09:42,IP Address,185.45.22.140,100,94,True,15/10/2020 09:42,R_27lOVEi59xvjijj,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Bagger 2016 Study 1,bagge 1,,,,,,,,,,Fixation likelihood,,,6 options,.52,,,,,,,,,,,yes,,,Fixation count,,,,10.31,,,,,,,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 09:42,15/10/2020 09:43,IP Address,185.45.22.140,100,67,True,15/10/2020 09:43,R_3ix7TVKS2mqjmam,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Bagger 2016 Study 2,bagger 2,,,,,,,,,,Fixation likelihood,6 options,,,.46,,,,,,,,,,,yes,,,Fixation count,,,,9.39,,,,,,,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 09:43,15/10/2020 09:44,IP Address,185.45.22.140,100,64,True,15/10/2020 09:44,R_w7gr4x64DZumXOp,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Ashby et al. 2015 Study 3,bagger 3,,,,,,,,,,Fixation likelihood,,,6 options,.44,,,,,,,,,,,yes,,,Fixation count,,,,8.42,,,,,,,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 09:44,15/10/2020 09:45,IP Address,185.45.22.140,100,57,True,15/10/2020 09:45,R_2D5lKuc3boex1ld,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Bagger 2016 Study 4,bagger 4,,,,,,,,,,Fixation likelihood,,,6 options,.49,,,,,,,,,,,yes,,,Fixation count,,,,10.63,,,,,,,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 10:02,15/10/2020 10:06,IP Address,185.45.22.140,100,269,True,15/10/2020 10:06,R_2cuRpep4X6xjbPw,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Behe et al. 2014,behe 2014,,,,,,,,,,Total dwell time (total fixation duration),,,"total dwell time from Table 6 p 1556
+taken from segments ""plant oriented"" and ""price oriented""
+aoi 1-4: production sign, plant identification sign, plant, price sign",,680,530,2360,430,,970,660,1700,890,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 10:09,15/10/2020 10:11,IP Address,185.45.22.140,100,148,True,15/10/2020 10:11,R_qwJlgFQ0RIqQTV7,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Behe et al. 2015,behe 2015,,,,,,,,,,Total dwell time (total fixation duration),,,"table 2 p 16
+aois 1-3: product, information sign, price sign",,1620,4320,4330,,,1410,3680,3850,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 10:29,15/10/2020 10:33,IP Address,185.45.22.140,100,232,True,15/10/2020 10:33,R_1Q0m6Q2n08BHzCg,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Behe et al. 2017,behe 2017,,,,,,,,,,Fixation likelihood,,,"fixation likelihood for the pot (product) aoi, from table 8 for cluster 1 and cluster 3",,.48,,,,,.56,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 11:13,15/10/2020 11:17,IP Address,185.45.22.140,100,203,True,15/10/2020 11:17,R_3nC9D8h2wGFEnEj,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Chandon et al. 2009,chandon,,,,,,,,Surface size,,Fixation likelihood,,,p 8 noting = 72% in the task,.72,.6,,,,,.82,,,,,yes,Central position,,Fixation likelihood,,,,.72,.8,,,,,.65,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 15:01,15/10/2020 15:03,IP Address,185.45.22.140,100,147,True,15/10/2020 15:03,R_2U5vvmUTkz5cw1T,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Fiedler & Gloeckner 2012 Study 1,fiedler 1,,,,,,,,,,Fixation likelihood,,,"2 options 8 aois
+appendix table a1",.9392,,,,,,,,,,,yes,,,Fixation count,,,total fix count = 33.48 by 8 aois = 4.185,4.185,,,,,,,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 15:03,15/10/2020 15:06,IP Address,185.45.22.140,100,157,True,15/10/2020 15:06,R_3esKnXylvnoq0gK,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Fiedler & Gloeckner 2012 Study 2,fiedler 2,,,,,,,,,,Fixation likelihood,,,2 options 8 aois,.9601,,,,,,,,,,,yes,,,Fixation count,,,"appendix table a1
+total fix count = 34.99 per 8 aoi = 4.37375
+",4.37375,,,,,,,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/10/2020 15:38,16/10/2020 07:32,IP Address,5.186.117.92,100,57249,True,16/10/2020 07:32,R_zZ1J8PwZROqCLYZ,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Gidloef et al. 2013,gidlof 2013,,,,,,,,,,Fixation likelihood,,,p 7,,.275,,,,,.257,,,,,yes,,,Total dwell time (total fixation duration),,,"table 1
+TDT for options looked at and across all options are (total x FL)
+decision 893.32 x .257 = 229.58324
+search 783.37 x .275 = 215.42675",,229.58324,,,,,215.42675,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+16/10/2020 08:12,16/10/2020 08:18,IP Address,5.186.117.92,100,308,True,16/10/2020 08:18,R_21bIf1qnuSs2Ocb,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Gidloef et al. 2017,gidlof 2017,,,,,,,,Central position,,Fixation likelihood,,,"# fixation likelihood base rate = .41
+1/(1 + exp(-(-.364)))  
+
+# computation is based on standardized betas from table 5 under the assumption that 
+# one unit increase in the predictor is captured in the observed data set
+
+# FL for central position (vertical position + vertical position^2)
+1/(1 + exp(-(-.364 + 2.4 - 2.1)))
+",,0.4840055,,,,,.41,,,,,yes,Preferential viewing,,Fixation likelihood,,,"# fixation likelihood base rate = .41
+1/(1 + exp(-(-.364)))  
+
+# computation is based on standardized betas from table 5 under the assumption that 
+# one unit increase in the predictor is captured in the observed data set
+
+# FL for pref view (quality)
+1/(1 + exp(-(-.364 + .4)))",,0.508999,,,,,.41,,,,,yes,Salience,,Fixation likelihood,,,"# fixation likelihood base rate = .41
+1/(1 + exp(-(-.364)))  
+
+# computation is based on standardized betas from table 5 under the assumption that 
+# one unit increase in the predictor is captured in the observed data set
+
+# FL for salience 
+1/(1 + exp(-(-.364 + .1)))",,0.4343807,,,,,.41,,,,,yes,Surface size,,Fixation likelihood,,,"# fixation likelihood base rate = .41
+1/(1 + exp(-(-.364)))  
+
+# computation is based on standardized betas from table 5 under the assumption that 
+# one unit increase in the predictor is captured in the observed data set
+
+# FL for size
+1/(1 + exp(-(-.364 + 2.1)))",,0.8501783,,,,,.41,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+16/10/2020 08:52,16/10/2020 10:39,IP Address,5.186.117.92,100,6442,True,16/10/2020 10:39,R_1DooZkIFzkX3P4z,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Glaholt & Reingold 2009b Study 1a,glaholt 2009b 1,,,,,,,,Task instruction,,Total dwell time (total fixation duration),,,"# table 1
+# 8 aois
+# study 1a TDT task
+3038 / 8 # condition 1
+3961 / 8 # condition 2",,379.75,,,,,495.125,,,,,yes,Task instruction,,Dwell count,,,"# study 1a dwell count task
+3.61 / 8 # condition 1
+3.91 / 8 # condition 2",,0.45125,,,,,0.48875,,,,,yes,Choice bias,,Total dwell time (total fixation duration),,,"# study 1a TDT choice
+1663   # chosen
+1376 / 7 # non chosen",,1663,,,,,196.5714,,,,,yes,Choice bias,,Dwell count,,,"# study 1a dwell count choice
+1.99  # chosen
+1.66 / 7 # non chosen",,1.99,,,,,0.2371429,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+16/10/2020 10:40,16/10/2020 10:42,IP Address,5.186.117.92,100,155,True,16/10/2020 10:42,R_UguitW73AaBS4Df,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Glaholt & Reingold 2009b Study 1c,glaholt 2009b 1c,,,,,,,,Task instruction,,Total dwell time (total fixation duration),,,"# study 1c TDT task
+5064 / 8 # condition 1
+7250 / 8 # condition 2",,633,,,,,906.25,,,,,yes,Task instruction,,Dwell count,,,"# study 1c dwell count task
+10.5 / 8 # condition 1
+12.9 / 8 # condition 2",,1.3125,,,,,1.6125,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+19/10/2020 08:48,19/10/2020 08:57,IP Address,5.186.117.92,100,531,True,19/10/2020 08:57,R_30tKFgbCSePvPuL,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Glaholt & Reingold 2012,glaholt 2012,,,,,,,,Choice bias,,Total dwell time (total fixation duration),,,table 2 under viewing time,,1410,,,,,720,,,,,yes,Choice bias,,Fixation likelihood,,,,,1,,,,,.86,,,,,yes,Choice bias,,Dwell count,,,,,2.18,,,,,1.52,,,,,yes,Choice bias,,Fixation count,,,,,5.2538,,,,,2.7208,,,,,yes,Task instruction,,Total dwell time (total fixation duration),,,,,890,,,,,300,,,,,yes,Task instruction,,Dwell count,,,,,1.68,,,,,1,,,,,yes,Task instruction,,Fixation likelihood,,,,,.89,,,,,.75,,,,,yes,Task instruction,,Fixation count,,,,,3.3264,,,,,1.33,,,,
+19/10/2020 09:13,19/10/2020 09:14,IP Address,5.186.117.92,100,67,True,19/10/2020 09:14,R_1rejMp73UAhII4O,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Graham & Roberto 2016,graham 2016,,,,,,,,Surface size,,Total dwell time (total fixation duration),,,table 2 mean view time,,276,,,,,262,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+19/10/2020 09:15,19/10/2020 09:18,IP Address,5.186.117.92,100,181,True,19/10/2020 09:18,R_2EiAlDbykMo1diD,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Grebitus et al. 2015,grebitus 2015,,,,,,,,Set size,,Total dwell time (total fixation duration),,,"from table 2 tdt
+aois: price, ""hormone free"", usa, england, ireland",,200,800,390,420,400,140,590,390,510,480,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+19/10/2020 09:37,19/10/2020 09:41,IP Address,5.186.117.92,100,269,True,19/10/2020 09:41,R_2wbNviRBOFUlP7q,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Guyader et al. 2017,guyader,,,,,,,,Task instruction,,Fixation likelihood,,,"tabe 1 contains info about how many noticed 3 aois: labels, pop sign and green price tag
+
+total noticed: 32+32+46
+total not notice: 29+29+15
+
+FL = 110/(110 + 73) = .6011",.6011,,,,,,,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+19/10/2020 10:24,19/10/2020 10:33,IP Address,5.186.117.92,100,552,True,19/10/2020 10:49,R_UsBh2KE3nJm4kSJ,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Hwang & Lee 2017,hwang lee,,,,,,,,Task instruction,,Total dwell time (total fixation duration),,,"table 2. data is summed over multiple (9) aois, see fig 3. hence the below computation
+
+#goal oriented
+(46.75+18.98+1.76+4.4)/9
+# recreational
+(34.32+19.35+1.74+3.3)/9",,7.987778,,,,,6.523333,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+19/10/2020 10:59,19/10/2020 11:01,IP Address,5.186.117.92,100,108,True,19/10/2020 11:01,R_5tI5FCM2fWy7PSF,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Keller et al. 2014,keller,,,,,,,,Task instruction,,Fixation count,,,"table 3. aois: pencentage, pictograph, answer scale",,2.09,7.29,12.28,,,4.36,13.3,23.02,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+19/10/2020 11:28,19/10/2020 11:31,IP Address,5.186.117.92,100,201,True,19/10/2020 11:31,R_1DCOWFPk1I8QtsO,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Kreplin et al. 2014,kreplin,,,,,,,,Left vs right position,,Fixation count,,,table 1,,1.67,,,,,1.3,,,,,yes,Left vs right position,,Total dwell time (total fixation duration),,,,,1610,,,,,1040,,,,,yes,Central position,,Fixation count,,,as center v right,,5.39,,,,,1.3,,,,,yes,Central position,,Total dwell time (total fixation duration),,,,,1740,,,,,1040,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+20/10/2020 10:13,20/10/2020 10:18,IP Address,5.186.117.92,100,275,True,20/10/2020 10:18,R_2i95qpZJ1UerEVX,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Lindner et al. 2014,lindner 2014,,,,,,,,Preferential viewing,,Total dwell time (total fixation duration),,,table 2. condition indicate attractive options vs unattractive options. aois indicate for high vs low domain knowledge students,,1752.1,1989.4,,,,976.7,1382.8,,,,yes,Choice bias,,Total dwell time (total fixation duration),,,,,2176.4,3066.6,,,,1635.1,2146.3,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+20/10/2020 12:44,20/10/2020 12:50,IP Address,5.186.117.92,100,342,True,20/10/2020 12:50,R_pt5xC1on37o3TIB,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Leboeuf et al. 2016,lebouf,,,,,,,,Task instruction,,Fixation likelihood,,,"p 312 under ""percent of more important ..."" section
+aoi 1 condition 1 less important condition to less important info. aoi 2 cond 1 more important to more important info.
+",,.89,.93,,,,.69,.75,,,,yes,Task instruction,,Total dwell time (total fixation duration),,,p 313,,1840,1480,,,,1538,1121,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+20/10/2020 13:27,20/10/2020 13:31,IP Address,5.186.117.92,100,238,True,20/10/2020 13:31,R_3nTW2nCiCzNUwl8,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Lohse 1997,lohse,,,,,,,,Salience,,Fixation likelihood,,,table 2 salience as bold vs plain ads,,.374,,,,,.264,,,,,yes,Salience,,Total dwell time (total fixation duration),,,,,170,,,,,120,,,,,yes,Surface size,,Fixation likelihood,,,small vs large in column,,.836,,,,,.582,,,,,yes,Surface size,,Total dwell time (total fixation duration),,,,,420,,,,,220,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+20/10/2020 13:45,20/10/2020 13:48,IP Address,5.186.117.92,100,186,True,20/10/2020 13:48,R_3PpdWxmwZlrwHhS,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Chandon et al. 2009,chandon,,,,,,,,Left vs right position,,Fixation likelihood,,,"read from figure 4 left v right position on ""noting""",,.59,,,,,.55,,,,,yes,Task instruction,,Fixation likelihood,,,,,.72,,,,,.73,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+20/10/2020 14:28,20/10/2020 14:31,IP Address,5.186.117.92,100,220,True,20/10/2020 14:31,R_21nAksqFAzos2gj,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Meissner  et al. 2016b,meissner 2016b,,,,,,,,Set size,,Fixation count,,,p 25 provides total fix count for pairs and quints. divided by 12 and 30 (aoi count) respectively,,2.02733,,,,,2.7425,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/10/2020 09:23,21/10/2020 09:39,IP Address,185.45.22.140,100,950,True,21/10/2020 09:39,R_31Lyu8XHDStzOSQ,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Nittono & Wada 2009 Study 1,Nittono,,,,,,,,Choice bias,,Fixation count,,,,,2.24,2.29,,,,1.92,2,,,,yes,Choice bias,,Total dwell time (total fixation duration),,,Table 1,,2315,2100,,,,1897,1834,,,,yes,Task instruction,,Total dwell time (total fixation duration),,,"#mean total dwell time across options for like condition
+(2315+1897)/2
+
+#mean total dwell time across options for dislike condition
+(2100+1968)/2",,2106,,,,,2034,,,,,yes,Task instruction,,Fixation count,,,"#mean fixation count across options for like condition
+(2.24+1.92)/2
+
+#mean fixation count across options for dislike condition
+(2.29+2)/2",,2.08,,,,,2.145,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/10/2020 09:39,21/10/2020 09:48,IP Address,185.45.22.140,100,543,True,21/10/2020 09:48,R_sv4w7wEurkX72Ux,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Pieters & Warlop 1999,pieters,,,,,,,,Task instruction,,Fixation likelihood,,,"Table 1
+
+#Task motivation low, 18 AOIs. 7 skipped
+1-(7/18)
+
+#Task motivation high, 18 AOIs. 7 skipped
+1-(7.214/18)",,0.6111111,,,,,0.5992222,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/10/2020 09:49,21/10/2020 09:51,IP Address,185.45.22.140,100,119,True,21/10/2020 09:51,R_1qVdKIa7Kzdb9Gh,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Rubaltelli et al. 2012,Rubaltello,,,,,,,,Task instruction,,Fixation count,,,Table 1,,14.06,,,,,11.32,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/10/2020 09:51,21/10/2020 09:58,IP Address,185.45.22.140,100,465,True,21/10/2020 09:58,R_12bCeJ1xvU78vYu,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Schotter et al. 2012,Schotter 12,,,,,,,,Choice bias,,Total dwell time (total fixation duration),,,page 1123,,454,,,,,371,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/10/2020 10:02,21/10/2020 10:06,IP Address,185.45.22.140,100,239,True,21/10/2020 10:06,R_3Jsmd6z63737iph,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Su et al 2013,su 2013,,,,,,,,Task instruction,,Fixation likelihood,,,"page 9
+difference between single play task vs proportion task",,0.885,,,,,0.958,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/10/2020 10:06,21/10/2020 10:09,IP Address,185.45.22.140,100,220,True,21/10/2020 10:09,R_1ochGldPZNJDngT,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Turner et al. 2014,turner 2014,,,,,,,,Task instruction,,Total dwell time (total fixation duration),,,"page 1024 
+Difference between health condition and taste condition",,24977.26,,,,,6184.59,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/10/2020 10:09,21/10/2020 10:11,IP Address,185.45.22.140,100,84,True,21/10/2020 10:11,R_8A3boGlGuivxJiV,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Van der Laan et al. 2015,van der laan 2015,,,,,,,,Choice bias,,Total dwell time (total fixation duration),,,page 52,,964,,,,,844,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/10/2020 10:11,21/10/2020 10:16,IP Address,185.45.22.140,100,303,True,21/10/2020 10:16,R_2aJi49kXVK3hjaO,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,van Herpen & van Trijp 2011 Study 1,van herpen 2011,,,,,,,,Task instruction,,Fixation likelihood,,,"table 3. 
+pref vs specific health condition",,0.3038,,,,,0.5195,,,,,yes,Task instruction,,Total dwell time (total fixation duration),,,,,810,,,,,1590,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/10/2020 10:16,21/10/2020 10:25,IP Address,185.45.22.140,100,513,True,21/10/2020 10:25,R_1FCyDf2f8BtZmAt,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Wolfson et al. 2016,wolfson 2016,,,,,,,,Preferential viewing,,Fixation likelihood,,,"table 3 
+difference between trying to lose weight and not trying to lose weight for full sample",,0.97,,,,,0.96,,,,,yes,Preferential viewing,,,,,,,,,,,,,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/10/2020 13:09,21/10/2020 13:11,IP Address,185.45.22.140,100,106,True,21/10/2020 13:11,R_3KrqbaegmcvNv4W,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,"Orquin, Bagger & Mueller Loose 2013",orquin bagger loose,,,,,,,,Preferential viewing,,Fixation likelihood,,,,,0.2092634,,,,,0.5712426,,,,,yes,Preferential viewing,,Fixation count,,,,,0.3895957,,,,,1.178807,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/10/2020 13:22,21/10/2020 13:31,IP Address,185.45.22.140,100,490,True,21/10/2020 13:31,R_1pA2GJINXYw0rpe,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Orquin & Lagerkvist 2015,orquin lagerkvist,,,,,,,,Task instruction,,Fixation likelihood,,,avoidance vs control condition,,0.7256410	,,,,,0.4675,,,,,yes,Task instruction,,Fixation count,,,,,6.323077,,,,,4.242500,,,,,yes,Task instruction,,Total dwell time (total fixation duration),,,,,3004.029,,,,,1433.106,,,,,yes,Salience,,Fixation likelihood,,,,,0.5611390,,,,,0.6304348,,,,,yes,Salience,,Fixation count,,,,,4.676717,,,,,5.926421,,,,,yes,Salience,,Total dwell time (total fixation duration),,,,,1645.155,,,,,2530.840,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/10/2020 14:44,21/10/2020 14:53,IP Address,185.45.22.140,100,511,True,21/10/2020 14:53,R_pbXO780x8yfi3Ad,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Orquin et al. 2019a Study 1,orquin 2019a study 1,,,,,,,,Salience,,Fixation likelihood,,,,,0.5173687,,,,,0.6426311,,,,,yes,Salience,,Fixation count,,,,,1.245023,,,,,1.636959,,,,,yes,Salience,,Total dwell time (total fixation duration),,,,,94.36173,,,,,130.5368,,,,,yes,Surface size,,Fixation likelihood,,,,,0.7100935,,,,,0.3345114,,,,,yes,Surface size,,Fixation count,,,,,2.028423,,,,,0.6428314,,,,,yes,Surface size,,Total dwell time (total fixation duration),,,,,171.1902,,,,,40.37743,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/10/2020 14:53,21/10/2020 14:56,IP Address,185.45.22.140,100,206,True,21/10/2020 14:56,R_zTZSvUFa6CnaKsh,,,,,56.1681060791016,10.2156066894531,anonymous,EN,Jacob,,Orquin et al. 2019a Study 1,orquin 2019a study 1,,,,,,,,Central position,,Fixation likelihood,,,,,0.7196971,,,,,0.3949321,,,,,yes,Central position,,Fixation count,,,,,2.036016,,,,,0.805653,,,,,yes,Central position,,Total dwell time (total fixation duration),,,,,175.6867,,,,,53.41756,,,,,yes,Set size,,Fixation likelihood,,,,,0.7042988,,,,,0.4743622,,,,,yes,Set size,,Fixation count,,,,,1.821978,,,,,1.020025,,,,,yes,Set size,,Total dwell time (total fixation duration),,,,,136.016,,,,,72.51242,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+29/10/2020 11:15,29/10/2020 11:18,IP Address,5.186.117.92,100,199,True,29/10/2020 11:18,R_25ZRBk8KAxIdxBy,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Glaholt & Reingold 2009b Study 1a,glaholt 2009b 1a,delete previous coding of glaholt 2009b 1a,,,,,preferential Non-consumer choice,,Choice bias,,Total dwell time (total fixation duration),,,table 2,,1663,,,,,1376,,,,,yes,Choice bias,,Dwell count,,,,,1.99,,,,,1.66,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+29/10/2020 11:18,29/10/2020 11:20,IP Address,5.186.117.92,100,114,True,29/10/2020 11:20,R_2TRcFh25TMnX3Ku,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Glaholt & Reingold 2009b Study 1a,glaholt 2009b 1a,,,,,,inferential Non-consumer choice,,Choice bias,,Total dwell time (total fixation duration),,,table 2,,2092,,,,,1869,,,,,yes,Choice bias,,Dwell count,,,,,2.08,,,,,1.84,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+29/10/2020 11:20,29/10/2020 11:24,IP Address,5.186.117.92,100,252,True,29/10/2020 11:24,R_27fDdJNqgSpkr86,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Glaholt & Reingold 2009b Study 1a,glaholt 2009b 1a,,,,,,,,Task instruction,,Total dwell time (total fixation duration),,,table 1. pref vs recency. division of numbers by 8 aois to get avg TDT/dwell count,,379.75,,,,,495.125,,,,,yes,Task instruction,,Dwell count,,,,,0.45125,,,,,0.48875,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+29/10/2020 13:27,29/10/2020 13:34,IP Address,5.186.117.92,100,449,True,29/10/2020 13:34,R_DpjLEvseY8RdBJf,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Schotter et al. 2010,schotter 2010,,,,,,preferential Non-consumer choice,,Choice bias,,Dwell count,,,p 1123 and fig 3a,,1.8,,,,,1.55,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+29/10/2020 13:34,29/10/2020 13:35,IP Address,5.186.117.92,100,50,True,29/10/2020 13:35,R_3FR6u1mQjUQFsFp,,,,,55.6396942138672,12.08740234375,anonymous,EN,Jacob,,Schotter et al. 2010,schotter 2010,,,,,,inferential Non-consumer choice,,Choice bias,,Dwell count,,,p 1123 and fig 3a,,1.95,,,,,1.75,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+03/11/2020 15:44,03/11/2020 15:48,IP Address,5.186.117.92,100,235,True,03/11/2020 15:48,R_2zkHNsPKNjOKXUP,,,,,55.5803985595703,12.3000030517578,anonymous,EN,Jacob,,Orquin et al. 2019a Study 2,orquin 2019a study 2,,,,,,,,Salience,,Fixation likelihood,,,,,0.5526401,,,,,0.4976647,,,,,yes,Salience,,Fixation count,,,,,1.116677,,,,,0.9731506,,,,,yes,Salience,,Total dwell time (total fixation duration),,,,,0.2607139,,,,,0.2313038,,,,,yes,Surface size,,Fixation likelihood,,,,,0.6572473,,,,,0.5203507,,,,,yes,Surface size,,Fixation count,,,,,1.437525,,,,,0.7034569,,,,,yes,Surface size,,Total dwell time (total fixation duration),,,,,0.3208807,,,,,0.1805552,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+03/11/2020 15:48,03/11/2020 15:52,IP Address,5.186.117.92,100,209,True,03/11/2020 15:52,R_QnTtubQ8K9YOgj7,,,,,55.5803985595703,12.3000030517578,anonymous,EN,Jacob,,Orquin et al. 2019a Study 2,orquin 2019a 2,,,,,,,,Central position,,Fixation likelihood,,,,,0.6013093,,,,,0.4390753,,,,,yes,Central position,,Fixation count,,,,,1.17525,,,,,0.8449765,,,,,yes,Central position,,Total dwell time (total fixation duration),,,,,0.2734772,,,,,0.192763,,,,,yes,Set size,,Fixation likelihood,,,,,0.5986643,,,,,0.5097534,,,,,yes,Set size,,Fixation count,,,,,1.193004,,,,,1.036287,,,,,yes,Set size,,Total dwell time (total fixation duration),,,,,0.2901055,,,,,0.2380734,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+03/11/2020 15:52,03/11/2020 15:54,IP Address,5.186.117.92,100,108,True,03/11/2020 15:54,R_2flZrat6KK1uWsY,,,,,55.5803985595703,12.3000030517578,anonymous,EN,Jacob,,Orquin et al. 2019a Study 2,orquin 2019a 2,,,,,,,,Task instruction,,Fixation likelihood,,,,,0.5886779,,,,,0.4671543,,,,,yes,Task instruction,,Fixation count,,,,,1.163407,,,,,0.9028953,,,,,yes,Task instruction,,Total dwell time (total fixation duration),,,,,0.2784917,,,,,0.2041146,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+03/11/2020 17:34,03/11/2020 17:42,IP Address,5.186.117.92,100,467,True,03/11/2020 17:42,R_3CV4FOokFkyxjbm,,,,,55.5803985595703,12.3000030517578,anonymous,EN,Jacob,,Orquin et al. 2019b Study 1,orquin 2019b 1 (n=71),,,,,,,,Set size,,Fixation likelihood,,,,,0.9896714,,,,,0.7426736,,,,,yes,Set size,,Fixation count,,,,,4.524883,,,,,1.730084,,,,,yes,Set size,,Total dwell time (total fixation duration),,,,,1184.765,,,,,350.2755,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+03/11/2020 17:42,03/11/2020 17:45,IP Address,5.186.117.92,100,178,True,03/11/2020 17:45,R_3oKQ8bT1qC6bl0M,,,,,55.5803985595703,12.3000030517578,anonymous,EN,Jacob,,Orquin et al. 2019b Study 4,orquin 2019b 4 (n=68),,,,,,,,Set size,,Fixation likelihood,,,,,0.9935323,,,,,0.7157546,,,,,yes,Set size,,Fixation count,,,,,5.793035,,,,,1.801603,,,,,yes,Set size,,Total dwell time (total fixation duration),,,,,1539.59,,,,,387.5327,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+03/11/2020 17:46,03/11/2020 17:48,IP Address,5.186.117.92,100,117,True,03/11/2020 17:48,R_1eRaePl0iIqlNVF,,,,,55.5803985595703,12.3000030517578,anonymous,EN,Jacob,,Orquin et al. 2019b Study 2,orquin 2019b 2 (n=16),,,,,,,,Set size,,Fixation likelihood,,,,,0.09775309,,,,,0.05352342,,,,,yes,Set size,,Fixation count,,,,,0.11893827,,,,,0.06416836,,,,,yes,Set size,,Total dwell time (total fixation duration),,,,,28.50711,,,,,14.97910,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+03/11/2020 17:48,03/11/2020 17:50,IP Address,5.186.117.92,100,127,True,03/11/2020 17:50,R_37OyyedpMaBWIJr,,,,,55.5803985595703,12.3000030517578,anonymous,EN,Jacob,,Orquin et al. 2019b Study 3,orquin 2019b 3 (n=11),,,,,,,,Set size,,Fixation likelihood,,,,,0.11793341,,,,,0.06582927,,,,,yes,Set size,,Fixation count,,,,,0.14672790,,,,,0.08026829,,,,,yes,Set size,,Total dwell time (total fixation duration),,,,,33.71839,,,,,17.57493,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17/11/2020 13:48,17/11/2020 14:01,IP Address,5.186.117.92,100,819,True,17/11/2020 14:01,R_12PXtUTE2WuCuuf,,,,,55.5803985595703,12.3000030517578,anonymous,EN,Jacob,,Jenke et al. 2019,jenke 2019,,,,,,,,Set size,,Fixation likelihood,,,p 14,,.71,,,,,.45,,,,,yes,Set size,,Fixation count,,,"p 17 
+17/10 vs 32/33",,1.7,,,,,0.969697,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17/11/2020 14:03,17/11/2020 14:04,IP Address,5.186.117.92,100,83,True,17/11/2020 14:04,R_2t4kCGTYXpbWvOU,,,,,55.5803985595703,12.3000030517578,anonymous,EN,Jacob,,Neuhofer et al. 2020,neuhofer 2020,,,,,,,,Surface size,,Total dwell time (total fixation duration),,,table 2,,3330,,,,,1740,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17/11/2020 14:07,17/11/2020 14:17,IP Address,5.186.117.92,100,611,True,17/11/2020 14:17,R_3OdHJH9p93qvT54,,,,,55.5803985595703,12.3000030517578,anonymous,EN,Jacob,,Schoemann et al. 2019,schoemann,,,,,,,,Task instruction,,Dwell count,,,"p 527. diff between EV and MM heuristic
+# aois = 8
+
+66.78/8 
+vs
+8.67/8",,8.3475,,,,,1.08375,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17/11/2020 14:18,17/11/2020 14:47,IP Address,5.186.117.92,100,1694,True,17/11/2020 14:47,R_dmKJohbcwUXMpwt,,,,,55.5803985595703,12.3000030517578,anonymous,EN,Jacob,,van Loo et al. 2019,van loo 2019,,,,,,,,Set size,,Total dwell time (total fixation duration),,,"table 4
+x1 = sum(9.68 + 7.25 + 9.58)/3
+x2 = sum(13.17 + 4.91 + 7.06 + 5.02)/4
+",,8.836667,,,,,7.54,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17/11/2020 15:07,17/11/2020 15:11,IP Address,5.186.117.92,100,230,True,17/11/2020 15:11,R_A56ubxZEYHkSD6N,,,,,55.5803985595703,12.3000030517578,anonymous,EN,Jacob,,Peschel et al. 2019,peschel 2019,,,,,,,,Salience,,Fixation likelihood,,,,,0.5872396,,,,,0.5559896,,,,,yes,Salience,,Fixation count,,,,,1.093750,,,,,1.083333,,,,,yes,Salience,,Total dwell time (total fixation duration),,,,,0.2472184,,,,,0.2374305,,,,,yes,Surface size,,Fixation likelihood,,,,,0.6184896,,,,,0.5247396,,,,,yes,Surface size,,Fixation count,,,,,1.2200521,,,,,0.9570312,,,,,yes,Surface size,,Total dwell time (total fixation duration),,,,,277.7948,,,,,206.8540,,,,,no,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

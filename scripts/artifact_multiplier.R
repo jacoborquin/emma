@@ -13,22 +13,23 @@
 
 # specify your path here if you want to use this script interactively, 
 # and uncomment the line:
-# setwd("/home/hstojic/Research/project/attention_meta/scripts")
+# setwd("/home/hstojic/research/project/attention_meta/scripts")
 # setwd("/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma/scripts")
 
 # housekeeping
 rm(list = ls())
 
 # import packages and functions
-source("./scripts/utils.R")
+source("utils.R")
 
 # loading data
-data = as.data.table(read_excel(
-	file.path(dataDir, "EMMA_ES_data.xlsx")
+data = as.data.table(read_csv(
+	file.path(dataDir, "data_effect_sizes.csv")
 ))
 ET_specs = as.data.table(read_csv2(
-	file.path(dataDir, "EMMA_ET_specs_data.csv")
+	file.path(dataDir, "data_eyetracker_specifications.csv")
 ))
+
 
 # ----------------------------------------------------------------------
 # Processing
@@ -42,8 +43,8 @@ ET_specs = as.data.table(read_csv2(
 data$Eye.tracker[is.na(data$Eye.tracker)] = "Unknown"
 
 # impute values when ET "unknown". we use the average accuracy and precision
-ET_specs$Accuracy[is.na(ET_specs$Accuracy)] = mean(ET_specs$Accuracy, na.rm = T)
-ET_specs$Precision[is.na(ET_specs$Precision)] = mean(ET_specs$Precision, na.rm = T)
+ET_specs$Accuracy[is.na(ET_specs$Accuracy)] = mean(ET_specs$Accuracy, na.rm = TRUE)
+ET_specs$Precision[is.na(ET_specs$Precision)] = mean(ET_specs$Precision, na.rm = TRUE)
 
 # merge with data file for precision values of ET
 data = merge(data, ET_specs, by = c("Eye.tracker"), all.x = TRUE)
@@ -68,6 +69,7 @@ data_long = data_long[,
 
 # verify
 any(table(data_long$Study, data_long$IV) > 1) == FALSE
+
 
 # -----
 # Test whether eye tracker accuracy and precision attenuate effect sizes 
@@ -114,11 +116,13 @@ result <- paste0(
 )
 cat(result, file = file.path(tablesDir, "artifactregresult.tex"))
 
+
 # -----
 # Save corrected data
 # ----
 
-write_csv(data, file.path(dataDir, "EMMA_ES_data_corrected.csv"))
+write_csv(data, file.path(dataDir, "data_effect_sizes_cleaned.csv"))
+
 
 # -----
 # Plot of accuracy on effect size
@@ -128,14 +132,14 @@ write_csv(data, file.path(dataDir, "EMMA_ES_data_corrected.csv"))
 figure <- 
 	ggplot(data = data_long, aes(Accuracy, Rz)) +
 	geom_point(alpha = .5, size = pointSize) +
-	# geom_smooth(method = "lm", color = "black", size = lineSize*2) +
 	geom_abline(intercept = b0, slope = b1, size = lineSize*1) +
 	scale_x_continuous("Eye tracker accuracy (visual angle)", breaks = seq(0, 1.5, by=.1)) +
 	ylab("Effect size (z)") +
 	mytheme
 filename <- file.path(figsDir, "ET_accuracy_effectsize.pdf")
 savePlots(figure, filename, fd_SI_1x1.5)
-  
+ 
+
 # -----
 # Make eye tracker specifications table for manuscript
 # -----
