@@ -624,20 +624,21 @@ print(
 
 # latex version PET-PEESE
 PETPEESE <- data.frame(rbind(
-    c("\\textbf{PET}", rep(NA, 4)),
+    c("PET", rep(NA, 4)),
     PET,
-    c("\\textbf{PEESE}", rep(NA, 4)),
+    c("PEESE", rep(NA, 4)),
     PEESE,
     stringsAsFactors = FALSE
 ), stringsAsFactors = FALSE)
-tab_caption <- "Publication bias analysis with precision-effect test (PET) and precision-effect estimate test (PEESE) of complete data."
+setnames(PETPEESE, c(4:5), c("$t$","$p$"))
+tab_caption <- "Publication bias analysis with precision-effect test (PET) and precision-effect estimate test (PEESE) of complete data. See \\textit{Methods} for details on the tests."
 tab_label <- "tab:PET-PEESE"
 print(
   xtable(
     PETPEESE, 
     caption = tab_caption, 
     label = tab_label,
-    align = "lccccc"
+    align = "llcccc"
   ), 
   include.rownames = FALSE,
   caption.placement = "top", 
