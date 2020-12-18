@@ -529,4 +529,4 @@ EMtoES = plot_grid(flavgfig, fcavgfig, tdtavgfig,
                    flfig, fcfig, tdtfig, labels = c("A", "B", "C", "D", "E", "F"), ncol = 3)
 
 filename <- file.path(figsDir, "EMtoES.pdf")
-savePlots(EMtoES, filename, fd_1c_1.5x2)
+savePlots(EMtoES, filename, fd_1c_2x2)
