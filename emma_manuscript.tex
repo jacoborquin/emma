@@ -73,21 +73,6 @@
 
 %%% commands for help with reviews
 
-%Numbered paragraphs
-% \newcounter{parno}[paragraph]%% numbered paragraph
-% \renewcommand{\theparno}{\arabic{parno}}
-% \newcommand{\p}{\stepcounter{parno}\noindent[\theparno]\ } 
-\setcounter{secnumdepth}{4}
-%delink paragraph counter from being reset by subsubsection
-\usepackage{chngcntr}
-\counterwithout{paragraph}{subsubsection}
-\counterwithin{paragraph}{section}
-\counterwithin{paragraph}{subsection}
-% \renewcommand{\theparagraph}{\arabic{paragraph}}
-
-%remove (printing of) section numbering
-% \renewcommand\thesection{}
-
 % marking the reviewer comments
 \newcommand\eatpunct[1]{}
 \newcommand{\com}[2][]{\vspace{5mm}\paragraph[ ]{ \eatpunct}\label{#1}\emph{#2}\vspace{5mm}}
@@ -106,7 +91,7 @@
 % Title, authors
 % ---------------------------------------------------------
 
-\title{\textcolor{Red}{The visual environment and attention in decision making}}
+\title{The visual environment and attention in decision making}
 
 \shorttitle{The visual environment and attention in decision making}
 
@@ -128,7 +113,7 @@ Data Availability Statement. The data and code reported in the manuscript is mad
 % ---------------------------------------------------------
 
 \abstract{% limit: 250 words
-\chg{abstract}{Visual attention is a fundamental aspect of most everyday decisions, and governments and companies spend vast resources competing for the attention of decision makers. In natural environments choice options differ on a variety of visual factors, such as salience, position or surface size. However, most decision theories ignore such visual factors, focusing on cognitive factors such as preferences as determinants of attention. To provide a systematic review of how the visual environment guides attention we meta-analyze studies on eye movements in decision making. Our results show that visual factors play a similar or larger role than cognitive factors in determining attention. Understanding real world decision making will require integration of both visual and cognitive factors in future theories of attention and decision making.}
+Visual attention is a fundamental aspect of most everyday decisions, and governments and companies spend vast resources competing for the attention of decision makers. In natural environments choice options differ on a variety of visual factors, such as salience, position or surface size. However, most decision theories ignore such visual factors, focusing on cognitive factors such as preferences as determinants of attention. To provide a systematic review of how the visual environment guides attention we meta-analyze studies on eye movements in decision making. Our results show that visual factors play a similar or larger role than cognitive factors in determining attention. Understanding real world decision making will require integration of both visual and cognitive factors in future theories of attention and decision making.
 }
 % limit: 5 keywords
 \keywords{eye movements, decision making, attention, meta-analysis, visual environment, cognitive factors} 
@@ -148,7 +133,7 @@ Data Availability Statement. The data and code reported in the manuscript is mad
 \maketitle
 
 \section{\normalfont\normalsize Public significance statement}
-\noindent \chg{significance-statement}{Visual attention in decision making is influenced by the relevance of information and by how information is presented i.e., visual factors like the position, salience, and size of information and the number of competing information elements. We show that \textit{how} information is presented is more important to attention than the relevance of the information. Policy makers and companies can leverage visual factors to mislead or guide our attention to information that enhances welfare supporting behaviors.}\par
+\noindent Visual attention in decision making is influenced by the relevance of information and by how information is presented i.e., visual factors like the position, salience, and size of information and the number of competing information elements. We show that \textit{how} information is presented is more important to attention than the relevance of the information. Policy makers and companies can leverage visual factors to mislead or guide our attention to information that enhances welfare supporting behaviors.\par
 \newpage
 
 \input{introduction}
