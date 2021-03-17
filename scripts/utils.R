@@ -33,7 +33,7 @@ lapply(packages, library, character.only = TRUE)
 # set the root directory for the project here:
 # root = "/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma"
 # root = "/home/hstojic/research/project/attention_meta"
-root = ".."
+root = "."
 
 # directory paths
 figsDir <- file.path(root, "figs")
@@ -286,11 +286,11 @@ savePlots <- function(figure, filename, dims, grob = FALSE, eps = FALSE) {
 onecoefTex = function(model, name){
   result <- paste0(
     "$\\beta_{0}=", 
-    round(summary(model)$coef[1], 2), 
+    round(model[1], 2), 
     "$, $SE=", 
-    round(summary(model)$coef[2], 2), 
+    round(model[2], 2), 
     "$, ", 
-    ifelse(round(summary(model)$coef[4], 2) == 0, "$p< 0.001$", paste0("$p=", round(summary(model)$coef[4], 2),"$"))
+    ifelse(round(model[5], 2) == 0, "$p< 0.001$", paste0("$p=", round(model[5], 2),"$"))
     )
   cat(result, file = file.path(tablesDir, name))
 }
@@ -298,11 +298,11 @@ onecoefTex = function(model, name){
 oneofmanycoefTex = function(model, name, coefnum){
   result <- paste0(
     "$\\beta=", 
-    round(summary(model)$coef[coefnum, 1], 2), 
+    round(model[coefnum, 1], 2), 
     "$, $SE=", 
-    round(summary(model)$coef[coefnum, 2], 2), 
+    round(model[coefnum, 2], 2), 
     "$, ", 
-    ifelse(round(summary(model)$coef[coefnum, 4], 2) == 0, "$p< 0.001$", paste0("$p=", round(summary(model)$coef[coefnum, 4], 2),"$"))
+    ifelse(round(model[coefnum, 5], 2) == 0, "$p< 0.001$", paste0("$p=", round(model[coefnum, 5], 2),"$"))
   )
   cat(result, file = file.path(tablesDir, name))
 }

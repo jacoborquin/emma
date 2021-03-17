@@ -19,7 +19,7 @@
 rm(list = ls())
 
 # import packages and functions
-source("utils.R")
+source("./scripts/utils.R")
 
 # loading data
 data = as.data.table(read_csv(
@@ -54,8 +54,10 @@ saldata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$
 saldata$vi.c = saldata$vi/saldata$a_acc^2 # compute corrected variances based on artefact multiplier
 salres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=saldata, method="HS")
 salresrobu = robust(salres, cluster=saldata$Authors)
-salTrim = trimfill(salres)
 
+# top 10% most precise analysis
+saldata10 = saldata[saldata$vi.c < .01]
+salTrim = rma(yi.c.FC, vi.c, weights=1/vi.c, data=saldata10, method="HS")
 
 # -----
 # psychometric meta-analysis and trim and fill analysis of 
@@ -66,8 +68,10 @@ sizedata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data
 sizedata$vi.c = sizedata$vi/sizedata$a_acc^2
 sizeres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=sizedata, method="HS")
 sizeresrobu = robust(sizeres, cluster=sizedata$Authors)
-sizeTrim = trimfill(sizeres)
 
+# top 10% most precise analysis
+sizedata10 = sizedata[sizedata$vi.c < .008]
+sizeTrim = rma(yi.c.FC, vi.c, weights=1/vi.c, data=sizedata10, method="HS")
 
 # -----
 # psychometric meta-analysis and trim and fill analysis of 
@@ -78,8 +82,10 @@ LRdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$I
 LRdata$vi.c = LRdata$vi/LRdata$a_acc^2
 LRres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=LRdata, method="HS")
 LRresrobu = robust(LRres, cluster=LRdata$Authors)
-LRTrim = trimfill(LRres)
 
+# top 10% most precise analysis
+LRdata10 = LRdata[LRdata$vi.c < .025]
+LRTrim = rma(yi.c.FC, vi.c, weights=1/vi.c, data=LRdata10, method="HS")
 
 # -----
 # psychometric meta-analysis and trim and fill analysis of 
@@ -90,8 +96,10 @@ centerdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[da
 centerdata$vi.c = centerdata$vi/centerdata$a_acc^2
 centerres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=centerdata, method="HS")
 centerresrobu = robust(centerres, cluster=centerdata$Authors)
-centerTrim = trimfill(centerres)
 
+# top 10% most precise analysis
+centerdata10 = centerdata[centerdata$vi.c < .0144]
+centerTrim  = rma(yi.c.FC, vi.c, weights=1/vi.c, data=centerdata10, method="HS")
 
 # -----
 # psychometric meta-analysis and trim and fill analysis of 
@@ -109,9 +117,8 @@ setdata_alt$vi.c = setdata_alt$vi/setdata_alt$a_acc^2
 # main analyses
 setres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata, method="HS")
 setresrobu = robust(setres, cluster=setdata$Authors)
-setTrim = trimfill(setres)
 
-# psychometric meta-analysis and trim and fill analysis of 
+# psychometric meta-analysis of 
 # set size moderator analysis - effect of attribute vs alternatives
 # moderator RVE analysis relies on clubSandwich method see:
 # https://cran.r-project.org/web/packages/clubSandwich/vignettes/meta-analysis-with-CRVE.html
@@ -122,9 +129,18 @@ setmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata_att, method="HS")
 setmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata_alt, method="HS") 
 setmod_attrobu = robust(setmod_att, cluster=setdata_att$Authors)
 setmod_altrobu = robust(setmod_alt, cluster=setdata_alt$Authors)
-setmod_attTrim = trimfill(setmod_att)
-setmod_altTrim = trimfill(setmod_alt)
 
+# top 10% most precise analysis using a study from each mod group (alt vs att)
+setdata10 = setdata[setdata$Study == "Zuschke 2020" | setdata$Study == "Hong et al. 2016"]
+setTrim  = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata10, method="HS")
+
+# top 10% most precise analysis using alt group
+setdata10alt = setdata_alt[setdata_alt$vi.c < 0.017]
+setmod_altTrim  = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata10alt, method="HS")
+
+# top 10% most precise analysis using att group
+setdata10att = setdata_att[setdata_att$vi.c < 0.013]
+setmod_attTrim  = rma(yi.c.FC, vi.c, weights=1/vi.c, data=setdata10att, method="HS")
 
 # ----------------------------------------------------------------------
 # Meta analyses - cognitive factors
@@ -146,7 +162,6 @@ taskdata_alt$vi.c = taskdata_alt$vi/taskdata_alt$a_acc^2
 # main analyses
 taskres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata, method="HS")
 taskresrobu = robust(taskres, cluster=taskdata$Authors)
-taskTrim = trimfill(taskres)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # task instruction moderator analysis - effect of attribute vs alternative 
@@ -157,9 +172,18 @@ taskmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata_att, method="HS")
 taskmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata_alt, method="HS")
 taskmod_attrobu = robust(taskmod_att, cluster=taskdata_att$Authors)
 taskmod_altrobu = robust(taskmod_alt, cluster=taskdata_alt$Authors)
-taskmod_altTrim = trimfill(taskmod_alt)
-taskmod_attTrim = trimfill(taskmod_att)
 
+# top 10% most precise analysis
+taskdata10 = taskdata[taskdata$vi.c < .009]
+taskTrim  = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata10, method="HS")
+
+# top 10% most precise analysis using alt group
+taskdata10alt = taskdata_alt[taskdata_alt$vi.c < .036]
+taskmod_altTrim  = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata10alt, method="HS")
+
+# top 10% most precise analysis using att group
+taskdata10att = taskdata_att[taskdata_att$vi.c < .014]
+taskmod_attTrim  = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata10att, method="HS")
 
 # -----
 # psychometric meta-analysis and trim and fill analysis of 
@@ -177,7 +201,6 @@ prefdata_alt$vi.c = prefdata_alt$vi/prefdata_alt$a_acc^2
 # main analyses
 prefres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata, method="HS")
 prefresrobu = robust(prefres, cluster=prefdata$Authors)
-prefTrim = trimfill(prefres)
 
 # psychometric meta-analysis and trim and fill analysis of 
 # preferential viewing moderator analysis - effect of alternative vs attribute 
@@ -188,9 +211,18 @@ prefmod_att = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata_att, method="HS")
 prefmod_alt = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata_alt, method="HS")
 prefmod_attrobu = robust(prefmod_att, cluster=prefdata_att$Authors)
 prefmod_altrobu = robust(prefmod_alt, cluster=prefdata_alt$Authors)
-prefmod_attTrim = trimfill(prefmod_att)
-prefmod_altTrim = trimfill(prefmod_alt)
 
+# top 10% most precise analysis using a study from each mod group (alt vs att)
+prefdata10 = prefdata[prefdata$vi.c < .006]
+prefTrim  = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata10, method="HS")
+
+# top 10% most precise analysis using alt group
+prefdata10alt = prefdata_alt[prefdata_alt$vi.c < .017]
+prefmod_altTrim  = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata10alt, method="HS")
+
+# top 10% most precise analysis using att group
+prefdata10att = prefdata_att[prefdata_att$vi.c < .006]
+prefmod_attTrim  = rma(yi.c.FC, vi.c, weights=1/vi.c, data=prefdata10att, method="HS")
 
 # -----
 # psychometric meta-analysis and trim and fill analysis of 
@@ -213,8 +245,10 @@ sandwichModTest(choicemod, "moderator_choicebias.tex")
 choicedata = choicedata_mod[, list(yi.c.FC = mean(yi.c.FC), vi.c = mean(vi.c), IV = unique(IV), N = unique(N), Authors = unique(Authors)), by = Study]
 choiceres = rma(yi.c.FC, vi.c, weights=1/vi.c, data=choicedata, method="HS")
 choiceresrobu = robust(choiceres, cluster=choicedata$Authors)
-choiceTrim = trimfill(choiceres)
 
+# top 10% most precise analysis using a study from each mod group (alt vs att)
+choicedata10 = choicedata[choicedata$vi.c < .014]
+choiceTrim  = rma(yi.c.FC, vi.c, weights=1/vi.c, data=choicedata10, method="HS")
 
 # ----------------------------------------------------------------------
 # Main and Moderator results text for manuscript
@@ -254,64 +288,47 @@ extractMain <- function(name, mainres, data) {
     return(res)
 }
 
-extractTrim <- function(trimres, mainres) {
-    if (trimres$side == "right"){ # if studies have been filled on the upper side
-        res <- c(
-            NA,
-            paste0("(", 0, ")"),
-            NA,
-            paste0("(", round(coef(summary(mainres))$estimate, 2), ")"),
-            paste0("(", round(coef(summary(mainres))$se, 2), ")"),
-            paste0("(", round(summary(mainres)$zval, 2), ")"),
-            ifelse(coef(summary(mainres))$pval < 0.001, "(<0.001)",
-                   paste0("(", round(coef(summary(mainres))$pval, 3), ")")),
-            paste0("(", round(coef(summary(mainres))$ci.lb, 2), ")"),
-            paste0("(", round(coef(summary(mainres))$ci.ub, 2), ")"),
-            NA
-        )
-    } else{
-        res <- c(
-            NA,
-            paste0("(", trimres$k0, ")"),
-            NA,
-            paste0("(", round(coef(summary(trimres))$estimate, 2), ")"),
-            paste0("(", round(coef(summary(trimres))$se, 2), ")"),
-            paste0("(", round(coef(summary(trimres))$zval, 2), ")"),
-            ifelse(coef(summary(trimres))$pval < 0.001, "(<0.001)",
-                   paste0("(", round(coef(summary(trimres))$pval, 3), ")")),
-            paste0("(", round(coef(summary(trimres))$ci.lb, 2), ")"),
-            paste0("(", round(coef(summary(trimres))$ci.ub, 2), ")"),
-            NA
-        )    
-    }
-    return(res)
+extractTrim <- function(trimres, data) {
+  res <- c(
+    NA,
+    paste0("(", trimres$k, ")"),
+    paste0("(", sum(data$N), ")"),
+    paste0("(", round(coef(summary(trimres))$estimate, 2), ")"),
+    paste0("(", round(coef(summary(trimres))$se, 2), ")"),
+    paste0("(", round(coef(summary(trimres))$zval, 2), ")"),
+    ifelse(coef(summary(trimres))$pval < 0.001, "(<0.001)",
+           paste0("(", round(coef(summary(trimres))$pval, 3), ")")),
+    paste0("(", round(coef(summary(trimres))$ci.lb, 2), ")"),
+    paste0("(", round(coef(summary(trimres))$ci.ub, 2), ")"),
+    paste0("(", round(trimres$I2, 2), ")")
+  )
+  return(res)
 }
 
 mainresults = data.frame(rbind(
   c("\\textbf{Visual factors}", rep(NA, 9)),
   extractMain("Salience",salresrobu,saldata),
-  extractTrim(salTrim,salresrobu),
+  extractTrim(salTrim,saldata10),
   extractMain("Surface size",sizeresrobu,sizedata),
-  extractTrim(sizeTrim,sizeresrobu),
+  extractTrim(sizeTrim,sizedata10),
   extractMain("Left vs right position",LRresrobu,LRdata),
-  extractTrim(LRTrim,LRresrobu),
+  extractTrim(LRTrim,LRdata10),
   extractMain("Center position",centerresrobu,centerdata),
-  extractTrim(centerTrim,centerresrobu),
+  extractTrim(centerTrim,centerdata10),
   extractMain("Set size",setresrobu,setdata),
-  extractTrim(setTrim,setresrobu),
+  extractTrim(setTrim,setdata10),
   c("\\textbf{Cognitive factors}", rep(NA, 9)),
   extractMain("Task instructions",taskresrobu,taskdata),
-  extractTrim(taskTrim),
+  extractTrim(taskTrim,taskdata10),
   extractMain("Preferential viewing",prefresrobu,prefdata),
-  extractTrim(prefTrim),
+  extractTrim(prefTrim,prefdata10),
   extractMain("Choice-gaze effect",choiceresrobu,choicedata),
-  extractTrim(choiceTrim)
+  extractTrim(choiceTrim,choicedata10)
 ), stringsAsFactors = FALSE)
 
 # format naming and saving csv file
 setnames(mainresults, c(1:10), c("Group","$k$","$N$","$\\rho$","SE","$t$","$p$","$\\textrm{CI}^{95}_{LL}$","$\\textrm{CI}^{95}_{UL}$","$I^2$"))
 write_csv(mainresults, file.path(tablesDir, "main_results.csv"))
-
 
 # latex version
 tab_caption <- "Main results of the meta-analysis, divided into visual and cognitive factor groups, and individual factors within them. The most important values are the corrected effect size estimate, $\\rho$, and the associated heterogeneity, $I^2$. Results of trim and fill analysis are in the parentesis."
@@ -348,26 +365,26 @@ modresults = data.frame(rbind(
     c("\\textbf{Set size}", rep(NA, 9)),
     extractMain("\\hspace{2mm}\\textit{Alternative}",
         setmod_altrobu,setdata[setdata$Alt.att == "alternative",]),
-    extractTrim(setmod_altTrim,setmod_altrobu),
+    extractTrim(setmod_altTrim,setdata10alt),
     extractMain("\\hspace{2mm}\\textit{Attribute}",
         setmod_attrobu,setdata[setdata$Alt.att == "attribute",]),
-    extractTrim(setmod_attTrim),
+    extractTrim(setmod_attTrim, setdata10att),
     
     c("\\textbf{Task instruction}", rep(NA, 9)),
     extractMain("\\hspace{2mm}\\textit{Alternative}",
         taskmod_altrobu,taskdata[taskdata$Alt.att == "alternative",]),
-    extractTrim(taskmod_altTrim),
+    extractTrim(taskmod_altTrim, taskdata10alt),
     extractMain("\\hspace{2mm}\\textit{Attribute}",
         taskmod_attrobu,taskdata[taskdata$Alt.att == "attribute",]),
-    extractTrim(taskmod_attTrim),
+    extractTrim(taskmod_attTrim, taskdata10att),
 
     c("\\textbf{Preferential viewing}", rep(NA, 9)),
     extractMain("\\hspace{2mm}\\textit{Alternative}",
         prefmod_altrobu,prefdata[prefdata$Alt.att == "alternative",]),
-    extractTrim(prefmod_altTrim),
+    extractTrim(prefmod_altTrim, prefdata10alt),
     extractMain("\\hspace{2mm}\\textit{Attribute}",
         prefmod_attrobu,prefdata[prefdata$Alt.att == "attribute",]),
-    extractTrim(prefmod_attTrim)
+    extractTrim(prefmod_attTrim, prefdata10att)
 ), stringsAsFactors = FALSE)
 
 # format naming
@@ -546,18 +563,25 @@ data$varz = data$sdz^2 # variance in z
 grant = grant[, list(grant = unique(grant), public = unique(public)), Study]
 data = merge(data, grant, by = "Study")
 pb = rma(yi=fcz, vi=varz, mods = ~ public, data = data)
+pb = robust(pb, cluster = data$Author)
 publicFactor = round(pb$b[1] / (pb$b[1] + pb$b[2]), digits = 3) # inflation factor due to not having public grant
 cat(paste0("$", publicFactor, "$"), file = file.path(tablesDir, "publicFactor.tex"))
 cat(paste0("$Q_M(1)=", round(pb$QM, 3),"$, $p=", round(pb$QMp, 3), "$"), file = file.path(tablesDir, "publicSig.tex"))
 
 # PET-PEESE test
 FE = lm(fcz ~ 1, weights = 1/varz, data = data) # fixed effect estimate of ES
+FE = coef_test(FE, vcov = "CR2", cluster = data$Authors)
 onecoefTex(FE, "FE.tex") # save coefficient to tex
+
 PET = lm(fcz ~ sdz + a_acc, weights = 1/varz, data = data) # PET test is sig therefore perfrom PEESE
+PET = coef_test(PET, vcov = "CR2", cluster = data$Authors)
 oneofmanycoefTex(PET, "PETintext.tex", 2)
+
 PEESE = lm(fcz ~ varz + a_acc, weights = 1/varz, data = data) # PEESE estimate
+PEESE = coef_test(PEESE, vcov = "CR2", cluster = data$Authors)
 oneofmanycoefTex(PEESE, "PEESEintext.tex", 1)
-peeseFactor = round(summary(FE)$coef[1] / summary(PEESE)$coef[1,1], digits = 3) # inflation factor according to PEESE
+
+peeseFactor = round(FE[1] / PEESE[1,1], digits = 3) # inflation factor according to PEESE
 cat(paste0("$", peeseFactor, "$"), file = file.path(tablesDir, "peeseFactor.tex"))
 
 # check inflation factor based on trim fill results
@@ -579,12 +603,12 @@ cat(paste0("$", trimFactor, "$"), file = file.path(tablesDir, "trimFactor.tex"))
 # Table with PET-PEESE results for manuscript
 # -----
 
-PET = round(data.frame(summary(PET)$coef, stringsAsFactors = FALSE), digits = 3)
-PEESE = round(data.frame(summary(PEESE)$coef, stringsAsFactors = FALSE), digits = 3)
+PET = round(data.frame(PET, stringsAsFactors = FALSE), digits = 3)
+PEESE = round(data.frame(PEESE, stringsAsFactors = FALSE), digits = 3)
 PET = cbind(Parameter=c("Intercept", "$SD$", "$A$"), PET, stringsAsFactors = FALSE)
 PEESE = cbind(Parameter=c("Intercept", "$Var$", "$A$"), PEESE, stringsAsFactors = FALSE)
-setnames(PET, c(3:5), c("SE","$t$","$p$"))
-setnames(PEESE, c(3:5), c("SE","$t$","$p$"))
+setnames(PET, c(3:5), c("t","$df$","$p$"))
+setnames(PEESE, c(3:5), c("t","$df$","$p$"))
 
 # latex version PET
 tab_caption <- "Precision-effect test (PET) of complete data"
@@ -594,7 +618,7 @@ print(
     PET, 
     caption = tab_caption, 
     label = tab_label,
-    align = "lllccc"
+    align = "lllcccc"
   ), 
   size = "\\small",
   include.rownames = FALSE,
@@ -612,7 +636,7 @@ print(
     PEESE, 
     caption = tab_caption, 
     label = tab_label,
-    align = "lllccc"
+    align = "lllcccc"
   ), 
   size = "\\small",
   include.rownames = FALSE,
@@ -638,7 +662,7 @@ print(
     PETPEESE, 
     caption = tab_caption, 
     label = tab_label,
-    align = "llcccc"
+    align = "llccccc"
   ), 
   include.rownames = FALSE,
   caption.placement = "top", 
