@@ -657,13 +657,13 @@ print(
 
 # latex version PET-PEESE
 PETPEESE <- data.frame(rbind(
-    c("PET", rep(NA, 4)),
+    c("PET", rep(NA, 5)),
     PET,
-    c("PEESE", rep(NA, 4)),
+    c("PEESE", rep(NA, 5)),
     PEESE,
     stringsAsFactors = FALSE
 ), stringsAsFactors = FALSE)
-setnames(PETPEESE, c(4:5), c("$t$","$p$"))
+setnames(PETPEESE, c(4:6), c("$t$","$df$","$p$"))
 tab_caption <- "Publication bias analysis with precision-effect test (PET) and precision-effect estimate test (PEESE) of complete data. See \\textit{Methods} for details on the tests."
 tab_label <- "tab:PET-PEESE"
 print(
@@ -679,7 +679,6 @@ print(
   sanitize.text.function = function(x){x},
   file = file.path(tablesDir, "PET-PEESE.tex")
 )
-
 
 # -------------------------------------------------------------------------------------------------------
 # Table with raw data for appendix
@@ -787,16 +786,16 @@ countryNA = countryNA[order(IV),]
 
 sampletable = cbind(IV=ageNA$IV,
                     Age=NA,
-                    "\\hspace{2mm}\\not reported"=ageNA$ageNA,
-                    "\\hspace{2mm}\\mean"=round(age$age, digits = 2),
+                    "\\hspace{2mm}not reported"=ageNA$ageNA,
+                    "\\hspace{2mm}mean"=round(age$age, digits = 2),
                     "Gender: female"=NA,
-                    "\\hspace{2mm}\\not reported"=womenNA$womenNA,
-                    "\\hspace{2mm}\\percent"=round(women$women, digits = 2),
+                    "\\hspace{2mm}not reported"=womenNA$womenNA,
+                    "\\hspace{2mm}percent"=round(women$women, digits = 2),
                     Ethnicity=NA,
-                    "\\hspace{2mm}\\not reported"=ethnicityNA$ethnicityNA,
+                    "\\hspace{2mm}not reported"=ethnicityNA$ethnicityNA,
                     ethnicity[,2:4],
                     Country=NA,
-                    "\\hspace{2mm}\\not reported"=countryNA$countryNA,
+                    "\\hspace{2mm}not reported"=countryNA$countryNA,
                     country[,2:9])
 #sampletable[is.na(sampletable)] = 0
 rownames = colnames(sampletable)
@@ -806,7 +805,7 @@ setnames(sampletable, c(1:8), c("Salience", "Surface size", "Left vs right posit
 sampletable = cbind(" "=rownames[-1],sampletable[-1,])
 
 rows = sampletable$' '[c(9:11,14:length(sampletable$' '))]
-add = rep("\\hspace{2mm}\\", times = length(rows))
+add = rep("\\hspace{2mm}", times = length(rows))
 rows = paste0(add,rows)
 Dimension = paste0(sampletable$' ')
 rows = c(Dimension[c(1:8)], 
