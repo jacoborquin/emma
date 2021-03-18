@@ -21,7 +21,8 @@ packages <- c(
     'DescTools',  
     'cowplot',
     'irr',  
-    'clubSandwich'
+    'clubSandwich',
+    'reshape2'
 )
 lapply(packages, library, character.only = TRUE)
 

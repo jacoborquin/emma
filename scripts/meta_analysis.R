@@ -191,7 +191,14 @@ taskmod_attTrim  = rma(yi.c.FC, vi.c, weights=1/vi.c, data=taskdata10att, method
 # -----
 
 # preparing data
-prefdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Pref.view"], vtype="AV"))
+prefdata = data[IV == "Pref.view", list(Authors = unique(Authors), 
+                                        IV = unique(IV), 
+                                        Alt.att = unique(Alt.att), 
+                                        fix.count.m = mean(fix.count.m), 
+                                        yi.c.FC = mean(yi.c.FC), 
+                                        N = unique(N), 
+                                        a_acc = unique(a_acc)), "Study"]
+prefdata = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=prefdata, vtype="AV"))
 prefdata$vi.c = prefdata$vi/prefdata$a_acc^2
 prefdata_att = data.table(escalc(measure="COR", ri=fix.count.m, ni=N, data=data[data$IV == "Pref.view" & data$Alt.att == "attribute"], vtype="AV"))
 prefdata_att$vi.c = prefdata_att$vi/prefdata_att$a_acc^2
@@ -331,10 +338,11 @@ setnames(mainresults, c(1:10), c("Group","$k$","$N$","$\\rho$","SE","$t$","$p$",
 write_csv(mainresults, file.path(tablesDir, "main_results.csv"))
 
 # latex version
-tab_caption <- "Main results of the meta-analysis, divided into visual and cognitive factor groups, and individual factors within them. The most important values are the corrected effect size estimate, $\\rho$, and the associated heterogeneity, $I^2$. Results of trim and fill analysis are in the parentesis."
+tab_caption <- "Main results of the meta-analysis, divided into visual and cognitive factor groups, and individual factors within them. The most important values are the corrected effect size estimate, $\\rho$, and the associated heterogeneity, $I^2$. 
+                Results of the Top10 analysis are in parenteses."
 tab_label <- "tab:main_results"
 tab_note <- paste0("\\hline \n \\multicolumn{10}{p{0.95\\textwidth}}",
-           "{\\scriptsize{\\textit{Note.} $k$ = number of studies (for trim and fill analysis number of imputed studies); $N$ = number of participants; $\\rho$ = unattenuated effect size estimate, SE = standard error of estimate; $Z$ = Z statistic; $p$ = significance level; $\\textrm{CI}^{95}_{LL}$ = lower limit of the 95\\% confidence interval; $\\textrm{CI}^{95}_{UL}$ = upper limit of the 95\\% confidence interval, $I^2$ = within-group heterogeneity.}} \n")
+           "{\\scriptsize{\\textit{Note.} $k$ = number of studies; $N$ = number of participants; $\\rho$ = unattenuated effect size estimate, SE = standard error of estimate; $Z$ = Z statistic; $p$ = significance level; $\\textrm{CI}^{95}_{LL}$ = lower limit of the 95\\% confidence interval; $\\textrm{CI}^{95}_{UL}$ = upper limit of the 95\\% confidence interval, $I^2$ = within-group heterogeneity.}} \n")
 print(
 	xtable(
 		mainresults, 
@@ -391,10 +399,11 @@ modresults = data.frame(rbind(
 setnames(modresults, c(1:10), c("Group","$k$","$N$","$\\rho$","SE","$Z$","$p$","$\\textrm{CI}^{95}_{LL}$","$\\textrm{CI}^{95}_{UL}$","$I^2$"))
 
 # latex version
-tab_caption <- "Moderator analysis results. The most important values are the corrected effect size estimate, $\\rho$, and the associated heterogeneity, $I^2$. Results of trim and fill analysis are in the parenthesis."
+tab_caption <- "Moderator analysis results. The most important values are the corrected effect size estimate, $\\rho$, and the associated heterogeneity, $I^2$. 
+                Results of the Top10 analysis are in parentheses."
 tab_label <- "tab:mod_results"
 tab_note <- paste0("\\hline \n \\multicolumn{10}{p{0.9\\textwidth}}",
-           "{\\scriptsize{\\textit{Note.} $k$ = number of studies (for trim and fill analysis number of imputed studies); $N$ = number of participants; $\\rho$ = unattenuated effect size estimate, SE = standard error of estimate; $Z$ = Z statistic; $p$ = significance level; $\\textrm{CI}^{95}_{LL}$ = lower limit of the 95\\% confidence interval; $\\textrm{CI}^{95}_{LL}$ = upper limit of the 95\\% confidence interval, $I^2$ = within-group heterogeneity.}} \n")
+           "{\\scriptsize{\\textit{Note.} $k$ = number of studies; $N$ = number of participants; $\\rho$ = unattenuated effect size estimate, SE = standard error of estimate; $Z$ = Z statistic; $p$ = significance level; $\\textrm{CI}^{95}_{LL}$ = lower limit of the 95\\% confidence interval; $\\textrm{CI}^{95}_{LL}$ = upper limit of the 95\\% confidence interval, $I^2$ = within-group heterogeneity.}} \n")
 print(
   xtable(
     modresults, 
@@ -607,8 +616,8 @@ PET = round(data.frame(PET, stringsAsFactors = FALSE), digits = 3)
 PEESE = round(data.frame(PEESE, stringsAsFactors = FALSE), digits = 3)
 PET = cbind(Parameter=c("Intercept", "$SD$", "$A$"), PET, stringsAsFactors = FALSE)
 PEESE = cbind(Parameter=c("Intercept", "$Var$", "$A$"), PEESE, stringsAsFactors = FALSE)
-setnames(PET, c(3:5), c("t","$df$","$p$"))
-setnames(PEESE, c(3:5), c("t","$df$","$p$"))
+setnames(PET, c(4:6), c("$t$","$df$","$p$"))
+setnames(PEESE, c(4:6), c("$t$","$df$","$p$"))
 
 # latex version PET
 tab_caption <- "Precision-effect test (PET) of complete data"
@@ -736,4 +745,92 @@ print(
   tabular.environment = "longtable",
   sanitize.text.function = function(x){x},
   file = file.path(tablesDir, "overview_table.tex")
+)
+
+# -------------------------------------------------------------------------------------------------------
+# Table with participant sample characteristics
+# -------------------------------------------------------------------------------------------------------
+
+# loading data
+sample = as.data.table(read_excel(
+  file.path(dataDir, "data_sample.xlsx")
+))
+
+sample = merge(sample, data, by = "Study", all.x = T)
+sample = sample[, list(IV = unique(IV),
+                       women = unique(percent_women),
+                       age = unique(mean_age),
+                       ethnicity = unique(ethnicity),
+                       country = unique(country)), Study]
+
+age = sample[is.na(age) == F, list(age = mean(age)), IV]
+age = age[order(IV), ]
+ageNA = sample[, list(ageNA = NROW(is.na(age))), IV]
+ageNA = ageNA[order(IV),]
+
+women = sample[is.na(women) == F, list(women = mean(women)), IV]
+women = women[order(IV),]
+womenNA = sample[, list(womenNA = NROW(is.na(women))), IV]
+womenNA = womenNA[order(IV),]
+
+ethnicity = sample[is.na(ethnicity) == F, list(count = NROW(Study)), by = c("IV", "ethnicity")]
+ethnicity = dcast(ethnicity, IV ~ ethnicity)
+ethnicity = ethnicity[order(ethnicity$IV),]
+ethnicityNA = sample[, list(ethnicityNA = NROW(is.na(ethnicity))), IV]
+ethnicityNA = ethnicityNA[order(IV),]
+
+country = sample[is.na(country) == F, list(count = NROW(Study)), by = c("IV", "country")]
+country = dcast(country, IV ~ country)
+country = country[order(country$IV),]
+countryNA = sample[, list(countryNA = NROW(is.na(country))), IV]
+countryNA = countryNA[order(IV),]
+
+sampletable = cbind(IV=ageNA$IV,
+                    Age=NA,
+                    "\\hspace{2mm}\\not reported"=ageNA$ageNA,
+                    "\\hspace{2mm}\\mean"=round(age$age, digits = 2),
+                    "Gender: female"=NA,
+                    "\\hspace{2mm}\\not reported"=womenNA$womenNA,
+                    "\\hspace{2mm}\\percent"=round(women$women, digits = 2),
+                    Ethnicity=NA,
+                    "\\hspace{2mm}\\not reported"=ethnicityNA$ethnicityNA,
+                    ethnicity[,2:4],
+                    Country=NA,
+                    "\\hspace{2mm}\\not reported"=countryNA$countryNA,
+                    country[,2:9])
+#sampletable[is.na(sampletable)] = 0
+rownames = colnames(sampletable)
+sampletable = transpose(sampletable)
+sampletable = sampletable[, c(5,7,3,1,6,8,4,2)]
+setnames(sampletable, c(1:8), c("Salience", "Surface size", "Left vs right position", "Center position", "Set size", "Task instructions", "Preferential viewing", "Choice-gaze effect"))
+sampletable = cbind(" "=rownames[-1],sampletable[-1,])
+
+rows = sampletable$' '[c(9:11,14:length(sampletable$' '))]
+add = rep("\\hspace{2mm}\\", times = length(rows))
+rows = paste0(add,rows)
+Dimension = paste0(sampletable$' ')
+rows = c(Dimension[c(1:8)], 
+         rows[c(1:3)],
+         Dimension[c(12:13)],
+         rows[c(4:length(rows))])
+row.names(sampletable) = NULL
+sampletable$' ' = rows
+  
+
+# latex version PEESE
+tab_caption <- "Participant sample characteristics grouped by visual and cognitive factors"
+tab_label <- "tab:sampleTable"
+print(
+  xtable(
+    sampletable, 
+    caption = tab_caption, 
+    label = tab_label,
+    align = "llcccccccc"
+  ), 
+  size = "\\small",
+  include.rownames = FALSE,
+  caption.placement = "top", 
+  hline.after = c(-1, 0, NROW(sampletable)),
+  sanitize.text.function = function(x){x},
+  file = file.path(tablesDir, "sampleTable.tex")
 )
