@@ -824,7 +824,7 @@ print(
     sampletable, 
     caption = tab_caption, 
     label = tab_label,
-    align = "llp{.09\\linewidth}p{.09\\linewidth}p{.09\\linewidth}p{.09\\linewidth}p{.09\\linewidth}p{.09\\linewidth}p{.09\\linewidth}p{.09\\linewidth}"
+    align = "llp{.07\\linewidth}p{.07\\linewidth}p{.09\\linewidth}p{.09\\linewidth}p{.07\\linewidth}p{.08\\linewidth}p{.1\\linewidth}p{.07\\linewidth}"
     #align = "llcccccccc"
   ), 
   size = "\\small",
