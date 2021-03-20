@@ -339,7 +339,7 @@ write_csv(mainresults, file.path(tablesDir, "main_results.csv"))
 
 # latex version
 tab_caption <- "Main results of the meta-analysis, divided into visual and cognitive factor groups, and individual factors within them. The most important values are the corrected effect size estimate, $\\rho$, and the associated heterogeneity, $I^2$. 
-                Results of the Top10 analysis are in parenteses."
+                Results of the Top10 analysis are in parentheses."
 tab_label <- "tab:main_results"
 tab_note <- paste0("\\hline \n \\multicolumn{10}{p{0.95\\textwidth}}",
            "{\\scriptsize{\\textit{Note.} $k$ = number of studies; $N$ = number of participants; $\\rho$ = unattenuated effect size estimate, SE = standard error of estimate; $Z$ = Z statistic; $p$ = significance level; $\\textrm{CI}^{95}_{LL}$ = lower limit of the 95\\% confidence interval; $\\textrm{CI}^{95}_{UL}$ = upper limit of the 95\\% confidence interval, $I^2$ = within-group heterogeneity.}} \n")
