@@ -133,7 +133,7 @@ figure <-
 	ggplot(data = data_long, aes(Accuracy, Rz)) +
 	geom_point(alpha = .5, size = pointSize) +
 	geom_abline(intercept = b0, slope = b1, size = lineSize*1) +
-	scale_x_continuous("Eye tracker accuracy (visual angle)", breaks = seq(0, 1.5, by=.1)) +
+	scale_x_continuous("Eye-tracker accuracy (visual angle)", breaks = seq(0, 1.5, by=.1)) +
 	ylab("Effect size (z)") +
 	mytheme
 filename <- file.path(figsDir, "ET_accuracy_effectsize.pdf")
@@ -147,11 +147,11 @@ savePlots(figure, filename, fd_SI_1x1.5)
 # make eye tracker specifications table for manuscript appendix
 ET_specs_final = data[, list(A = unique(a_acc), accuracy = unique(Accuracy), precision = unique(Precision)), by= c("Eye.tracker")]
 ET_specs_final$A <- round(ET_specs_final$A, 4)
-setnames(ET_specs_final, c(1:4), c("Eye tracker model", "$a_a$", "Accuracy", "Precision"))
+setnames(ET_specs_final, c(1:4), c("Eye-tracker model", "$a_a$", "Accuracy", "Precision"))
 write_csv(ET_specs_final, file.path(tablesDir, "eyetracker_specs.csv"))
 
 # latex version
-tab_caption <- "Eye tracker specifications table, with accuracy and precision for each eye tracker as extracted from the manufacturer website, and computed artifact multiplier used for correcting for a bias in effect size estimates."
+tab_caption <- "Eye-tracker specifications table, with accuracy and precision for each eye-tracker as extracted from the manufacturer website, and computed artifact multiplier used for correcting for a bias in effect size estimates."
 tab_label <- "tab:eyetracker_specifications"
 tab_note <- paste0("\\hline \n \\multicolumn{4}{l}",
            "{\\scriptsize{\\textit{Note.} $a_a$ = artifact multiplier.}} \n")

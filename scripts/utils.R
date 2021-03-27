@@ -34,7 +34,7 @@ lapply(packages, library, character.only = TRUE)
 # set the root directory for the project here:
 # root = "/Users/au161118/Dropbox/ASB/Admin stuff/Posters & Papers/PAPERS/EMMA/scripts/emma"
 # root = "/home/hstojic/research/project/attention_meta"
-root = "."
+root = ".."
 
 # directory paths
 figsDir <- file.path(root, "figs")
