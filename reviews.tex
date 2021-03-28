@@ -40,12 +40,12 @@ Rodgers, M. A., \& Pustejovsky, J. E. (In Press). Evaluating Meta-Analytic Metho
 \\
 Mathur, M. B., \& VanderWeele, T. J. (2020). Sensitivity analysis for publication bias in meta‐analyses. Journal of the Royal Statistical Society. Series C, Applied Statistics, 69(5), 1091.\\
 \\
-The second paper provides clear evidence that using publication bias tests that ignore dependency (as  done in the present analysis) can lead to grossly mistaken inferences. The third paper proposes a “sensitivity analysis” approach to examining publication bias in meta-analysis while accounting for effect size dependency. An R package that implements the approach can be found here: https://cran.r-project.org/web/packages/PublicationBias/index.html\\
+The second paper provides clear evidence that using publication bias tests that ignore dependency (as  done in the present analysis) can lead to grossly mistaken inferences. The third paper proposes a “sensitivity analysis” approach to examining publication bias in meta-analysis while accounting for effect size dependency. An R package that implements the approach can be found here: \url{https://cran.r-project.org/web/packages/PublicationBias/index.html}\\
 \\
 Although I do not expect you to implement all the approaches presented in these papers, I expect some adjustments of relevance in your paper. In fact, the trim and fill method is typically not appropriate for a multilevel model and should likely be removed.
 }
     
-Thank you for the diligence and pointing out these new studies and the obvious inconsistency between the main and publication bias analyses. In accordance with our correspondence, we have adjusted the PET-PEESE and the public grants analyses with robust variance estimates and replaced the trim and fill analysis with the Top10 analysis. In the method subsection ``Publication bias'' we introduce the Top10 analysis and the computation of precision. To avoid confusion by referencing concepts introduced later, we have moved the subsection so it appears after the subsections on the statistical analysis.    
+Thank you for the diligence and pointing out these new studies and the obvious inconsistency between the main and publication bias analyses. In accordance with our correspondence, we have adjusted the PET-PEESE and the public grants analyses with robust variance estimates and replaced the trim and fill analysis with the Top10 analysis. In the method we introduce the Top10 analysis and the computation of precision (section ``Publication bias'', line \lineref{publicaton-bias-method}). To avoid confusion by referencing concepts introduced later, we have moved the subsection so it appears after the subsections on the statistical analysis. Overall, this analysis has made the results stronger. The Top10 analysis results suggests that several visual factors now have larger effect sizes, while for the cognitive factors it suggests even larger downward adjustment. The main text was adjusted accordingly, mainly the Results section (lines \lineref{Top10-1}, \lineref{Top10-2}, \lineref{Top10-3}, \lineref{Top10-4} and \lineref{Top10-5}), and briefly in the Discussion section (line \lineref{Top10-discussion}).    
     
     
 \com[com-editor-independent]{2- Still related to this, given the dependency among effect sizes, it might be advisable to remove the word “independent” in the sentence stating “This resulted in 122 independent effect size estimates, out of which 50 were effects of visual factors and 72 were effects of cognitive factors…”, at the bottom of page 13.}
@@ -73,19 +73,21 @@ We have revised the section and now provide a brief description of our expectati
 \end{itemize}
 }
 
-The paper has now been proof read by a professional editor.
+The paper has now been proof read by a professional editor. Although numerous, by and large these were very small changes (e.g. missing commas), so we have not marked these changes.
 
 
 \com[com-editor-variables]{6- Table 1 would suggest that you coded very few variables and I presume that it focuses on what you view as important moderators. I want to encourage you to be more explicit in presenting a list of all coded variables. A list of variables appears in the method but it is unclear whether other variables were considered (e.g., exploratory or descriptive factors). It seems good evidence synthesis practice to document the source of the papers that enter reviews/meta-analyses; in many such works, these provide a helpful context to interpret the results that then follow. For example, how about elaborating on the countries where the studies originated, what races/ethnicities and ages were represented in studies, and so on? Although these factors might not be plausibly connected to results, they could be used to address future directions and limitations in the context of the generalizability of the findings. This component would also make the discussion more sensitive to diversity factors. Alternatively, if studies are not describing their samples, then you could call on the literature to do so in future studies. It is also possible that these factors are not typically studied in this research area and that would have to be clarified as well. Regardless of whether you can provide an in-depth discussion of diversity variables, in the end, I would expect you to include a table that incorporates important features of the samples along with the moderators, as shown in the attached example (from a paper recently accepted for publication in Psychological Bulletin).}
 
-We have now coded participant sample information following your recommendation (age, gender distribution, ethnicity, and country) and have inserted a table summarizing this at the beginning of the results section.
+We have not considered variables other than those listed in the method section. We have put a sentence stating this explicitly in the method (line \lineref{nonlisted-variables}).
+
+We have now coded participant sample information following your recommendation (age, gender distribution, ethnicity, and country) and have placed a table summarizing this in the appendix. We have briefly given some context in the main text, given this information (line \lineref{sample-information}).
 
 ADD INTERPRETATION AFTER TABLE IS FINALIZED
 
 
 \com[com-editor-limitations]{7- Related to the preceding point, the Discussion does not include a Limitations sub-section, which is typically expected in a review of this type. It could cover limitations of the included studies or of the methods used in evidence synthesis, but it requires discussion. On this point, the suggestion by Reviewer 2 that restrictions on language were imposed because the search terms were in English would count as a limitation that should be mentioned in the relevant section. For example, how much non-English literature might have been missed? Would these studies reach the same conclusions? Are important populations being omitted because of this particular method?}
 
-As suggested we have added a title to demarcate the Limitations subsection. However, to demarcate this section from the subsequent one, we have also added a title to the last section called "Conclusion".  
+As suggested we have added a title to demarcate the Limitations subsection (line \lineref{limitations}). However, to demarcate this section from the subsequent one, we have also added a title to the last section called ``Conclusion'' (line \lineref{conclusion}).  
 
 
 
