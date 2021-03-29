@@ -764,24 +764,24 @@ sample = sample[, list(IV = unique(IV),
 
 age = sample[is.na(age) == F, list(age = mean(age)), IV]
 age = age[order(IV), ]
-ageNA = sample[, list(ageNA = NROW(is.na(age))), IV]
+ageNA = sample[is.na(age) == T, list(ageNA = NROW(age)), IV]
 ageNA = ageNA[order(IV),]
 
 women = sample[is.na(women) == F, list(women = mean(women)), IV]
 women = women[order(IV),]
-womenNA = sample[, list(womenNA = NROW(is.na(women))), IV]
+womenNA = sample[is.na(women) == T, list(womenNA = NROW(women)), IV]
 womenNA = womenNA[order(IV),]
 
 ethnicity = sample[is.na(ethnicity) == F, list(count = NROW(Study)), by = c("IV", "ethnicity")]
 ethnicity = dcast(ethnicity, IV ~ ethnicity)
 ethnicity = ethnicity[order(ethnicity$IV),]
-ethnicityNA = sample[, list(ethnicityNA = NROW(is.na(ethnicity))), IV]
+ethnicityNA = sample[is.na(ethnicity) == T, list(ethnicityNA = NROW(ethnicity)), IV]
 ethnicityNA = ethnicityNA[order(IV),]
 
 country = sample[is.na(country) == F, list(count = NROW(Study)), by = c("IV", "country")]
 country = dcast(country, IV ~ country)
 country = country[order(country$IV),]
-countryNA = sample[, list(countryNA = NROW(is.na(country))), IV]
+countryNA = sample[is.na(country) == T, list(countryNA = NROW(country)), IV]
 countryNA = countryNA[order(IV),]
 
 sampletable = cbind(IV=ageNA$IV,
