@@ -25,8 +25,8 @@ source("./scripts/utils.R")
 data = as.data.table(read_csv(
 	  file.path(dataDir, "data_effect_sizes_cleaned.csv")
 ))
-grant = as.data.table(read_csv(
-    file.path(dataDir, "data_grant.csv")
+grant = as.data.table(read_excel(
+    file.path(dataDir, "data_grant.xlsx")
 ))
 
 
