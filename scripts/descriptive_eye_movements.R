@@ -113,7 +113,7 @@ ESdata$IV = ifelse(
     ESdata$IV == "Pref.view", "Preferential viewing",
         ifelse(ESdata$IV == "Center.position", "Central position",
             ifelse(ESdata$IV == "Choice.bias", "Choice-gaze effect",
-                ifelse(ESdata$IV == "LR.position", "Left vs right position",
+                ifelse(ESdata$IV == "LR.position", "Left vs. right position",
                     ifelse(ESdata$IV == "Task", "Task instruction",
                         ifelse(ESdata$IV == "Size", "Surface size",
                             ifelse(ESdata$IV == "Setsize", "Set size", 
@@ -374,7 +374,7 @@ logTransform = function(IV, model, mean){
 FL = c(
     logitTransform("Salience", flmodel),
     logitTransform("Surface size", flmodel),
-    logitTransform("Left vs right position", flmodel),
+    logitTransform("Left vs. right position", flmodel),
     logitTransform("Center position", flmodel),
     logitTransform("Set size", flmodel),
     logitTransform("Task instructions", flmodel),
@@ -385,7 +385,7 @@ FL = c(
 FC = c(
     logTransform("Salience", fcmodel, fcmeanLog),
     logTransform("Surface size", fcmodel, fcmeanLog),
-    logTransform("Left vs right position", fcmodel, fcmeanLog),
+    logTransform("Left vs. right position", fcmodel, fcmeanLog),
     logTransform("Center position", fcmodel, fcmeanLog),
     logTransform("Set size", fcmodel, fcmeanLog),
     logTransform("Task instructions", fcmodel, fcmeanLog),
@@ -396,7 +396,7 @@ FC = c(
 TDT = c(
     logTransform("Salience", tdtmodel, tdtmeanLog),
     logTransform("Surface size", tdtmodel, tdtmeanLog),
-    logTransform("Left vs right position", tdtmodel, tdtmeanLog),
+    logTransform("Left vs. right position", tdtmodel, tdtmeanLog),
     logTransform("Center position", tdtmodel, tdtmeanLog),
     logTransform("Set size", tdtmodel, tdtmeanLog),
     logTransform("Task instructions", tdtmodel, tdtmeanLog),

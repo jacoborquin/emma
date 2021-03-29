@@ -57,7 +57,7 @@ result <- paste0(
 	"effect size, $\\textrm{ICC} = ", round(ES_ICC$value, 3),"$,",
 	" sample size, $\\textrm{ICC} = ", round(N_ICC$value, 3),"$,",
 	" research domain, $\\kappa = ", round(domain_kappa$value, 3),"$,",
-	" eye tracker model, $\\kappa = ", round(ET_kappa$value, 3),"$,",
+	" eye-tracker model, $\\kappa = ", round(ET_kappa$value, 3),"$,",
 	" dependent variable, $\\kappa = ", round(DV_kappa$value, 3),"$,", 
 	" independent variable, $\\kappa = ", round(IV_kappa$value, 3),"$"
 )

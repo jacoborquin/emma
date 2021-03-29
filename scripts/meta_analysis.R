@@ -19,7 +19,7 @@
 rm(list = ls())
 
 # import packages and functions
-source("./scripts/utils.R")
+source("utils.R")
 
 # loading data
 data = as.data.table(read_csv(
@@ -318,7 +318,7 @@ mainresults = data.frame(rbind(
   extractTrim(salTrim,saldata10),
   extractMain("Surface size",sizeresrobu,sizedata),
   extractTrim(sizeTrim,sizedata10),
-  extractMain("Left vs right position",LRresrobu,LRdata),
+  extractMain("Left vs. right position",LRresrobu,LRdata),
   extractTrim(LRTrim,LRdata10),
   extractMain("Center position",centerresrobu,centerdata),
   extractTrim(centerTrim,centerdata10),
@@ -339,7 +339,7 @@ write_csv(mainresults, file.path(tablesDir, "main_results.csv"))
 
 # latex version
 tab_caption <- "Main results of the meta-analysis, divided into visual and cognitive factor groups, and individual factors within them. The most important values are the corrected effect size estimate, $\\rho$, and the associated heterogeneity, $I^2$. 
-                Results of the Top10 analysis are in parenteses."
+                Results of the Top10 analysis are in parentheses."
 tab_label <- "tab:main_results"
 tab_note <- paste0("\\hline \n \\multicolumn{10}{p{0.95\\textwidth}}",
            "{\\scriptsize{\\textit{Note.} $k$ = number of studies; $N$ = number of participants; $\\rho$ = unattenuated effect size estimate, SE = standard error of estimate; $Z$ = Z statistic; $p$ = significance level; $\\textrm{CI}^{95}_{LL}$ = lower limit of the 95\\% confidence interval; $\\textrm{CI}^{95}_{UL}$ = upper limit of the 95\\% confidence interval, $I^2$ = within-group heterogeneity.}} \n")
@@ -464,7 +464,7 @@ cat(result, file = file.path(tablesDir, "difftest_pref_choice.tex"))
 # generating plots for each subgroup
 salplot = genForest(salresrobu,saldata,"Salience","Salience", "yi.c.FC")
 sizeplot = genForest(sizeresrobu,sizedata,"Size","Surface size", "yi.c.FC")
-LRplot = genForest(LRresrobu,LRdata,"LR.position","Left vs right position", "yi.c.FC")
+LRplot = genForest(LRresrobu,LRdata,"LR.position","Left vs. right position", "yi.c.FC")
 centerplot = genForest(centerresrobu,centerdata,"Center.position","Center position", "yi.c.FC")
 setplot = genForest(setresrobu,setdata,"Setsize", "Set size", "yi.c.FC")
 taskplot = genForest(taskresrobu,taskdata,"Task", "Task instructions", "yi.c.FC")
@@ -518,7 +518,7 @@ savePlots(forestpanel, filename, fd_SI_3x2)
 # generating funnel plots for each main and subgroup
 salfunnel = genFunnel(salresrobu,saldata,"yi.c.FC","Salience")
 sizefunnel = genFunnel(sizeresrobu,sizedata,"yi.c.FC", "Surface size")
-LRfunnel = genFunnel(LRresrobu,LRdata,"yi.c.FC", "Left vs right position")
+LRfunnel = genFunnel(LRresrobu,LRdata,"yi.c.FC", "Left vs. right position")
 centerfunnel = genFunnel(centerresrobu,centerdata,"yi.c.FC", "Center position")
 setfunnel = genFunnel(setresrobu,setdata,"yi.c.FC", "Set size")
 setfunnel_alt = genFunnel(setmod_altrobu,setdata[setdata$Alt.att == "alternative"],"yi.c.FC", "Set size - altenrative")
@@ -717,10 +717,10 @@ overview = overview[order(Authors),]
 setnames(
     overview, 
     c("N","a_acc","fix.count.m","Eye.tracker","Research.Domain","Alt.att"), 
-    c("$N$","$a_a$","$r$","Eye tracker","Domain","Alt/Att")
+    c("$N$","$a_a$","$r$","Eye-tracker","Domain","Alt/Att")
 )
 
-tab_caption <- "Overview of individual effect sizes: IV = independent variable (LvR = Left vs right position, Center = Center position, Sal = Salience, Pref = Preferential viewing, Choice = Choice-gaze effect, Task = Task instructions); $N$ = number of participants; $a_a$ = artifact multiplier; $r$ = attenuated effect size correlation expressed in the fixation count metric; Domain = research domain (Pref con = Preferential consumer choice, Pref non-con = Preferential non-consumer choice, Inf con = Inferential consumer choice, Inf non-con = Inferential non-consumer choice, Lotteries = Risky gambles); Alt/Att = Alternative or attribute manipulation."
+tab_caption <- "Overview of individual effect sizes: IV = independent variable (LvR = Left vs. right position, Center = Center position, Sal = Salience, Pref = Preferential viewing, Choice = Choice-gaze effect, Task = Task instructions); $N$ = number of participants; $a_a$ = artifact multiplier; $r$ = attenuated effect size correlation expressed in the fixation count metric; Domain = research domain (Pref con = Preferential consumer choice, Pref non-con = Preferential non-consumer choice, Inf con = Inferential consumer choice, Inf non-con = Inferential non-consumer choice, Lotteries = Risky gambles); Alt/Att = Alternative or attribute manipulation."
 tab_label <- "tab:overviewtable"
 add.to.row <- list(pos = list(0), command = NULL)
 command <- paste0("\\hline\n\\endhead\n","\\hline\n","\\multicolumn{", dim(overview)[2], "}{l}","{\\footnotesize Continued on next page}\n","\\endfoot\n","\\endlastfoot\n")
@@ -801,7 +801,7 @@ sampletable = cbind(IV=ageNA$IV,
 rownames = colnames(sampletable)
 sampletable = transpose(sampletable)
 sampletable = sampletable[, c(5,7,3,1,6,8,4,2)]
-setnames(sampletable, c(1:8), c("Salience", "Surface size", "Left vs right position", "Center position", "Set size", "Task instructions", "Preferential viewing", "Choice-gaze effect"))
+setnames(sampletable, c(1:8), c("Salience", "Surface size", "Left vs. right position", "Center position", "Set size", "Task instructions", "Preferential viewing", "Choice-gaze effect"))
 sampletable = cbind(" "=rownames[-1],sampletable[-1,])
 
 rows = sampletable$' '[c(9:11,14:length(sampletable$' '))]
