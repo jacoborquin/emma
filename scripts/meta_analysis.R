@@ -816,7 +816,7 @@ row.names(sampletable) = NULL
 sampletable$' ' = rows
   
 
-# latex version PEESE
+# latex version Sample Table
 tab_caption <- "Participant sample characteristics grouped by visual and cognitive factors"
 tab_label <- "tab:sampleTable"
 print(
