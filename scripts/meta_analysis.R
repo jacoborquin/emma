@@ -775,13 +775,17 @@ womenNA = womenNA[order(IV),]
 ethnicity = sample[is.na(ethnicity) == F, list(count = NROW(Study)), by = c("IV", "ethnicity")]
 ethnicity = dcast(ethnicity, IV ~ ethnicity)
 ethnicity = ethnicity[order(ethnicity$IV),]
-ethnicityNA = sample[is.na(ethnicity) == T, list(ethnicityNA = NROW(ethnicity)), IV]
+ethnicityNA = sample[is.na(ethnicity), list(ethnicityNA = NROW(ethnicity)), IV]
+ethnicityNA = merge(ethnicity, ethnicityNA, by = "IV", all.x = T)
+ethnicityNA = ethnicityNA[, c(1,5)]
 ethnicityNA = ethnicityNA[order(IV),]
 
 country = sample[is.na(country) == F, list(count = NROW(Study)), by = c("IV", "country")]
 country = dcast(country, IV ~ country)
 country = country[order(country$IV),]
 countryNA = sample[is.na(country) == T, list(countryNA = NROW(country)), IV]
+countryNA = merge(country, countryNA, by = "IV", all.x = T)
+countryNA = countryNA[, c(1,19)]
 countryNA = countryNA[order(IV),]
 
 sampletable = cbind(IV=ageNA$IV,
@@ -797,6 +801,7 @@ sampletable = cbind(IV=ageNA$IV,
                     Country=NA,
                     "\\hspace{2mm}not reported"=countryNA$countryNA,
                     country[,2:18])
+
 #sampletable[is.na(sampletable)] = 0
 rownames = colnames(sampletable)
 sampletable = transpose(sampletable)
