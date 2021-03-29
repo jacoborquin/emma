@@ -79,7 +79,7 @@ Tobii Glasses 1,\cite{wastlund2015},Waestlund et al. 2014 Study 2,Task,NA,0.2564
 Tobii Glasses 1,\cite{wastlund2015},Waestlund et al. 2014 Study 3,Task,NA,0.395027751,NA,NA,66,inf. Consumer choice,alternative,1.42,0.5,0.3643269065259421,0.3811921167262711,0.395027751
 Tobii T120,\cite{du2014},Du & MacDonald 2014,Pref.view,0.2275,NA,0.21,NA,72,pref. Consumer choice,attribute,0.4,0.24,0.820937156767871,0.2275,0.23639012080745955
 Tobii T120,\cite{hong2016a},Hong et al. 2016,Setsize,0.44,NA,NA,NA,75,pref. Consumer choice,alternative,0.4,0.24,0.820937156767871,0.43999999999999995,0.455320966352462
-Tobii T120,\cite{meissner2016b},Meissner  et al. 2016b,Setsize,0.42,NA,NA,NA,40,pref. Consumer choice,alternative,0.4,0.24,0.820937156767871,0.42,0.4348466203497895
+Tobii T120,\cite{meissner2016b},Meissner et al. 2016b,Setsize,0.42,NA,NA,NA,40,pref. Consumer choice,alternative,0.4,0.24,0.820937156767871,0.42,0.4348466203497895
 Tobii T120,\cite{meissner2016a},Meissner et al. 2016a Study 2,Center.position,0.12,NA,NA,NA,35,pref. Consumer choice,NA,0.4,0.24,0.820937156767871,0.12000000000000008,0.12481949557411219
 Tobii T120,\cite{meissner2016a},Meissner et al. 2016a Study 2,Pref.view,0.775103033,NA,NA,NA,35,pref. Consumer choice,attribute,0.4,0.24,0.820937156767871,0.775103033,0.7913006139252126
 Tobii T120,\cite{meissner2016a},Meissner et al. 2016a Study 2,Pref.view,0.881406974,NA,NA,NA,35,pref. Consumer choice,alternative,0.4,0.24,0.820937156767871,0.881406974,0.893318188814318
@@ -94,7 +94,7 @@ Tobii T2150,\cite{orquin2019a},Orquin et al. 2019a Study 1,Center.position,0.267
 Tobii T2150,\cite{orquin2019a},Orquin et al. 2019a Study 1,Salience,0.088265062,0.136703564,0.086391139,NA,91,pref. Consumer choice,attribute,0.5,0.35,0.7761714459598387,0.08826506200000002,0.13670356400000006
 Tobii T2150,\cite{orquin2019a},Orquin et al. 2019a Study 1,Setsize,0.077840191,0.064698644,0.064173708,NA,91,pref. Consumer choice,attribute,0.5,0.35,0.7761714459598387,0.0778401909999999,0.06469864399999993
 Tobii T2150,\cite{orquin2019a},Orquin et al. 2019a Study 1,Size,0.222238718,0.190103704,0.168300567,NA,91,pref. Consumer choice,attribute,0.5,0.35,0.7761714459598387,0.22223871800000006,0.190103704
-Tobii T2150,\cite{orquin2013},"Orquin, Bagger & Mueller Loose 2013",Pref.view,NA,0.203120936,NA,NA,68,pref. Consumer choice,attribute,0.5,0.35,0.7761714459598387,0.1954075596358141,0.203120936
+Tobii T2150,\cite{orquin2013},Orquin et al. 2013,Pref.view,NA,0.203120936,NA,NA,68,pref. Consumer choice,attribute,0.5,0.35,0.7761714459598387,0.1954075596358141,0.203120936
 Tobii T60,\cite{ares2014},Ares et al. 2014,Pref.view,0.32,0.13,0.32,0.32,71,pref. Consumer choice,attribute,0.5,0.22,0.7761714459598387,0.32000000000000006,0.12999999999999995
 Tobii T60,\cite{grebitus2015},Grebitus et al. 2015,Setsize,NA,NA,0.018813266,NA,130,pref. Consumer choice,attribute,0.5,0.22,0.7761714459598387,0.019474963143079175,0.01717572807192638
 Tobii T60,\cite{orquin2015a},Orquin & Lagerkvist 2015,Salience,0.067357264,0.070604246,0.053836508,NA,150,pref. Consumer choice,attribute,0.5,0.22,0.7761714459598387,0.06735726399999992,0.07060424600000005

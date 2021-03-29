@@ -20,7 +20,7 @@
 rm(list = ls())
 
 # import packages and functions
-source("utils.R")
+source("./scripts/utils.R")
 
 # loading data
 data = as.data.table(read_csv(

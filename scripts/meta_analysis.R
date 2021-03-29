@@ -19,7 +19,7 @@
 rm(list = ls())
 
 # import packages and functions
-source("utils.R")
+source("./scripts/utils.R")
 
 # loading data
 data = as.data.table(read_csv(
@@ -796,7 +796,7 @@ sampletable = cbind(IV=ageNA$IV,
                     ethnicity[,2:4],
                     Country=NA,
                     "\\hspace{2mm}not reported"=countryNA$countryNA,
-                    country[,2:9])
+                    country[,2:18])
 #sampletable[is.na(sampletable)] = 0
 rownames = colnames(sampletable)
 sampletable = transpose(sampletable)
