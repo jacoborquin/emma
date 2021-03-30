@@ -36,7 +36,7 @@ EyeLink 1000,\cite{orquin2019a},Orquin et al. 2019a Study 2,Setsize,0.020263628,
 EyeLink 1000,\cite{orquin2019a},Orquin et al. 2019a Study 2,Size,0.230162917,0.249612238,0.169184272,NA,76,inf. Consumer choice,attribute,0.5,0.05,0.7761714459598387,0.230162917,0.24961223800000004
 EyeLink 1000,\cite{orquin2019a},Orquin et al. 2019a Study 2,Task,0.082750442,0.121465718,0.092021542,NA,52,inf. Consumer choice,attribute,0.5,0.05,0.7761714459598387,0.08275044200000008,0.12146571800000003
 EyeLink 1000,\cite{schotter2012a},Schotter et al. 2012,Choice.bias,NA,NA,NA,0.3048,32,inf. Non-consumer choice,NA,0.5,0.05,0.7761714459598387,0.29247842549580616,0.2596174367623976
-EyeLink 1000,\cite{wolfson2017},Wolfson et al. 2016,Pref.view,NA,0.074373627,NA,NA,234,pref. Consumer choice,attribute,0.5,0.05,0.7761714459598387,0.07148353683658226,0.07437362699999996
+EyeLink 1000,\cite{wolfson2017},Wolfson et al. 2017,Pref.view,NA,0.074373627,NA,NA,234,pref. Consumer choice,attribute,0.5,0.05,0.7761714459598387,0.07148353683658226,0.07437362699999996
 EyeLink 1000 (acc = .33),\cite{schoemann2019},Schoemann et al. 2019,Task,NA,NA,NA,0.87,40,risky Gamble,attribute,0.33,0.05,0.8522731543334936,0.8553596665794362,0.8093489741804258
 EyeLink 1000 Plus (acc < .5),\cite{robertson2020},Robertson & Lunn 2020,LR.position,0.13,NA,NA,0.15,74,pref. Consumer choice,attribute,0.5,0.05,0.7761714459598387,0.12999999999999995,0.13521173691163296
 EyeLink II,\cite{brandstatter2014},Braendstaatter & Koerner 2014,Choice.bias,0.774596669,NA,NA,NA,80,Risky Gamble,NA,0.5,0.01,0.7761714459598387,0.7745966690000001,0.7908071605417208
@@ -75,8 +75,8 @@ SMI iview,\cite{lindner2014},Lindner et al. 2014,Pref.view,NA,NA,0.5731,NA,26,in
 SMI iview HED,\cite{gidlof2013},Gidloef et al. 2013,Task,NA,NA,0.03896239,-0.002708331,40,pref. Consumer choice,alternative,1,0.5,0.5523428919196774,0.04033164791562054,0.03557333871154411
 SMI model unknown (acc < .5),\cite{bialkova2020},Bialkova et al. 2020,Task,0.2322232,NA,0.2751973,NA,30,pref. Consumer choice,attribute,0.5,0.29833333333333334,0.7761714459598387,0.23222319999999994,0.24128314508909923
 Tobii D10,\cite{turner2014},Turner et al. 2014,Task,NA,NA,0.519615242,NA,89,pref. Consumer choice,attribute,0.5,0.5,0.7761714459598387,0.5342471415662888,0.48207388746536406
-Tobii Glasses 1,\cite{wastlund2015},Waestlund et al. 2014 Study 2,Task,NA,0.256484604,NA,NA,98,inf. Consumer choice,alternative,1.42,0.5,0.3643269065259421,0.2469028166408899,0.25648460399999995
-Tobii Glasses 1,\cite{wastlund2015},Waestlund et al. 2014 Study 3,Task,NA,0.395027751,NA,NA,66,inf. Consumer choice,alternative,1.42,0.5,0.3643269065259421,0.3811921167262711,0.395027751
+Tobii Glasses 1,\cite{wastlund2015},Waestlund et al. 2015 Study 2,Task,NA,0.256484604,NA,NA,98,inf. Consumer choice,alternative,1.42,0.5,0.3643269065259421,0.2469028166408899,0.25648460399999995
+Tobii Glasses 1,\cite{wastlund2015},Waestlund et al. 2015 Study 3,Task,NA,0.395027751,NA,NA,66,inf. Consumer choice,alternative,1.42,0.5,0.3643269065259421,0.3811921167262711,0.395027751
 Tobii T120,\cite{du2014},Du & MacDonald 2014,Pref.view,0.2275,NA,0.21,NA,72,pref. Consumer choice,attribute,0.4,0.24,0.820937156767871,0.2275,0.23639012080745955
 Tobii T120,\cite{hong2016a},Hong et al. 2016,Setsize,0.44,NA,NA,NA,75,pref. Consumer choice,alternative,0.4,0.24,0.820937156767871,0.43999999999999995,0.455320966352462
 Tobii T120,\cite{meissner2016b},Meissner et al. 2016b,Setsize,0.42,NA,NA,NA,40,pref. Consumer choice,alternative,0.4,0.24,0.820937156767871,0.42,0.4348466203497895
@@ -99,10 +99,10 @@ Tobii T60,\cite{ares2014},Ares et al. 2014,Pref.view,0.32,0.13,0.32,0.32,71,pref
 Tobii T60,\cite{grebitus2015},Grebitus et al. 2015,Setsize,NA,NA,0.018813266,NA,130,pref. Consumer choice,attribute,0.5,0.22,0.7761714459598387,0.019474963143079175,0.01717572807192638
 Tobii T60,\cite{orquin2015a},Orquin & Lagerkvist 2015,Salience,0.067357264,0.070604246,0.053836508,NA,150,pref. Consumer choice,attribute,0.5,0.22,0.7761714459598387,0.06735726399999992,0.07060424600000005
 Tobii T60,\cite{orquin2015a},Orquin & Lagerkvist 2015,Task,0.052237084,0.135232744,0.084912469,NA,100,pref. Consumer choice,attribute,0.5,0.22,0.7761714459598387,0.05223708399999996,0.13523274400000007
-Tobii T60,\cite{orquin2020osfb},Orquin et al. 2019b Study 1,Setsize,0.4230173,0.4170414,0.4768397,NA,71,pref. Consumer choice,alternative,0.5,0.22,0.7761714459598387,0.42301729999999993,0.41704139999999995
-Tobii T60,\cite{orquin2020osfb},Orquin et al. 2019b Study 2,Setsize,0.032738514,0.089125613,0.071161731,0.085255748,16,pref. Consumer choice,alternative,0.5,0.22,0.7761714459598387,0.03273851400000003,0.08912561299999999
-Tobii T60,\cite{orquin2020osfb},Orquin et al. 2019b Study 3,Setsize,0.026875958,0.090325424,0.074760618,0.085357327,11,pref. Consumer choice,alternative,0.5,0.22,0.7761714459598387,0.026875957999999932,0.09032542399999993
-Tobii T60,\cite{orquin2020osfb},Orquin et al. 2019b Study 4,Setsize,0.5079106,0.463359,0.535099,NA,68,pref. Consumer choice,alternative,0.5,0.22,0.7761714459598387,0.5079106,0.46335900000000013
+Tobii T60,\cite{orquin2020osfb},Orquin et al. 2020 Study 1,Setsize,0.4230173,0.4170414,0.4768397,NA,71,pref. Consumer choice,alternative,0.5,0.22,0.7761714459598387,0.42301729999999993,0.41704139999999995
+Tobii T60,\cite{orquin2020osfb},Orquin et al. 2020 Study 2,Setsize,0.032738514,0.089125613,0.071161731,0.085255748,16,pref. Consumer choice,alternative,0.5,0.22,0.7761714459598387,0.03273851400000003,0.08912561299999999
+Tobii T60,\cite{orquin2020osfb},Orquin et al. 2020 Study 3,Setsize,0.026875958,0.090325424,0.074760618,0.085357327,11,pref. Consumer choice,alternative,0.5,0.22,0.7761714459598387,0.026875957999999932,0.09032542399999993
+Tobii T60,\cite{orquin2020osfb},Orquin et al. 2020 Study 4,Setsize,0.5079106,0.463359,0.535099,NA,68,pref. Consumer choice,alternative,0.5,0.22,0.7761714459598387,0.5079106,0.46335900000000013
 Tobii T60,\cite{peschel2019},Peschel et al. 2019,Salience,0.00388136,0.01507254,0.01334301,NA,127,pref. Consumer choice,attribute,0.5,0.22,0.7761714459598387,0.003881360000000023,0.01507253999999999
 Tobii T60,\cite{peschel2019},Peschel et al. 2019,Size,0.09753778,0.04526679,0.0962669,NA,127,pref. Consumer choice,attribute,0.5,0.22,0.7761714459598387,0.09753777999999999,0.04526678999999994
 Tobii T60,\cite{jenke2019},Jenke et al. 2019,Pref.view,NA,0.32,NA,NA,122,inf. Non-consumer choice,attribute,0.5,0.22,0.7761714459598387,0.3083442073893641,0.32000000000000006

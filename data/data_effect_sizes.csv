@@ -83,10 +83,10 @@ Authors,Study,IV,fix.count,fix.like,TFD,dwell.count,N,Eye.tracker,Research.Domai
 \cite{orquin2019a},Orquin et al. 2019a Study 2,Setsize,0.020263628,0.045578747,0.026439858,,76,EyeLink 1000,inf. Consumer choice,attribute
 \cite{orquin2019a},Orquin et al. 2019a Study 2,Size,0.230162917,0.249612238,0.169184272,,76,EyeLink 1000,inf. Consumer choice,attribute
 \cite{orquin2019a},Orquin et al. 2019a Study 2,Task,0.082750442,0.121465718,0.092021542,,52,EyeLink 1000,inf. Consumer choice,attribute
-\cite{orquin2020osfb},Orquin et al. 2019b Study 1,Setsize,0.4230173,0.4170414,0.4768397,,71,Tobii T60,pref. Consumer choice,alternative
-\cite{orquin2020osfb},Orquin et al. 2019b Study 2,Setsize,0.032738514,0.089125613,0.071161731,0.085255748,16,Tobii T60,pref. Consumer choice,alternative
-\cite{orquin2020osfb},Orquin et al. 2019b Study 3,Setsize,0.026875958,0.090325424,0.074760618,0.085357327,11,Tobii T60,pref. Consumer choice,alternative
-\cite{orquin2020osfb},Orquin et al. 2019b Study 4,Setsize,0.5079106,0.463359,0.535099,,68,Tobii T60,pref. Consumer choice,alternative
+\cite{orquin2020osfb},Orquin et al. 2020 Study 1,Setsize,0.4230173,0.4170414,0.4768397,,71,Tobii T60,pref. Consumer choice,alternative
+\cite{orquin2020osfb},Orquin et al. 2020 Study 2,Setsize,0.032738514,0.089125613,0.071161731,0.085255748,16,Tobii T60,pref. Consumer choice,alternative
+\cite{orquin2020osfb},Orquin et al. 2020 Study 3,Setsize,0.026875958,0.090325424,0.074760618,0.085357327,11,Tobii T60,pref. Consumer choice,alternative
+\cite{orquin2020osfb},Orquin et al. 2020 Study 4,Setsize,0.5079106,0.463359,0.535099,,68,Tobii T60,pref. Consumer choice,alternative
 \cite{orquin2013},Orquin et al. 2013,Pref.view,,0.203120936,,,68,Tobii T2150,pref. Consumer choice,attribute
 \cite{paernamets2015a},Paernamets et al. 2015 Study 1,Task,,,0.489897949,,58,SMI RED,pref. Non-consumer choice,alternative
 \cite{paernamets2015a},Paernamets et al. 2015 Study 2,Task,,,0.331662479,,37,SMI RED,pref. Non-consumer choice,alternative
@@ -101,9 +101,9 @@ Authors,Study,IV,fix.count,fix.like,TFD,dwell.count,N,Eye.tracker,Research.Domai
 \cite{vanloo2015},Van Loo et al. 2015,Pref.view,0.257,,0.27525,,81,SMI RED,pref. Consumer choice,attribute
 \cite{vanderlaan2015},Van der Laan et al. 2015,Choice.bias,,,0.438175243,,22,Easygaze,inf. Consumer choice,
 \cite{vanderlaan2017},Van der Laan et al. 2017,Pref.view,,,0.254251218,,125,Easygaze,pref. Consumer choice,alternative
-\cite{wastlund2015},Waestlund et al. 2014 Study 2,Task,,0.256484604,,,98,Tobii Glasses 1,inf. Consumer choice,alternative
-\cite{wastlund2015},Waestlund et al. 2014 Study 3,Task,,0.395027751,,,66,Tobii Glasses 1,inf. Consumer choice,alternative
-\cite{wolfson2017},Wolfson et al. 2016,Pref.view,,0.074373627,,,234,EyeLink 1000,pref. Consumer choice,attribute
+\cite{wastlund2015},Waestlund et al. 2015 Study 2,Task,,0.256484604,,,98,Tobii Glasses 1,inf. Consumer choice,alternative
+\cite{wastlund2015},Waestlund et al. 2015 Study 3,Task,,0.395027751,,,66,Tobii Glasses 1,inf. Consumer choice,alternative
+\cite{wolfson2017},Wolfson et al. 2017,Pref.view,,0.074373627,,,234,EyeLink 1000,pref. Consumer choice,attribute
 \cite{vanherpen2011},van Herpen & van Trijp 2011 Study 1,Task,,0.156209137,0.323229968,,309,SMI RED,pref. Consumer choice,attribute
 \cite{bialkova2020},Bialkova et al. 2020,Task,0.2322232,,0.2751973,,30,SMI model unknown (acc < .5),pref. Consumer choice,attribute
 \cite{peschel2019},Peschel et al. 2019,Salience,0.00388136,0.01507254,0.01334301,,127,Tobii T60,pref. Consumer choice,attribute
