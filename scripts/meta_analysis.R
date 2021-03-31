@@ -762,6 +762,9 @@ sample = sample[, list(IV = unique(IV),
                        ethnicity = unique(ethnicity),
                        country = unique(country)), Study]
 
+k = sample[, list(k = NROW(Study)), IV]
+k = k[order(IV), ]
+
 age = sample[is.na(age) == F, list(age = mean(age)), IV]
 age = age[order(IV), ]
 ageNA = sample[is.na(age) == T, list(ageNA = NROW(age)), IV]
@@ -788,7 +791,8 @@ countryNA = merge(country, countryNA, by = "IV", all.x = T)
 countryNA = countryNA[, c(1,19)]
 countryNA = countryNA[order(IV),]
 
-sampletable = cbind(IV=ageNA$IV,
+sampletable = cbind(IV=k$IV,
+                    '$k$' = k$k,
                     Age=NA,
                     "\\hspace{2mm}not reported"=ageNA$ageNA,
                     "\\hspace{2mm}mean"=round(age$age, digits = 2),
@@ -809,13 +813,13 @@ sampletable = sampletable[, c(5,7,3,1,6,8,4,2)]
 setnames(sampletable, c(1:8), c("Salience", "Surface size", "Left vs. right position", "Center position", "Set size", "Task instructions", "Preferential viewing", "Choice-gaze effect"))
 sampletable = cbind(" "=rownames[-1],sampletable[-1,])
 
-rows = sampletable$' '[c(9:11,14:length(sampletable$' '))]
+rows = sampletable$' '[c(10:12,15:length(sampletable$' '))]
 add = rep("\\hspace{2mm}", times = length(rows))
 rows = paste0(add,rows)
 Dimension = paste0(sampletable$' ')
-rows = c(Dimension[c(1:8)], 
+rows = c(Dimension[c(1:9)], 
          rows[c(1:3)],
-         Dimension[c(12:13)],
+         Dimension[c(13:14)],
          rows[c(4:length(rows))])
 row.names(sampletable) = NULL
 sampletable$' ' = rows
