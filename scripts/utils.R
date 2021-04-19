@@ -201,9 +201,13 @@ genFunnel = function(rmaobj, data, varname, label) {
 		select(-(vi.c))  
 	estimate = FisherZ(as.numeric(rmaobj[2]))  # rma estimate 
 	se.seq=seq(0, sqrt(max(data$vi.c)), 0.001) # make SE vector from 0 to max SE
+	
 	ll95 = estimate-(1.96*se.seq) 
 	ul95 = estimate+(1.96*se.seq)
-	dfCI = data.frame(ll95, ul95, se.seq, estimate)
+	ll99 = estimate-(3.29*se.seq)
+	ul99 = estimate+(3.29*se.seq)
+	
+	dfCI = data.frame(ll95, ul95, ll99, ul99, se.seq, estimate)
 
  	plot <- 
 		ggplot(aes(x = SE, y = DV), data = fig) +
@@ -217,14 +221,18 @@ genFunnel = function(rmaobj, data, varname, label) {
 		geom_line(
             aes(x = se.seq, y = ll95), 
             data = dfCI, size = lineSize,
+            linetype = 'dashed',
             color = "grey"
         ) +
 		geom_line(
             aes(x = se.seq, y = ul95), 
             data = dfCI, size = lineSize,
+            linetype = 'dashed',
             color = "grey"
         ) +
-		scale_x_reverse() +
+ 	  geom_line(aes(x = se.seq, y = ll99), linetype = 'dashed', data = dfCI) +
+ 	  geom_line(aes(x = se.seq, y = ul99), linetype = 'dashed', data = dfCI) +
+ 	  scale_x_reverse() +
 		coord_flip() +
         ggtitle(label) +
 		mytheme 
