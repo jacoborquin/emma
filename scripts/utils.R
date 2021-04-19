@@ -199,7 +199,7 @@ genFunnel = function(rmaobj, data, varname, label) {
 		select(DV = varname, vi.c) %>%
 		mutate(SE = sqrt(vi.c)) %>%
 		select(-(vi.c))  
-	estimate = FisherZ(as.numeric(rmaobj[2]))  # rma estimate 
+	estimate = 0 #FisherZ(as.numeric(rmaobj[2]))  # rma estimate 
 	se.seq=seq(0, sqrt(max(data$vi.c)), 0.001) # make SE vector from 0 to max SE
 	
 	ll95 = estimate-(1.96*se.seq) 
