@@ -19,7 +19,7 @@
 rm(list = ls())
 
 # import packages and functions
-source("./scripts/utils.R")
+source("utils.R")
 
 # loading data
 data = as.data.table(read_csv(
@@ -584,7 +584,8 @@ onecoefTex(FE, "FE.tex") # save coefficient to tex
 
 PET = lm(fcz ~ sdz + a_acc, weights = 1/varz, data = data) # PET test is sig therefore perfrom PEESE
 PET = coef_test(PET, vcov = "CR2", cluster = data$Authors)
-oneofmanycoefTex(PET, "PETintext.tex", 2)
+oneofmanycoefTex(PET, "PETintext.tex", 1)
+oneofmanycoefTex(PET, "EGGERintext.tex", 2)
 
 PEESE = lm(fcz ~ varz + a_acc, weights = 1/varz, data = data) # PEESE estimate
 PEESE = coef_test(PEESE, vcov = "CR2", cluster = data$Authors)
@@ -781,7 +782,7 @@ ethnicity = ethnicity[order(ethnicity$IV),]
 ethnicityNA = sample[is.na(ethnicity), list(ethnicityNA = NROW(ethnicity)), IV]
 ethnicityNA = merge(ethnicity, ethnicityNA, by = "IV", all.x = T)
 ethnicityNA = ethnicityNA[, c(1,5)]
-ethnicityNA = ethnicityNA[order(IV),]
+ethnicityNA = ethnicityNA[order(ethnicityNA$IV),]
 
 country = sample[is.na(country) == F, list(count = NROW(Study)), by = c("IV", "country")]
 country = dcast(country, IV ~ country)
@@ -789,7 +790,7 @@ country = country[order(country$IV),]
 countryNA = sample[is.na(country) == T, list(countryNA = NROW(country)), IV]
 countryNA = merge(country, countryNA, by = "IV", all.x = T)
 countryNA = countryNA[, c(1,19)]
-countryNA = countryNA[order(IV),]
+countryNA = countryNA[order(countryNA$IV),]
 
 sampletable = cbind(IV=k$IV,
                     '$k$' = k$k,
