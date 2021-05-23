@@ -171,5 +171,6 @@ print(
         command = tab_note
     ),
     sanitize.text.function = function(x){x},
-    file = file.path(tablesDir, "eyetracker_specs.tex")
+    file = file.path(tablesDir, "eyetracker_specs.tex"),
+    comment = FALSE
 )

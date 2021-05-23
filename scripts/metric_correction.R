@@ -125,7 +125,8 @@ print(
 	include.rownames = FALSE,
 	caption.placement = "top", 
     sanitize.text.function = function(x){x},
-    file = file.path(tablesDir, "metric_correction.tex")
+    file = file.path(tablesDir, "metric_correction.tex"),
+    comment = FALSE
 )
 
 

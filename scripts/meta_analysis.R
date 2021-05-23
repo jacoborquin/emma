@@ -25,8 +25,11 @@ source("utils.R")
 data = as.data.table(read_csv(
 	  file.path(dataDir, "data_effect_sizes_cleaned.csv")
 ))
-grant = as.data.table(read_excel(
-    file.path(dataDir, "data_grant.xlsx")
+grant = as.data.table(read_csv(
+    file.path(dataDir, "data_grant.csv")
+))
+sample = as.data.table(read_csv(
+  file.path(dataDir, "data_sample.csv")
 ))
 
 
@@ -422,7 +425,8 @@ print(
         command = tab_note
     ),
     sanitize.text.function = function(x){x},
-    file = file.path(tablesDir, "mod_results.tex")
+    file = file.path(tablesDir, "mod_results.tex"),
+  comment = FALSE
 )
 
 
@@ -635,7 +639,8 @@ print(
   caption.placement = "top", 
   hline.after = c(-1, 0, NROW(PET)),
   sanitize.text.function = function(x){x},
-  file = file.path(tablesDir, "PET.tex")
+  file = file.path(tablesDir, "PET.tex"),
+  comment = FALSE
 )
 
 # latex version PEESE
@@ -653,7 +658,8 @@ print(
   caption.placement = "top", 
   hline.after = c(-1, 0, NROW(PEESE)),
   sanitize.text.function = function(x){x},
-  file = file.path(tablesDir, "PEESE.tex")
+  file = file.path(tablesDir, "PEESE.tex"),
+  comment = FALSE
 )
 
 # latex version PET-PEESE
@@ -678,7 +684,8 @@ print(
   caption.placement = "top", 
   hline.after = c(-1, 0, NROW(PETPEESE)),
   sanitize.text.function = function(x){x},
-  file = file.path(tablesDir, "PET-PEESE.tex")
+  file = file.path(tablesDir, "PET-PEESE.tex"),
+  comment = FALSE
 )
 
 # -------------------------------------------------------------------------------------------------------
@@ -744,17 +751,13 @@ print(
   add.to.row = add.to.row,
   tabular.environment = "longtable",
   sanitize.text.function = function(x){x},
-  file = file.path(tablesDir, "overview_table.tex")
+  file = file.path(tablesDir, "overview_table.tex"),
+  comment = FALSE
 )
 
 # -------------------------------------------------------------------------------------------------------
 # Table with participant sample characteristics
 # -------------------------------------------------------------------------------------------------------
-
-# loading data
-sample = as.data.table(read_excel(
-  file.path(dataDir, "data_sample.xlsx")
-))
 
 sample = merge(sample, data, by = "Study", all.x = T)
 sample = sample[, list(IV = unique(IV),
@@ -842,5 +845,6 @@ print(
   caption.placement = "top", 
   hline.after = c(-1, 0, NROW(sampletable)),
   sanitize.text.function = function(x){x},
-  file = file.path(tablesDir, "sampleTable.tex")
+  file = file.path(tablesDir, "sampleTable.tex"),
+  comment = FALSE
 )
