@@ -579,7 +579,7 @@ pb = rma(yi=fcz, vi=varz, mods = ~ public, data = data)
 pb = robust(pb, cluster = data$Author)
 publicFactor = round(pb$b[1] / (pb$b[1] + pb$b[2]), digits = 3) # inflation factor due to not having public grant
 cat(paste0("$", publicFactor, "$"), file = file.path(tablesDir, "publicFactor.tex"))
-cat(paste0("$Q_M(1)=", round(pb$QM, 3),"$, $p=", round(pb$QMp, 3), "$"), file = file.path(tablesDir, "publicSig.tex"))
+cat(paste0("$Q_M(1,67)=", round(pb$QM, 3),"$, $p=", round(pb$QMp, 3), "$"), file = file.path(tablesDir, "publicSig.tex"))
 
 # PET-PEESE test
 FE = lm(fcz ~ 1, weights = 1/varz, data = data) # fixed effect estimate of ES
