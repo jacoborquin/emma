@@ -19,14 +19,17 @@
 rm(list = ls())
 
 # import packages and functions
-source("./scripts/utils.R")
+source("utils.R")
 
 # loading data
 data = as.data.table(read_csv(
 	  file.path(dataDir, "data_effect_sizes_cleaned.csv")
 ))
-grant = as.data.table(read_excel(
-    file.path(dataDir, "data_grant.xlsx")
+grant = as.data.table(read_csv(
+    file.path(dataDir, "data_grant.csv")
+))
+sample = as.data.table(read_csv(
+  file.path(dataDir, "data_sample.csv")
 ))
 
 
@@ -422,7 +425,8 @@ print(
         command = tab_note
     ),
     sanitize.text.function = function(x){x},
-    file = file.path(tablesDir, "mod_results.tex")
+    file = file.path(tablesDir, "mod_results.tex"),
+  comment = FALSE
 )
 
 
@@ -575,7 +579,7 @@ pb = rma(yi=fcz, vi=varz, mods = ~ public, data = data)
 pb = robust(pb, cluster = data$Author)
 publicFactor = round(pb$b[1] / (pb$b[1] + pb$b[2]), digits = 3) # inflation factor due to not having public grant
 cat(paste0("$", publicFactor, "$"), file = file.path(tablesDir, "publicFactor.tex"))
-cat(paste0("$Q_M(1)=", round(pb$QM, 3),"$, $p=", round(pb$QMp, 3), "$"), file = file.path(tablesDir, "publicSig.tex"))
+cat(paste0("$Q_M(1,67)=", round(pb$QM, 3),"$, $p=", round(pb$QMp, 3), "$"), file = file.path(tablesDir, "publicSig.tex"))
 
 # PET-PEESE test
 FE = lm(fcz ~ 1, weights = 1/varz, data = data) # fixed effect estimate of ES
@@ -584,7 +588,8 @@ onecoefTex(FE, "FE.tex") # save coefficient to tex
 
 PET = lm(fcz ~ sdz + a_acc, weights = 1/varz, data = data) # PET test is sig therefore perfrom PEESE
 PET = coef_test(PET, vcov = "CR2", cluster = data$Authors)
-oneofmanycoefTex(PET, "PETintext.tex", 2)
+oneofmanycoefTex(PET, "PETintext.tex", 1)
+oneofmanycoefTex(PET, "EGGERintext.tex", 2)
 
 PEESE = lm(fcz ~ varz + a_acc, weights = 1/varz, data = data) # PEESE estimate
 PEESE = coef_test(PEESE, vcov = "CR2", cluster = data$Authors)
@@ -634,7 +639,8 @@ print(
   caption.placement = "top", 
   hline.after = c(-1, 0, NROW(PET)),
   sanitize.text.function = function(x){x},
-  file = file.path(tablesDir, "PET.tex")
+  file = file.path(tablesDir, "PET.tex"),
+  comment = FALSE
 )
 
 # latex version PEESE
@@ -652,7 +658,8 @@ print(
   caption.placement = "top", 
   hline.after = c(-1, 0, NROW(PEESE)),
   sanitize.text.function = function(x){x},
-  file = file.path(tablesDir, "PEESE.tex")
+  file = file.path(tablesDir, "PEESE.tex"),
+  comment = FALSE
 )
 
 # latex version PET-PEESE
@@ -677,7 +684,8 @@ print(
   caption.placement = "top", 
   hline.after = c(-1, 0, NROW(PETPEESE)),
   sanitize.text.function = function(x){x},
-  file = file.path(tablesDir, "PET-PEESE.tex")
+  file = file.path(tablesDir, "PET-PEESE.tex"),
+  comment = FALSE
 )
 
 # -------------------------------------------------------------------------------------------------------
@@ -743,17 +751,13 @@ print(
   add.to.row = add.to.row,
   tabular.environment = "longtable",
   sanitize.text.function = function(x){x},
-  file = file.path(tablesDir, "overview_table.tex")
+  file = file.path(tablesDir, "overview_table.tex"),
+  comment = FALSE
 )
 
 # -------------------------------------------------------------------------------------------------------
 # Table with participant sample characteristics
 # -------------------------------------------------------------------------------------------------------
-
-# loading data
-sample = as.data.table(read_excel(
-  file.path(dataDir, "data_sample.xlsx")
-))
 
 sample = merge(sample, data, by = "Study", all.x = T)
 sample = sample[, list(IV = unique(IV),
@@ -781,7 +785,7 @@ ethnicity = ethnicity[order(ethnicity$IV),]
 ethnicityNA = sample[is.na(ethnicity), list(ethnicityNA = NROW(ethnicity)), IV]
 ethnicityNA = merge(ethnicity, ethnicityNA, by = "IV", all.x = T)
 ethnicityNA = ethnicityNA[, c(1,5)]
-ethnicityNA = ethnicityNA[order(IV),]
+ethnicityNA = ethnicityNA[order(ethnicityNA$IV),]
 
 country = sample[is.na(country) == F, list(count = NROW(Study)), by = c("IV", "country")]
 country = dcast(country, IV ~ country)
@@ -789,7 +793,7 @@ country = country[order(country$IV),]
 countryNA = sample[is.na(country) == T, list(countryNA = NROW(country)), IV]
 countryNA = merge(country, countryNA, by = "IV", all.x = T)
 countryNA = countryNA[, c(1,19)]
-countryNA = countryNA[order(IV),]
+countryNA = countryNA[order(countryNA$IV),]
 
 sampletable = cbind(IV=k$IV,
                     '$k$' = k$k,
@@ -841,5 +845,6 @@ print(
   caption.placement = "top", 
   hline.after = c(-1, 0, NROW(sampletable)),
   sanitize.text.function = function(x){x},
-  file = file.path(tablesDir, "sampleTable.tex")
+  file = file.path(tablesDir, "sampleTable.tex"),
+  comment = FALSE
 )

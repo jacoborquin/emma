@@ -21,7 +21,7 @@
 rm(list = ls())
 
 # import packages and functions
-source("./scripts/utils.R")
+source("utils.R")
 
 # loading data
 data = as.data.table(read_csv(
@@ -125,7 +125,8 @@ print(
 	include.rownames = FALSE,
 	caption.placement = "top", 
     sanitize.text.function = function(x){x},
-    file = file.path(tablesDir, "metric_correction.tex")
+    file = file.path(tablesDir, "metric_correction.tex"),
+    comment = FALSE
 )
 
 

@@ -20,7 +20,7 @@
 rm(list = ls())
 
 # import packages and functions
-source("./scripts/utils.R")
+source("utils.R")
 
 # loading data
 data = as.data.table(read_csv(
@@ -171,5 +171,6 @@ print(
         command = tab_note
     ),
     sanitize.text.function = function(x){x},
-    file = file.path(tablesDir, "eyetracker_specs.tex")
+    file = file.path(tablesDir, "eyetracker_specs.tex"),
+    comment = FALSE
 )

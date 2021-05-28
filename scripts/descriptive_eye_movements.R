@@ -37,6 +37,18 @@ EMresults = as.data.table(read.csv(
 # selected wrong author name
 rawdata$author[rawdata$author_confirm == "bagger 3"] = "Bagger 2016 Study 3"
 
+# some author names were corrected in the meantime, we have to amend the data
+# here as well to match with other data
+rawdata$author[rawdata$author == "Meissner  et al. 2016b"] = "Meissner et al. 2016b"
+rawdata$author[rawdata$author == "Orquin et al. 2019b Study 1"] = "Orquin et al. 2020 Study 1"
+rawdata$author[rawdata$author == "Orquin et al. 2019b Study 2"] = "Orquin et al. 2020 Study 2"
+rawdata$author[rawdata$author == "Orquin et al. 2019b Study 3"] = "Orquin et al. 2020 Study 3"
+rawdata$author[rawdata$author == "Orquin et al. 2019b Study 4"] = "Orquin et al. 2020 Study 4"
+rawdata$author[rawdata$author == "Orquin, Bagger & Mueller Loose 2013"] = "Orquin et al. 2013"
+rawdata$author[rawdata$author == "Waestlund et al. 2014 Study 2"] = "Waestlund et al. 2015 Study 2"
+rawdata$author[rawdata$author == "Waestlund et al. 2014 Study 3"] = "Waestlund et al. 2015 Study 3"
+rawdata$author[rawdata$author == "Wolfson et al. 2016"] = "Wolfson et al. 2017"
+
 # coding sheet to be deleted
 rawdata = rawdata[rawdata$author_confirm != "glaholt 2009b 1"] # initial coding missed the research domain 
 
@@ -437,7 +449,8 @@ print(
         command = tab_note
     ),
     sanitize.text.function = function(x){x},
-    file = file.path(tablesDir, "em_results.tex")
+    file = file.path(tablesDir, "em_results.tex"),
+    comment = FALSE
 )
 
 
